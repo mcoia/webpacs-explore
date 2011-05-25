@@ -1,0 +1,79 @@
+<HTML>
+  <HEAD>
+   <TITLE>Patron Record Display</TITLE>
+  </HEAD>
+
+  <BODY>
+<!--{toplogo}-->
+  <TABLE WIDTH="100%">
+  <TR>
+  <TD>
+Catalog searches:
+<!--{ifmymil}-->
+<!--{searchbtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{ifpsearch}-->
+<BR>
+<!--{psearchbtn}-->
+<BR>
+<!--{xif}-->
+  <BR>
+  Circulation information:
+<!--{ifchkouts}-->
+<!--{chkoutsbtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{ifholds}-->
+<!--{holdsbtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{ifill}-->
+<!--{illbtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{ifbookings}-->
+<!--{bookingsbtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{iffines}-->
+<!--{finesbtn}-->
+<!--{xif}-->
+  <BR>
+  Patron information:<p>
+<!--{ifmodifypin}-->
+<!--{modifypinbtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{ifmodifypatinfo}-->
+<!--{modifypatinfobtn}-->
+  &nbsp;
+<!--{xif}-->
+<!--{ifmsgs}-->
+<!--{msgsbtn}-->
+<!--{xif}-->
+  <P>
+<!--{startover}-->
+<!--{logout}-->
+  </P>
+  </TD>
+  <TD ALIGN="center">
+  <TABLE BORDER="0">
+  <TR>
+  <TD>
+<!--{ifpatimage}-->
+<!--{patimage}-->
+<!--{xif}-->
+  <P>
+<!--{patroninfo}-->
+  </TD>
+  </TR>
+  </TABLE>
+  </TD>
+  </TR>
+  </TABLE>
+  <BR>
+<!--{patfunc}-->
+  <P>
+  </BODY>
+</HTML>

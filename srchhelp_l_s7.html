@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript">
+<!--
+function clearDefault() {
+
+var currentVal=document.forms[0].SEARCH.value
+if (currentVal == "YYYYMMDD")
+{
+document.forms[0].SEARCH.value=""
+}
+}
+
+//-->
+</script>
+<title>Richardson Library Auction Sale Date Search</title>
+</head>
+
+ <body style="background-color: #DDE4E9">
+ 
+ <div id="container">
+ 
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/" id="currentsubPage"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S7/"><font>View
+ Your Record</font></a></li></ul></div>
+ 
+ <div>
+ <div id="content">
+
+
+<h2>Auction Catalogs</h2>
+
+<br />
+<div id="menuBar">
+<a HREF="/search~S7/a">AUCTION HOUSE</a>
+<a HREF="/search~S7/t">TITLE</a>
+<a HREF="/search~S7/q">HOUSE + TITLE</a>
+<font>DATE OF SALE</font>
+<a HREF="/search~S7/i">SALE CODE</a>
+<a HREF="/search~S7/Y">WORD</a>
+</div>
+
+<p>
+ Type the exact <B>Date of Sale</B> as 8 digits, for example 20051219 (2005 Dec. 19), then press [<b>Enter</b>] key or click <b>Submit Search</b>
+</p>
+<br>
+<FORM METHOD=GET>
+<INPUT TYPE=TEXT NAME="SEARCH" MAXLENGTH="10" SIZE="24" ALIGN=CENTER VALUE="YYYYMMDD" onClick="clearDefault()">
+&nbsp;
+<INPUT TYPE=SUBMIT VALUE="Submit Search">
+</FORM>
+<br>
+<p>Use right-hand truncation to retrieve all catalogs for an entire month, for example:
+</p>
+
+<div class="indent">
+May 1998 = <B>199805</B> or <B>1998/05</B>
+</div>
+
+<p>For sales that occurred over a span of dates, enter the <B>earliest</B> date of sale, for example:
+
+
+<div class="indent">
+July 2-11, 2001 = <B>20010702</B> or <B>2001/07/02</B>
+</div>
+
+
+<div>
+<div id="footer">
+One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
+Telephone 314.655.5252
+	
+<div id="copyright">
+&copy; 2009 Saint Louis Art Museum
+</div>
+</div></div>
+
+</div> </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<html>
+
+
+
+<head><title>Missouri Botanical Garden Library Catalog
+ 
+</title>
+
+<script language="JavaScript">
+/*implements combo box-links to pages -url locations*/
+
+function SelectLink(){
+if 
+(document.jform1.opaclinks.options[document.jform1.opaclinks.selectedIndex].value != "none")
+{
+    url = document.jform1.opaclinks.options[document.jform1.opaclinks.selectedIndex].value;
+	location = url;
+}       
+
+}
+</script>
+</head>
+<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc" 
+onLoad="document.Main.searcharg.value='';document.Main.searcharg.focus();">
+<DIV ALIGN="center">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
+<TR>
+<!--{patron}-->
+<P>
+</TR>
+
+<TR>
+<TD COLSPAN=3>
+                          
+<!--<IMG  SRC="/screens/iiilogo.gif" WIDTH=100 HEIGHT=100 ALT="" BORDER="0" 
+ALIGN="left">--><CENTER><IMG SRC="/screens/mbglogo.gif" WIDTH=500 
+HEIGHT=50 
+ALT=Missouri Botanical Garden
+BORDER="0"><IMG SRC="http://www.mobot.org/mobot/molib/slrlc/trans.gif" 
+width="1" height="1" border="0"></CENTER>
+<BR>
+
+<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" 
+ALIGN="left"></TD>
+</TR>
+<TR>
+<TD VALIGN="top" width=20%>
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
+<TD>
+<font size=+1 color="#006651">
+Catalog 
+Options</font><p>
+<A HREF="/"><font color=blue>Home</font>
+</A><BR><BR>
+<A HREF="http://www.mobot.org/MOBOT/molib"><font  color=blue>
+Library Information</A></font><BR>
+<!--A  HREF="/suggest/"><font color=blue>
+Suggestions</A></font><BR>
+<A HREF="/acquire/"><font  color=blue>Books to 
+Acquire</A></font><BR>
+<A HREF="/ftlist/"><font face="arial" color=blue>Featured 
+Lists</font></A>--><BR>
+<A HREF="/patroninfo/"><font color=blue>
+View Your Record</font></A><BR>
+</TD>
+</TR>
+</TABLE>
+
+</TD><TD VALIGN="top">
+<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
+ALIGN="top"></TD>
+<TD VALIGN="center"> 
+
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
+<TR><TD COLSPAN=2>
+<font size=+1 color="006651">Missouri Botanical Garden Library<BR> 
+Search Options</font><p>
+<FORM ACTION=/search~/a?a name="Main">
+<!-- <SELECT NAME=searchscope>
+<OPTION VALUE=1>Missouri Botanical Garden</SELECT> -->
+<INPUT TYPE=hidden Name=searchscope VALUE=1>
+<SELECT NAME=searchtype>
+<OPTION VALUE=t selected>TITLE</OPTION>
+<OPTION VALUE=t>BPH Abbrev.</OPTION>
+<OPTION VALUE=a>AUTHOR</OPTION>
+<OPTION VALUE=d>SUBJECT</OPTION>
+<OPTION VALUE=X>KEYWORD</OPTION>
+<OPTION VALUE=b>BARCODE</OPTION>
+<OPTION VALUE=.>BibID</OPTION>
+</SELECT>
+<INPUT TYPE="TEXT" NAME="searcharg" SIZE="25" MAXLENGTH="75" VALUE="">
+</SELECT>
+<INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D">
+<INPUT TYPE=SUBMIT VALUE="Submit Search">
+</FORM>
+<DIV>
+</TR>
+<TR><TD><a href="/search/t">Title & BPH Abbrev. Search</a></TD>
+<TD><a href="/search/Y">Keyword Search</a></TD></TR>
+<TR><TD><a href="/search/a">Author Search</a></TD>
+<TD><a href="/search/c">Call Number Search</a></TD></TR>
+<TR><TD><a href="/search/s">Journal Title Search</a></TD>
+<TD><a href="/search/h">Mentor Number Search</a></TD></TR>
+<TR><TD><a href="/search/d">Subject Search</a></TD> 
+<TD><a href="/search~S1/i">ISBN/ISSN Number Search</a></TD></TR>
+<TR><TD><a href="/search/q">Author/Title Search</a></TD> 
+<TD><a href="/search/b">Barcode Search</a></TD></TR>
+<TR><TD><a 
+href="http://slrlc.org:211/screens/z39menu_s1.html">Search Other 
+Library Catalogs
+</a></TD><TD><a href="/search/,">Bib ID</a></TD></TR>
+<TR><TD colspan="2"><BR>
+<!--<form id="jform1" name="jform1" method="post">
+<font size="4" color="#FF0000">Online Journals</font><BR> <select 
+name="opaclinks" onChange="SelectLink()">
+<option value="1" selected>Select Journal:   (Some titles available only on 
+site)</option>
+<option value="http://www.slrlc.org/record=b1179138">Acta Amazonica</option>
+<option value="http://www.slrlc.org/record=b1193281 ">Acta Biologica 
+Colombiana</option>
+<option value="http://www.slrlc.org/record=b1256752">Acta Biologica 
+Szegediensis</option>
+<option value="http://www.slrlc.org/record=b1207961 ">Acta Botanica 
+Brasilica</option>
+<option value="http://www.slrlc.org/record=b1179278">Acta Botánica 
+Venezuélica</option>
+<option value="http://www.slrlc.org/record=b1185346">Acta Cientifica 
+Venezolana</option>
+<option value="http://www.slrlc.org/record=b1181575">Acta Phytotaxonomica 
+Sinica</option>
+<option value="http://www.slrlc.org/record=b1245845">Adansonia</option>
+<option value="http://www.slrlc.org/record=b1188038">Ambio</option>
+<option value="http://www.slrlc.org/record=b1302616">American Biology 
+Teacher</option>
+<option value="http://www.slrlc.org/record=b1179744">American Fern 
+Journal</option>
+<option value="http://www.slrlc.org/record=b1168734">American Journal of 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1179822">American Midland 
+Naturalist</option>
+<option value="http://www.slrlc.org/record=b1302618">American Museum 
+Novitiates</option>
+<option value="http://www.slrlc.org/record=b1178828">Anais da Academia 
+Brasileira de Ciencias</option>
+<option value="http://www.slrlc.org/record=b1180446">Anales del Instituto de 
+Biología, Universidad Nacional Autónoma de 
+   México: Serie botánica</option>
+<option value="http://www.slrlc.org/record=b1192092">Anales del Jardín 
+Botánico de Madrid</option>
+<option value="http://www.slrlc.org/record=b1179850">Annals of Botany</option>
+<option value="http://www.slrlc.org/record=b1189812">Annals of the Carnegie 
+Museum</option>
+<option value="http://www.slrlc.org/record=b1193800">Annals of the Missouri 
+Botanical Garden</option>
+<option value="http://www.slrlc.org/record=b1244545">Applied Vegetation 
+Science</option>
+<option value="http://www.slrlc.org/record=b1179846">Aquatic Botany</option>
+<option value="http://www.slrlc.org/record=b1241973">Arctic, Antarctic, and 
+Alpine Research</option>
+<option value="http://www.slrlc.org/record=b1180031">Australian Journal of 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1204576">Australian Systematic 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1237706">BEN: botanical electronic
+ news</option>
+<option value="http://www.slrlc.org/record=b1215409">Biodiversity and 
+Conservation</option>
+<option value="http://www.slrlc.org/record=b1303005">Biogeografía: Bulletin of
+ the Systematic …</option>
+<option value="http://www.slrlc.org/record=b1180341">Biologia 
+Plantarum</option>
+<option value="http://www.slrlc.org/record=b1187756">Biological Conservation 
+Newsletter</option>
+<option value="http://www.slrlc.org/record=b1215966">Biology 
+International</option>
+<option value="http://www.slrlc.org/record=b1302619">BIOS</option>
+<option value="http://www.slrlc.org/record=b1180313">BioScience</option>
+<option value="http://www.slrlc.org/record=b1180312">Biotropica</option>
+<option value="http://www.slrlc.org/record=b1282978">BMC Evolutionary 
+Biology</option>
+<option value="http://www.slrlc.org/record=b1194018">Botanical Bulletin of 
+Academia Sinica</option>
+<option value="http://www.slrlc.org/record=b1180398">Botanical Review</option>
+<option value="http://www.slrlc.org/record=b1285431">Botanical 
+Studies</option>
+<option value="http://www.slrlc.org/record=b1168807">Botanische 
+Jahrbucher</option>
+<option value="http://www.slrlc.org/record=b1180442">Bragantia</option>
+<option value="http://www.slrlc.org/record=b1180663">Brittonia</option>
+<option value="http://www.slrlc.org/record=b1180999">Bryologist</option>
+<option value="http://www.slrlc.org/record=b1179819">Bulletin of the American 
+Museum of Natural History</option>
+<option value="http://www.slrlc.org/record=b1180316">Bulletin of the 
+Biological Society of Washington</option>
+<option value="http://www.slrlc.org/record=b1233770">Bulletin of the 
+Geobotanical Institute ETH</option>
+<option value="http://www.slrlc.org/record=b1173623">Bulletin of the Southern 
+California Academy of Sciences</option>
+<option value="http://www.slrlc.org/record=b1181930">Cactus and succulent 
+journal</option>
+<option value="http://www.slrlc.org/record=b1245603">California Wild</option>
+<option value="http://www.slrlc.org/record=b1181470">Caribbean Journal of 
+Science</option>
+<option value="http://www.slrlc.org/record=b1181577">Castanea</option>
+<option value="http://www.slrlc.org/record=b1243980">Chloris 
+Chilensis</option>
+<option value="http://www.slrlc.org/record=b1193700">Cladistics</option>
+<option value="http://www.slrlc.org/record=b1259436">Conservation and 
+Society</option>
+<option value="http://www.slrlc.org/record=b1201215">Conservation 
+Biology</option>
+<option value="http://www.slrlc.org/record=b1244555">Conservation in 
+Practice</option>
+<option value="http://www.slrlc.org/record=b1249371">Constancea</option>
+<option value="http://www.slrlc.org/record=b1180733">Current Science</option>
+<option value="http://www.slrlc.org/record=b1229844">Curtis’s Botanical 
+Magazine</option>
+<option value="http://www.slrlc.org/record=b1180703">Darwiniana</option>
+<option value="http://www.slrlc.org/record=b1275351">Dendrobiology</option>
+<option value="http://www.slrlc.org/record=b1242467">Diversity and 
+Distributions</option>
+<option value="http://www.slrlc.org/record=b1181631">Ecological 
+Monographs</option>
+<option value="http://www.slrlc.org/record=b1239241">Ecological 
+Restoration</option>
+<option value="http://www.slrlc.org/record=b1181632">Ecology</option>
+<option value="http://www.slrlc.org/record=b1181651">Economic Botany</option>
+<option value="http://www.slrlc.org/record=b1228606">Ecoscience</option>
+<option value="http://www.slrlc.org/record=b1204371">Ecotropicos</option>
+<option value="http://www.slrlc.org/record=b1231788">Endangered Species 
+Bulletin</option>
+<option value="http://www.slrlc.org/record=b1240106">Enviro News Southern 
+Africa</option>
+<option value="http://www.slrlc.org/record=b1177155">Environmental 
+Conservation</option>
+<option value="http://www.slrlc.org/record=b1233084">Environmental 
+History</option>
+<option value="http://www.slrlc.org/record=b1181655">Evolution</option>
+<option value="http://www.slrlc.org/record=b1200738">Evolutionary 
+Ecology</option>
+<option value="http://www.slrlc.org/record=b1188920">Fieldiana: 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1169163">Flora</option>
+<option value="http://www.slrlc.org/record=b1185388">Gayana: Botanica</option>
+<option value="http://www.slrlc.org/record=b1215069">Global Ecology and 
+Biogeography</option>
+<option value="http://www.slrlc.org/record=b1180713">Grana</option>
+<option value="http://www.slrlc.org/record=b1206780">Harvard Papers in 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1224307">Haseltonia</option>
+<option value="http://www.slrlc.org/record=b1202734">HerbalGram</option>
+<option value="http://www.slrlc.org/record=b1186125">Hickenia</option>
+<option value="http://www.slrlc.org/record=b1224296">Israel Journal of Plant 
+Sciences</option>
+<option value="http://www.slrlc.org/record=b1186144">Journal of 
+Biogeography</option>
+<option value="http://www.slrlc.org/record=b1192379">Journal of 
+Bryology</option>
+<option value="http://www.slrlc.org/record=b1231789">Journal of East African 
+Natural History</option>
+<option value="http://www.slrlc.org/record=b1169292">Journal of 
+Ecology</option>
+<option value="http://www.slrlc.org/record=b1183295">Journal of 
+Ethnobiology</option>
+<option value="http://www.slrlc.org/record=b1229604">Journal of Herbs, Spices,
+ and Medicinal Plants</option>
+<option value="http://www.slrlc.org/record=b1206776">Journal of 
+Paleontology</option>
+<option value="http://www.slrlc.org/record=b1215183">Journal of the 
+Arizona-Nevada Academy of Science</option>
+<option value="http://www.slrlc.org/record=b1186148">Journal of the History of
+ Biology</option>
+<option value="http://www.slrlc.org/record=b1233088">Journal of the Torrey 
+Botanical Society</option>
+<option value="http://www.slrlc.org/record=b1196145">Journal of Tropical 
+Ecology</option>
+<option value="http://www.slrlc.org/record=b1209758">Journal of Vegetation 
+Science</option>
+<option value="http://www.slrlc.org/record=b1189287">Lagascalia</option>
+<option value="http://www.slrlc.org/record=b1195293">Lyonia</option>
+<option value="http://www.slrlc.org/record=b1169859">Memorias do Instituto 
+Oswaldo Cruz</option>
+<option value="http://www.slrlc.org/record=b1216668">Meylania</option>
+<option value="http://www.slrlc.org/record=b1243038">Mountain Research and 
+Development</option>
+<option value="http://www.slrlc.org/record=b1180716">New Phytologist</option>
+<option value="http://www.slrlc.org/record=b1173122">New Zealand Journal of 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1232700">Northeastern 
+Naturalist</option>
+<option value="http://www.slrlc.org/record=b1173219">Nova Hedwigia</option>
+<option value="http://www.slrlc.org/record=b1214316">Novon</option>
+<option value="http://www.slrlc.org/record=b1299268">Orchidstudium</option>
+<option value="http://www.slrlc.org/record=b1272677">Organisms, Diversity, & 
+Evolution</option>
+<option value="http://www.slrlc.org/record=b1173110">Pacific Science</option>
+<option value="http://www.slrlc.org/record=b1225594">Paleobiology</option>
+<option value="http://www.slrlc.org/record=b1192350">Palynology</option>
+<option value="http://www.slrlc.org/record=b1234741">Plant Ecology</option>
+<option value="http://www.slrlc.org/record=b1168764">Plant Science 
+Bulletin</option>
+<option value="http://www.slrlc.org/record=b1202028">Plant Species 
+Biology</option>
+<option value="http://www.slrlc.org/record=b1180830">Plant Systematics and 
+Evolution</option>
+<option value="http://www.slrlc.org/record=b1255805">PLOS Biology</option>
+<option value="http://www.slrlc.org/record=b1269295">PARAMO</option>
+<option value="http://www.slrlc.org/record=b1179125">Proceedings of the 
+Academy of Natural Sciences of Philadelphia</option>
+<option value="http://www.slrlc.org/record=b1180315">Proceedings of the 
+Biological Society of Washington</option>
+<option value="http://www.slrlc.org/record=b1180729">Quarterly Review of 
+Biology</option>
+<option value="http://www.slrlc.org/record=b1249510">Ravintsara</option>
+<option value="http://www.slrlc.org/record=b1222781">Revista Brasileira de 
+Biologia</option>
+<option value="http://www.slrlc.org/record=b1175232">Revista Brasileira de 
+Botanica</option>
+<option value="http://www.slrlc.org/record=b1207263">Revista Chilena de 
+Historia Natural</option>
+<option value="http://www.slrlc.org/record=b1191201">Revista del Museo de La 
+Plata. Nueva serie, Botânica</option>
+<option value="http://www.slrlc.org/record=b1275352">Revista Peruana de 
+Biologia</option>
+<option value="http://www.slrlc.org/record=b1169860">Rhodora</option>
+<option value="http://www.slrlc.org/record=b1269306">Science Update</option>
+<option value="http://www.slrlc.org/record=b1204905">Sexual Plant 
+Reproduction</option>
+<option value="http://www.slrlc.org/record=b1173278">SIDA Contributions to 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1175584">Silva Fennica</option>
+<option value="http://www.slrlc.org/record=b1285423">Southeastern 
+Naturalist</option>
+<option value="http://www.slrlc.org/record=b1173109">Southwestern 
+Naturalist</option>
+<option value="http://www.slrlc.org/record=b1196932">Species: Newsletter of 
+the SSC</option>
+<option value="http://www.slrlc.org/record=b1216028">Systematic 
+Biology</option>
+<option value="http://www.slrlc.org/record=b1223466">Systematic 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1172246">Taxon</option>
+<option value="http://www.slrlc.org/record=b1188869">Transactions of the 
+Kansas Academy of Science</option>
+<option value="http://www.slrlc.org/record=b1252172">Tropical Resources : the 
+Bulletin of the Yale Tropical Resources Institute</option>
+<option value="http://www.slrlc.org/record=b1232692">Turkish Journal of 
+Botany</option>
+<option value="http://www.slrlc.org/record=b1215991">Vegetation History and 
+Archaeobotany</option>
+<option value="http://www.slrlc.org/record=b1248827">Vulpia</option>
+<option value="http://www.slrlc.org/record=b1209926">Weed Science</option>
+<option value="http://www.slrlc.org/record=b1172477">Willdenowia</option>
+</select>
+</form>-->
+
+</TD>
+</TR></font>
+</TABLE>
+
+</TD>
+<TD VALIGN="top"></TD>
+</TR>
+</TABLE>
+<p>
+<!--<IMG  SRC="/screens/botlogo.gif">-->
+</DIV>
+</body>
+</html>

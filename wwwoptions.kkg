@@ -1,0 +1,128 @@
+# General WWWOptions
+
+BODYPARAM=BGCOLOR=#ffffff LINK=#0000FF VLINK=#800080
+BOTLOGO=<!--<center><img src="/screens/botlogo.gif"></center>-->
+TOPLOGO=<img src="/screens/iiilogo.gif"><img src="/screens/slrlc.gif">
+TOPLOGO1=<center><img src="/screens/mbglogo.gif"></center>
+TOPLOGO2=<center><img src="/screens/mhslogo.gif"></center>
+TOPLOGO3=<center><img src="/screens/slamlogo.gif"></center>
+BRIEF=0
+CLEAR_PRIVATE_INFO=true
+
+DISPLAY_245=atd
+DISPLAY_856=z
+DROP_DOWN=atdXs
+#EBADDRESS=http://search.britannica.com/search?query=%s
+EMAILOP=From the library catalog|exporter|
+EXPORT_SELECT_TABLE=Sendto:browser,email,local|Format:full,brief,marc
+EXTENDED=ACL
+
+#FEATURED_LIST=21,22|Selected Titles|Topic|# Titles
+
+FRAMEURL=15
+ERESERVE=[0123456789]
+HOLDINGS_POS=atp
+INDEX_EXT=coi
+LINK856TEXT=Click on the following to:
+MARC=yes
+OFFER_HISTORY=true
+#RECORDFRAME=25,50,25
+SHOWOREC=no_cdate
+SORT_BROWSE1=c:Year|r:Reverse Year|t:Title|a:Author
+SORT_ITEMS=true
+STARTOVER=/search
+STATGROUP=800
+TIMEOUT=32000;URL=/
+XSTARTOVER=/search
+Z39BROADCAST=Z39.50 Broadcast Search:Please select the Z39.50 servers to which you want to send your search
+Z39MULTI=500:100
+
+# Patron record options
+NEWPIN_MSG=Please enter your PIN
+NOSEARCH=nubf
+PATRON_FIELDS=n/a|a/a|t/t
+PSTARTOVER=/search
+PSTARTOVER1=/search~S1
+# Request WWWOptions
+
+#BIBREQUEST=true
+#REQUEST=Hold this item|bib|ask|Y
+
+# My Millennium WWWOptions
+
+MY_WEBPAC=false|true
+NO_REVERIFY=acq,req
+PREFTEXT=Save as preferred search
+PREF_SEARCHES=25|Y
+STAFF=2,8,101,199
+FRAMEURL_PAT=40
+
+# Keyword search WWWOptions
+
+ASSEARCH=1
+AVS_TAG=XYZ
+KEYWORD_COLOR=Y|all|red
+
+# Serials checkin WWWOptions
+
+CHECKIN_BGCOLOR=ARRIVED=#FFFFFF|EXPECTED=#FFFFFF|
+TO BIND/BOUND=#FFFFFF|LATE=#FFFFFF|OTHER=#FFFFFF
+CHECKIN_FONTCOLOR=ARRIVED=GREEN|EXPECTED=BLACK|
+TO BIND/BOUND=RED|LATE=BLACK|OTHER=BLACK
+SUPPRESS_CARD=UI
+
+# Materials bookings WWWOptions
+
+BOOK_CAL_AVAIL=black
+BOOK_CAL_BKGRD=white
+BOOK_CAL_CLOSE=red
+BOOK_CAL_UNAVAIL=blue
+CANCEL_BOOKINGS=true
+
+# OPTION BUTTONS
+
+BUT_BOOKING=/screens/bookitem.gif
+BUT_ANOTHER=/screens/another.gif
+BUT_BIBEXPORT=/screens/bibexport.gif
+BUT_BRIEF=/screens/brief.gif
+BUT_CLEAR_MARKED=/screens/clrsaves.gif
+BUT_ENCYCPD=/screens/encycpd.gif
+BUT_EXPORT_VIEW_SAVES=/screens/export.gif
+BUT_EMAIL=/screens/email.gif
+BUT_EXTENDED=/screens/extended.gif
+BUT_FULL_TEXT=/sceens/fulltxt.gif
+BUT_LIMIT=/screens/limit.gif
+BUT_LOGOUT=/screens/logout.gif
+BUT_PLOGOUT=/screens/ret2pat.gif
+BUT_MARC_DISPLAY=/screens/marcdisp.gif
+BUT_MODIFY=/screens/modify.gif
+BUT_CLOSEWN=/screens/ret2cat.gif
+BUT_LIMAVAIL=/screens/limavail.gif
+BUT_UNLIMAVAIL=/screens/unlimavail.gif
+BUT_NEWSRCH=/screens/newsrch.gif
+BUT_NEXTPAGE=/screens/nextpage.gif
+BUT_NEXTREC=/screens/nextrec.gif
+BUT_PREVPAGE=/screens/prevpage.gif
+BUT_PREVREC=/screens/prevrec.gif
+BUT_PREVSCRN=/screens/prevscrn.gif
+BUT_PUBLIC=/screens/public.gif
+BUT_REGULAR_DISPLAY=/screens/regdisp.gif
+BUT_REQUEST=/screens/request.gif
+BUT_RET2CRS=/screens/ret2crs.gif
+BUT_RET2FEAT=/screens/ret2feat.gif
+BUT_RET2PREC=/screens/ret2pat.gif
+BUT_RETHOME=/screens/rethome.gif
+BUT_RTRNTB=/screens/rtrntb.gif
+BUT_SHOWSIM=/screens/showsimilar.gif
+BUT_STAFF=/screens/staff.gif
+BUT_STARTOVER=/screens/newsrch.gif
+BUT_WORDSRCH=/screens/wordsrch.gif
+BUT_Z39_ANOTHER=/screens/z39ano.gif
+BUT_Z39_REQUEST=/screens/request.gif
+BUT_RET2CAT=/screens/ret2cat.gif
+BUT_ILL_HOME=/screens/illano.gif
+BUT_ILL_CANCEL=/screens/illcan.gif
+BUT_ILL_FORM=/screens/illform.gif
+BUT_CARDFORM_LIN=/screens/linedisp.gif
+BUT_CARDFORM_BOX=/screens/boxdisp.gif
+BUT_Z39SEARCH=/screens/z39srch.gif

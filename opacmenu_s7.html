@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML> <HEAD>
+<script language="JavaScript">
+<!--
+function changeType() {
+
+var myindex=document.forms[0].searchtype.selectedIndex
+if (myindex < 1)
+  {
+  document.forms[0].searcharg.value="YYYYMMDD (8 digits)"
+  }
+  else
+  {
+  document.forms[0].searcharg.value=""
+  }
+}
+
+function clearDefault() {
+
+var currentVal=document.forms[0].searcharg.value
+if (currentVal == "YYYYMMDD (8 digits)")
+{
+document.forms[0].searcharg.value=""
+}
+}
+
+//-->
+</script>
+
+<title>Richardson Library Auction Catalogs</title>
+</HEAD>
+ <body style="background-color: #DDE4E9">
+ 
+ <div id="container">
+ 
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org/"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/" id="currentsubPage"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S7/"><font>View
+ Your Record</font></a></li></ul></div>
+ 
+ <div><div id="content">
+
+
+<h2>Auction Catalogs</h2>
+<br>
+<FORM METHOD=GET ACTION=/search/a?a>
+<SELECT NAME=searchscope>
+<OPTION VALUE=7>Auction Catalogs
+</SELECT>
+<SELECT NAME=searchtype>
+<OPTION VALUE=l SELECTED>DATE OF SALE
+<OPTION VALUE=a>AUCTION HOUSE
+<OPTION VALUE=i>SALE CODE
+<OPTION VALUE=t>TITLE
+<OPTION VALUE=Y>WORD
+</SELECT>
+
+<INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="45" VALUE="YYYYMMDD (8 digits)" onClick="clearDefault()">
+<INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D">
+<INPUT TYPE="SUBMIT" VALUE="GO!">
+</FORM>
+<FONT style="font-family: sans-serif; font-size: 10pt;"><I><B>If you cannot find a particular sale catalog, please consult library staff.</B></I></FONT>
+
+
+<h3>Search Options</h3>
+
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0>
+<TR><TD><a href="/search~S7/a"><font face="arial">Auction House Search</a></TD><TD>
+<a href="/search~S7/l"><font face="arial">Date of Sale Search</a></TD></TR>
+<TR><TD><a 
+href="/search~S7/t"><font face="arial">Title Search</a></TD><TD><a href="/search~S7/i"><font face="arial">Sale Code Search</a></TD></TR>
+<TR>
+<TD><a href="/search~S7/q"><font face="arial">Auction House + Title 
+Search</a></TD>
+
+<TD><a href="/search~S7/Y"><font face="arial">Word Search</a></TD></TR>
+</TABLE>
+
+<div><div id="footer">
+	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
+	Telephone 314.655.5252
+	
+	<div id="copyright">
+		&copy; 2009 Saint Louis Art Museum
+</div>
+</div></div>
+
+
+</div> </div> </div>
+
+ </body> </HTML>

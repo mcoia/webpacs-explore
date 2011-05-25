@@ -1,0 +1,348 @@
+body { background-color: #FFFFFF }
+
+#container {
+	width: 100%;
+	margin: 0px;
+	line-height: 130%;
+}
+
+#top {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0px;
+	/*background-color: #2F6680;*/
+	background-color: #577993;
+}
+
+#top img {
+	margin-left: 185px;
+}
+
+
+a:link { color: #577993; }
+a:active{ color: #577993; }
+a:visited { color: #577993;  } 
+a:hover  { color: #CCCCCC;  } 
+
+.browseHeader { background-color: #577993; }
+.browseHeaderData {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+.browseHeaderEntries {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+.browseHeaderNum {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+.browseHeaderYear {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+.browseHeaderMark {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+.browseEntry { background-color: #FFFFFF; }
+.browseSubEntry  { background-color: #FFFFFF }
+.browseEntryData { background-color: #FFFFFF; }
+.browseEntryEntries { text-align: center; }
+
+
+.bibItemsHeader { background-color: #577993; }
+.bibItems {color: #FFFFFF; font-weight: bold }
+
+
+/*-- Navigation Items... ------------------------ */
+#navigation {
+	padding: 0px;
+	padding-top: 30px;
+	float: left;
+	width: 160px;
+}
+
+#navBottom {	
+	background-color: #2F6680;
+}
+
+#navigation ul {
+	/* margin-top: 30px; */
+	margin-left: 0px;
+	padding: 0px;
+}
+
+#navigation li {
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+#navigation li a,
+#navigation li a:visited,
+#navigation li a:active,
+#navigation li a#currentpage:link,
+#navigation li a#currentpage:visited,
+#navigation li a#currentpage:active {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	/*padding-left: 10px; */
+	font-family: scalasans,sans-serif;
+	/*color: #4E5C65;*/
+	color: #606A74;
+	font-size: 8pt;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	width: 160px;
+	/*border-left: 30px solid #D6E1E6; */
+}
+
+#navigation li a#currentpage:link,
+#navigation li a#currentpage:visited,
+#navigation li a#currentpage:active {
+	background-color: #FFFFFF;
+}
+
+#navigation div {
+	padding-left: 40px;
+}
+
+#navigation li li div {
+	padding-left: 70px;
+	text-indent: -10px;
+}
+
+#navigation li a:hover,
+#navigation li a#currentpage:hover {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	color: #FFFFFF;
+	background-color: #4E5C65;
+	border: 1px solid white;
+	/* border-left: 30px solid white; */
+}
+
+/* SUB LIST ---------------------------------- */
+#navigation ul ul {
+	/* margin-left: 40px; 
+	border-top: 1px solid white;
+	border-bottom: 1px solid white; */
+}
+
+#navigation li li {
+	list-style-type: none;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#navigation li li a:link,
+#navigation li li a:visited,
+#navigation li li a:active {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: scalasans,sans-serif;
+	color: #4E5C65;
+	font-size: 8pt;
+	text-decoration: none;
+	text-transform: none;
+	display: block;
+	width: 160px;
+}
+
+#navigation li li a#currentPage:link,
+#navigation li li a#currentPage:visited,
+#navigation li li a#currentPage:active
+{
+	text-transform: none;
+	background-color: #f1f4f6;
+}
+
+#navigation li li a:hover {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #FFFFFF;
+	background-color: #4E5C65;
+	border: 1px solid white;
+	text-transform: none;
+}
+
+
+
+#navigation li li li div {
+	padding-left: 90px;
+	text-indent: -10px;
+}
+
+/*
+#navigation li li li {
+	list-style-type: none;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#navigation li li li a:link,
+#navigation li li li a:visited,
+#navigation li li li a:active {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: scalasans,sans-serif;
+	color: #4E5C65;
+	font-size: 8pt;
+	text-decoration: none;
+	text-transform: none;
+	display: block;
+	width: 160px;
+}
+
+#navigation li li li a#currentPage:link,
+#navigation li li li a#currentPage:visited,
+#navigation li li li a#currentPage:active
+{
+	text-transform: none;
+}
+
+#navigation li li li a:hover {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #FFFFFF;
+	background-color: #4E5C65;
+	border: 1px solid white;
+	text-transform: none;
+} */
+/* ------------------------------------------------- */
+
+#content {
+	width: 500px;
+	margin-left: 185px;
+	margin-top: 20px;
+	margin-bottom: 12px;
+	border-left: 2px solid #eeeeee;
+    padding-left: 10px;
+}
+
+#content {
+
+	line-height: 14pt;
+	font-family: times;
+	font-size: 9pt;
+}
+
+#content p {
+	line-height: 14pt;
+	font-family: times;
+	font-size: 12pt;
+	margin-bottom: 6pt;
+	/* letter-spacing: -1px; */
+	/* text-align: justify; */
+}
+
+
+#content h2 {
+	font-family: sabon, times, serif;
+	color: #577993;
+	font-size: 20pt;
+	font-weight: bold;
+	padding-top: 10px;
+	margin-bottom: -4pt;
+}
+
+#content h3 {
+	font-family: scalasans,sans-serif;
+	color: #000000;
+	font-size: 13pt;
+	font-weight: bold;
+    margin-bottom: -2pt;
+    padding-top: 10px;
+
+}
+
+#content h4 {
+	font-family: scalasans,sans-serif;
+	color: #000000;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 4pt;
+}
+
+#content .indent {
+	padding-left: 20px;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	line-height: 18pt;
+}
+
+#content .errormessage {
+	color: red;
+	text-align: center;
+	font-family: Times, serif;
+	font-size: 12pt;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#content #doubletable {
+}
+
+#content #doubletable th {
+	font-family: Times, serif;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+
+#content #doubletable td {
+	font-family: Times, serif;
+	font-size: 12pt;
+	font-weight: normal;
+	padding-left: 10px;
+	padding-bottom: 2pt;
+	line-height: 18pt;
+}
+
+
+
+#content table {
+    margin-left: 20 px;
+	}
+
+#content td {
+	font-family: scalasans,sans-serif;
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+#content td a:link,
+#content td a:active, 
+#content td a:visited {
+     color: #000000;
+ }
+ 
+#content td a:hover {
+	color: #577993;
+}
+
+
+#content #firstPara {
+	padding-top: 10pt;
+}
+
+
+#footer {
+	padding-top: 60px;
+
+}
+
+
+#footer
+{
+	font-size: 9pt;
+	line-height: 14pt;
+	color: #606A74;
+	font-family: Sabon, Times New Roman;
+}
+
+#footer #copyright
+{
+	padding-top: 5px;
+	font-size: 8pt;
+}
+
+#footer #copyright a:link,
+#footer #copyright a:visited,
+#footer #copyright a:active {
+	text-decoration: none;
+	color: #577993;
+}
+
+#footer #copyright a:hover {
+	color: #4E5C65;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML> <HEAD> <title>Richardson Library Books & Periodicals</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function addInstructorName() {
+if (document.forms[0].searchtype.options[4].selected == true)
+{ 
+var fillIn = document.forms[0].searcharg;
+fillIn.value = "Murawski";
+}
+else
+{
+var fillIn = document.forms[0].searcharg;
+fillIn.value = "";
+}
+}
+
+//-->
+</SCRIPT>
+
+</HEAD>
+ <body style="background-color: #DDE4E9" onLoad="document.forms[0].searcharg.focus()";>
+ 
+ <div id="container">
+ 
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/" id="currentsubPage"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S6/"><font>View
+ Your Record</font></a></li></ul></div>
+ 
+ <div><div id="content">
+
+
+<h2>Books & Periodicals</h2>
+<br>
+ <FORM METHOD=GET ACTION=/search/a?a> <SELECT
+ NAME=searchscope> <OPTION VALUE=6>Books & Periodicals</SELECT>
+ <SELECT NAME=searchtype onchange="addInstructorName()">
+ <OPTION VALUE=t>TITLE
+ <OPTION VALUE=a>AUTHOR
+ <OPTION VALUE=d>SUBJECT
+ <OPTION VALUE=Y SELECTED>WORD
+ <OPTION VALUE=p>INSTRUCTOR
+ </SELECT>
+
+<INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="75" VALUE=""> </SELECT> <INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D"> <INPUT TYPE="SUBMIT" VALUE="GO!"> </FORM>
+
+<h3>Search Options</h3>
+
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0>
+<TR>
+<TD><a href="/search~S6/a">Author Search</a></TD>
+<TD><a href="/search~S6/i">Number Search</a></TD>
+</TR>
+<TR><TD><a href="/search~S6/t">Title Search</a></TD>
+<TD><a href="/search~S6/c">Call Number Search</a></TD>
+</TR>
+<TR><TD><a href="/search~S6/q">Author + Title Search</a></TD>
+<TD><a href="/search~S6/d">Subject Search</a></TD>
+</TR>
+
+<TR><TD><a href="/search~S6/s">Journal Title Search</a></TD>
+
+<TD><a href="/search~S6/X">Advanced Search</a></TD>
+</TR>
+
+
+</TABLE>
+
+<div><div id="footer">
+	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
+	Telephone 314.655.5252
+	
+	<div id="copyright">
+		&copy; 2009 Saint Louis Art Museum
+</div>
+</div></div>
+
+
+</div> </div> </div>
+
+ </body> </HTML>
