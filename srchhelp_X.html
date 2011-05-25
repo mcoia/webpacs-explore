@@ -1,165 +1,508 @@
-<html>
-
-<head>
-<title>SLRLC Advanced Search</title>
-
-</head>
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
-<DIV ALIGN="center">
-
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<!--{patron}-->
-<P>
-</TR>
-
-<TR>
-<TD COLSPAN=3>
-
-<IMG SRC="/screens/iiilogo.gif" WIDTH=70 HEIGHT=73 ALT="" BORDER="0" 
-ALIGN="left"><IMG SRC="/screens/slrlc.gif" ALT="" 
-BORDER="0">
-<BR>
-<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" 
-ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
-<TD>
-<font size=+1 color=green face="arial">Catalog Options</font><p>
-<A HREF="/"><font face="arial" color=blue>Home
-</A><BR><br>
-<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
-Consortium Information</A></font><BR><br>
-<!--<A HREF="/suggest/"><font face="arial" color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font face="arial" color=blue>Books to 
-Acquire</A></font><BR>
-<A HREF="/ftlist/"><font face="arial" color=blue>Featured 
-Lists</font></A><BR>-->
-<A HREF="/patroninfo/"><font face="arial" color=blue>
-View Your Record</font></A><BR>
-</TD>
-</TR>
-</TABLE>
-
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=350 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="center" ALIGN="center">
-<CENTER>
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-
-<!--{msg}-->
-<TD ALIGN="left" VALIGN="top">
-<TABLE BORDER=0 CELLPADDING=9 ALIGN="center" BGCOLOR="FFF8DC">
-<TR><TD ALIGN=center colspan=2>
-<FORM ACTION=/search/X METHOD=GET>
-Type the <b>WORD(S)</b> you want, then click Submit Search<br>
-<!--{search}-->
-</TD>
-</TR>
-<TR><TD>
-<!--{lang}-->
-</TD>
-<TD>
-<!--{mattype}-->
-</TD></TR>
-<TR><TD ALIGN=center>
-<!--{branch}-->
-<BR></TD>
-<TD>
-<!--{publish}-->
-<TR><TD ALIGN=center colspan=2>
-<!--{DOCDATE}-->
-</TD></TR>
-<TR><TD ALIGN=center colspan=2>
-<!--{sort}-->
-<!--{submit}-->
-</FORM></TD></TR></TABLE>
-<p>
-<center>
-<A HREF="/search/Y"><IMG SRC="/screens/simple.gif" BORDER=0 ALT="[SIMPLE 
-SEARCH]"></a>&nbsp;
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" BORDER=0 ALT="[START 
-OVER]"></A>
-</center>
-</TABLE>
-</TR>
-<TR>
-<TD COLSPAN=3>
-<p>
-<TABLE CELLPADDING=3 CELLSPACING=2 WIDTH="100%">
-<TR>
-<TH WIDTH=10%></TH>
-<TH WIDTH=40%>Type one or more <b>DISTINCTIVE WORDS</B>, then click 
-<b>Search</b></TH>
-
-<TH WIDTH=50%>EXAMPLES</TH></TR>
-<TR>
-<TD WIDTH=100><b>ADJACENCY</b></TD>
-<TD BGCOLOR="#FFF8DC"><FONT SIZE=-1>
-Multiple words are searched together as one phrase.</FONT></TD>
-<TD BGCOLOR="#99CCCC"><TT><font face="Times New Roman">Louisiana Purchase 
-Exposition</font></TT></TD>
-<TR>
-<TD WIDTH=100><b>TRUNCATION</b></TD><TD BGCOLOR="#FFF8DC"><FONT SIZE=-1>
-Words may be right-hand truncated using an asterisk. Use a single asterisk * 
-to
-truncate from 1-5 characters. Use a double asterisk ** for open-ended 
-truncation
-.</FONT></TD>
-<TD BGCOLOR="#99CCCC">&nbsp;<p><TT><font face="Times New Roman">Landsca* 
-archit**
-</font>
-
-</TT>
-</p>
-<p>&nbsp;</TD>
-<TR>
-<TD WIDTH=100><b>OPERATORS</b></TD><TD BGCOLOR="#FFF8DC"><FONT SIZE=-1>
-Use &quot;AND&quot;&nbsp; to search multiple words that do not occur as a 
-phrase:</FONT><p><FONT SIZE=-1>
-Use &quot;OR to search for the occurrence of either of multiple terms. 
-Parentheses group words together when using Boolean operators:</FONT></p>
-<p><FONT SIZE=-1>
-Use &quot;AND NOT&quot; to exclude words: </FONT></TD>
-<TD BGCOLOR="#99CCCC"><FONT SIZE=-1>Lion and 
-valley&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp; Catlin and 1972<p>(prince or prinz) 
-and maximilian</p>
-<p>&nbsp;<FONT SIZE=-1></p>
-<p>Louisiana purchase and not exposition</TD>
-<TR>
-<TD WIDTH=100><b>PROXIMITY</b></TD><TD BGCOLOR="#FFF8DC"><FONT SIZE=-1>
-Use &quot;near&quot; to specify words close to each other, in any
-order. Use &quot;within #&quot; to specify terms which occur within # words 
-of
- each other in the record.</FONT></TD>
-<TD BGCOLOR="#99CCCC"><FONT SIZE=-1>Missouri near university
-<p>Missouri within 5 thesis</TT></TD>
-<TR>
-<TD WIDTH=100><b>FIELDS</b></TD><TD BGCOLOR="#FFF8DC"><font size="-1">Use 
-field 
-abbreviations specify fields to search. Available fields 
-are&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
-sp;&nbsp; 
-a: (author), t: (title), s: 
-(subject),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-and n: (note.) </font></TD>
-<TD BGCOLOR="#99CCCC"><FONT SIZE=-1>(a:faherty) and (s:shaw)</TT><br>
-&nbsp;</TD></TR>
-</TABLE>
-
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-<!--<IMG SRC="/screens/botlogo.gif">-->
-</DIV>
-</body>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Version 2003.08.15 -->
+<head>
+<title>Millennium Web Catalog</title>
+<meta http-equiv="Content-Type" content="text/html" />
+<link rel="stylesheet" href="/screens/styles.css" type="TEXT/CSS" />
+
+<script type="text/javascript" language="JavaScript1.3">
+<!--
+//  IMPORTANT NOTE: The following Javascript functions are provided for example purposes only.
+//  Unless you have experience working with Javascript, please refer to your local technical
+//  resources for assistance with modification.
+//  If many of your patrons use an out of date browser (such as Netscape 4.7) with incomplete support
+//  for Javascript, you may wish to use srchhelp_X_nojavascript.html instead. Simply rename this file
+//  srchhelp_X_javascript.html and then rename that file srchhelp_X.html.
+// -->
+
+<!-- Hide the JavaScript from browsers which do not understand SCRIPT tag
+
+<!-- Initialize arrays used in following functions -->
+var searchType = new Array();
+var searchName = new Array();
+var searchValue = new Array();
+var limitType = new Array();
+var limitName = new Array();
+var limitValue = new Array();
+
+function processLimit()
+<!-- version 1 : January 22, 2003 -->
+<!--
+// This function is called by the submitSearch function.
+// This function processes all limit form elements in the current page.
+// Any form element used to apply a limit to the search entered by the user is 
+// considered a limit form element for the purpose of this function.
+// Innovative recommends always using tokens to insert limit form elements into HTML. 
+// For more information on tokens see the User Manual or http://csdirect.iii.com .
+// All limit form elements must appear contiguously within the HTML and must be enclosed
+// in the following hidden form tags.
+// The user must include the following hidden form element before the first 
+// limit form element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="startLimit">
+// The following hidden form element must be included after the last limit form
+// element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="endLimit">
+// -->
+{
+var limitWorkString = "";
+for (var i = 0; i < limitName.length; i++)
+{
+<!-- 
+//  The following statement processes date form elements.
+//  Date limits must be processed differently since they contain text form elements.
+// -->
+if (limitName[i] == "Da" || limitName[i] == "Db") {limitWorkString += "&" + limitName[i] + "=" + limitValue[i]; continue;}
+<!-- The following statement processes all selection list form elements. --> 
+if (limitValue[i] != 0) {limitWorkString += "&" + limitName[i] + "=" + limitValue[i];}
+}
+return limitWorkString;
+}
+
+
+function processSearch()
+<!-- version 1 : January 22, 2003 -->
+<!--
+// This function is called by the submitSearch function.
+// This function processes field limit, search text, and boolean form elements in the current page.
+// Any form element which allows the user to choose a field limit, type search text, or choose
+// a boolean operator is considered a search form element for the purpose of this function.
+// All search form elements must appear contiguously within the HTML and must be enclosed
+// in the following hidden form tags.
+// The user must include the following hidden form element before the first search
+// form element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="startSearch">
+// The following hidden form element must be included after the last search form
+// element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="endSearch">
+// -->
+{
+var searchWorkString = "";
+for (var i = 0; i < searchName.length; i++)
+{
+if (searchName[i].indexOf("fieldLimit") != -1)
+{
+if ((searchValue[i] != 0) && (searchValue[i+1].length != 0))
+{
+<!-- NOTE: This statement places parentheses around the input typed by the user. -->
+searchWorkString += searchValue[i] + "(" + searchValue[i+1] + ")";
+i++;
+}
+continue;
+}
+else if (searchName[i].indexOf("searchText") != -1)
+{
+if (searchValue[i].length != 0)
+{
+<!-- NOTE: This statement places parentheses around the input typed by the user. -->
+searchWorkString += "(" + searchValue[i] + ")";
+}
+continue;
+}
+else if (searchName[i].indexOf("boolean") != -1)
+{
+if ((searchType[i+2] == "text") && (searchValue[i+2].length != 0))
+{
+searchWorkString += searchValue[i];
+}
+continue;
+}
+else
+{
+continue;
+}
+}
+return searchWorkString;
+}
+
+
+function submitSearch(searchForm)
+<!-- version 1 : January 22, 2003 -->
+<!--
+// This function is called when the user clicks the submit button.
+// This function processes all form elements in the form named search and 
+// populates the arrays searchType, searchName, searchValue, limitType, limitName, limitValue
+// with data. It then passes the data to the functions processSearch and processLimit; please 
+// see the description of those functions for important information on the hidden form elements
+// within the form named search which are required for this function to work properly.
+// Finally, this function replaces the current page with a URL constructed based on the user's
+// form input.
+// -->
+{
+var isSearch = 0;
+var isLimit = 0;
+  
+var searchString = "";
+var limitString = "";
+  
+var searchArrayCounter = 0;
+var limitArrayCounter = 0; 
+   
+for (var i = 0; i < searchForm.elements.length; i++)
+{
+if (searchForm[i].name.indexOf("startSearch") != -1) {isSearch = 1; isLimit = 0; continue;}
+else if (searchForm[i].name.indexOf("startLimit") != -1) {isSearch = 0; isLimit = 1; continue;}
+else if (searchForm[i].name.indexOf("endSearch") != -1) {isSearch = 0; isLimit = 0; continue;}
+else if (searchForm[i].name.indexOf("endLimit") != -1) {isSearch = 0; isLimit = 0; continue;}
+else
+{
+if (isSearch == 1)
+{
+searchName[searchArrayCounter] = searchForm[i].name;
+if (searchForm[i].type == "select-one") {searchType[searchArrayCounter] = "select-one"; searchValue[searchArrayCounter] = searchForm[i].options[searchForm[i].selectedIndex].value; searchArrayCounter++; continue;}
+else if (searchForm[i].type == "text") { searchType[searchArrayCounter] = "text"; searchValue[searchArrayCounter] = searchForm[i].value; searchArrayCounter++; continue;}
+else {searchType[searchArrayCounter] = ""; searchValue[searchArrayCounter] = ""; searchArrayCounter++; continue;}
+}
+else if (isLimit == 1)
+{
+limitName[limitArrayCounter] = searchForm[i].name;
+if (searchForm[i].type == "select-one") {limitType[limitArrayCounter] = "select-one"; limitValue[limitArrayCounter] = searchForm[i].options[searchForm[i].selectedIndex].value; limitArrayCounter++; continue;}
+else if (searchForm[i].type == "text") {limitType[limitArrayCounter] = "text"; limitValue[limitArrayCounter] = searchForm[i].value; limitArrayCounter++; continue;}
+else {limitType[limitArrayCounter] = ""; limitValue[limitArrayCounter] = ""; limitArrayCounter++; continue;}		 
+}
+else
+{
+continue;
+}
+}
+}
+searchString = processSearch();   
+limitString = processLimit();
+	
+searchString =encodeURI(searchString) 
+window.location.href = "http://" + location.host + "/search/X?" + searchString + limitString;
+return false;
+}
+
+function modifySearch()
+<!-- version 1 : January 22, 2003 -->
+<!--
+// This function is called any time the current page loads with a URL containing the string
+// ?NOSRCH= in it. This will be the case if the user has clicked the OPAC's "Modify Search" button.
+// This function takes the URL of the current page and extracts all data after ?NOSRCH= into the 
+// array modifyString3. It then passes that information to the function parseSearch.
+// -->
+{
+var modifyString1 = unescape(location.search);
+var modifyString2 = new Array();
+var modifyString3 = new Array();
+var modifyString2 = modifyString1.split("&");
+var modifyString3 = modifyString2[0].split("?NOSRCH=");
+parseSearch(modifyString3[1]);
+}
+
+function parseSearch(str)
+<!-- version 1 : January 22, 2003 -->
+<!--
+// This function is called by the function modifySearch.
+// This function takes the relevant portion of the URL of the current page and attempts to place
+// all data within that URL back into the appropriate form elements on the page within the 
+// form named search. If the function can't find appropriately named form elements into which
+
+// to place data, it puts everything into the text element named searchText1 in the form named search.
+// -->
+{
+var temp = "";
+var elementName = "";
+var fieldLimitCounter = 1;
+var searchTextCounter = 1;
+var booleanCounter = 1;
+
+for (var i = 0; i < str.length; i++)
+{
+if (str.charAt(i) == ":")
+{
+elementName = "fieldLimit" + fieldLimitCounter;
+temp = str.charAt(i-1) + str.charAt(i);
+for (var m = 0; m < document.search.length; m++)
+{
+if (document.search.elements[m].name == elementName)
+{
+for (var n = 0; n < document.search.elements[m].length; n++)
+{
+if (document.search.elements[m].options[n].value == temp) {document.search.elements[m].options[n].selected = true; fieldLimitCounter++; break;}
+else {continue;}
+}
+break;
+}
+else
+{
+continue;
+}
+}
+continue;
+}
+else if (str.charAt(i) == "(")
+{
+temp = "";
+elementName = "searchText" + searchTextCounter;
+for (var m = 0; m < document.search.length; m++)
+{
+if (document.search.elements[m].name == elementName)
+{
+for (i = i + 1; i < str.length; i++)
+{
+if (str.charAt(i) == ")") {i++; break;}
+else {temp += str.charAt(i); continue;}
+}
+searchTextCounter++;
+document.search.elements[m].value = temp;
+break;
+}
+else
+{
+continue;
+}
+}
+continue;
+}
+else
+{
+temp = "";
+elementName = "boolean" + booleanCounter;
+for (i = i; i < str.length; i++)
+{
+if (str.charAt(i+1) == ":"  || str.charAt(i+1) == "(") {break;}
+else {temp += str.charAt(i); continue;}
+}		 
+if (temp.length > 0)
+{
+for (var m = 0; m < document.search.length; m++)
+{
+if (document.search.elements[m].name == elementName)
+{
+for (var n = 0; n < document.search.elements[m].length; n++)
+{
+if (document.search.elements[m].options[n].value.indexOf(temp) != -1)
+{
+document.search.elements[m].options[n].selected = true;
+booleanCounter++;
+temp = "";
+break;
+}
+else {continue;}
+}
+fieldLimitCounter = booleanCounter;
+searchTextCounter = booleanCounter;
+break;
+}
+else
+{
+continue;
+}
+}
+if (temp.length > 0) {document.search.searchText1.value = temp;}
+continue;
+}
+else
+{
+continue;
+}
+}	   
+}
+}
+
+function gotoDestination(path,port) {
+  if (port == null) port = 80;
+	var url = "http://" + location.hostname + ":" + port + path;
+	window.open(url);
+}
+
+function GoBack() {
+  history.back()
+}
+//-->
+</script></head>
+
+<body onLoad="if (location.href.indexOf('NOSRCH') != -1) modifySearch(document.location.search); document.search.searchText1.focus();">
+<!--Begin the top logo table-->
+<!--TIP: this data should match the data used by the TOPLOGO web option-->
+<!--You will need to make any changes to all static HTML pages and to toplogo.html.-->
+<!--The Web server will need to be restarted for changes to toplogo.html to take effect.-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr> 
+<td bgcolor="#0132A7" colspan="2"><img src="/screens/spacer.gif" height="2" width="1" alt="" /></td>
+</tr>
+<tr valign="middle"> 
+<td width="*" align="left" class="pageNavArea"> 
+<!--Beginning navigation bar at the top of the page-->
+<a href="/"><img src="/screens/home.gif" width="80" height="40" alt="Home" border="0" /></a><a href="/screens/help_index.html"><img src="/screens/help.gif" width="80" height="40" alt="Help" border="0" /></a> 
+<a href="/search"><img src="/screens/newsrch.gif" width="80" height="40" alt="New Search" border="0" /></a> 
+<!--End of the top navigation bar-->
+</td>
+<td width="209" align="right" class="pageNavArea"> 
+<!-- Beginning of library logo area -->
+<a href="/"><img src="/screens/logo.gif" width="166" height="25" border="0" alt="- Innovative Interfaces, Inc. -" /></a>&nbsp;<!-- End of library logo area -->
+</td>
+</tr>
+</table>
+<!--End the top logo table-->
+
+<br />
+
+<!--Begin the main content table-->
+<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
+<tr valign="top" class="pageMainArea">
+<td class="pageMainArea">&nbsp;
+<!--Beginning main page content-->
+<!-- This table is purely cosmetic. It's only cell has a background color which is visible in the cellspacing gaps of the content table nested in that cell. -->
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageNavArea"> 
+<!-- This table has the content -->
+<table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
+<tr> 
+<td colspan="3" class="pageMainArea"> <span class="pageMainAreaHeader">Advanced 
+Keyword Search</span> <a href="/search/Y"><img src="/screens/simplesearch.gif" width="80" height="40" border="0" align="absmiddle" /></a> 
+<br /> 
+<!--{msg}-->
+<br />
+Please fill in the boxes, select limits, and click Submit (or choose a <a href="/search/Y">Simple 
+Keyword Search</a>): 
+<!-- Note: if you use a character set other than utf-8, change the charset declaration in the enctype attribute below accordingly. -->
+<form action="javascript:submitSearch(this);" enctype="multipart/form-data: charset=utf-8" name="search" id="search" onsubmit="return submitSearch(this);">
+<input type="hidden" name="startSearch" />
+<select name="fieldLimit1">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">Author:</option>
+<option value="t:">Title:</option>
+<option value="d:">Subject:</option>
+<option value="N:">Note:</option>
+</select>
+<input maxlength="75" size="35" name="searchText1" />
+<select name="boolean1">
+<option value="+and+" selected="selected">And</option>
+<option value="+and+not+">And not</option>
+<option value="+or+">Or</option>
+</select>
+<br />
+<select name="fieldLimit2">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">Author:</option>
+<option value="t:">Title:</option>
+<option value="d:">Subject:</option>
+<option value="N:">Note:</option>
+</select>
+<input maxlength="75" size="35" name="searchText2" />
+<select name="boolean2">
+<option value="+and+" selected="selected">And</option>
+<option value="+and+not+">And not</option>
+<option value="+or+">Or</option>
+</select>
+<br />
+<select name="fieldLimit3">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">Author:</option>
+<option value="t:">Title:</option>
+<option value="d:">Subject:</option>
+<option value="N:">Note:</option>
+</select>
+<input maxlength="75" size="35" name="searchText3" />
+<select name="boolean3">
+<option value="+and+" selected="selected">And</option>
+<option value="+and+not+">And not</option>
+<option value="+or+">Or</option>
+</select>
+<br />
+<select name="fieldLimit4">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">Author:</option>
+<option value="t:">Title:</option>
+<option value="d:">Subject:</option>
+<option value="N:">Note:</option>
+</select>
+<input maxlength="75" size="35" name="searchText4" />
+<input type="hidden" name="endSearch" />
+<br />
+<br />
+<input type="hidden" name="startLimit" />
+Limit to: 
+<!--{scope}-->
+<!--{branch}-->
+<!--{lang}-->
+<!--{DOCDATE}-->
+<!--{publish}-->
+<!--{mattype}-->
+<!--{sort}-->
+<input type="hidden" name="endLimit" />
+<p> 
+<input type="submit" value="Submit" name="submit" />
+</p>
+</form></td>
+</tr>
+<tr> 
+<td colspan="3" class="pageNavAreaText"><div align="center">Search Tips</div></td>
+</tr>
+<tr> 
+<td class="pageMainArea">&nbsp;</td>
+<td class="pageMainArea">&nbsp;</td>
+<td class="pageMainArea">Examples:</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">Adjacency</td>
+<td align="left" class="pageMainArea">Multiple words are searched together as 
+one phrase.</td>
+<td align="left" class="pageMainArea">United States supreme court</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">Truncation</td>
+<td align="left" class="pageMainArea">Words may be right-hand truncated using 
+an asterisk.</td>
+<td align="left" class="pageMainArea">environment* polic*</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">Operators</td>
+<td align="left" class="pageMainArea"><p>Use "and" or "or" to specify multiple 
+words in any field, any order. Use "and not" to exclude words.</p></td>
+<td align="left" class="pageMainArea">(annotated bibliography) and child*<br /> 
+<br />
+(alaska or canada) and (adventure and not vacation)</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">&nbsp;</td>
+<td align="left" class="pageMainArea">Note that you can use these clauses in combination 
+with selections from the operator pulldown menu (as indicated in brackets).</td>
+<td align="left" class="pageMainArea">History [And]<br/>
+Naples or Napoli [And]<br/> Borgia or Alexander</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">Proximity</td>
+<td align="left" class="pageMainArea">Use "near" to specify words close to each 
+other, in any order.</td>
+<td align="left" class="pageMainArea">California near university</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">Field limits</td>
+<td align="left" class="pageMainArea">Specify fields to search using the Field 
+pulldown menu (as indicated in brackets).</td>
+<td align="left" class="pageMainArea">[Author] Doctorow</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!--End of main page content-->
+</td>
+</tr>
+</table>
+<!--End the main content table-->
+
+<br />
+<!--Begin the bottom logo table-->
+<!--TIP: this data should match the data used by the BOTLOGO web option-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr valign="middle"> 
+<td align="center" class="pageNavArea"> 
+<!--Beginning text-only navigation bar at the bottom of the page-->
+<a href="/" class="pageNavAreaText">Home</a> | <a href="/screens/help_index.html" class="pageNavAreaText">Help</a> 
+<!--End of bottom navigation bar-->
+</td>
+</tr>
+<tr> 
+<td bgcolor="#0132A7"><img src="/screens/spacer.gif" height="1" width="1" alt="" /></td>
+</tr>
+</table>
+<!--End the bottom logo table--> 
+<p align="center" class="InnovativeCredit">Powered by <a href="http://www.iii.com" target="_blank">Innovative Interfaces, Inc.</a> 2003</p>
+</body>
 </html>

@@ -2,29 +2,29 @@
 <html>
 <head>
 <title>Saint Louis Art Museum Slide Library Call Number Search</title>
-
+<link href="/screens/css9.css" type="text/css" rel="stylesheet"></link>
 </head>
 
- <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
+ <body style="background-color: #DDE4E9">
  
  <div id="container">
  
  <div>
- <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
- </div></div>
+ <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
+ Louis Art Museum">
+ </div>
+ </div>
  
  <div ID="navigation">
  <ul>
- <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
- <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
-<li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
+ <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
  <ul>
- <li><a href="/search~S3/"><font>All Collections</font></a></li>
- <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
- <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
- <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
- <li><a href="/search~S8/"><font>Archives</font></a></li>
- <li><a href="/search~S9" id="currentsubPage"><font>Slide Library</font></a></li>
+ <li><a href="/search~S6/"><div>Books & Periodicals</div></a></li>
+ <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
+ <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
+ <li><a href="/search~S8/"><div>Archives</div></a></li>
+ <li><a href="/search~S9" id="currentsubPage"><div>Slide Library</div></a></li>
 
 
  </ul>
@@ -32,7 +32,9 @@
  
  
  <li><a
- href="/patroninfo~S9/"><font>View Your Record</font></a></li>
+ href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library
+ Information</div></a></li><li><a
+ href="http://slrlc.org/patroninfo/"><div>View Your Record</div></a></li>
  </ul>
  </div>
  
@@ -41,31 +43,21 @@
 
 
 <h2>Slide Library</h2>
+<p id="firstPara">
+Type the <B>CALL NUMBER</B> for the Slide you want, then press <b>&lt;Enter&gt;</b>
 
-<br />
-<div id="menuBar">
-<a HREF="/search~S9/a">ARTIST</a>
-<a HREF="/search~S9/t">TITLE</a>
-<a HREF="/search~S9/q">ARTIST + TITLE</a>
-<a HREF="/search~S9/i">OBJECT NO.</a>
-<font>CALL NO.</font>
-<a HREF="/search~S9/Y">WORD</a>
-</div>
-
-<p>
-Type the <B>CALL NUMBER</B> for the Slide you want, then press the [<b>Enter</b>] key or click <b>Submit Search</b>
+or click <b>Submit Search</b>
 </p>
 <br>
 <FORM METHOD=GET>
-<INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="45" SIZE="45" ALIGN=CENTER> 
-&nbsp;
+<INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="35" SIZE="35" ALIGN=CENTER> 
 <INPUT TYPE=SUBMIT VALUE="Submit Search">
 </FORM>
 
-
+<a href="/search/"><img src="/screens/newsrch.gif" width="86" height="26" align="center" alt="" border="0" alt="[START OVER]"></a>
 
 <p>
-Use right-hand truncation, typing as much of the call number as you like, for example:
+Type as much or as little of the Slide <b>CALL NUMBER</b> as you want, for example:
 </p>
 
 <div class="indent">
@@ -77,7 +69,7 @@ Use right-hand truncation, typing as much of the call number as you like, for ex
 TIPS:
 </p>
 <div class="indent">
-Entering the first 5 digits of the call number (e.g. 12279), which is the Slide accession number, is sufficient
+Typing the first 5 digits of the call number (e.g. 12279), which is the Slide accession number, is sufficient
 </div>
 </UL>
 

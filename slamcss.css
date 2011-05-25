@@ -43,9 +43,6 @@ td.browseHeaderYear {color: #FFFFFF; font-weight: bold; text-align: center; vert
 td.browseHeaderMark {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
 td.browseEntry { background-color: #FFFFFF; }
 
-table.url { width: 100%; font-weight: normal; font-family: Times, serif; color: #85A3B8; }
-td.urlLabel { width: 20%; }
-td.urlText { font-size: 85%; letter-spacing: -0.3px; font-family: Courier; }
 
 td.browseSubEntryData  { background-color: #FFFFFF; color: #4E5C65; }
 td.browseSubEntryData a:link, td.browseSubEntryData a:active, td.browseSubEntryData a:visited { text-decoration: none; color: #4E5C65; }
@@ -72,13 +69,10 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 .bibItems { font-family: Times, serif; }
 .bibItemsEntry a:link, .bibItemsEntry a:active, .bibItemsEntry a:visited { text-decoration: underline; color: #1F1F1F; } 
 .bibItemsEntry a:hover { color: #0000ff; }
-.bibInfo { font-family: Times, serif; }
+.bibInfo { font-family: Times, serif;}
 .bibInfo a:link, .bibInfo a:active, .bibInfo a:visited { text-decoration: underline; } 
 .bibInfoData a:link, .bibInfoData a:active, .bibInfoData a:visited  { text-decoration: underline; color: #1F1F1F; }
 .bibInfoData a:hover { color: #0000ff; }
-
-/*The following entry overrides the font color set in the LINK856TEXT WWWOption (by MoBot?; Grrr ...) ;*/
-.bibLinks font { font-family: Times, serif; color: #000000; }
 
 
 /*-- Navigation Items... ------------------------ */
@@ -327,7 +321,6 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 
 #menuBar a:hover {
 	text-decoration: underline;
-	color: #577993;
 	padding-right: 5px;
 	padding-left: 5px;
 }
@@ -367,12 +360,12 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 #content td a:active, 
 #content td a:visited {
 	 text-decoration: none;
-     color: #4E5C65;
+     color: #577993;
  }
  
 #content td a:hover {
 	text-decoration: underline;
-	color: #577993;
+	color: #4E5C65;
 }
 
 #content p a:link,
@@ -442,7 +435,7 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 
 
 #footer {
-	padding-top: 90px;
+	padding-top: 60px;
 
 }
 
@@ -470,49 +463,4 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 
 #footer #copyright a:hover {
 	color: #4E5C65;
-}
-
-#alphanavigation ul {
-     font-family: Times,serif;
-     padding: 0 0 0 10px;
-	 font-size: 20px;
-	 letter-spacing: 6px;
-     text-align: center;
-}
-
-#alphanavigation li {
-     margin: 0;
-     display: inline;
-     list-style: none;
-}
-
-#alphanavigation a {
-     text-decoration: none;
-}
-
-#artistnames {
-     font-size: 16px;
-	 line-height: 130%;
-	 color: black;
-	 font-family: Times, serif;
-	 margin-left: 12px;
-}
-
-#artistnames #seeref {
-     text-indent: 15px;
-}
-
-#artistnames H2 {
-	font-family: Times, serif;
-	color: #577993;
-	font-size: 24px;
-	font-weight: bold;
-	padding-top: 10px;
-	margin-bottom: 4px;
-	margin-left: -8px;
-}
-
-#artistnames H2 a {
-     text-decoration: none;
-	 color: #577993;
 }

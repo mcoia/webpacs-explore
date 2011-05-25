@@ -1,102 +1,136 @@
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Version 2003.08.15 -->
 <head>
-<title>Millennium AltaVista Style Search</title>
-
+<title>Millennium Web Catalog</title>
+<meta http-equiv="Content-Type" content="text/html" />
+<link rel="stylesheet" href="/screens/styles.css" type="TEXT/CSS" />
 </head>
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
-<DIV ALIGN="center">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<!--{patron}-->
-<P>
-</TR>
+<body onLoad="document.forms[0].elements[0].focus();">
+<!--Begin the top logo table-->
+<!--TIP: this data should match the data used by the TOPLOGO web option-->
+<!--You will need to make any changes to all static HTML pages and to toplogo.html.-->
+<!--The Web server will need to be restarted for changes to toplogo.html to take effect.-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr> 
+<td bgcolor="#0132A7" colspan="2"><img src="/screens/spacer.gif" height="2" width="1" alt="" /></td>
+</tr>
+<tr valign="middle"> 
+<td width="*" align="left" class="pageNavArea"> 
+<!--Beginning navigation bar at the top of the page-->
+<a href="/"><img src="/screens/home.gif" width="80" height="40" alt="Home" border="0" /></a><a href="/screens/help_index.html"><img src="/screens/help.gif" width="80" height="40" alt="Help" border="0" /></a> 
+<a href="/search"><img src="/screens/newsrch.gif" width="80" height="40" alt="New Search" border="0" /></a> 
+<!--End of the top navigation bar-->
+</td>
+<td width="209" align="right" class="pageNavArea"> 
+<!-- Beginning of library logo area -->
+<a href="/"><img src="/screens/logo.gif" width="166" height="25" border="0" alt="- Innovative Interfaces, Inc. -" /></a>&nbsp;<!-- End of library logo area -->
+</td>
+</tr>
+</table>
+<!--End the top logo table-->
 
-<TR>
-<TD COLSPAN=3>
+<br />
 
-<IMG SRC="/screens/millogo.gif" WIDTH=100 HEIGHT=82 ALT="" BORDER="0" ALIGN="left"><CENTER><IMG SRC="/screens/logo.gif" WIDTH=400 HEIGHT=79 ALT="" BORDER="0"></CENTER>
-<BR>
-<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
-<TD>
-<font size=+1 color=green face="arial">Catalog Options</font><p>
-<A HREF="/"><font face="arial" color=blue>Home
-</A><BR>
-<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
-Library Information</A></font><BR>
-<A HREF="/suggest/"><font face="arial" color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font face="arial" color=blue>Books to Acquire</A></font><BR>
-<A HREF="/ftlist/"><font face="arial" color=blue>Featured Lists</font></A><BR>
-<A HREF="/patroninfo/"><font face="arial" color=blue>
-View Your Record</font></A><BR>
-</TD>
-</TR>
-</TABLE>
-
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=250 ALT="LINE" BORDER="0" ALIGN="top"></TD>
-<TD VALIGN="center" ALIGN="center">
-<CENTER>
-
+<!--Begin the main content table-->
+<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
+<tr valign="top" class="pageMainArea">
+<td class="pageMainArea">&nbsp; 
+<!--Beginning main page content-->
+<span class="pageMainAreaHeader">AltaVista-style Search</span> <a href="/search/X"><img src="/screens/advancedsearch.gif" width="80" height="40" border="0" align="absmiddle" /></a><a href="/search/Y"><img src="/screens/simplesearch.gif" width="80" height="40" border="0" align="absmiddle" /></a><br />
+<form action="/search/Z" method="get">
+<!-- This table is purely cosmetic. It's only cell has a background color which is visible in the cellspacing gaps of the content table nested in that cell. -->
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="pageNavArea"> 
+<!-- This table has the content -->
+<table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
+<tr> 
+<td colspan="3" class="pageMainArea"> 
 <!--{msg}-->
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-<TD ALIGN="left" VALIGN="top">
-Type the <B>WORD(S)</B> you want, then click <b>Search</b>
-<FORM ACTION=/search/Z>
+<br />
+Type the keyword(s) in the box below then click the Search button to perform the 
+search.<br /> 
 <!--{search}-->
-<INPUT TYPE=HIDDEN NAME=SORT VALUE=S>
+<!--{scope}-->
 <!--{submit}-->
-</FORM>
-<A HREF="/search/X"><IMG SRC="/screens/advanced.gif" BORDER=0 ALT="[ADVANCED SEARCH]"></a>&nbsp;
-<A HREF="/search/Y"><IMG SRC="/screens/simple.gif" BORDER=0 ALT="[SIMPLE SEARCH]"></a>
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" BORDER=0 ALT="[START OVER]"></A>
-<p>
-</TR>
-</TABLE>
-</TABLE>
+</td>
+</tr>
+<tr> 
+<td colspan="3" class="pageMainArea">&nbsp;</td>
+</tr>
+<tr> 
+<td colspan="3" class="pageNavAreaText"><div align="center">Search Tips</div></td>
+</tr>
+<tr> 
+<td class="pageMainArea">&nbsp;</td>
+<td class="pageMainArea">&nbsp;</td>
+<td class="pageMainArea">Examples:</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText"><p>AltaVista-style Adjacency</p></td>
+<td align="left" class="pageMainArea"> To search multiple words together as one 
+phrase, enclose in quotes. By default searches will return records containing 
+any of the search terms entered (default OR).</td>
+<td align="left" class="pageMainArea">&quot;global warming&quot; (finds only records 
+containing the words &quot;global warming&quot; as a phrase)<br /> <br />
+pollution cancer (finds any record containing &quot;pollution&quot; and any record 
+containing &quot;cancer&quot;)</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">AltaVista-style Truncation</td>
+<td align="left" class="pageMainArea"> Words may be right-hand truncated using 
+an asterisk. Use a single asterisk * to truncate from 1-5 characters. Use a double 
+asterisk ** for open-ended truncation.</td>
+<td align="left" class="pageMainArea">populat*<br />
+dost**</td>
+</tr>
+<tr> 
+<td class="pageNavAreaText">AltaVista-style Operators</td>
+<td align="left" class="pageMainArea"> These do not work the same as Boolean operators; 
+they only apply to one word and they do not modify the relationship between words. 
+Use a + to require a word be present, use a - to exclude a word, if not specified 
+the assumed operator is OR</td>
+<td align="left" class="pageMainArea">
+nuclear +family (finds any record with nuclear AND family, and any record 
+with family)<br />
+<br />
++nuclear +family (finds any record with nuclear AND family)<br />
+<br />
+nuclear -family (finds any record with nuclear AND NOT family, and any record 
+without family)<br />
+<br />
++nuclear -family (finds any record with nuclear AND NOT family)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+<!--End of main page content-->
+</td>
+</tr>
+</table>
+<!--End the main content table-->
 
-<TABLE COLSPAN=3 CELLPADDING=10 CELLSPACING=2 bgcolor="#FFFFFF" WIDTH="100%">
-<TR>
-<TH WIDTH=10%></TH>
-<TH WIDTH=40%>Type in Words to search: </TH>
-<TH WIDTH=50%>EXAMPLES</TH></TR>
-<TR>
-<TD WIDTH=100><b>ADJACENCY</b></TD>
-<TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-To search multiple words together as one phrase, enclose in quotes. By default searches will return records containing any of the search terms entered (default OR). </FONT></TD>
-
-<TD BGCOLOR="#99CCFF"><TT>"global warming" (finds only records containing the words "global warming" as a phrase)<BR>
-pollution cancer (finds any record containing "pollution" and any record containing "cancer")
-
-</TD>
-<TR>
-<TD WIDTH=100><b>TRUNCATION</b></TD><TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-Words may be right-hand truncated using an asterisk. Use a single asterisk * to truncate from 1-5 characters. Use a double asterisk ** for open-ended truncation.</FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT>populat*
-<BR>
-dost**</TT></TD>
-<TR>
-<TD WIDTH=100><b>OPERATORS</b></TD><TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-These do not work the same as Boolean operators; they only apply to one word and they do not modify the relationship between words.  Use a + to require a word be present, use a - to exclude a word, if not specified the assumed operator is OR </FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT><UL><LI>nuclear +family (finds any record with nuclear AND family, and any record with family)<BR>
-<LI>+nuclear +family (finds any record with nuclear AND family)<BR><LI>nuclear -family (finds any record with nuclear AND NOT family, and any record without family) <BR><LI>+nuclear -family (finds any record with nuclear AND NOT family)</TD>
-</TT>
-</FONT>
-</TABLE>
-
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-<IMG SRC="/screens/botlogo.gif">
-</DIV>
+<br />
+<!--Begin the bottom logo table-->
+<!--TIP: this data should match the data used by the BOTLOGO web option-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr valign="middle"> 
+<td align="center" class="pageNavArea"> 
+<!--Beginning text-only navigation bar at the bottom of the page-->
+<a href="/" class="pageNavAreaText">Home</a> | <a href="/screens/help_index.html" class="pageNavAreaText">Help</a> 
+<!--End of bottom navigation bar-->
+</td>
+</tr>
+<tr> 
+<td bgcolor="#0132A7"><img src="/screens/spacer.gif" height="1" width="1" alt="" /></td>
+</tr>
+</table>
+<!--End the bottom logo table--> 
+<p align="center" class="InnovativeCredit">Powered by <a href="http://www.iii.com" target="_blank">Innovative Interfaces, Inc.</a> 2003</p>
 </body>
 </html>

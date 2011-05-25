@@ -2,36 +2,39 @@
 <html>
 <head>
 <title>Saint Louis Art Museum Slide Library Artist Search</title>
+<link href="/screens/css9.css" type="text/css" rel="stylesheet"></link>
 </head>
 
- <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
+ <body style="background-color: #DDE4E9">
  
  <div id="container">
  
  <div>
- <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
- </div></div>
+ <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
+ Louis Art Museum">
+ </div>
+ </div>
  
  <div ID="navigation">
  <ul>
-  <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
- <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
- <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
+ <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
  <ul>
- <li><a href="/search~S3/"><font>All Collections</font></a></li>
- <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
- <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
- <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
- <li><a href="/search~S8/"><font>Archives</font></a></li>
- <li><a href="/search~S9" id="currentsubPage"><font>Slide Library</font></a></li>
+ <li><a href="/search~S6/"><div>Books & Periodicals</div></a></li>
+ <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
+ <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
+ <li><a href="/search~S8/"><div>Archives</div></a></li>
+ <li><a href="/search~S9" id="currentsubPage"><div>Slide Library</div></a></li>
 
 
  </ul>
  </li>
  
  
-<li><a
- href="/patroninfo~S9/"><font>View Your Record</font></a></li>
+ <li><a
+ href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library
+ Information</div></a></li><li><a
+ href="http://slrlc.org/patroninfo/"><div>View Your Record</div></a></li>
  </ul>
  </div>
  
@@ -40,27 +43,15 @@
 
 
 <h2>Slide Library</h2>
-
-<br />
-<div id="menuBar">
-<font>ARTIST</font>
-<a HREF="/search~S9/t">TITLE</a>
-<a HREF="/search~S9/q">ARTIST + TITLE</a>
-<a HREF="/search~S9/i">OBJECT NO.</a>
-<a HREF="/search~S9/m">CALL NO.</a>
-<a HREF="/search~S9/Y">WORD</a>
-</div>
-
-<p>
-Type the <b>ARTIST</b> for the Slide you want, then press [<b>Enter</b>] key or click <b>Submit Search</b>
+<p id="firstPara">
+Type the <b>ARTIST</b> for the Slide you want, then press <b>&lt;Enter&gt;</b> or click <b>Submit Search</b>
 </p>
 <br>
 <FORM METHOD=GET>
-<INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="45" SIZE="45" ALIGN=CENTER>&nbsp;
+<INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="35" SIZE="35" ALIGN=CENTER>
 <INPUT TYPE=SUBMIT VALUE="Submit Search">
-
 </FORM>
-
+<a HREF="/search/"><img SRC="/screens/newsrch.gif" WIDTH=86 HEIGHT=26 ALIGN="center" ALT="" BORDER="0" ALT="[START OVER]"></a>
 <br>
 <p>
 Type the Artist's <b>LAST NAME first</b>, for example
@@ -71,12 +62,12 @@ Beckmann, Max
 </div>
    
  <p>
- You may also type the name of a firm, artists' group, or other organization, for example
+ You may also type the name of a museum or other organization, for example
  </p>
  <div class="indent">
- Emil Lange (Firm)<br>
+ Meissen Factory<br>
  University City Porcelain Works<br>
- Wiener Werkst&#228;tte
+Wiener Werkst&#228;tte
 </div>
 
 <div>

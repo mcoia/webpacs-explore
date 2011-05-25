@@ -1,0 +1,296 @@
+/*<!-- Version 2003.08.15 -->*/
+/* general appearance */
+/* See also Web options BODYPARAM */
+/* Stylesheet to use for dynamic Web pages */
+/* is set by Web option STYLESHEET */
+
+/* COLOR SCHEME (use find & replace to swap colors */
+/* light blue: B7C9F9 */
+/* medium blue: 3B6EE0 */
+/* dark blue: 0132A7 */
+/* very dark blue: 162A6D */
+
+BODY { background-color: white; font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;  font-style : normal; font-weight : normal; }
+
+TD { font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;  font-style : normal; font-weight : normal; }
+
+/*traditional link colors are suggested for better usability */
+A:LINK { color: #000099; }
+A:ACTIVE{ color: #993399; }
+A:VISITED { color: #993399;  } 
+A:HOVER  { color: #993399;  } 
+
+A.pageNavAreaText:LINK, A.pageNavAreaText:VISITED {  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #FFFFFF; text-decoration: none; font-weight: bold; background-color: #3B6EE0;  }
+
+A.pageNavAreaText:ACTIVE, A.pageNavAreaText:HOVER {  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #B7C9F9; text-decoration: none; font-weight: bold; background-color: #3B6EE0;  }
+
+A.pageNavBarButton:LINK, A.pageNavBarButton:VISITED { color: #000099; }
+
+A.pageNavBarButton:ACTIVE, A.pageNavBarButton:HOVER { color: #993399; }
+
+/* classes for static HTML pages */
+
+.pageNavBar { text-align: center; }
+
+.pageNavBarButton { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0132A7; background: #B7C9F9; text-align: left; ; font-weight: bold; text-decoration: none; border-style: none;  }
+
+.pageSearchArea { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #000000; background: #B7C9F9; text-align: left;  } 
+
+.pageDataArea { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #000000; background: #B7C9F9; text-align: left;  }
+
+.pageDataAreaHeading { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #FFFFFF; background: #3B6EE0; font-weight: bold; font-size: larger; text-align: left;  }
+
+.pageInfoAreaHeader { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0132A7; background: #B7C9F9; font-size: larger; font-weight: bolder; text-align: left;  }
+
+.pageInfoArea { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #000000; background: #B7C9F9; text-align: left;  }
+
+.unpadded { margin-bottom:auto;margin-top:auto; }
+
+.nowrap {white-space: nowrap; }
+
+
+/* classes for browse displays */
+/* See also Web options BROWSE_HEADERS, TABLEPARAM_BROWSE, TABLEPARAM_BRIEFCIT */
+
+TR.briefCitRow { color: #000000; background: #B7C9F9; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: normal;  }
+
+.briefCitMark { font-weight: bold; }
+
+TABLE.browseScreen { } 
+
+TABLE.browseWidgit { background: #B7C9F9; }
+
+TD.browseWidgit { color: #000000; background: #FFFFFF; text-align: center; }
+
+TABLE.browseSaveJump { } 
+
+TD.browseSaveJump { color: #000000; background: #FFFFFF; text-align: left; }
+
+TABLE.browseList { }
+
+TR.browseHeader { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderNum { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderMark { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderData { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderMedia { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderYear { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderEntries { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TD.browseHeaderRelevance { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; vertical-align: middle; }
+
+TR.browseSuperEntry { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold;  }
+
+TR.browseEntry { color: #000000; background: #B7C9F9; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: normal;  }
+
+TD.browseEntryNum { text-align: center; }
+
+TD.browseEntryMark {
+	font-weight: bold;
+}
+
+TD.browseEntryData { text-align: left; }
+
+TD.browseEntryMedia { vertical-align: middle; }
+
+TD.browseEntryYear {text-align: center; }
+
+TD.browseEntryEntries { text-align: center; }
+
+TD.browseEntryRelevance { }
+
+TR.browseSubEntry { color: #000000; background: #B7C9F9; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: normal;  }
+
+TD.browseSubEntryData { }
+
+TD.browseSubEntryMedia { }
+
+TD.browseSubEntryYear { }
+
+TD.browseSubEntryEntries { }
+
+TD.browseSubEntryRelevance { }
+
+TABLE.browseResourceTable { }
+
+TD.browseResourceTable { }
+
+TR.browseResourceTableEntry { }
+
+TD.browseResourceTableEntry { }
+
+/* classes for single bib display */
+/* see also Web options TABLEPARAM_BIB */
+
+TABLE.bibScreen { }
+
+TABLE.bibWidgit { }
+
+TABLE.bibInfo { }
+
+TR.bibInfoEntry { }
+
+TD.bibInfoEntry { }
+
+TD.bibInfoLabel { background: #B7C9F9; font-style: italic; }
+
+TD.bibInfoData { }
+
+TABLE.bibHoldings { }
+
+TR.bibHoldingsHeader { }
+
+TR.bibHoldingsData { }
+
+TABLE.bibResourceTable { }
+
+TD.bibResourceTable { }
+
+TR.bibResourceTableEntry { }
+
+TD.bibResourceTableEntry { }
+
+/* classes for patron record display */
+/* see also Web options TABLEPARAM_PATDISP, TABLEPARAM_PATFUNC, */
+/* and the various BUT_PAT_ graphics options. */a
+
+TABLE.patDisplay { }
+
+TR.patDisplay { }
+
+TD.patDisplayInfo { }
+
+TD.patDisplayFunc { }
+
+TABLE.patInfo { }
+
+TR.patInfo { }
+
+TD.patInfo { }
+
+TD.patImage { }
+
+TABLE.patFuncBtns { }
+
+TR.patFuncBtns { color: #000000; background: #B7C9F9; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  }
+
+TD.patFuncBtns { }
+
+TABLE.patFunc { }
+
+TR.patFuncTitle { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  }
+
+TH.patFuncTitle { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  }
+
+TR.patFuncHeaders { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  }
+
+TH.patFuncHeaders { color: #FFFFFF; background: #3B6EE0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  }
+
+TR.patFuncEntry { color: #000000; background: #B7C9F9; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: normal;  }
+
+TD.patFuncMark { }
+
+TD.patFuncTitle { }
+
+TD.patFuncDate { }
+
+TD.patFuncStatus { }
+
+TD.patFuncPickup { }
+
+TD.patFuncCallNo { }
+
+TD.patFuncNoEntries { }
+
+TD.patFuncCancel { }
+
+TD.patFuncBookDate { }
+
+TR.patFuncPSrchType { }
+
+TD.patFuncPSrchType { }
+
+TD.patFuncPSrchBtn { }
+
+TR.patFuncFinesEntryTitle { color: #000000; background: #B7C9F9; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: normal;  }
+
+TD.patFuncFinesEntryTitle { }
+
+TR.patFuncFinesDetail { }
+
+TD.patFuncFinesDetailType { }
+
+TD.patFuncFinesDetailAmt { }
+
+TR.patFuncFinesDetailDate { }
+
+TD.patFuncFinesDetailDateLabel { }
+
+TD.patFuncFinesDetailDate { }
+
+TR.patFuncFinesTotal { }
+
+TD.patFuncFinesTotalLabel { }
+
+TD.patFuncFinesTotalAmt { }
+
+TABLE.patFuncModifyPIN { }
+
+TR.patFuncModifyPIN { }
+
+TD.patFuncModifyPIN { }
+
+TABLE.patFuncModifyPatInfo { }
+
+TR.patFuncModifyPatInfo { }
+
+TD.patFuncModifyPatInfo { }
+
+
+.InnovativeCredit {  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: x-small; font-style: italic}
+
+.pageNavArea { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #FFFFFF; background: #3B6EE0;  }
+.pageNavAreaText {  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #FFFFFF; text-decoration: none; font-weight: bold; background-color: #3B6EE0; }
+.pageMainArea { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #000000; background: #B7C9F9; }
+.pageDirectoryArea { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #000000; text-align: left;  }
+.pageMainAreaHeader { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0132A7; font-size: larger; font-weight: bolder; text-align: left; }
+.KidsOnline {  font-family: "Comic Sans MS", Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold}
+
+.loggedInMessage {	font-style: italic; }
+
+.errormessage { font-size: large; color: #FF0000; }
+
+.msg { font-size: large; color: #FF0000; }
+
+.resLinkBrowseMenu { text-align: center; }
+
+.navigationMenu { text-align: center; }
+
+.briefcitTitle { font-weight: bold; }
+
+.briefcitStatus { font-weight: bold; }
+
+.wbPanelCategory { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0132A7; }
+
+/*These styles belong to the "Curvy" template*/
+.boxNavTopLeft {  background-image:  url(/screens/nav_top_left.gif); background-repeat: no-repeat; background-position: right bottom}
+.boxNavTopRight {  background-image:  url(/screens/nav_top_right.gif); background-repeat: no-repeat; background-position: left bottom}
+.boxNavBottomLeft {  background-image:  url(/screens/nav_bottom_left.gif); background-repeat: no-repeat}
+.boxNavBottomRight {  background-image:  url(/screens/nav_bottom_right.gif); background-repeat: no-repeat}
+.boxNavTopCenter {  background-image:  url(/screens/nav_top_center.gif); background-repeat: repeat-x; background-position: bottom}
+.boxNavMidLeft {  background-image:  url(/screens/nav_mid_left.gif); background-repeat: repeat-y}
+.boxNavMidRight {  background-image:  url(/screens/nav_mid_right.gif); background-repeat: repeat-y}
+.boxNavBottomCenter {  background-image:  url(/screens/nav_bottom_mid.gif); background-repeat: repeat-x}
+.boxMainBottomCenter { background-image:  url(/screens/main_bottom_mid.gif); background-repeat: repeat-x }
+.boxMainBottomLeft { background-image:  url(/screens/main_bottom_left.gif); background-repeat: no-repeat }
+.boxMainBottomRight { background-image:  url(/screens/main_bottom_right.gif); background-repeat: no-repeat }
+.boxMainMidLeft { background-image:  url(/screens/main_mid_left.gif); background-repeat: repeat-y }
+.boxMainMidRight { background-image:  url(/screens/main_mid_right.gif); background-repeat: repeat-y }
+.boxMainTopCenter { background-image:  url(/screens/main_top_center.gif); background-repeat: repeat-x; background-position: bottom}
+.boxMainTopLeft { background-image:  url(/screens/main_top_left.gif); background-repeat: no-repeat; background-position: right bottom }
+.boxMainTopRight { background-image:  url(/screens/main_top_right.gif); background-repeat: no-repeat; background-position: left bottom }

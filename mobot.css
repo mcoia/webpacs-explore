@@ -1,0 +1,129 @@
+.green{ background-color: #006651;}
+.ltgreen{ background-color: #99cc66;}
+.offwhite{ color: #FFFFF1;}
+.terracotta{ color: #CC6666;}
+.accent{ color: #EBEACF;}
+
+body{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+	padding: 0 px;
+	background-color: #ffffff;
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 12px;
+}
+
+p{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 12px;
+	
+}
+
+td{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 12px;
+}
+li{
+	padding: 5px;
+}
+a{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 12px;
+	color: #CC6666;
+	text-decoration: underline;
+}
+a:hover{
+	text-decoration: underline;
+}
+.leftlinks{
+	font-family: Verdana, Helvetica, Times, serif;
+	font-size: 14px;
+	color: #EBEACF;
+	background-color: transparent;
+	text-decoration: none;
+}
+.visit{
+	font-family: Verdana, Helvetica, Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #EBEACF;
+	background-color: transparent;
+	text-decoration: none;
+}
+.footer{
+	font-family: Verdana, Helvetica, Times, serif;
+	font-size: 12px;
+	color: #EBEACF;
+	background-color: transparent;
+	
+}
+
+.toplinks{
+	font-family: Verdana, Helvetica, Times, serif;
+	font-size: 12px;
+	color: #EBEACF;
+	background-color: transparent;
+	text-decoration: none;
+}
+.leftactive{
+	font-family: Verdana, Helvetica, Times, serif;
+	font-size: 14px;
+	color: #EBEACF;
+	background-color: transparent;
+	text-decoration: none;
+}
+.headline{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #CC6666;
+	background-color: transparent;
+	text-decoration: none;
+}
+.divisionheadline{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 18px;
+	color: #CC6666;
+	background-color: transparent;
+	text-decoration: none;
+}
+.subactive{
+	font-family: Verdana, Helvetica, Times, serif;
+	font-size: 12px;
+	color: #EBEACF;
+	background-color: transparent;
+	text-decoration: none;
+}
+.small{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 10px;
+	background-color: transparent;
+	text-decoration: none;
+}
+.medium{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 12px;
+	background-color: transparent;
+	text-decoration: none;
+}
+.large{
+	font-family: Helvetica, Verdana, Times, serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: transparent;
+	text-decoration: none;
+}
+#event{
+	text-align: center;
+}
+#toplinks{
+	margin-bottom: 10px;
+}
+#leftlinks{
+	margin-right: 5px;
+	}
+.centercontent{
+	background-color: #FFFFF1;
+}
+

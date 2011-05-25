@@ -1,6 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML> <HEAD> <title>Saint Louis Art Museum Archives</title>
-<link href="/sreeens/slamcss.css" type="text/css" rel="stylesheet"></link>
+<html>
+
+
+<head><title>
+Saint Louis Art Museum Archives Search
+</title>
+
+<STYLE type="text/css">
+ body {font-family: Times, serif; font-size: 100%}
+ p.indent {margin-left: 8pt;}
+ div.errormessage {color: purple; text-align: center; font-size: 10pt; font-family: Times, serif;}
+</STYLE>
+
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 function doSearch(form) {
@@ -25,76 +36,91 @@ function doSearch(form) {
 }
 //-->
 </SCRIPT>
-</HEAD>
- <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
+
+</head>
+<body bgcolor="#FFFFFF" alink="#0000FF" vlink="#0000FF">
+<DIV ALIGN="center">
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
+
+
+<TR>
+
+<TD COLSPAN=3>
+
+<IMG SRC="/screens/slambut.gif" ALT="" BORDER="0">
  
- <div id="container">
- 
- <div>
- <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
- </div></div>
- 
- <div ID="navigation">
- <ul>
- <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
- <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
- <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
- <ul>
- <li><a href="/search~S3/"><font>All Collections</font></a></li>
- <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
- <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
- <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
- <li><a href="/search~S8/" id="currentsubPage"><font>Archives</font></a></li>
+<BR>
+<BR>
+</TD></TR>
+<TR>
+<TD COLSPAN=3>
+<IMG SRC="/screens/burgdot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
+</TR>
+<TR>
+<TD VALIGN="top" width=25%>
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
+<TR>
+
+<TD>
+<font size=+1 color=#006666 face="arial">Catalog Options</font>
+<p> <A HREF="/search~S3/"><font face="arial">All Collections</font></A>
+<p class="indent"><A HREF="/search~S6/"><font size=-1 face="arial">Books & Periodicals</font></A>
+<p class="indent"><A HREF="/search~S10/"><font size=-1 face="arial">Periodicals Only</font></A>
+<p class="indent"><A HREF="/search~S7/"><font size=-1 face="arial">Auction Catalogs</font></A>
+<p class="indent"><font size=-1 face="arial" color=black><B>Archives</B></font>
+<p class="indent"><font size=-1 face="arial"><A HREF="/search~S9/">Slide Library</font></A>
+<p><font face="arial"><A HREF="http://www.stlouis.art.museum/index.aspx?id=7">Library Information</font></A>
+<p><font face="arial"><A HREF="/patroninfo/"> View Your Record</font></A>
+<BR>
+<BR>
+</TD>
+</TR>
+
+</TABLE>
+
+</TD><TD VALIGN="top">
+<IMG SRC="/screens/burgdot.gif" WIDTH=1 HEIGHT=400 ALT="LINE" BORDER="0" 
+ALIGN="top"></TD>
+<TD VALIGN="top" ALIGN="left">
+
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top">
+<TR>
 
 
- </ul>
- </li>
- 
- <li><a
- href="/patroninfo~S8/"><font>View
- Your Record</font></a></li></ul></div>
- 
- <div><div id="content">
-
-
-<h2>Archival Records</h2>
-
-<div class="firstPara">
-Word Search
-</div>
-
-
+<TD ALIGN="left" VALIGN="top">
+<font size=+2 color=#006666 face="arial"><B>Archival Records</B></font>
+<BR>
 <!--{iferr}-->
-<div id="errormessage">
+<div class="errormessage">
 <!--{msg}-->
 </div>
 <!--{xif}-->
+<BR>
+Search for Archival records using <B>Names</B>, <B>Subjects</B>, or any other relevant <B>Words</B>, in any order:
 
 
-<p>
-Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other relevant <B>Words</B>, in any order:
-</p>
+</TD></TR>
+<TR><TD>
 
-<FORM ACTION=/search~S8/Y name="Simple">
+<FORM ACTION=/search/Y name="Simple">
 <!--{search}-->
 <input type="hidden" name="SORT" value="D">
-<input type="submit" name="submit" value="Submit">&nbsp;&nbsp;<input type="button" value=" Reset " ONCLICK="document.forms[0].elements[0].value=''">
+<input type="submit" name="submit" value="Submit">
 <input name="searchscope" type="hidden" value="8">
 </FORM>
-<br />
-<p>
-<font style="color: #577993; font-weight: bold; font-size: 16pt; font-family: sabon, times, serif;">Or</font> &#8212; search for the records of a specific named <B>Person</B> or <B>Institution</B>, or records on a specific <B>Subject</B>, using the lists below:
-<p>
 
+<BR>
 
+<B>Or --</B> search for the records of a specific named <B>Person</B> or <B>Institution</B>, or records on a specific <B>Subject</B>, using the lists below:
+
+<BR>
+<BR>
 <FORM NAME="names">
-<select style="width: 450px;">
+<select>
 <option>Select a Name ... </option>
-<option value="Abid, Ann B">Abid, Ann B.</option>
 <option value="Aloe, Louis P., 1867-1929">Aloe, Louis P., 1867-1929</option>
 <option value="Ambler, Jacquelin">Ambler, Jacquelin</option>
-<option value="Archambault, Blanche A">Archambault, Blanche A.</option>
-
 <option value="Ballard, James F. (James Franklin), 1851-1931">Ballard, James F. (James Franklin), 1851-1931</option>
 <option value="Bartlett, Louisa, 1947-">Bartlett, Louisa, 1947-</option>
 <option value="Bellos, Alexandra">Bellos, Alexandra</option>
@@ -109,23 +135,21 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Brimble, Alan">Brimble, Alan</option>
 <option value="Buckley, Charles E.">Buckley, Charles E.</option>
 <option value="Burke, James Donald, 1939-">Burke, James Donald, 1939-</option>
-<option value="Butler, Jim">Butler, Jim</option>
+
 <option value="Butts, Barbara">Butts, Barbara</option>
 <option value="Cameron, Louise">Cameron, Louise</option>
 <option value="Carpenter, Mildred Bailey, b. 1894">Carpenter, Mildred Bailey, b. 1894</option>
-<option value="Cavanaugh, Marianne">Cavanaugh, Marianne</option>
 <option value="Ciampoli, Judith Graves">Ciampoli, Judith Graves</option>
-<option value="City Art Museum of St. Louis">City Art Museum of St. Louis</option>
-<option value="City Art Museum of St. Louis. Curatorial Office">City Art Museum of St. Louis. Curatorial Office</option>
-<option value="City Art Museum of St. Louis. Director's Office">City Art Museum of St. Louis. Director's Office</option>
-<option value="City Art Museum of St. Louis. Education Department">City Art Museum of St. Louis. Education Department</option>
-<option value="City Art Museum of St. Louis. Registrar's Office">City Art Museum of St. Louis. Registrar's Office</option>
+<option value="City Art Museum of St. Louis">City Art Museum of St. Louis. </option>
+<option value="City Art Museum of St. Louis. Curatorial Office">City Art Museum of St. Louis. Curatorial Office. </option>
+<option value="City Art Museum of St. Louis. Director's Office">City Art Museum of St. Louis. Director's Office. </option>
+<option value="City Art Museum of St. Louis. Education Department">City Art Museum of St. Louis. Education Department. </option>
+<option value="City Art Museum of St. Louis. Registrar's Office">City Art Museum of St. Louis. Registrar's Office. </option>
+
 <option value="Clark, Margot, 1926-1994">Clark, Margot, 1926-1994</option>
-<option value="Claverie, Carol">Claverie, Carol</option>
 <option value="Cleveland, Richard S.">Cleveland, Richard S.</option>
 <option value="Cohn, Sherrye, 1946-">Cohn, Sherrye, 1946-</option>
 <option value="Conradsen, David H.">Conradsen, David H.</option>
-<option value="Cournoyer, Jon">Cournoyer, Jon</option>
 <option value="Curley, F.E.A.">Curley, F.E.A.</option>
 <option value="Davis, Charles P.">Davis, Charles P.</option>
 <option value="Davis, Charles Percy, 1858-1933">Davis, Charles Percy, 1858-1933</option>
@@ -136,21 +160,17 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Dreher, Fred, b. 1908">Dreher, Fred, b. 1908</option>
 <option value="Ehrlich, Hedy">Ehrlich, Hedy</option>
 <option value="Eisendrath, William N.">Eisendrath, William N.</option>
-
 <option value="Fausz, Jeanette">Fausz, Jeanette</option>
 <option value="Fisher, Reka">Fisher, Reka</option>
 <option value="Fox, Celine">Fox, Celine</option>
 <option value="Fuchs, Gloria">Fuchs, Gloria</option>
-<option value="Fullerton, Vivian">Fullerton, Vivian</option>
 
 <option value="Gates, Jay">Gates, Jay</option>
 <option value="Graham, Patricia Jane">Graham, Patricia Jane</option>
 <option value="Graves, Judy T.">Graves, Judy T.</option>
 <option value="Grossman, Betty Greenfield">Grossman, Betty Greenfield</option>
 <option value="Harris, Ben T., Mrs.">Harris, Ben T., Mrs.</option>
-<option value="Heller, Julie">Heller, Julie</option>
 <option value="Hellwege, Pamela S.">Hellwege, Pamela S.</option>
-<option value="Heuting, Scott G">Heuting, Scott G.</option>
 <option value="Hewitt, Susie H. M.">Hewitt, Susie H. M.</option>
 <option value="Hibbard, George E., 1924-1991">Hibbard, George E., 1924-1991</option>
 <option value="Hitt, Merritt S.">Hitt, Merritt S.</option>
@@ -181,7 +201,7 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Maddy, Kenneth, Mrs.">Maddy, Kenneth, Mrs.</option>
 <option value="Makholm, Kristin">Makholm, Kristin</option>
 <option value="Mallinckrodt, Edward, 1878-1967">Mallinckrodt, Edward, 1878-1967</option>
-<option value="May, Morton D. (Morton David), 1914-1983">	May, Morton D. (Morton David), 1914-1983</option>
+<option value="May, Morton D., 1914-">May, Morton D., 1914-</option>
 <option value="McBrayer, Ruth K.">McBrayer, Ruth K.</option>
 <option value="McCarty, Cara">McCarty, Cara</option>
 
@@ -194,8 +214,8 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Musick, James B.">Musick, James B.</option>
 <option value="Nagel, Charles, 1899-">Nagel, Charles, 1899-</option>
 <option value="Neilson, Nancy Ward">Neilson, Nancy Ward</option>
+
 <option value="Nelson, Christina H.">Nelson, Christina H.</option>
-<option value="Nelson, Patti">Nelson, Patti</option>
 <option value="Newkirk, Thomas C.">Newkirk, Thomas C.</option>
 <option value="Nunley, John W. (John Wallace), 1945-">Nunley, John W. (John Wallace), 1945-</option>
 <option value="Ohlman, Nick">Ohlman, Nick</option>
@@ -203,7 +223,6 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Parker, Ann, 1950-">Parker, Ann, 1950-</option>
 <option value="Parsons, Lee Allen, 1932-">Parsons, Lee Allen, 1932-</option>
 <option value="Patton, Mary-Edgar">Patton, Mary-Edgar</option>
-<option value="Pearson, Judith Siegel">Pearson, Judith Siegel</option>
 <option value="Piper, Rubin H.">Piper, Rubin H.</option>
 
 <option value="Powell, Mary M.">Powell, Mary M.</option>
@@ -212,15 +231,12 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Rahmberg, Susan">Rahmberg, Susan</option>
 <option value="Rathbone, Perry Townsend, 1911-">Rathbone, Perry Townsend, 1911-</option>
 <option value="Rauh, Emily S., 1933-">Rauh, Emily S., 1933-</option>
-<option value="Regnier, Maria, 1901-1994">Regnier, Maria, 1901-1994</option>
 <option value="Reich, Daniel A.">Reich, Daniel A.</option>
 <option value="Rensing, Susan Ray">Rensing, Susan Ray</option>
 <option value="Rhodes, Charles Ward, d. 1905">Rhodes, Charles Ward, d. 1905</option>
-<option value="Roach, Jeanette E">Roach, Jeanette E.</option>
-<option value="Rogers, Meyric R. (Meyric Reynold), 1893-">Rogers, Meyric R. (Meyric Reynold), 1893-</option>
-<option value="Ruessing, Edward A">Ruessing, Edward A.</option>
-<option value="Rundell, Helene">Rundell, Helene</option>
 
+<option value="Rogers, Meyric R. (Meyric Reynold), 1893-">Rogers, Meyric R. (Meyric Reynold), 1893-</option>
+<option value="Rundell, Helene">Rundell, Helene</option>
 <option value="Safron, Max">Safron, Max</option>
 
 <option value="Saint Louis Museum of Fine Arts">Saint Louis Museum of Fine Arts. </option>
@@ -229,62 +245,52 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Savage, Charles C.">Savage, Charles C.</option>
 <option value="Sawyer, John R.">Sawyer, John R.</option>
 <option value="Schiller, Joyce K.">Schiller, Joyce K.</option>
+
 <option value="Schubert, Cynthia">Schubert, Cynthia</option>
 <option value="Shapiro, Michael Edward">Shapiro, Michael Edward</option>
 <option value="Shaplin, Philippa, 1921-">Shaplin, Philippa, 1921-</option>
 <option value="Sharf, Elizabeth Horton">Sharf, Elizabeth Horton</option>
 <option value="Sherer, Samuel L.">Sherer, Samuel L.</option>
-<option value="Shewmaker, John B., Mrs">Shewmaker, John B., Mrs.</option>
 <option value="Sigala, Stephanie C.">Sigala, Stephanie C.</option>
 <option value="Simmons, Victor">Simmons, Victor</option>
 <option value="Slavin, Amanda">Slavin, Amanda</option>
+
 <option value="Springer, Lynn E.">Springer, Lynn E.</option>
-<option value="St. Louis Art Museum. Curatorial Office">St. Louis Art Museum. Curatorial Office</option>
-<option value="St. Louis Art Museum. Development Office">St. Louis Art Museum. Development Office</option>
-<option value="St. Louis Art Museum. Director's Office">St. Louis Art Museum. Director's Office</option>
-<option value="St. Louis Art Museum. Education Department">St. Louis Art Museum. Education Department</option>
-<option value="St. Louis Art Museum. Finance Office">St. Louis Art Museum. Finance Office</option>
-<option value="St. Louis Art Museum. Friends Office">St. Louis Art Museum. Friends Office</option>
-<option value="St. Louis Art Museum. Library">St. Louis Art Museum. Library</option>
-<option value="St. Louis Art Museum. Photograph Collection">St. Louis Art Museum. Photograph Collection</option>
-<option value="St. Louis Art Museum. Photography Manager's Office">St. Louis Art Museum. Photography Manager's Office</option>
-<option value="St. Louis Art Museum. Publications Department">St. Louis Art Museum. Publications Department</option>
-<option value="St. Louis Art Museum. Registrar's Office">St. Louis Art Museum. Registrar's Office</option>
-<option value="St. Louis Art Museum. Secretary%2FController's Office">St. Louis Art Museum. Secretary/Controller's Office</option>
+<option value="St. Louis Art Museum. Curatorial Office">St. Louis Art Museum. Curatorial Office. </option>
+<option value="St. Louis Art Museum. Development Office">St. Louis Art Museum. Development Office. </option>
+<option value="St. Louis Art Museum. Director's Office">St. Louis Art Museum. Director's Office. </option>
+<option value="St. Louis Art Museum. Education Department">St. Louis Art Museum. Education Department. </option>
+<option value="St. Louis Art Museum. Finance Office">St. Louis Art Museum. Finance Office. </option>
+<option value="St. Louis Art Museum. Friends Office">St. Louis Art Museum. Friends Office.</option>
+<option value="St. Louis Art Museum. Registrar's Office">St. Louis Art Museum. Registrar's Office.</option>
+<option value="St. Louis Art Museum. Secretary/Controller's Office">St. Louis Art Museum. Secretary/Controller's Office. </option>
 <option value="Stein, Laurie A.">Stein, Laurie A.</option>
-<option value="Steiner, Mary Ann">Steiner, Mary Ann</option>
 <option value="Stevens, Andrew M.">Stevens, Andrew M.</option>
-<option value="Stewart, Odille D">Stewart, Odille D.</option>
+
 <option value="Stockho, Thelma R.">Stockho, Thelma R.</option>
 <option value="Taylor, Marie, 1904-">Taylor, Marie, 1904-</option>
 <option value="Thalinger, E. Oscar, 1885-1965">Thalinger, E. Oscar, 1885-1965</option>
-<option value="Torno, Lawrence S">Torno, Lawrence S.</option>
-
-<option value="Ulkus, Kathy Y">Ulkus, Kathy Y.</option>
-
 <option value="Vallance, Elizabeth Jean">Vallance, Elizabeth Jean</option>
-
-<option value="Walker, Louise">Walker, Louise</option>
 <option value="Walsh, Kathleen Anne">Walsh, Kathleen Anne</option>
 <option value="Washburne, Carol">Washburne, Carol</option>
 <option value="Washington University (Saint Louis, Mo.). School of Fine Arts">Washington University (Saint Louis, Mo.). School of Fine Arts</option>
 <option value="Wasserman, Daniel">Wasserman, Daniel</option>
 <option value="Weiss, Judith C.">Weiss, Judith C.</option>
-<option value="Williams, Thomas L">Williams, Thomas L.</option>
+
 <option value="Wood, James N.">Wood, James N.</option>
 <option value="Woodard, Patricia Reagan">Woodard, Patricia Reagan</option>
-<option value="Woods, Patricia">Woods, Patricia</option>
 <option value="World's Columbian Exposition (1893 : Chicago, Ill.)">World's Columbian Exposition (1893 : Chicago, Ill.)</option>
 <option value="Wuerpel, Edmund H., 1866-1958">Wuerpel, Edmund H., 1866-1958</option>
 <option value="Zelleke, Ghenete">Zelleke, Ghenete</option>
 </select>
 <BR>
-<INPUT TYPE="BUTTON" VALUE="GO!" onClick="doSearch(this.form)">
+<INPUT TYPE="BUTTON" VALUE="Submit" onClick="doSearch(this.form)">
 </FORM>
 
 
+<BR>
 <FORM NAME="subjects">
-<select style="width: 450px;">
+<select>
 <option>Select a Subject ...</option>
 <option value="Aloe, Louis P., 1867-1929 Archives">Aloe, Louis P., 1867-1929--Archives</option>
 <option value="Architecture Missouri Saint Louis Archival resources">Architecture--Missouri--Saint Louis--Archival resources</option>
@@ -304,25 +310,26 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="City Art Museum of St. Louis Art collections Archives">City Art Museum of St. Louis--Art collections--Archives</option>
 
 <option value="City Art Museum of St. Louis Exhibitions Archives">City Art Museum of St. Louis--Exhibitions--Archives</option>
+<option value="City Art Museum of St. Louis Management Archives">City Art Museum of St. Louis--Management--Archives</option>
 <option value="City Art Museum of St. Louis">City Art Museum of St. Louis</option>
 <option value="Clark, Margot, 1924-1994 Archives">Clark, Margot, 1924-1994--Archives</option>
 <option value="Del Mar, Frances Archives">Del Mar, Frances--Archives</option>
 <option value="Del Mar, Frances Photograph collections">Del Mar, Frances--Photograph collections</option>
+<option value="Dine, Jim, 1935-">Dine, Jim, 1935-</option>
 <option value="Dreher, Fred, b. 1908 Archives">Dreher, Fred, b. 1908--Archives</option>
 <option value="Fountains Missouri Saint Louis Archival resources">Fountains--Missouri--Saint Louis--Archival resources</option>
 
 <option value="Grossman, Betty Greenfield Archives">Grossman, Betty Greenfield--Archives</option>
 <option value="Hewitt, Susie H. M. Notebooks, sketchbooks, etc. Archives">Hewitt, Susie H. M.--Notebooks, sketchbooks, etc.--Archives</option>
 <option value="Hibbard, George E., 1924-1991 Archives">Hibbard, George E., 1924-1991--Archives</option>
-<option value="Ives, Halsey Cooley, 1847-1911">Ives, Halsey Cooley, 1847-1911</option>
+<option value="Ives, Halsey Cooley, 1846-1911">Ives, Halsey Cooley, 1846-1911</option>
 <option value="Jefferson National Expansion Memorial (Saint Louis, Mo.) Archival resources">Jefferson National Expansion Memorial (Saint Louis, Mo.)--Archival resources</option>
-<option value="Louisiana Purchase Exposition (1904 : Saint Louis, Mo.)">Louisiana Purchase Exposition (1904 : Saint Louis, Mo.)</option>
 <option value="Mallinckrodt, Edward, 1878-1967 Archives">Mallinckrodt, Edward, 1878-1967--Archives</option>
 <option value="Mallinckrodt, Edward, 1878-1967 Art collections">Mallinckrodt, Edward, 1878-1967--Art collections</option>
 <option value="Maori (New Zealand people) Archival resources">Maori (New Zealand people)--Archival resources</option>
 <option value="Max Safron Gallery Archival resources">Max Safron Gallery--Archival resources</option>
 
-<option value="May, Morton D. (Morton David), 1914-1983">May, Morton D. (Morton David), 1914-1983</option>
+<option value="May, Morton D., 1914-">May, Morton D., 1914-</option>
 <option value="Miller, Richard E., 1875-1943 Homes and haunts Archives">Miller, Richard E., 1875-1943--Homes and haunts--Archives</option>
 <option value="Milles, Carl, 1875-1955 Archives">Milles, Carl, 1875-1955--Archives</option>
 <option value="Milles, Carl, 1875-1955. Meeting of the Waters">Milles, Carl, 1875-1955. Meeting of the Waters</option>
@@ -334,7 +341,6 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 
 <option value="Putzel, Henry V., 1878-1969 Archives">Putzel, Henry V., 1878-1969--Archives</option>
 <option value="Putzel, Henry V., 1878-1969 Art collections">Putzel, Henry V., 1878-1969--Art collections</option>
-<option value="Regnier, Maria, 1901-1994">Regnier, Maria, 1901-1994</option>
 <option value="Safron, Max Archives">Safron, Max--Archives</option>
 <option value="Saint Louis (Mo.) Buildings, structures, etc. Archival resources">Saint Louis (Mo.)--Buildings, structures, etc.--Archival resources</option>
 <option value="Saint Louis Museum of Fine Arts">Saint Louis Museum of Fine Arts</option>
@@ -344,6 +350,7 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="St. Louis Art Museum Art collections Archives">St. Louis Art Museum--Art collections--Archives</option>
 
 <option value="St. Louis Art Museum Exhibitions Archives">St. Louis Art Museum--Exhibitions--Archives</option>
+<option value="St. Louis Art Museum Management Archives">St. Louis Art Museum--Management--Archives</option>
 <option value="St. Louis Art Museum Photograph collections Archival resources">St. Louis Art Museum--Photograph collections--Archival resources</option>
 <option value="St. Louis Museum of Fine Arts Archives">St. Louis Museum of Fine Arts--Archives</option>
 <option value="Tahiti Documentary photography">Tahiti--Documentary photography</option>
@@ -354,19 +361,21 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 
 </select>
 <BR>
-<INPUT TYPE="BUTTON" VALUE="GO!" onClick="doSearch(this.form)">
+<INPUT TYPE="BUTTON" VALUE="Submit" onClick="doSearch(this.form)">
 </FORM>
 
-<div><div id="footer">
-	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
-	Telephone 314.655.5252
-	
-	<div id="copyright">
-		&copy; 2009 Saint Louis Art Museum
-</div>
-</div></div>
+</TD></TR>
+</TABLE>
+</TR>
+<TR>
+<TD COLSPAN=3>
 
+</TD>
+<TD VALIGN="top"></TD>
 
-</div> </div> </div>
+</TR>
+</TABLE>
 
- </body> </HTML>
+</DIV>
+</body>
+</html>

@@ -1,188 +1,246 @@
 BOOKINGS=no|true|true
-# General WWWOptions
+# Display and Logging Options
 
-BODYPARAM=BGCOLOR=#ffffff LINK=#0000FF VLINK=#800080					
-BOTLOGO=<!--<center><img src="/screens/botlogo.gif"></center>-->
-TOPLOGO=<img src="/screens/iiilogo.gif"><img src="/screens/slrlc.gif">
-TOPLOGO1=<center><img src="/screens/mbglogo.gif"></center>
-TOPLOGO2=<center><a href="http://www.mohistory.org/lrc/collections/library/"><img border="0"  src="/screens/mhm2.gif"></a></center>
-TOPLOGO3=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Richardson Library</b></font><br></center>
-TOPLOGO4=<img src="/screens/mhm2.gif">
-TOPLOGO5=<center><img src="/screens/mhm.gif"></center>
-TOPLOGO7=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><a href="http://www.slam.org"><img border="0" src="http://stlouis.art.museum/Homepage/images/heading.gif"></a></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Auction Catalogs</b></font><br></center>
-TOPLOGO12=<center><img src="/screens/mhm.gif"></center>
-# BRIEF=
-BROWSE_t=245/abnp
-
-CLEAR_PRIVATE_INFO=true
-
-# DISPLAY_245=atd
-DROP_DOWN=atdXscmbl
-# EBADDRESS=http://search.britannica.com/search?query=%s
-EMAILOP=From the library catalog|exporter|
-EXPORT_SELECT_TABLE=Sendto:browser,email,local|Format:full,brief,marc
-EXTENDED=CL
-
-FEATURED_LIST=98,101|Selected Titles|Topic|# Titles
-
-FRAMEURL=0
-ERESERVE=[0123456789]
-ERESERVE_IP=www.slrlc.org
-HOLDINGS_POS=atpR
-INDEX_EXT=coiatWl
-LINK856TEXT=<font color="#cc3300">Click on the following to:</font>
-MARC=yes
-OFFER_HISTORY=true
-# RECORDFRAME=25,50,25
-SHOWOREC=no_cdate
-SORT_BROWSE1=c:Year|r:Reverse Year|t:Title|a:Author
-# SORT_ITEMS=
-STARTOVER=/search 
-
+TOPLOGO1=<center><img src="/screens/iiilogo.gif"></center>
+BOTLOGO=@screens/botlogo.html
+BODYPARAM=bgcolor="#FFFFFF"
+STARTOVER=/search
 STATGROUP=login
-TIMEOUT=32000;URL=/
-XSTARTOVER=/search
+STYLESHEET=/screens/mobot.css
+TIMEOUT=6000;URL=/
+XSTARTOVER=/
 
 
-Z39BROADCAST=Z39.50 Broadcast Search:Please select the Z39.50 servers to which you want to send your search
-Z39MULTI=500:100
-Z39SEARCH=New York:INNOPAC,ANS:INNOPAC,LHL:davinci,WASHU:INNOPAC,NHM:UNICORN
-Z39RESTRICT=OCLC3/WorldCat
-Z39IPOK=199.217.207.98
-# Scoping options #
-RESET_SCOPE=false
-LOCKSCOPE=false
+# OPAC Display and Behavior Options
 
-# Patron record options=
-NEWPIN_MSG=Please enter your PIN
-NOSEARCH=nuf
-PATRON_FIELDS=n/a|a/a|t/t
-PSTARTOVER=/search
+# BIBIMAGE=http://www.TheContentServer.com/bin/cntsvr.dll?GetImage&SysID=PUTACCOUNTHERE&CustID=PUTACCOUNTHERE&ISBN=%s&Type=S&Return=0|I|http://www.TheContentServer.com/bin/cntsvr.dll?GetImage&SysID=PUTACCOUNTHERE&CustID=PUTACCOUNTHERE&ISBN=%s&Type=L&Return=1
+BRIEF=A
+BROWSE_t=245/ab/0|240/abc/0|970/t/0|/ab/0
+BROWSE_HEADERS=Save|Media
+DISPLAY_245=atd
+DISPLAY_856=z
+DROP_DOWN=Xatdc
+EXTENDED=CT
+FRAMEURL=15
+HOLDINGS_POS=atpR
+# HOTLINK=i^020,c^09,n^505
+IBROWSE_MAX=10000
+ILL_HOME=/screens/ill.html
+INDEX_EXT=coi
+LINK856TEXT=Connect to
+MARC=yes
+MEDIA=2
+NOSEARCH=nubf
+OFFER_HISTORY=true
+# RECORDFRAME=27,48,25
+# RECORDFRAME_STAFF=27,48,25
+SHOWOREC=no_cdate
+SORT_BROWSE=t:Title|a:Author|c:Year|r:Reverse Year|n:Call Number|m:Material Type
+SORT_ITEMS=true
+# SORT_MEDIA=@amcdji
+TABLEPARAM_BIB=cellpadding="2" cellspacing="0" border="0"|cellpadding="2" cellspacing="0" border="0"
+TABLEPARAM_BRIEFCIT=true|border="0"
+TABLEPARAM_BROWSE=width="100%" cellpadding="2" cellspacing="0" border="0"|align="center"|width="100%" cellpadding="2" cellspacing="0" border="0" bordercolor="#FFFFFF"|cellpadding="2" cellspacing="0" border="0"
+# WEBPUBDEF=true
+
+# Checkin Card Display Options
+CHECKIN_BGCOLOR=ARRIVED=#FFFFFF|EXPECTED=#FFFFFF|TO BIND/BOUND=#FFFFFF|LATE=#FFFFFF|OTHER=#FFFFFF
+CHECKIN_FONTCOLOR=ARRIVED=GREEN|EXPECTED=BLACK|TO BIND/BOUND=RED|LATE=BLACK|OTHER=BLACK
+DISPLAY_CHECKIN_856=z
+SUPPRESS_CARD=UI
 
 
-# Request WWWOptions
+# Advanced Search Options
 
-# BIBREQUEST=true
-# REQUEST=Hold this item|bib|ask|Y
-
-# My Millennium WWWOptions
-
-MY_WEBPAC=false|true
-NO_REVERIFY=acq,req
-PREFTEXT=Save as preferred search
-PREF_SEARCHES=25|Y
-STAFF=2,8,101,199
-FRAMEURL_PAT=40
-
-# Keyword search WWWOptions
-
-#ASSEARCH=1
+AVS_MODIFY_TAG=X
 AVS_TAG=XYZ
 KEYWORD_COLOR=Y|all|red
 
-# Serials checkin WWWOptions
 
-CHECKIN_BGCOLOR=ARRIVED=#FFFFFF|EXPECTED=#FFFFFF|
-TO BIND/BOUND=#FFFFFF|LATE=#FFFFFF|OTHER=#FFFFFF
-CHECKIN_FONTCOLOR=ARRIVED=GREEN|EXPECTED=BLACK|
-TO BIND/BOUND=RED|LATE=BLACK|OTHER=BLACK
-SUPPRESS_CARD=UI
+# Featured List Options
+FEATURED_LIST=1,2,3|FEATURED LISTS|CATEGORY|# of Titles
 
-# Materials bookings WWWOptions
 
-BOOK_CAL_AVAIL=black
+# Request Options
+
+# BIBREQUEST=true
+REQUEST=Hold this item|bib|ask|Y
+REQUEST_MULTI=Request All Items in Book Cart|bib|ask
+
+
+# Materials Booking Options
+
+BOOK_CAL_AVAIL=green
 BOOK_CAL_BKGRD=white
 BOOK_CAL_CLOSE=red
-BOOK_CAL_UNAVAIL=blue
+BOOK_CAL_UNAVAIL=black
 CANCEL_BOOKINGS=true
 
-# OPTION BUTTONS
 
-BUT_BOOKING=/screens/bookitem.gif
+# Patron Record Display and Behavior Options
+FRAMEURL_PAT=50
+# MODIFY_PFLDS=z
+NEWPIN_MSG=Please enter a Personal Identification Number (PIN)
+PATRON_FIELDS=n/a|a/a|t/t
+# PATRON_MSG=z|Message from the library
+# PATRON_NOTICES=apz
+PSTARTOVER=/
+TABLEPARAM_PATDISP=border="0"|border="0"|border="0"
+TABLEPARAM_PATFUNC=border="0"|border="0"|border="0"
+
+
+# My Millennium Options
+
+LOGGEDIN_MSG=You are logged into %s as %s
+STAFFLOGGEDIN_MSG=You are logged into staff mode at %s as %s
+MY_WEBPAC=false|true
+NO_REVERIFY=acq,book,ill,media,req,wam,z39
+PREFTEXT=Save as preferred search
+PREF_SEARCHES=25|Y
+# STAFF=199
+
+
+# Export Options
+
+# BRIEF_EXPORT=a|t|p|c
+EMAILOP=From the library catalog|exporter|
+ERESERVE=[0123456789]
+EXPORT_SELECT_TABLE=Sendto:browser,email,local|Format:full,brief,marc
+
+
+# Graphic Buttons and Other Images Options
+
 BUT_ANOTHER=/screens/another.gif
 BUT_BIBEXPORT=/screens/bibexport.gif
+BUT_BOOKING=/screens/booking.gif
 BUT_BRIEF=/screens/brief.gif
-BUT_CLEAR_MARKED=/screens/clrsaves.gif
-BUT_ENCYCPD=/screens/encycpd.gif
-BUT_EXPORT_VIEW_SAVES=/screens/export.gif
+BUT_CANCEL=/screens/cancel.gif
+BUT_CARDFORM_BOX=/screens/cardform_box.gif
+BUT_CARDFORM_LIN=/screens/cardform_lin.gif
+BUT_CLEAR_MARKED=/screens/clear_marked.gif
+BUT_CLOSEFRAME=/screens/closeframe.gif
+BUT_CLOSEWINDOW=/screens/closewindow.gif
+BUT_CLOSEWN=/screens/closewn.gif
 BUT_EMAIL=/screens/email.gif
+BUT_ENCYCPD=/screens/encycpd.gif
+BUT_EXPORT_MULTI=/screens/export_multi.gif
+BUT_EXPORT_VIEW_SAVES=/screens/export_view_saves.gif
 BUT_EXTENDED=/screens/extended.gif
-BUT_FULL_TEXT=/sceens/fulltxt.gif
+BUT_FULL_TEXT=/screens/full_text.gif
+BUT_GETPSAVEDRECS=/screens/getpsavedrecs.gif
+BUT_ILL_CANCEL=/screens/ill_cancel.gif
+BUT_ILL_FORM=/screens/ill_form.gif
+BUT_ILL_HOME=/screens/ill_home.gif
+BUT_LIMAVAIL=/screens/limavail.gif
 BUT_LIMIT=/screens/limit.gif
 BUT_LOGOUT=/screens/logout.gif
-BUT_PLOGOUT=/screens/ret2pat.gif
-BUT_MARC_DISPLAY=/screens/marcdisp.gif
+BUT_MARC_DISPLAY=/screens/marc_display.gif
 BUT_MODIFY=/screens/modify.gif
-BUT_CLOSEWN=/screens/ret2cat.gif
-BUT_LIMAVAIL=/screens/limavail.gif
-BUT_UNLIMAVAIL=/screens/unlimavail.gif
-BUT_NEWSRCH=/screens/newsrch.gif
+BUT_NEWSRCH=/screens/startover.gif
 BUT_NEXTPAGE=/screens/nextpage.gif
 BUT_NEXTREC=/screens/nextrec.gif
+# BUT_PAT_BOOKING=/screens/pat_booking.gif
+BUT_PAT_CANCELALL=/screens/pat_cancelall.gif
+BUT_PAT_CANCELMARK=/screens/pat_cancelmark.gif
+# BUT_PAT_CHKOUTS=/screens/pat_chkouts.gif
+# BUT_PAT_FINES=/screens/pat_fines.gif
+# BUT_PAT_HOLDS=/screens/pat_holds.gif
+# BUT_PAT_ILL=/screens/pat_ill.gif
+BUT_PAT_INFO=/screens/pat_info.gif
+BUT_PAT_MSGS=/screens/pat_msgs.gif
+BUT_PAT_PIN=/screens/pat_pin.gif
+BUT_PAT_PSEARCH_REMOVE=/screens/pat_psearch_remove.gif
+BUT_PAT_PSEARCH_UPDATE=/screens/pat_psearch_update.gif
+BUT_PAT_RENEWALL=/screens/pat_renewall.gif
+# BUT_PAT_RENEWMARK/screens/pat_renewmark.gif=
+BUT_PAT_SEARCH=/screens/pat_search.gif
+BUT_PAT_SORTBYCHKOUT=/screens/pat_sortbychkout.gif
+BUT_PAT_SORTBYDUE=/screens/pat_sortbydue.gif
+BUT_PAT_SUBMIT=/screens/pat_submit.gif
+BUT_PLOGOUT=/screens/ret2prec.gif
 BUT_PREVPAGE=/screens/prevpage.gif
 BUT_PREVREC=/screens/prevrec.gif
 BUT_PREVSCRN=/screens/prevscrn.gif
+BUT_PSTARTOVER=/screens/startover.gif
 BUT_PUBLIC=/screens/public.gif
-BUT_REGULAR_DISPLAY=/screens/regdisp.gif
+BUT_REGULAR_DISPLAY=/screens/regular_display.gif
 BUT_REQUEST=/screens/request.gif
+BUT_REQUEST_ALL=/screens/request_all.gif
+BUT_REQUEST_MULTI=/screens/request_multi.gif
+BUT_REQUEST_RESET=/screens/request_reset.gif
+BUT_REQUEST_SELECTED=/screens/request_selected.gif
+BUT_RESOURCELINK=/screens/resourcelink.gif
+BUT_RET2CAT=/screens/ret2cat.gif
 BUT_RET2CRS=/screens/ret2crs.gif
 BUT_RET2FEAT=/screens/ret2feat.gif
-BUT_RET2PREC=/screens/ret2pat.gif
+BUT_RET2PREC=/screens/ret2prec.gif
 BUT_RETHOME=/screens/rethome.gif
-BUT_RTRNTB=/screens/rtrntb.gif
-BUT_SHOWSIM=/screens/showsimilar.gif
+BUT_RTRNTB=/screens/rtrntb.gif 
+BUT_SHOWSIM=/screens/showsim.gif
 BUT_STAFF=/screens/staff.gif
-BUT_STARTOVER=/screens/newsrch.gif
+BUT_STARTOVER=/screens/startover.gif
+BUT_SUBMIT=/screens/submit.gif
+BUT_UNLIMAVAIL=/screens/unlimavail.gif
+BUT_VIEW_SAVES=/screens/view_saves.gif
 BUT_WORDSRCH=/screens/wordsrch.gif
-BUT_Z39_ANOTHER=/screens/z39ano.gif
-BUT_Z39_REQUEST=/screens/request.gif
-BUT_RET2CAT=/screens/ret2cat.gif
-BUT_ILL_HOME=/screens/illano.gif
-BUT_ILL_CANCEL=/screens/illcan.gif
-BUT_ILL_FORM=/screens/illform.gif
-BUT_CARDFORM_LIN=/screens/linedisp.gif
-BUT_CARDFORM_BOX=/screens/boxdisp.gif
-BUT_Z39SEARCH=/screens/z39srch.gif
-TOPLOGO11=<img src="/screens/botanicuslogo.gif"><p><p>
-# HEADING_LENGTH=
-TOPLOGO6=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Books & Periodicals</b></font><br></center>
-TOPLOGO10=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Periodicals Only</b></font><br></center>
-#EXTENDED_l=UT
+BUT_Z39_ANOTHER=/screens/z39_another.gif
+BUT_Z39_REQUEST=/screens/z39_request.gif
+BUT_Z39SEARCH=/screens/z39search.gif
 
-STYLESHEET6=/screens/slamcss.css
-ICON_SUBMIT6=<img src=/screens/submit.gif border=0/>
-ICON_CANCEL6=<img src=/screens/cancel.gif border=0/>
-STYLESHEET10=/screens/slamcss.css
-STYLESHEET7=/screens/slamcss.css
-STYLESHEET9=/screens/slamcss.css
-TOPLOGO9=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Slide Library</b></font><br></center>
-STYLESHEET8=/screens/slamcss.css
-TOPLOGO8=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Archival Records</b></font><br></center>
+ICON_856LINK=<img src="/screens/media_computer.gif" alt="Digital media" border="0" />Digital Media
+ICON_962LINK=<img src="/screens/media_computer.gif" alt="Digital media" border="0" />Digital Media 
+ICON_BOOKCART=<img src="/screens/bookcart.gif" alt="Add to Book Cart" border="0">
+ICON_FULLRECORD=<img src="/screens/viewfullrecord.gif" alt="View full record" border="0" width="36" height="25" />Full Record
+ICON_LOCATEINRESULTS=<input type="image" name="jumpto" src="/screens/locateinresults.gif" alt="Locate in results" border="0" width="120" height="20" />
+ICON_PAGING_CAPTION=Result Page&nbsp;
+ICON_PAGING_PREV=Prev
+ICON_PAGING_NEXT=Next
+ICON_REQUEST=<img src="/screens/request_icon.gif" alt="Request this title" border="0" width="36" height="25" />Request
+ICON_SAVEALLPAGE=<input type="image" name="save_all_page" src="/screens/saveallpage.gif" alt="Save all on page" border="0" width="120" height="20" />
+ICON_SAVEMARKED=<input type="image" name="save_marked" src="/screens/savemarked.gif" alt="Save marked records" border="0" width="120" height="20" />
 
-ICON_BOOKCART_SAVED=<IMG SRC="/screens/clrrecord.gif" ALT="Clear Record" BORDER=0>
+IMAGE_AVS1=/screens/avsstar1.gif
+IMAGE_AVS2=/screens/avsstar2.gif
+IMAGE_AVS3=/screens/avsstar3.gif
+IMAGE_AVS4=/screens/avsstar4.gif
+IMAGE_AVS5=/screens/avsstar5.gif
 
-ICON_SUBMIT3=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT7=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT8=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT9=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT10=<img src=/screens/submit.gif border=0/>
-ICON_CANCEL3=<img src=/screens/cancel.gif border=0/>
-ICON_CANCEL7=<img src=/screens/cancel.gif border=0/>
-ICON_CANCEL8=<img src=/screens/cancel.gif border=0/>
-ICON_CANCEL9=<img src=/screens/cancel.gif border=0/>
-ICON_CANCEL10=<img src=/screens/cancel.gif border=0/>
-PROXYDNS=www.slrlc.org
-SUPPRESS_OPTION=Z39SEARCH
+IMAGE_MATTYPE-=/screens/media_book.gif
+IMAGE_MATTYPEa=/screens/media_book.gif
+IMAGE_MATTYPEb=/screens/media_book.gif
+IMAGE_MATTYPEc=/screens/media_music.gif
+IMAGE_MATTYPEd=/screens/media_music.gif
+IMAGE_MATTYPEe=/screens/media_cartographic_printed.gif
+IMAGE_MATTYPEf=/screens/media_cartographic_printed.gif
+IMAGE_MATTYPEg=/screens/media_projectedmedia.gif
+IMAGE_MATTYPEi=/screens/media_nonmusicalsound.gif
+IMAGE_MATTYPEj=/screens/media_musicalsound.gif
+IMAGE_MATTYPEk=/screens/media_2dartwork.gif
+IMAGE_MATTYPEl=/screens/media_2dartwork.gif
+IMAGE_MATTYPEm=/screens/media_computerfile.gif
+IMAGE_MATTYPEo=/screens/media_3dartwork.gif
+IMAGE_MATTYPEp=/screens/media_3dartwork.gif
+IMAGE_MATTYPEr=/screens/media_3dartwork.gif
+IMAGE_MATTYPEt=/screens/media_book.gif
+IMAGE_MATTYPEy=/screens/media_ebook.gif
+IMAGE_MATTYPE@=/screens/media_ebook.gif
+
+
+# Other Resources Options
+# EBADDRESS=http://search.britannica.com/search?query=%s
+# RESLINK=bibresourcetop|browseresourcetop
+# RESOURCETABLE=valign="top" rowspan="2" width="10%"|cellpadding="0" cellspacing="0" border="0"><tr><td><span class="webbridge"><img src="/screens/resource_table.gif" width="90" height="28" border="0"></span></td></tr
+WEBADDRESS=http://www.amazon.com/exec/obidos/search-handle-url/index=books&field-keywords=%s&bq=1/|I| http://www.amazon.com/exec/obidos/ASIN/%s|<img src="/screens/resourcelink.gif" border="0">|REVIEW|20
+Z39BROADCAST=Z39.50 Broadcast Search:Please select the Z39.50 servers to which you want to send your search
+Z39MULTI=500:100
+Z39SEARCH=New York:INNOPAC,ANS:INNOPAC,LHL:davinci,WASHU:INNOPAC
+
+# Course Reserves Options
+# IMAGE_PRINT=yes
+# IMAGE_SAVE=yes
+
+
+TOPLOGO=@screens/toplogo.html
+STYLESHEET9=/screens/css9.css
+STYLESHEET6=/screens/css6.css
 STYLESHEET3=/screens/slamcss.css
-XRECTYYPE=XRECTPE=bi
-EXRECTYPE=EXRECTYPE=bi
-XRECTYPE=XRECTYPE=bi
-
-ICON_RECORDLINK7=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-ICON_RECORDLINK6=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-ICON_RECORDLINK3=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-ICON_RECORDLINK8=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-ICON_RECORDLINK9=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-ICON_RECORDLINK10=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-ICON_RECORDLINK2=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
-DISPLAY_856=z|true

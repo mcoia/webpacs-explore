@@ -1,87 +1,82 @@
-<html>
 
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Version 2003.08.15 -->
 <head>
-<title>Millennium Z39.50 Search</title>
+<title>Millennium Web Catalog</title>
+<meta http-equiv="Content-Type" content="text/html" />
+<link rel="stylesheet" href="/screens/styles.css" type="TEXT/CSS" />
 </head>
 
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
-<DIV ALIGN="center">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<!--{patron}-->
-</TR>
-<TR>
-<TD COLSPAN=3><IMG SRC="/screens/millogo.gif" WIDTH=100 HEIGHT=82 ALT="" 
-BORDER="0" ALIGN="left">
-<CENTER>
-<IMG SRC="/screens/logo.gif" WIDTH=400 HEIGHT=79 ALT="" BORDER="0">
-</CENTER>
-<BR><IMG SRC="/screens/grndot.gif" WIDTH=700 HEIGHT=1 ALT="" BORDER="0" 
-ALIGN="left">
-</TD>
-</TR>
-<TD VALIGN="top">
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
-<TD>
-<font size=+1 color=green face="arial">Catalog Options</font><p>
-<A HREF="/"><font face="arial" color=blue>Home</font>
-</A><BR>
-<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
-Library Information</A></font><BR>
-<A HREF="/suggest/"><font face="arial" color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font face="arial" color=blue>Books to 
-Acquire</A></font><BR
->
-<A HREF="/ftlist/"><font face="arial" color=blue>Featured Lists</font></A><BR>
-<A HREF="/patroninfo/"><font face="arial" color=blue>
-View Your Record</font></A><BR>
-</TD>
-</TR>
-</TABLE>
+<body>
+<!--Begin the top logo table-->
+<!--TIP: this data should match the data used by the TOPLOGO web option-->
+<!--You will need to make any changes to all static HTML pages and to toplogo.html.-->
+<!--The Web server will need to be restarted for changes to toplogo.html to take effect.-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr> 
+<td bgcolor="#0132A7" colspan="2"><img src="/screens/spacer.gif" height="2" width="1" alt="" /></td>
+</tr>
+<tr valign="middle"> 
+<td width="*" align="left" class="pageNavArea"> 
+<!--Beginning navigation bar at the top of the page-->
+<a href="/"><img src="/screens/home.gif" width="80" height="40" alt="Home" border="0" /></a><a href="/screens/help_index.html"><img src="/screens/help.gif" width="80" height="40" alt="Help" border="0" /></a> 
+<a href="/search"><img src="/screens/newsrch.gif" width="80" height="40" alt="New Search" border="0" /></a> 
+<!--End of the top navigation bar-->
+</td>
+<td width="209" align="right" class="pageNavArea"> 
+<!-- Beginning of library logo area -->
+<a href="/"><img src="/screens/logo.gif" width="166" height="25" border="0" alt="- Innovative Interfaces, Inc. -" /></a>&nbsp;<!-- End of library logo area -->
+</td>
+</tr>
+</table>
+<!--End the top logo table-->
 
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=500 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="top">
-<CENTER>
+<br />
 
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-				   
-<TD ALIGN="left" VALIGN="top">
+<!--Begin the main content table-->
+<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
+<tr valign="top" class="pageMainArea">
+<td class="pageMainArea">&nbsp;
+<!--Beginning main page content-->
 
-<CENTER><B>Search the the following systems using Innovative's Z39.50 
-client:</B>
-</CENTER>
-<UL>
-<LI><A HREF="http:/z39/MELVYL/CAT">Univ of Calif Melvyl Full
-Catalog </A>
-<LI><a href="http:/z39/NYBG/INNOPAC">New York Botanical Garden</A>
-<LI><a href="http:/z39m/OCLC2:ArticleFirst,OCLC2:ERIC,OCLC2:R
-eadersGuideAbstracts,OCLC2:WilsonBusinessAbstracts/">Broadcast a Search to 
-Article First, ERIC, Readers Guide Abstracts and Wilson Business Abstracts</a>
-<LI><A HREF="http:/z39m">Z39BROADCAST </A>
-</UL>
-<A HREF="http://172.16.11.225/search/"><IMG SRC="/screens/newsrch.gif" 
-BORDER=0 ALT="[START OVER]"></A>
+<span class="pageMainAreaHeader">Search Other Library Catalogs and Databases</span><br />
+<br />
+<a href="http://YOUR.SERVER.ADDRESS:211/z39m/oclc2:articlefirst,oclc2:eric,oclc2:readersguideabstracts,oclc2:wilsonbusinessabstracts/">Combined 
+Search of the Following Remote Libraries via Z39.50</a>: 
+<ul>
+<li>Article First</li>
+<li>ERIC</li>
+<li>Readers Guide Abstracts</li>
+<li>Wilson Business Abstracts</li>
+</ul> 
+Other Resources:
+<ul>
+<li><a href="http://YOUR.SERVER.ADDRESS:211/z39/Melvyl/CAT">Univ of Calif Melvyl 
+Full Catalog</a></li>
+<li><a href="http://YOUR.SERVER.ADDRESS:211/z39m">Choose many other libraries to search</a></li>
+</ul>
+<!--End of main page content-->
+</td>
+</tr>
+</table>
+<!--End the main content table-->
 
-<!-- end search -->
-</DIV>
-</TD>
-</TR>
-</TABLE>
-
-</TD>
-</TR>
-</TABLE>
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-<IMG SRC="/screens/botlogo.gif">
-</DIV>
+<br />
+<!--Begin the bottom logo table-->
+<!--TIP: this data should match the data used by the BOTLOGO web option-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr valign="middle"> 
+<td align="center" class="pageNavArea"> 
+<!--Beginning text-only navigation bar at the bottom of the page-->
+<a href="/" class="pageNavAreaText">Home</a> | <a href="/screens/help_index.html" class="pageNavAreaText">Help</a> 
+<!--End of bottom navigation bar-->
+</td>
+</tr>
+<tr> 
+<td bgcolor="#0132A7"><img src="/screens/spacer.gif" height="1" width="1" alt="" /></td>
+</tr>
+</table>
+<!--End the bottom logo table--> 
+<p align="center" class="InnovativeCredit">Powered by <a href="http://www.iii.com" target="_blank">Innovative Interfaces, Inc.</a> 2003</p>
 </body>
 </html>
