@@ -1,79 +1,130 @@
-<HTML>
-  <HEAD>
-   <TITLE>Patron Record Display</TITLE>
-  </HEAD>
-
-  <BODY>
 <!--{toplogo}-->
-  <TABLE WIDTH="100%">
-  <TR>
-  <TD>
-Catalog searches:
-<!--{ifmymil}-->
-<!--{searchbtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{ifpsearch}-->
-<BR>
-<!--{psearchbtn}-->
-<BR>
-<!--{xif}-->
-  <BR>
-  Circulation information:
-<!--{ifchkouts}-->
-<!--{chkoutsbtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{ifholds}-->
-<!--{holdsbtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{ifill}-->
-<!--{illbtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{ifbookings}-->
-<!--{bookingsbtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{iffines}-->
-<!--{finesbtn}-->
-<!--{xif}-->
-  <BR>
-  Patron information:<p>
-<!--{ifmodifypin}-->
-<!--{modifypinbtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{ifmodifypatinfo}-->
-<!--{modifypatinfobtn}-->
-  &nbsp;
-<!--{xif}-->
-<!--{ifmsgs}-->
-<!--{msgsbtn}-->
-<!--{xif}-->
-  <P>
-<!--{startover}-->
-<!--{logout}-->
-  </P>
-  </TD>
-  <TD ALIGN="center">
-  <TABLE BORDER="0">
-  <TR>
-  <TD>
+<!--{patron}-->
+<div class="pat">
+<div class="patFloat">
+<div class="patTop">
+<div class="patNameAddress">
 <!--{ifpatimage}-->
 <!--{patimage}-->
 <!--{xif}-->
-  <P>
 <!--{patroninfo}-->
-  </TD>
-  </TR>
-  </TABLE>
-  </TD>
-  </TR>
-  </TABLE>
-  <BR>
+</div>  <!--patNameAddress-->
+</div>
+
+<div class="clear"></div>
+
+<div class="patActionsLinks">
+<div id="patActionsLinksList">
+ <!--{ifholds}-->
+<div class="patActionItem" id="patButHolds">
+<div class="button2">
+<!--{holdsbtn}-->
+</div>
+</div>
+ <!--{xif}-->
+<!--{ifill}-->
+<div class="patActionItem" id="patButIll">
+<!--{illbtn}-->
+</div>
+<!--{xif}-->
+<!--{iffines}-->
+<div class="patActionItem" id="patButFines">
+<div class="button2">
+<!--{finesbtn}-->
+</div>
+</div>
+<!--{xif}-->
+<!--{ifchkouts}-->
+<div class="patActionItem" id="patButChkouts">
+<div class="button2">
+<!--{chkoutsbtn}-->
+</div>
+</div>
+<!--{xif}-->
+<!--{ifmodifypatinfo}-->
+<div class="patActionItem">
+<!--{modifypatinfobtn}-->
+</div>
+<!--{xif}-->
+<!--{ifprograms}-->
+<div class="patActionItem">
+<!--{programsbtn}-->
+</div>
+<!--{xif}-->
+<!--{ifbookings}-->
+<div class="patActionItem" id="patButBookings">
+<div class="button2">
+<!--{bookingsbtn}-->
+</div>
+</div>
+<!--{xif}-->
+<!--{ifmodifypin}-->
+<div class="patActionItem">
+<!--{modifypinbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifmsgs}-->
+<div class="patActionItem">
+<!--{msgsbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifpsearch}-->
+<div class="patActionItem">
+<!--{psearchbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifmffav}-->
+<div class="patActionItem">
+<!--{mffavbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifcirchist}-->
+<div class="patActionItem">
+<!--{circhistbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifpatrate}-->
+<div class="patActionItem">
+<!--{patratebtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifpatreview}-->
+<div class="patActionItem">
+<!--{patreviewbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifmylists}-->
+<div class="patActionItem">
+<!--{mylists}-->
+</div>
+<!--{xif}-->
+
+<!--{ifprogreg}-->
+<div class="patActionItem">
+<!--{progregcal}-->
+</div>
+<!--{xif}-->
+
+<div class="patActionItem">
+<!--{patfeeds}-->
+</div>
+
+</div>
+</div>
+
+<div class="patFuncArea">
 <!--{patfunc}-->
-  <P>
-  </BODY>
-</HTML>
+</div>
+<div class="clear"></div>
+</div> <!--patFloat-->
+</div> <!--pat-->
+<!--{botlogo}-->
+</body>
+</html>

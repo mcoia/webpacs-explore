@@ -1,128 +1,106 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- Updated: 09 June 2010 -->
+<head>
+<title>Millennium Web Catalog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<!--<link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" > Un-comment to offer a larger logo on mainmenu.-->
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
+}
 
-<head><title>
-St. Louis Research Libraries Consortium Main Menu
-</title>
-
-</head>
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
-<DIV ALIGN="center">
-
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<P>
-</TR>
-
-<TR>
-<TD COLSPAN=3>
-
-<IMG  SRC="/screens/iiilogo.gif" WIDTH=70 HEIGHT=73 ALT="" 
-BORDER="0" 
-ALIGN="left"><IMG SRC="/screens/slrlc.gif" 
-ALT="" 
-BORDER="0">
-<BR>
-<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" 
-BORDER="0" 
-ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" 
-ALIGN="left">
-<TD>
-<font size=+1 color=green face="arial">Catalog Options</font><p>
-<A HREF="/search~S15"><font face="arial" color=blue>Search the 
-SLRLC Catalog
-</A><BR><BR>
-<A HREF="/search~S1/">Search the Missouri Botanical Garden 
-Catalog</a><BR><BR>
-<A HREF="/search~S2/">Search the Missouri History Museum 
-Catalog</a><BR><BR>
-<A HREF="/search~S3/">Search the Saint Louis Art Museum 
-Catalog</a><BR><BR>
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
+}
+}
+/* ]]> */
+</script>
+</head>
+<body>
+<!--{toplogo}-->
 
-<A HREF="/search~S14/">Search the Goldfarb School of Nursing 
-Catalog</a><BR><BR>
-<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
-Consortium Info</A></font><BR>
-<!--<A HREF="/suggest/"><font face="arial" color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font face="arial" color=blue>
-Books to Acquire</A></font><BR>
-<A HREF="/ftlist/"><font face="arial" color=blue>Featured 
-Lists</font></A><BR>
-<A HREF="/patroninfo/"><font face="arial" color=blue>
-View Your Record</font></A><BR>
-<A HREF="http://www.britannica.com"><font face="arial" 
-color=blue>
-Encyclopaedia Britannica</font></A><BR>-->
-</TD>
-</TR>
-</TABLE>
-
-</TD>
-<TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=500 ALT="LINE" 
-BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="top">
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-
-<TD ALIGN="left" VALIGN="top">
-<P><B>The St. Louis Research Libraries Consortium (SLRLC)</B> is 
-pleased to 
-offer this Web-based interface 
-to its catalog of resources. </P>
-
-
-<B>SLRLC  Web Search Options: </B> 
-
-                                  
-<P> Simultaneously search the Library Catalogs of all three 
-Consortium 
-Libraries. 
- </P>
-
-Search each individual member library by clicking the appropriate 
-link. 
-                              
-<P> <B>Consortium Info</B> - Information about the formation of 
-the Saint 
-Louis Research Libraries Consortium.</P>
-
-<!--<P><B>Suggestions and Books to Acquire</B> - Submit general 
-suggestions 
-for 
-the library or collection recommendations to be read by library 
-staff. <P>
-
-<P><B>Featured Lists</B> - Access library-defined lists 
-highlighting new 
-arrivals, journals, special collections, or featured authors. <P>
-
-<P><B>View Your Own Record</B> - Find out about items you have 
-checked out, 
-holds status, and fines. </P>
-
-<P><B>Encyclopaedia Britannica</B> - Connect to and search the 
-Online 
-Encyclopaedia Britannica.
-</P>-->
-
-</TD>
-</TR>
-</TABLE>
-</TD>
-<TD VALIGN="top">
-</TD>
-</TR>
-</TABLE>
-<p>
-<!--<IMG SRC="/screens/botlogo.gif">-->
-</DIV>
-</FONT>
-</BODY>
-</HTML>
+<div class="pageContentInner mainSearch">
+
+<h1 class="accessibleAddInfo">Search</h1>
+
+<div id="accessibleForm" class="form1Part">
+<div class="browseSearchtool">
+<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
+
+
+<input type="hidden" id="iiiFormHandle_1">
+
+<!-- Optional legend:
+<fieldset>
+<legend>Type the search term you want to find.</legend>-->
+<div class="formEntryArea">
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="X" selected="selected">Keyword</option>
+<option value="t">Title</option>
+<option value="s">Journal Title</option>
+<option value="a">Author</option>
+<option value="d">Subject</option>
+<option value="y">Resource Name</option>
+</select>
+<!--{nosort}-->
+<label for="searcharg" class="accessibleAddInfo">Search term</label>
+<input maxlength="75" name="searcharg" size="20" >
+<label for="scope" class="accessibleAddInfo">Location</label>
+<!--{scope}-->
+<span class="nowrap formButtonArea">
+
+  <!--{submit}-->
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
+</form>
+</div><!-- browseSearchtool -->
+</div><!-- form1Part -->
+
+<div class="mainMenuContent">
+<div class="mainMenuContentLeft">
+<img src="/screens/main.jpg" height=249 width=355>
+</div>
+<div class="mainMenuContentRight">
+<ul>
+<li><a href="[encore IP/iii/encore]">Search Encore</a></li>
+<li><a href="/iii/calendar/month">Program Calendar</a></li>
+<li><a href="/ftlist">Featured Lists</a></li>
+<li><a href="/rpro">Research Pro</a></li>
+<li><a href="/search/y">Find e-resources</a></li>
+<li><a href="/illb">Interlibrary Loan</a></li>
+<li><a href="[WebPAC IP:2090]">KidsOnline</a></li>
+</ul>
+</div>
+</div>
+
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
+</html>
