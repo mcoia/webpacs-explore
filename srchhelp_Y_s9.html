@@ -2,40 +2,36 @@
 <html>
 <head>
 <title>Saint Louis Art Museum Slide Library Word Search</title>
-<link href="/screens/css9.css" type="text/css" rel="stylesheet"></link>
+
 </head>
 
- <body style="background-color: #DDE4E9">
+ <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
  
  <div id="container">
  
  <div>
- <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
- Louis Art Museum">
-
- </div>
- </div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
  
  <div id="navigation">
  <ul>
- <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
- <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
  <ul>
-
- <li><a href="/search~S6/"><div>Books & Periodicals</div></a></li>
- <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
- <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
- <li><a href="/search~S8/"><div>Archives</div></a></li>
- <li><a href="/search~S9" id="currentsubPage"><div>Slide Library</div></a></li>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ <li><a href="/search~S9" id="currentsubPage"><font>Slide Library</font></a></li>
 
  </ul>
  </li>
  
  
  <li><a
- href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library
- Information</div></a></li><li><a
- href="http://slrlc.org/patroninfo/"><div>View Your Record</div></a></li>
+ href="/patroninfo~S9/"><font>View Your Record</font></a></li>
  </ul>
  </div>
  
@@ -45,103 +41,36 @@
 
 <h2>Slide Library</h2>
 
-
-<div class="firstPara">
-Simple Word Search
+<br />
+<div id="menuBar">
+<a HREF="/search~S9/a">ARTIST</a>
+<a HREF="/search~S9/t">TITLE</a>
+<a HREF="/search~S9/q">ARTIST + TITLE</a>
+<a HREF="/search~S9/i">OBJECT NO.</a>
+<a HREF="/search~S9/m">CALL NO.</a>
+<font>WORD</font>
 </div>
 
-<div class="errormessage">
+<!--{iferr}-->
+<div id="errormessage">
+<!--{msg}-->
 </div>
-
-<p id="firstPara">
-Type the <b>WORD(S)</b> you want, then press [Enter] or click <b> Submit Search</b>
-</p>
-
-<FORM ACTION=/search/Y name="Simple">
-<input type="text" name="SEARCH" size="48" value="">
-<input type="hidden" name="SORT" value="D">
-<INPUT type="hidden" name="searchscope" value=9>
-<input type="submit" name="submit" value="Submit">
-</FORM>
-
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" BORDER=0 ALT="[START 
-OVER]"></A>&nbsp;
-<A HREF="/search/X"><IMG SRC="/screens/advanced.gif" BORDER=0
-ALT="[ADVANCED 
-SEARCH]"></a>
-<br>
-
-<p style="font-size: 16pt; font-weight: bold; margin-bottom: -20px; color: #577993; text-align: center;">Search Help</p>
-
-<div id="wordhelp">
-
-<p><b>Enter one or more distinctive WORDS,</b> including names, titles, subjects or other terms relevant to your search.
- For example:</p>
-
-<div class="indent">
-medieval altarpieces<br>
-maori
-</div>
-
-<p><b>Tips</b></p>
-
-<p>A simple word search will search for records containing <b>all</b> the terms entered, regardless of their order or proximity. Word searches are not case sensitive; upper and lower case may be used interchangeably.
-</p>
+<!--{xif}-->
 
 <p>
-Omit initial articles in all languages (e.g. <i>The, An, Le, Ein, Los</i>). Use <b>distinctive</b>
-words for best results; the inclusion of common words such as "the", "with", "of", etc. reduces precision and will likely yield poor results.</p>
+Enter one or more <b>Distinctive WORDS</b>, including names, titles, subjects or other terms relevant to your search, then press the [<b>Enter</b>] key or click <b> Submit Search</b> (or choose an <a
+href="/search~S9/X">Advanced Word Search</a>)
+</p>
 <br />
-<hr width=25% />
 
-<center><p><b>Advanced Search Techniques</b></p></center>
 
-<p><b>Truncation</b></p>
-<p>Words may be right-hand truncated using an asterisk. Use a single asterisk * to truncate from 1-5 characters. Use a double asterisk ** for open-ended truncation. For example:</p>
+<form action="/search/Y" id="search" name="search" method="get">
+<!--{search}-->
 
-<div class="indent">
-expression* german*<br>
+<input type="submit" name="submit" value="Submit">
+<input type="hidden" name="searchscope" value="9">
+</form>
 
-parmig** 
-</div>
-
-<p><b>Phrase Search</b></p>
-
-<p>Multiple words are searched together as one phrase, if enclosed in quotation marks. For example:</p>
-
-<div class="indent">
-"renaissance sculpture"<br />
-"sepik river"
-</div>
-
-<p><b>Wildcards</b></p>
-
-<p>A single character in a keyword can be replaced with a question  mark to search
-for variants of the replaced character. For example:</p>
-
-<div class="indent">
-organi?ation<br />
-poll???olo
-</div>
-
-<p><b>Field Limits</b></p>
-
-<p>Specify fields to search using the field abbreviations a: (author), t: (title), s: (subject), or n: (note).
-
-<div class="indent">
-(a:louis and a:museum) and (s:gogh)<br /> 
-(s:kiki) and (n:interview* or s:interview*)
-</div>
-
-<p><b>Boolean Operators</b></p>
-
-<p>Use the words <b>and</b> or <b>or</b> to indicate logical relationships among multiple search terms. Narrow your search by using the phrase <b>and not</b> to exclude specific words or phrases. Use parentheses to group words into Boolean expressions. For example:</p>
-
-<div class="indent">(blaue reiter) and not kandin*<br>
-
-(brucke or reiter) and (exhib** and berlin)
-</div>
-</div>
 
 <div>
 <div id="footer">
@@ -154,8 +83,7 @@ Telephone 314.655.5252
 
 </div></div>
 
-</div> </div>
-</div>
+</div></div>
 
 </body>
 </html>

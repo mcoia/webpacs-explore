@@ -1,85 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript">
+<!--
+function clearDefault() {
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> <html> <head> <title>Saint Louis Art Museum Auction Sale Date Search</title>
-<style type="text/css">
- body {font-family: Times, serif; font-size: 100%}
- p.indent {margin-left: 8pt;}
- </style>
+var currentVal=document.forms[0].SEARCH.value
+if (currentVal == "YYYYMMDD")
+{
+document.forms[0].SEARCH.value=""
+}
+}
+
+//-->
+</script>
+<title>Richardson Library Auction Sale Date Search</title>
 </head>
-<body bgcolor="#FFFFFF" alink="#0000FF" vlink="#0000FF"> <DIV ALIGN="center">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<TD COLSPAN=3>
-<IMG SRC="/screens/slambut.gif" ALT="" BORDER="0">
-<BR>
-<BR>
-</TD></TR>
-<TR>
-<TD COLSPAN=3>
-<IMG SRC="/screens/burgdot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left"> <TR> <TD> <font size=+1 color=#006666 face="arial">Catalog Options</font>
-<p> <A HREF="/search~S3/"><font face="arial">All Collections</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S6/">Books & Periodicals</font>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S10/">Periodicals Only</font></A>
-<p class="indent"><A HREF="/search~S7/"><font size=-1 face="arial" color=black><B>Auction Catalogs</B></font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S8/">Archives</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S9/">Slide Library</font></A>
-<p><font face="arial"><A HREF="http://www.stlouis.art.museum/index.aspx?id=7">Library Information</A></font>
-<p><font face="arial"><A HREF="/patroninfo/"> View Your Record</font></A>
-<BR>
-<BR> 
-</TD></TR>
-</TABLE>
+ <body style="background-color: #DDE4E9">
+ 
+ <div id="container">
+ 
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/" id="currentsubPage"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S7/"><font>View
+ Your Record</font></a></li></ul></div>
+ 
+ <div>
+ <div id="content">
 
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/burgdot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0"
-ALIGN="top"></TD>
-<TD VALIGN="center" ALIGN="center">
-<CENTER>
 
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
+<h2>Auction Catalogs</h2>
 
-<TR>
+<br />
+<div id="menuBar">
+<a HREF="/search~S7/a">AUCTION HOUSE</a>
+<a HREF="/search~S7/t">TITLE</a>
+<a HREF="/search~S7/q">HOUSE + TITLE</a>
+<font>DATE OF SALE</font>
+<a HREF="/search~S7/i">SALE CODE</a>
+<a HREF="/search~S7/Y">WORD</a>
+</div>
 
-   
-<TD ALIGN="left" VALIGN="top">
-<font size=+2 color=#006666 face="arial"><B>Auction Catalogs</B></font>
-<BR>
-<BR>
-Type the earliest <B>Date of Sale</B> as 8 digits (<B>YYYYMMDD</B>), then press <b>&lt;Enter&gt;</b> or click <b>Submit Search</b>
-<BR>
-<BR>
-<FORM METHOD=GET> <INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="10" SIZE="24" ALIGN=CENTER VALUE="YYYYMMDD" style="color:#666666" onClick="document.forms[0].SEARCH.value='';"> <INPUT TYPE=SUBMIT VALUE="Submit Search"> </TR> </TD>
+<p>
+ Type the exact <B>Date of Sale</B> as 8 digits, for example 20051219 (2005 Dec. 19), then press [<b>Enter</b>] key or click <b>Submit Search</b>
+</p>
+<br>
+<FORM METHOD=GET>
+<INPUT TYPE=TEXT NAME="SEARCH" MAXLENGTH="10" SIZE="24" ALIGN=CENTER VALUE="YYYYMMDD" onClick="clearDefault()">
+&nbsp;
+<INPUT TYPE=SUBMIT VALUE="Submit Search">
+</FORM>
+<br>
+<p>Use right-hand truncation to retrieve all catalogs for an entire month, for example:
+</p>
 
- </FORM> <TR> <TD> <A HREF="/search/"><IMG SRC="/screens/newsrch.gif" WIDTH=86 HEIGHT=26 ALIGN="center" ALT="" BORDER="0" ALT="[START OVER]"></A> </TD> </TR> <TR> <TD> <P>
+<div class="indent">
+May 1998 = <B>199805</B> or <B>1998/05</B>
+</div>
 
-Examples:
+<p>For sales that occurred over a span of dates, enter the <B>earliest</B> date of sale, for example:
 
-<UL>
-<TABLE>
-<TR><TD><LI>December 19, 2005 = <B>20051219</B> or <B>2005/12/19</B></LI></TD> <TR><TD><LI>July 2-11, 2001 (<i>multi-date sale</i>) = <B>20010702</B> or <B>2001/07/02</B></LI></TD> <TR><TD><LI>May 1998 (<i>entire month</i>) = <B>199805</B> or <B>1998/05</B></LI></TD> </TABLE> </UL>
 
-TIPS:
-<UL>
-<TABLE>
-<TR><TD><LI>Omit the day to retrieve all catalogs for an entire month. For example, 199505 will retrieve all catalogs for May 1995. </LI></TD></TR> <TR><TD><LI>For sales that occurred over a span of dates, enter the <B>earliest</B> date of sale. For example, use 19901130 for a sale that occurred from November 30 to December 1, 1990.</LI></TD></TR>
+<div class="indent">
+July 2-11, 2001 = <B>20010702</B> or <B>2001/07/02</B>
+</div>
 
-</TABLE>
-</UL>
-</DIV>
-</TD>
-</TR>
-</TABLE>
 
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
+<div>
+<div id="footer">
+One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
+Telephone 314.655.5252
+	
+<div id="copyright">
+&copy; 2009 Saint Louis Art Museum
+</div>
+</div></div>
 
-</DIV>
+</div> </div>
+</div>
+
 </body>
 </html>
-

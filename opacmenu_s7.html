@@ -1,7 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-
-<head>
+<HTML> <HEAD>
 <script language="JavaScript">
 <!--
 function changeType() {
@@ -28,64 +26,40 @@ document.forms[0].searcharg.value=""
 
 //-->
 </script>
-<title>
-Saint Louis Art Museum Library Auction Catalog Search
-</title>
-<style type="text/css">
-body {font-family: Times, serif; font-size: 100%}
- p.indent {margin-left: 8pt;}
- </style>
-</head>
-<body bgcolor="#FFFFFF" alink="#0000FF" vlink="#0000FF">
-<DIV ALIGN="center">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-
-<TR>
-<TD COLSPAN=3>
- <IMG SRC="/screens/slambut.gif" 
-ALT="" 
-BORDER="0">
-<BR>
-<BR>
-</TD></TR>
-<TR>
-<TD COLSPAN=3>
-<IMG SRC="/screens/burgdot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
-<TR>
-<TD>
-<font size=+1 color=#006666 face="arial">Catalog Options</font>
-<p> <A HREF="/search~S3/"><font face="arial">All Collections</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S6/">Books & Periodicals</font>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S10/">Periodicals Only</font></A>
-<p class="indent"><font size=-1 face="arial" color=black><B>Auction Catalogs</B></font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S8/">Archives</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S9/">Slide Library</font></A>
-<p><font face="arial"><A HREF="http://www.stlouis.art.museum/index.aspx?id=7">Library Information</A></font>
-<p><font face="arial"><A HREF="/patroninfo/"> View Your Record</font></A>
-<BR>
-<BR>
-</TD>
-</TR>
-</TABLE>
-
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/burgdot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="top"> 
+<title>Richardson Library Auction Catalogs</title>
+</HEAD>
+ <body style="background-color: #DDE4E9">
+ 
+ <div id="container">
+ 
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org/"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/" id="currentsubPage"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S7/"><font>View
+ Your Record</font></a></li></ul></div>
+ 
+ <div><div id="content">
 
 
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
-<FORM ACTION=/search~/a?a>
-<TR><TD COLSPAN=2>
-<font size=+2 color=#006666 face="arial"><B>Auction Catalogs</B></font>
-<p>
-
+<h2>Auction Catalogs</h2>
+<br>
+<FORM METHOD=GET ACTION=/search/a?a>
 <SELECT NAME=searchscope>
 <OPTION VALUE=7>Auction Catalogs
 </SELECT>
@@ -94,45 +68,40 @@ ALIGN="top"></TD>
 <OPTION VALUE=a>AUCTION HOUSE
 <OPTION VALUE=i>SALE CODE
 <OPTION VALUE=t>TITLE
-<OPTION VALUE=X>WORD
+<OPTION VALUE=Y>WORD
 </SELECT>
 
 <INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="45" VALUE="YYYYMMDD (8 digits)" onClick="clearDefault()">
-</SELECT>
 <INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D">
 <INPUT TYPE="SUBMIT" VALUE="GO!">
-
-</TD>
-</TR>
-<TR>
-<!--bgcolor=#F5C2D1-->
-<TD COLSPAN=2><CENTER><FONT face="arial" SIZE="-1"><B><I>If you cannot find a particular sale catalog, please consult library staff.</I></B>
-</FONT></CENTER></TD></TR>
 </FORM>
-<TR><TD></TD></TR>
-<TR>
-<TD COLSPAN=2><font size=+1 color=#006666 face="arial">Search Options</font></TD>
-</TR>
+<FONT style="font-family: sans-serif; font-size: 10pt;"><I><B>If you cannot find a particular sale catalog, please consult library staff.</B></I></FONT>
 
+
+<h3>Search Options</h3>
+
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0>
 <TR><TD><a href="/search~S7/a"><font face="arial">Auction House Search</a></TD><TD>
 <a href="/search~S7/l"><font face="arial">Date of Sale Search</a></TD></TR>
 <TR><TD><a 
 href="/search~S7/t"><font face="arial">Title Search</a></TD><TD><a href="/search~S7/i"><font face="arial">Sale Code Search</a></TD></TR>
 <TR>
-<TD><a href="/search~S7/q"><font face="arial">Auction House/Title 
+<TD><a href="/search~S7/q"><font face="arial">Auction House + Title 
 Search</a></TD>
 
-<TD><a href="/search~S7/Y"><font face="arial">Word 
-Search</a></TD></TR>                                         
-
-
+<TD><a href="/search~S7/Y"><font face="arial">Word Search</a></TD></TR>
 </TABLE>
 
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
+<div><div id="footer">
+	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
+	Telephone 314.655.5252
+	
+	<div id="copyright">
+		&copy; 2009 Saint Louis Art Museum
+</div>
+</div></div>
 
-</DIV>
-</body>
-</html>
+
+</div> </div> </div>
+
+ </body> </HTML>

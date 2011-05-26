@@ -1,50 +1,65 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML> <HEAD> <title>Richardson Library Books & Periodicals</title>
-<link href="/sreeens/slamcss.css" type="text/css" rel="stylesheet"></link>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function addInstructorName() {
+if (document.forms[0].searchtype.options[4].selected == true)
+{ 
+var fillIn = document.forms[0].searcharg;
+fillIn.value = "Murawski";
+}
+else
+{
+var fillIn = document.forms[0].searcharg;
+fillIn.value = "";
+}
+}
+
+//-->
+</SCRIPT>
+
 </HEAD>
- <body style="background-color: #DDE4E9">
+ <body style="background-color: #DDE4E9" onLoad="document.forms[0].searcharg.focus()";>
  
  <div id="container">
  
  <div>
- <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
- Louis Art Museum">
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
  </div></div>
  
  <div ID="navigation">
  <ul>
- <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
- <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
  <ul>
- <li><a href="/search~S6/" id="currentsubPage"><div>Books & Periodicals</div></a></li>
- <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
- <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
- <li><a href="/search~S8/"><div>Archives</div></a></li>
- <li><a href="/search~S9/"><div>Slide Library</div></a></li>
-
-
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/" id="currentsubPage"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
  </ul>
  </li>
- 
- 
  <li><a
- href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library  Information</div></a></li><li><a
- href="/patroninfo~S6/"><div>View
- Your Record</div></a></li></ul></div>
+ href="/patroninfo~S6/"><font>View
+ Your Record</font></a></li></ul></div>
  
  <div><div id="content">
 
 
 <h2>Books & Periodicals</h2>
 <br>
-<FORM METHOD=POST ACTION=/search~/a?a>
-<SELECT NAME=searchscope>
-<OPTION VALUE=6>Books & Periodicals</SELECT>
-<SELECT NAME=searchtype>
-<OPTION VALUE=t>TITLE 
-<OPTION VALUE=a>AUTHOR
-<OPTION VALUE=d>SUBJECT 
-<OPTION VALUE=Y SELECTED>WORD</SELECT>
+ <FORM METHOD=GET ACTION=/search/a?a> <SELECT
+ NAME=searchscope> <OPTION VALUE=6>Books & Periodicals</SELECT>
+ <SELECT NAME=searchtype onchange="addInstructorName()">
+ <OPTION VALUE=t>TITLE
+ <OPTION VALUE=a>AUTHOR
+ <OPTION VALUE=d>SUBJECT
+ <OPTION VALUE=Y SELECTED>WORD
+ <OPTION VALUE=p>INSTRUCTOR
+ </SELECT>
 
 <INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="75" VALUE=""> </SELECT> <INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D"> <INPUT TYPE="SUBMIT" VALUE="GO!"> </FORM>
 
@@ -58,13 +73,13 @@
 <TR><TD><a href="/search~S6/t">Title Search</a></TD>
 <TD><a href="/search~S6/c">Call Number Search</a></TD>
 </TR>
-<TR><TD><a href="/search~S6/q">Author/Title Search</a></TD>
+<TR><TD><a href="/search~S6/q">Author + Title Search</a></TD>
 <TD><a href="/search~S6/d">Subject Search</a></TD>
 </TR>
 
 <TR><TD><a href="/search~S6/s">Journal Title Search</a></TD>
 
-<TD><a href="/search~S6/Y">Word Search</a></TD>
+<TD><a href="/search~S6/X">Advanced Search</a></TD>
 </TR>
 
 
@@ -75,7 +90,7 @@
 	Telephone 314.655.5252
 	
 	<div id="copyright">
-		&copy; 2006 Saint Louis Art Museum
+		&copy; 2009 Saint Louis Art Museum
 </div>
 </div></div>
 

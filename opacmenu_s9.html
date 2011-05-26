@@ -1,58 +1,55 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML> <HEAD> <title>Saint Louis Art Museum Richardson Library</title>
-<link href="/screens/css9.css" type="text/css" rel="stylesheet"></link>
+<HTML> <HEAD> <title>Saint Louis Art Museum Slide Library</title>
 </HEAD>
- <body style="background-color: #DDE4E9">
+ <body style="background-color: #DDE4E9" onLoad="document.forms[0].searcharg.focus()";>
  
  <div id="container">
  
  <div>
- <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
- Louis Art Museum">
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
  </div></div>
  
  <div ID="navigation">
  <ul>
- <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
- <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
  <ul>
- <li><a href="/search~S6/"><div>Books & Periodicals</div></a></li>
- <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
- <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
- <li><a href="/search~S8/"><div>Archives</div></a></li>
- <li><a href="/search~S9/" id="currentsubPage"><div>Slide Library</div></a></li>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ <li><a href="/search~S9/" id="currentsubPage"><font>Slide Library</font></a></li>
 
 
  </ul>
  </li>
  
- 
  <li><a
- href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library
- Information</div></a></li><li><a
- href="http://slrlc.org/patroninfo/"><div>View
- Your Record</div></a></li></ul></div>
+ href="/patroninfo~S9/"><font>View
+ Your Record</font></a></li></ul></div>
  
  <div><div id="content">
 
 
 <h2>Slide Library</h2>
 <br>
-<FORM ACTION=/search~/a?a>
+<FORM METHOD=GET ACTION=/search/a?a>
 <SELECT NAME=searchscope>
 <OPTION VALUE=9>Slides</SELECT>
 <SELECT NAME=searchtype>
+<OPTION VALUE=a SELECTED>ARTIST
+<OPTION VALUE=i>OBJECT NUMBER
 <OPTION VALUE=t>TITLE 
-<OPTION VALUE=a>ARTIST
-<OPTION VALUE=d>SUBJECT 
-<OPTION VALUE=Y SELECTED>WORD</SELECT>
+<OPTION VALUE=Y>WORD</SELECT>
 
 <INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="75" VALUE=""> </SELECT> <INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D"> <INPUT TYPE="SUBMIT" VALUE="GO!"> </FORM>
 
 
 <h3>Search Options</h3>
 
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 >
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 >
 <TR>
 <TD><a href="/search~S9/a">Artist Search</a></TD>
 <TD><a href="/search~S9/i">SLAM Object Number Search</a></TD>
@@ -60,15 +57,11 @@
 <TR><TD><a href="/search~S9/t">Title Search</a></TD>
 <TD><a href="/search~S9/m">Slide Call Number Search</a></TD>
 
-<TR><TD><a href="/search~S9/d">Subject Search</a></TD>
+<TR><TD><a href="/search~S9/q">Artist + Title Search</a></TD>
 
 <TD><a href="/search~S9/Y">Word Search</a></TD>
 
-
-<TR><TD><a href="/search~S9/q">Artist/Title
-Search</a></TD><TD>    
-</TD>
- </TR>
+</TR>
 
 </TABLE>
 
@@ -77,7 +70,7 @@ Search</a></TD><TD>
 	Telephone 314.655.5252
 	
 	<div id="copyright">
-		&copy; 2006 Saint Louis Art Museum
+		&copy; 2009 Saint Louis Art Museum
 </div>
 </div></div>
 

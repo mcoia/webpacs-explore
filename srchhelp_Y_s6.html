@@ -1,159 +1,85 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-
-
-<head><title>
-Saint Louis Art Museum Books & Periodicals Word Search
-</title>
-<STYLE type="text/css">
- body {font-family: Times, serif; font-size: 100%}
- p.indent {margin-left: 8pt;}
- div.errormessage {color: purple; text-align: center; font-size: 10pt; font-family: Times, serif;}
-</STYLE>
+<head>
+<title>Richardson Library Books & Periodicals Word Search</title>
 </head>
-<body bgcolor="#FFFFFF" alink="#0000FF" vlink="#0000FF">
-<DIV ALIGN="center">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-
-<TR>
-
-<TD COLSPAN=3>
-
-<IMG SRC="/screens/slambut.gif" ALT="" BORDER="0">
+ <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
  
-<BR>
-<BR>
-</TD></TR>
-<TR>
-<TD COLSPAN=3>
-<IMG SRC="/screens/burgdot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
-<TR>
-<TD>
-<font size=+1 color=#006666 face="arial">Catalog Options</font>
-<p> <A HREF="/search~S3/"><font face="arial">All Collections</font></A>
-<p class="indent"><A HREF="/search~S6/"><font size=-1 face="arial" color=black><B>Books & Periodicals</B></font></A>
-<p class="indent"><A HREF="/search~S10/"><font size=-1 face="arial"><A HREF="/search~S10/">Periodicals Only</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S7/">Auction Catalogs</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S8/">Archives</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S9/">Slide Library</font></A>
-<p><font face="arial"><A HREF="http://www.stlouis.art.museum/index.aspx?id=7">Library Information</A></font>
-<p><font face="arial"><A HREF="/patroninfo/"> View Your Record</font></A>
-<BR> <BR> <BR>
-<BR>
+ <div id="container">
+ 
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/" id="currentsubPage"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S6/"><font>View
+ Your Record</font></a></li></ul></div>
 
-</TD>
-</TR>
-</TABLE>
-
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/burgdot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="top" ALIGN="left">
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top">
-<TR>
+<div>
+ <div id="content">
 
 
-<TD ALIGN="left" VALIGN="top">
-<font size=+2 color=#006666 face="arial"><B>Books & Periodicals</B></font>
-<BR>
-<BR>
+<h2>Books & Periodicals</h2>
+
+<br />
+<div id="menuBar">
+<a HREF="/search~S6/a">AUTHOR</a>
+<a HREF="/search~S6/t">TITLE</a>
+<a HREF="/search~S6/q">AUTHOR + TITLE</a>
+<a HREF="/search~S6/s">JOURNAL</a>
+<a HREF="/search~S6/d">SUBJECT</a>
+<a HREF="/search~S6/i">NUMBER</a>
+<a HREF="/search~S6/c">CALL NO.</a>
+<a HREF="/search~S6/X">ADVANCED</a>
+</div>
+
 <!--{iferr}-->
-<div class="errormessage">
+<div id="errormessage">
 <!--{msg}-->
 </div>
 <!--{xif}-->
-Type the <B>WORD(S)</B> you want, then press <b>&lt;Enter&gt;</b> or click 
-<b>Submit Search</b>
 
-</TD></TR>
-<TR><TD>
 
-<FORM ACTION=/search/Y name="Simple">
+<p>
+Enter one or more <b>Distinctive WORDS</b>, including names, titles, subjects or other terms relevant to your search, then press the [<b>Enter</b>] key or click <b> Submit</b> (or choose an <a
+href="/search~S6/X">Advanced Word Search</a>).
+</p>
+<br />
+
+
+<form action="/search/Y" id="search" name="search" method="get">
 <!--{search}-->
-<input type="hidden" name="SORT" value="D">
-<INPUT type="hidden" name="searchscope" value=6>
-<input type="submit" name="submit" value="Submit">
-</FORM>
-</TD></TR>
-<TR><TD>
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" BORDER=0 ALT="[START 
-OVER]"></A>&nbsp;
-<A HREF="/search/X"><IMG SRC="/screens/advanced.gif" BORDER=0 ALT="[ADVANCED 
-SEARCH]"></a>
 
-</TD></TR>
-</TABLE>
-</TR>
-<TR>
-<TD COLSPAN=3>
-<p>
-<TABLE BORDER=0 CELLPADDING=10 CELLSPACING=2 WIDTH="100%">
+<input type="submit" name="submit" value="Submit">&nbsp;<INPUT TYPE="BUTTON" VALUE="Start Over" ONCLICK="location.href='/search~S6/'">
+<input type="hidden" name="searchscope" value="6">
+</form>
 
-<TR>
+<div>
+<div id="footer">
+One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
+Telephone 314.655.5252
+	
+<div id="copyright">
+&copy; 2009 Saint Louis Art Museum
+</div>
 
-<TH WIDTH=10%></TH>
-<TH WIDTH=40%>Enter Distinctive Words to search: </TH>
+</div></div>
 
-<TH WIDTH=50%>EXAMPLES</TH></TR>
-<TR>
-<TD WIDTH=100><b>ADJACENCY</b></TD>
-<TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Multiple words are searched together as one phrase, if enclosed in quotation marks.</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>"renaissance sculpture"</TT></TD>
-<TR>
+</div></div></div>
 
-<TD WIDTH=100><b>TRUNCATION</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-
-Words may be right-hand truncated using an asterisk. Use a single asterisk * 
-to
-truncate from 1-5 characters. Use a double asterisk ** for open-ended 
-truncation
-.</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>expression* german*
-<p>
-parmig**</TT>
-</TD>
-<TR>
-<TD WIDTH=100><b>OPERATORS</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Use &quot;and&quot; or &quot;or&quot; to specify multiple words in any field,
-any order.  Use &quot;and not&quot; to exclude words. Parentheses group words 
-together when using Boolean operators.</FONT></TD>
-
-<TD bgcolor=#F5C2D1><TT>(blaue reiter) and  not kandin*
-<p>
-(brucke or reiter) and (exhib** and berlin)</TT></TD>
-<TR>
-<TD WIDTH=100><b>PROXIMITY</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Use &quot;near&quot; to specify words close to each other, in any
-order. Use &quot;within #&quot; to specify terms which occur within # words of
- each other in the record.</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>garden near sculpture
-
-<p>
-
- roman within 3 antiquit*</TT></TD>
-<TR>
-<TD WIDTH=100><b>FIELDS</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Specify fields to search, using field abbreviation.  Fields available for
-this database are a: (author), t: (title), s: (subject), and n: (note).
-</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>(a:louis and a:museum) and (s:gogh)</TT>
-<p>
-<TT>(s:kiki) and (n:interview* or s:interview*)</TT></TD></TR>
-</TABLE>
-
-</TD>
-<TD VALIGN="top"></TD>
-
-</TR>
-</TABLE>
-
-</DIV>
 </body>
 </html>

@@ -1,207 +1,756 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> <html> <head>
+<title>Richardson Library Auction Catalogs Advanced Word Search</title>
+<script type="text/javascript" language="JavaScript1.3">
+<!--
+//  IMPORTANT NOTE: The following Javascript functions are provided for example purposes only.
+//  Unless you have experience working with Javascript, please refer to your local technical
+//  resources for assistance with modification.
+//  If many of your patrons use an out of date browser (such as Netscape 4.7) with incomplete support
+//  for Javascript, you may wish to use srchhelp_X_nojavascript.html instead. Simply rename this file
+//  srchhelp_X_javascript.html and then rename that file srchhelp_X.html.
+// -->
 
+<!-- Hide the JavaScript from browsers which do not understand SCRIPT tag
 
-<head><title>
-Saint Louis Art Museum Auction Catalogs Advanced Word Search
-</title>
-<STYLE type="text/css">
- body {font-family: Times, sans-serif; font-size: 100%}
- p.indent {margin-left: 8pt;}
- div.errormessage {color: purple; text-align: center; font-size: 10pt; font-family: Times,serif;}
-</STYLE>
+<!-- Initialize arrays used in following functions -->
+var searchType = new Array();
+var searchName = new Array();
+var searchValue = new Array();
+var limitName = new Array();
+var limitValue = new Array();
+
+function processLimit()
+<!-- last updated : January 4, 2005 -->
+<!--
+// This function is called by the submitSearch function.
+// This function processes all limit form elements in the current page.
+// Any form element used to apply a limit to the search entered by the user is 
+// considered a limit form element for the purpose of this function.
+// Innovative recommends always using tokens to insert limit form elements into HTML. 
+// For more information on tokens see the User Manual or http://csdirect.iii.com .
+// All limit form elements must appear contiguously within the HTML and must be enclosed
+// in the following hidden form tags.
+// The user must include the following hidden form element before the first 
+// limit form element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="startLimit">
+// The following hidden form element must be included after the last limit form
+// element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="endLimit">
+// -->
+{
+var limitWorkString = "";
+for (var i = 0; i < limitName.length; i++)
+{
+<!-- 
+//  The following statement processes date form elements.
+//  Date limits must be processed differently since they contain text form elements.
+// -->
+if (limitName[i] == "Da" || limitName[i] == "Db") {limitWorkString += "&" + limitName[i] + "=" + limitValue[i]; continue;}
+<!-- The following statement processes all selection list form elements. --> 
+if (limitValue[i] != 0) {limitWorkString += "&" + limitName[i] + "=" + limitValue[i];}
+else if(limitName[i] != "availlim") {limitWorkString += "&" + limitName[i]+"=";}
+}
+<!-- The following statement checks for the availability limit. -->
+if (document.search.availlim != null) {
+if (document.search.availlim.checked) {limitWorkString += "&availlim=1";}
+}
+
+return limitWorkString;
+}
+
+function processSearch()
+<!-- version 1 : January 22, 2003 -->
+<!--
+// This function is called by the submitSearch function.
+// This function processes field limit, search text, and boolean form elements in the current page.
+// Any form element which allows the user to choose a field limit, type search text, or choose
+// a boolean operator is considered a search form element for the purpose of this function.
+// All search form elements must appear contiguously within the HTML and must be enclosed
+// in the following hidden form tags.
+// The user must include the following hidden form element before the first search
+// form element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="startSearch">
+// The following hidden form element must be included after the last search form
+// element appearing in the search form:
+// <INPUT TYPE="hidden" NAME="endSearch">
+// -->
+{
+var searchWorkString = "";
+for (var i = 0; i < searchName.length; i++)
+{
+if (searchName[i].indexOf("fieldLimit") != -1)
+{
+if ((searchValue[i] != 0) && (searchValue[i+1].length != 0))
+{
+<!-- NOTE: This statement places parentheses around the input typed by the user. -->
+searchWorkString += searchValue[i] + "(" + searchValue[i+1] + ")";
+i++;
+}
+continue;
+}
+else if (searchName[i].indexOf("searchText") != -1)
+{
+if (searchValue[i].length != 0)
+{
+<!-- NOTE: This statement places parentheses around the input typed by the user. -->
+searchWorkString += "(" + searchValue[i] + ")";
+}
+continue;
+}
+else if (searchName[i].indexOf("boolean") != -1)
+{
+if ((searchType[i+2] == "text") && (searchValue[i+2].length != 0))
+{
+searchWorkString += searchValue[i];
+}
+continue;
+}
+else
+{
+continue;
+}
+}
+return searchWorkString;
+}
+
+function submitSearch(searchForm)
+<!-- last updated : January 13, 2005 -->
+<!--
+// This function is called when the user clicks the submit button.
+// This function processes all form elements in the form named search and 
+// populates the arrays searchType, searchName, searchValue, limitName, limitValue
+// with data. It then passes the data to the functions processSearch and processLimit; please 
+// see the description of those functions for important information on the hidden form elements
+// within the form named search which are required for this function to work properly.
+// Finally, this function replaces the current page with a URL constructed based on the user's
+// form input.
+// -->
+{
+var isSearch = 0;
+var isLimit = 0;
+  
+var searchString = "";
+var limitString = "";
+  
+var searchArrayCounter = 0;
+var limitArrayCounter = 0; 
+   
+for (var i = 0; i < searchForm.elements.length; i++)
+{
+if (searchForm[i].name.indexOf("startSearch") != -1) {isSearch = 1; isLimit = 0; continue;}
+else if (searchForm[i].name.indexOf("startLimit") != -1) {isSearch = 0; isLimit = 1; continue;}
+else if (searchForm[i].name.indexOf("endSearch") != -1) {isSearch = 0; isLimit = 0; continue;}
+else if (searchForm[i].name.indexOf("endLimit") != -1) {isSearch = 0; isLimit = 0; continue;}
+else
+{
+if (isSearch == 1)
+{
+searchName[searchArrayCounter] = searchForm[i].name;
+if (searchForm[i].type == "select-one") {searchType[searchArrayCounter] = "select-one"; searchValue[searchArrayCounter] = searchForm[i].options[searchForm[i].selectedIndex].value; searchArrayCounter++; continue;}
+else if (searchForm[i].type == "text") { searchType[searchArrayCounter] = "text"; searchValue[searchArrayCounter] = searchForm[i].value; searchArrayCounter++; continue;}
+else {searchType[searchArrayCounter] = ""; searchValue[searchArrayCounter] = ""; searchArrayCounter++; continue;}
+}
+else if (isLimit == 1)
+{
+limitName[limitArrayCounter] = searchForm[i].name;
+if (searchForm[i].type == "select-one") {limitValue[limitArrayCounter] = searchForm[i].options[searchForm[i].selectedIndex].value; limitArrayCounter++; continue;}
+else if (searchForm[i].type == "select-multiple")
+{ for (var m = 0; m < searchForm[i].options.length; m++)
+{
+if (searchForm[i].options[m].selected)
+{
+limitName[limitArrayCounter] = searchForm[i].name;
+limitValue[limitArrayCounter] = searchForm[i].options[m].value;
+limitArrayCounter++;
+}
+}
+continue;
+}
+
+<!-- SLAM modification! In following line SLAM added: || searchForm[i].name == "searchscope" -->
+
+else if (searchForm[i].type == "text" || searchForm[i].name == "searchscope") {limitValue[limitArrayCounter] = searchForm[i].value; limitArrayCounter++; continue;}
+else {limitValue[limitArrayCounter] = ""; limitArrayCounter++; continue;}		 
+}
+else
+{
+continue;
+}
+}
+}
+searchString = processSearch();   
+limitString = processLimit();
+
+searchString = encodeURI(searchString);
+<!--
+// Replace statements convert certain indexed special characters from the original
+// character to their escaped form. Each statement here must have a corresponding
+// statement in two places in the parseSearch function.
+// ++ is converted to %2B%2B (example, c++)
+// NOTE: do not convert single + to %2B or the scripts will break
+// # is converted to %23
+// & is converted to %26
+// / is converted to %2F
+//-->
+if (searchString.indexOf("++") != -1) {searchString = searchString.replace(/\+\+/, "%2B%2B");}
+if (searchString.indexOf("#") != -1) {searchString = searchString.replace(/#/g, "%23");}
+if (searchString.indexOf("&") != -1) {searchString = searchString.replace(/&/g, "%26");}
+if (searchString.indexOf("?") != -1) {searchString = searchString.replace(/\?/g, "%3F");}
+if (searchString.indexOf("/") != -1) {searchString = searchString.replace(/\//g, "%2F");}
+window.location.href = "http://" + location.host + "/search/X?" + searchString + limitString;
+
+return false;
+}
+
+function modifySearch()
+<!-- last updated : October 29, 2004 -->
+<!--
+// This function takes the URL of the current page and extracts all search data into the 
+// array modifyString3. It then passes that information to the function parseSearch.
+// -->
+{
+var modifyString1 = decodeURI(location.search);
+<!-- SLAM modification!
+// Following IF block added 11/13/06 to remove the string "searchtype=X&searcharg=" from
+// URLs used to retrieve the AVS page when user submits an unsuccessful Word search
+// from the search form at top of search results screens.
+// -->
+
+if (modifyString1.indexOf("?searchtype=X") != -1)
+{
+modifyString1 = "?" + modifyString1.slice(24)
+}
+var modifyString2 = new Array();
+var modifyString3 = new Array();
+var modifyString2 = modifyString1.split("&");
+
+if (modifyString2[0].indexOf("?NOSRCH=") != -1)
+{
+var modifyString3 = modifyString2[0].split("?NOSRCH=");
+}
+else
+{
+var modifyString3 = modifyString2[0].split("?");
+}
+parseSearch(modifyString3[1]);
+<!-- SLAM Modification!
+// Following call to repopLimits function (see below) added 11/13/06.
+// -->
+repopLimits (modifyString2);
+}
+
+function parseSearch(str)
+<!-- last updated : November 17, 2004 -->
+<!--
+// This function is called by the function modifySearch.
+// This function takes the relevant portion of the URL of the current page and attempts to place
+// all data within that URL back into the appropriate form elements on the page within the 
+// form named search. If the function can't find appropriately named form elements into which
+// to place data, it puts everything into the text element named searchText1 in the form named search.
+// -->
+{
+var temp = "";
+var elementName = "";
+var fieldLimitCounter = 1;
+var searchTextCounter = 1;
+var booleanCounter = 1;
+
+<!-- Convert %3A to : for proper display and processing of field limits -->
+str = str.replace(/%3A/g, ":");
+<!-- Store original search string in case we can't parse out the search elements -->
+var origSearch = str;
+
+for (var i = 0; i < str.length; i++)
+{
+if (str.charAt(i) == ":")
+{
+elementName = "fieldLimit" + fieldLimitCounter;
+temp = str.charAt(i-1) + str.charAt(i);
+for (var m = 0; m < document.search.length; m++)
+{
+if (document.search.elements[m].name == elementName)
+{
+for (var n = 0; n < document.search.elements[m].length; n++)
+{
+if (document.search.elements[m].options[n].value == temp)
+{
+document.search.elements[m].options[n].selected = true;
+fieldLimitCounter++;
+break;
+}
+else {continue;}
+}
+break;
+}
+else
+{
+continue;
+}
+}
+continue;
+}
+else if (str.charAt(i) == "(")
+{
+temp = "";
+elementName = "searchText" + searchTextCounter;
+for (var m = 0; m < document.search.length; m++)
+{
+if (document.search.elements[m].name == elementName)
+{
+for (i = i + 1; i < str.length; i++)
+{
+if (str.charAt(i) == ")") {i++; break;}
+else {temp += str.charAt(i); continue;}
+}
+searchTextCounter++;
+<!--
+// Replace statements convert certain indexed special characters from escaped form to the
+// original character. Each statement here must have a corresponding statement in the
+// submitSearch function and both here and at the end of the parseSearch function.
+// %2B is converted to +
+// %23 is converted to #
+// %26 is converted to &
+// %2F is converted to / 
+//-->
+temp = temp.replace(/%2B/g, "+");
+temp = temp.replace(/%23/g, "#");
+temp = temp.replace(/%26/g, "&");
+temp = temp.replace(/%3F/g, "?");
+temp = temp.replace(/%2F/g, "/");
+document.search.elements[m].value = temp;
+break;
+}
+else
+{
+continue;
+}
+}
+continue;
+}
+else
+{
+temp = "";
+elementName = "boolean" + booleanCounter;
+for (i = i; i < str.length; i++)
+{
+if (str.charAt(i+1) == ":"  || str.charAt(i+1) == "(") {break;}
+else {temp += str.charAt(i); continue;}
+}		 
+if (temp.length > 0)
+{
+for (var m = 0; m < document.search.length; m++)
+{
+if (document.search.elements[m].name == elementName)
+{
+for (var n = 0; n < document.search.elements[m].length; n++)
+{
+if (document.search.elements[m].options[n].value.indexOf(temp) != -1)
+{
+document.search.elements[m].options[n].selected = true;
+booleanCounter++;
+temp = "";
+break;
+}
+else {continue;}
+}
+fieldLimitCounter = booleanCounter;
+searchTextCounter = booleanCounter;
+break;
+}
+else
+{
+continue;
+}
+}
+if (temp.length > 0)
+{
+<!-- The following statement replaces + with space for display -->
+origSearch = origSearch.replace(/\+/g, " ");
+<!--
+// Replace statements convert certain indexed special characters from escaped form to the
+// original character. Each statement here must have a corresponding statement in the
+// submitSearch function and both here and earlier in the parseSearch function.
+// %2B is converted to +
+// %23 is converted to #
+// %26 is converted to &
+// %2F is converted to / 
+//-->
+origSearch = origSearch.replace(/%2B%2B/g, "++");
+origSearch = origSearch.replace(/%23/g, "#");
+origSearch = origSearch.replace(/%26/g, "&");
+origSearch = origSearch.replace(/%3F/g, "?");
+origSearch = origSearch.replace(/%2F/g, "/");
+<!--
+// If we get to this point, parseSearch has not been able to parse the user's search.
+// In some cases, fieldLimit1 will have been found and set. Because we are 
+// writing the entire original search into searchText1, we need to reset fieldLimit1
+// to avoid possible conflicts with the data in searchText1. The for loop below finds
+// the "any field" option in fieldLimit1 and selects it. Then we put the original search
+// string into searchText1.
+//-->
+for (var n = 0; n < document.search.fieldLimit1.length; n++)
+{
+if (document.search.fieldLimit1.options[n].value == "")
+{
+document.search.fieldLimit1.options[n].selected = true;
+}
+}
+document.search.searchText1.value = origSearch;
+}
+continue;
+}
+else
+{
+continue;
+}
+}	   
+}
+}
+
+<!-- SLAM Modification!
+// Added repopLimits function (called in last line of modifySearch function above), 11/13/06.
+// Used in place of tokens to repopulate user's limits when a search is modified.
+// -->
+function repopLimits(limitsString) {
+var repopLimitChunk = new Array();
+var repopLimitName = "";
+var repopLimitValue = "";
+for (var x = 1; x < limitsString.length; x++) {
+    repopLimitChunk = limitsString[x].split("=");
+    repopLimitName = repopLimitChunk[0];
+    repopLimitValue = repopLimitChunk[1];
+    if (repopLimitName.length < 5)
+    {
+    if (document.forms[0].elements[repopLimitName].type == "text")
+    {
+    document.forms[0].elements[repopLimitName].value = repopLimitValue
+    }
+    else
+    {
+    for (var l = 0; l < document.forms[0].elements[repopLimitName].length;
+l++)
+    {
+    if (document.forms[0].elements[repopLimitName].options[l].value ==
+repopLimitValue)
+    {
+    document.forms[0].elements[repopLimitName].options[l].selected = true
+    break;
+    }
+    else
+    {
+    continue;
+    }
+    }
+    }
+}
+}
+}
+
+function gotoDestination(path,port) {
+  if (port == null) port = 80;
+	var url = "http://" + location.hostname + ":" + port + path;
+	window.open(url);
+}
+
+function GoBack() {
+  history.back()
+}
+//-->
+</script>
+
 </head>
-<body bgcolor="#FFFFFF" alink="#0000FF" vlink="#0000FF">
-<DIV ALIGN="center">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-
-<TR>
-
-<TD COLSPAN=3>
-
-<IMG SRC="/screens/slambut.gif" ALT="" BORDER="0">
+<body onload="if (location.search != '') modifySearch(document.location.search); document.search.searchText1.focus();" style="background-color: #DDE4E9";>
+ <div id="container">
  
-<BR>
-<BR>
-</TD></TR>
-<TR>
-<TD COLSPAN=3>
-<IMG SRC="/screens/burgdot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
-<TR>
-<TD>
-<font size=+1 color=#006666 face="arial">Catalog Options</font>
-<p> <A HREF="/search~S3/"><font face="arial">All Collections</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S6/">Books & Periodicals</font>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S10/">Periodicals Only</font></A>
-<p class="indent"><A HREF="/search~S7/"><font size=-1 face="arial" color=black><B>Auction Catalogs</B></font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S8/">Archives</font></A>
-<p class="indent"><font size=-1 face="arial"><A HREF="/search~S9/">Slide Library</font></A>
-<p><font face="arial"><A HREF="http://www.stlouis.art.museum/index.aspx?id=7">Library Information</A></font>
-<p><font face="arial"><A HREF="/patroninfo/"> View Your Record</font></A>
-<BR>
-<BR>
+ <div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
+ 
+ <div ID="navigation">
+ <ul>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
+ <ul>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/" id="currentsubPage"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ </ul>
+ </li>
+ <li><a
+ href="/patroninfo~S7/"><font>View
+ Your Record</font></a></li></ul></div>
 
-</TD>
-</TR>
-</TABLE>
+ <div>
+ <div id="content">
 
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/burgdot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="top" ALIGN="left">
+<h2>Auction Catalogs</h2>
 
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top">
-<TR>
+<div class="firstPara">
+Advanced Search
+</div>
 
-
-<TD ALIGN="left" VALIGN="top">
-<font size=+2 color=#006666 face="arial"><B>Auction Catalogs</B></font>
-
-<BR>
-<BR>
-<!--{iferr}-->
-<div class="errormessage">
+<!--{iferrmsg}-->
+<div id="errormessage">
 <!--{msg}-->
 </div>
 <!--{xif}-->
 
-Type the <B>WORD(S)</B> you want, then press <b>&lt;Enter&gt;</b> or click <b>Submit Search</b>
+<p>Fill in the boxes, select optional search limits, and click Submit (or choose a <a
+href="/search/Y">Simple Word Search</a>). For additional search help see <a href="#help">below</a>.</p>
 
-</TD></TR>
-<TR><TD>
+<!-- Note: if you use a character set other than utf-8, change the charset
+declaration in the enctype attribute below accordingly. -->
+<form action="javascript:submitSearch(this);" enctype="multipart/form-data: charset=utf-8" name="search" id="search" onsubmit="return submitSearch(this);">
+<input type="hidden" name="startSearch" />
 
-<FORM ACTION=/search/X METHOD=GET>
-<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=0 ALIGN="center" >
-
-<tr>
-<td colspan="2">
-<!--{search}-->
-<INPUT TYPE=SUBMIT VALUE="Submit Search">
-<INPUT type="hidden" name="searchscope" value=7>
-<INPUT type="hidden" name="b" value=""></td> </tr>
+<table id="booleanTable">
 
 <tr>
-<td colspan="2"><br /></td>
+<td class="firstCell">Search for:</td>
+<td>
+<select name="fieldLimit1">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">House:</option>
+<option value="t:">Title:</option>
+<option value="N:">Note:</option>
+</select>
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText1" />
+</td>
 </tr>
-
 <tr>
-<td colspan="2">Limit your search by:</td> </tr>
-
+<td>
+<select name="boolean1">
+<option value="+and+" selected="selected">And</option>
+<option value="+and+not+">And not</option>
+<option value="+or+">Or</option>
+</select>
+</td>
+<td>
+<select name="fieldLimit2">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">House:</option>
+<option value="t:">Title:</option>
+<option value="N:">Note:</option>
+</select>
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText2" />
+</td>
+</tr>
 <tr>
-<td>Language</td>
+<td>
+<select name="boolean2">
+<option value="+and+" selected="selected">And</option>
+<option value="+and+not+">And not</option>
+<option value="+or+">Or</option>
+</select>
+</td>
+<td>
+<select name="fieldLimit3">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">House:</option>
+<option value="t:">Title:</option>
+<option value="N:">Note:</option>
+</select>
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText3" />
+</td>
+</tr>
+<tr>
+<td>
+<select name="boolean3">
+<option value="+and+" selected="selected">And</option>
+<option value="+and+not+">And not</option>
+<option value="+or+">Or</option>
+</select>
+</td>
+<td>
+<select name="fieldLimit4">
+<option value="" selected="selected">Any Field:</option>
+<option value="a:">House:</option>
+<option value="t:">Title:</option>
+<option value="N:">Note:</option>
+</select>
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText4" />
+</td>
+</tr>
+</table>
+
+<p>
+<input type="submit" value="Submit" name="submit" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset">&nbsp;<INPUT TYPE="BUTTON" VALUE="Start Over" ONCLICK="location.href='/search~S7/'">
+</p>
+
+<input type="hidden" name="endSearch" />
+
+
+<input type="hidden" name="startLimit" />
+<input name="searchscope" value="7" type=hidden />
+
+<!--
+<p>Collection: 
+<div class="indent">
+<select name=searchscope >
+<option value="6">Books & Periodicals</option>
+</select>
+</div>
+</p>
+-->
+
+<p>
+Limit your search by: 
+</p>
+
+<div id="Lmtable">
+<table>
+<tr><td>Language</td>
 <td><select name="l">
 <option value="">ANY</option>
 <option value="eng">English</option>
+<option value="dan">Danish</option>
 <option value="dut">Dutch</option>
+
 <option value="fre">French</option>
 <option value="ger">German</option>
+<option value="heb">Hebrew</option>
 <option value="ita">Italian</option>
+<option value="lat">Latin</option>
+<option value="rus">Russian</option>
 <option value="spa">Spanish</option>
 <option value="chi">Chinese</option>
 <option value="jpn">Japanese</option>
-<option value="rus">Russian</option>
-</select>
 
-</td>
+<option value="kor">Korean</option>
 
+</select></td>
 </tr>
 
 
-<tr>
-<td>Format</td>
+<tr><td>Format</td>
 <td><select name="m">
 <option value="">ANY</option>
-<option value="a">Printed Catalogs</option>
-<option value="m">Electronic Resources</option></select>
+<option value="a">Printed Materials</option>
 
-</td>
+<option value="m">Computer Discs, CD-ROMs ...</option>
+</select></td>
 </tr>
 
-<tr>
-<td>Year</td>
-<td>After <input type="text" size="10" name="Da" value=""> and Before <input type="text" size="10" name="Db" value=""></td> </tr>
+<tr><td>Location</td>
 
-<tr>
-<td colspan="2">Sort your results by:</td> </tr> <tr> <td></td><td> <input type="radio" name="SORT" value="D" checked>Date <input type="radio" name="SORT" value="A">Title <input type="radio" name="SORT" value="R">Relevance </td> </tr>
+<td><select name="b">
+<option value="">ANY</option>
+<option value="a"> Saint Louis Art Museum</option>
 
+<option value="web">World Wide Web</option>
+</select><td>
+</tr>
+
+
+<tr><td>Publisher</td>
+<td><input type="text" size="20" name="p" value=""></td>
+</tr>
+
+<tr><td>Year</td>
+<td>After <input type="text" size="10" name="Da" value=""> and Before <input type="text" size="10" name="Db" value=""></td>
+</tr>
 </table>
-
-</FORM>
-
-</TD></TR>
-<TR><TD>
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" BORDER=0 ALT="[START 
-OVER]"></A>&nbsp;
-<A HREF="/search/Y"><IMG SRC="/screens/simple.gif" BORDER=0 ALT="[SIMPLE 
-SEARCH]"></a>
-
-</TD></TR>
-</TABLE>
-</TR>
-<TR>
-<TD COLSPAN=3>
-<p>
-<TABLE BORDER=0 CELLPADDING=10 CELLSPACING=2 WIDTH="100%">
-<TR>
-
-<TH WIDTH=10%></TH>
-<TH WIDTH=40%>Enter Distinctive Words to search: </TH>
-
-<TH WIDTH=50%>EXAMPLES</TH></TR>
-<TR>
-<TD WIDTH=100><b>ADJACENCY</b></TD>
-<TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Multiple words are searched together as one phrase, if enclosed in quotation marks.</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>&quot;renaissance sculpture&quot;</TT></TD>
-<TR>
-<TD WIDTH=100><b>TRUNCATION</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Words may be right-hand truncated using an asterisk. Use a single asterisk * 
-to
-truncate from 1-5 characters. Use a double asterisk ** for open-ended 
-truncation
-.</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>expression* german*
-<p>
-parmig**</TT>
-</TD>
-<TR>
-<TD WIDTH=100><b>OPERATORS</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Use &quot;and&quot; or &quot;or&quot; to specify multiple words in any field,
-any order.  Use &quot;and not&quot; to exclude words. Parentheses group words 
-together when using Boolean operators.</FONT></TD>
-
-<TD bgcolor=#F5C2D1><TT>(christie or sotheby*) and impression*
-</TT></TD>
-<TR>
-<TD WIDTH=100><b>PROXIMITY</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Use &quot;near&quot; to specify words close to each other, in any
-order. Use &quot;within #&quot; to specify terms which occur within # words of
- each other in the record.</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>garden near sculpture
+</div>
 
 <p>
+Sort your results by:
+</p>
 
-roman within 3 antiquit*</TT></TD>
-<TR>
-<TD WIDTH=100><b>FIELDS</b></TD><TD bgcolor=#F5C2D1><FONT SIZE=-1>
-Specify fields to search, using field abbreviation.  Fields available for
-this database are a: (author), t: (title), s: (subject), and n: (note).
-</FONT></TD>
-<TD bgcolor=#F5C2D1><TT>(a:christie) and (t:house sale*)</TT><br>
-<TT>(a:christie or a:sotheby*) and (t:picasso)</TT></TD></TR>
-</TABLE>
+<div class="indent">
+<select name="SORT" >
+<option value="D">Date</option>
+<option value="A">Title</option>
+<option value="R">Relevance</option>
+</select>
+</div>
 
-</TD>
-<TD VALIGN="top"></TD>
+<p> 
 
-</TR>
-</TABLE>
+</p>
+<input type="hidden" name="endLimit" />
+</form>
 
-</DIV>
-</body>
-</html>
+<div id="wordhelp">
+<p style="font-size: 16pt; font-weight: bold; margin-bottom: -5px; margin-top: 2px; color:
+#577993; text-align: center;"><a name="help" style="text-decoration: none;">Search Help</a></p
+<p><b>Tips</b></p>
+
+<p>Word searches are not case sensitive;
+upper and lower case may be used interchangeably. </p>
+
+<p> Omit initial articles in all languages (e.g.  <i>The, An, Le, Ein, Los</i>).
+Use <b>distinctive</b> words for best results; the inclusion of common words such
+as "the", "with", "of", etc. reduces precision and will likely yield poor
+results.</p> 
+
+<br />
+<hr width=25% />
+
+<p><b>Phrase Search</b></p>
+
+<p>Multiple words are searched together as one phrase, if enclosed in quotation
+marks. For example:</p>
+
+<div class="indent"> "Renaissance sculpture"<br />
+"House sale" </div>
+
+<p><b>Truncation</b></p> <p>Words may be right-hand truncated using an asterisk.
+Use a single asterisk * to truncate from 1-5 characters. Use a double asterisk **
+for open-ended truncation. For example:</p>
+
+<div class="indent"> Expression* German*<br>
+
+Parmig** </div>
+
+
+<p><b>Wildcards</b></p>
+
+<p>A single character in a keyword can be replaced with a question  mark to
+search for variants of the replaced character. For example:</p>
+
+<div class="indent"> Organi?ation<br /> Cim?bu? </div>
+
+<p><b>Field Limits</b></p>
+
+<p>Specify fields to search by selecting either [All Fields], [Author], [Title], [Subject], or [Note] from the center column of pulldown menus. For example:
+
+<div class="indent"> [Author] Drouot<br />
+[Title] Victorian paintings
+</div>
+
+<p><b>Boolean Operators</b></p>
+
+<p>Use the pulldown menus in the left-hand column to select the Boolean operators [And] or [Or] to indicate logical relationships among
+multiple search terms. Narrow your search by selecting [And Not] to
+exclude specific words or phrases. For example:</p>
+
+<div class="indent">Line 1 [Any Field] London<br />
+Line 2 [And] [Title] Cimabue<br />
+<br />
+Line 1 [Author] Sotheby* <br />
+Line 2 [And] [Any Field] Hay Whitney <br />
+Line 3 [And] [Title] Impression*
+</div>
+
+</div>
+
+<div> <div id="footer"> One Fine Arts Drive, Forest Park, St. Louis, MO
+63110-1380<br> Telephone 314.655.5252
+
+<div id="copyright"> &copy; 2009 Saint Louis Art Museum </div> </div></div>
+
+</div> </div>
+
+</body> </html>

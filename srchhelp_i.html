@@ -1,91 +1,109 @@
+<html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- Version 2003.08.15 -->
+
 <head>
-<title>Millennium Web Catalog</title>
-<meta http-equiv="Content-Type" content="text/html" />
-<link rel="stylesheet" href="/screens/styles.css" type="TEXT/CSS" />
+<title>SLRLC ISN Search</title>
+
 </head>
+<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
+<DIV ALIGN="center">
 
-<body onLoad="document.forms[0].elements[0].focus();">
-<!--Begin the top logo table-->
-<!--TIP: this data should match the data used by the TOPLOGO web option-->
-<!--You will need to make any changes to all static HTML pages and to toplogo.html.-->
-<!--The Web server will need to be restarted for changes to toplogo.html to take effect.-->
-<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
-<tr> 
-<td bgcolor="#0132A7" colspan="2"><img src="/screens/spacer.gif" height="2" width="1" alt="" /></td>
-</tr>
-<tr valign="middle"> 
-<td width="*" align="left" class="pageNavArea"> 
-<!--Beginning navigation bar at the top of the page-->
-<a href="/"><img src="/screens/home.gif" width="80" height="40" alt="Home" border="0" /></a><a href="/screens/help_index.html"><img src="/screens/help.gif" width="80" height="40" alt="Help" border="0" /></a> 
-<a href="/search"><img src="/screens/newsrch.gif" width="80" height="40" alt="New Search" border="0" /></a> 
-<!--End of the top navigation bar-->
-</td>
-<td width="209" align="right" class="pageNavArea"> 
-<!-- Beginning of library logo area -->
-<a href="/"><img src="/screens/logo.gif" width="166" height="25" border="0" alt="- Innovative Interfaces, Inc. -" /></a>&nbsp;<!-- End of library logo area -->
-</td>
-</tr>
-</table>
-<!--End the top logo table-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
+<TR>
+<!--{patron}-->
+<P>
+</TR>
 
-<br />
+<TR>
+<TD COLSPAN=3>
 
-<!--Begin the main content table-->
-<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
-<tr valign="top" class="pageMainArea">
-<td class="pageMainArea">&nbsp;
-<!--Beginning main page content-->
+<IMG SRC="/screens/iiilogo.gif" WIDTH=70 HEIGHT=73 ALT="" BORDER="0" 
+ALIGN="left"><IMG SRC="/screens/slrlc.gif" WIDTH=400 HEIGHT=79 ALT="" 
+BORDER="0">
+<BR>
+<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" 
+ALIGN="left"></TD>
+</TR>
+<TR>
+<TD VALIGN="top" width=25%>
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
+<TD>
+<font size=+1 color=green face="arial">Catalog Options</font><p>
+<A HREF="/"><font face="arial" color=blue>Home
+</A><BR><BR>
+<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
+Library Information</A></font><BR><BR>
+<!--<A HREF="/suggest/"><font face="arial" color=blue>
+Suggestions</A></font><BR>
+<A HREF="/acquire/"><font face="arial" color=blue>Books to 
+Acquire</A></font><BR>
+<A HREF="/ftlist/"><font face="arial" color=blue>Featured 
+Lists</font></A><BR>-->
+<A HREF="/patroninfo/"><font face="arial" color=blue>
+View Your Record</font></A><BR>
+</TD>
+</TR>
+</TABLE>
 
-<span class="pageMainAreaHeader">Standard Number Search</span> <br />
-<br />
-<table width="90%" border="0" align="center" cellpadding="2" cellspacing="0">
-<tr>
-<td class="pageNavArea"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
-<tr> 
-<td class="pageInfoArea"> Type the standard number (ISBN or ISSN) you want to 
-find, then press the Enter key or click Search.<br />
-<form method="get">
-<!--{search}-->
-<!--{scope}-->
-<!--{submit}-->
-</form>
-Type the ISBN or ISSN  as it appears. Punctuation and spaces can be omitted if desired.
-For example:
-<ul>
-<li>0060254920</li>
-<li>0303-7207</li>
-</ul>
-<br />
-</td>
-</tr>
-</table></td>
-</tr>
-</table>
-<!--End of main page content-->
-</td>
-</tr>
-</table>
-<!--End the main content table-->
+</TD><TD VALIGN="top">
+<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
+ALIGN="top"></TD>
+<TD VALIGN="center" ALIGN="center">
+<CENTER>
 
-<br />
-<!--Begin the bottom logo table-->
-<!--TIP: this data should match the data used by the BOTLOGO web option-->
-<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
-<tr valign="middle"> 
-<td align="center" class="pageNavArea"> 
-<!--Beginning text-only navigation bar at the bottom of the page-->
-<a href="/" class="pageNavAreaText">Home</a> | <a href="/screens/help_index.html" class="pageNavAreaText">Help</a> 
-<!--End of bottom navigation bar-->
-</td>
-</tr>
-<tr> 
-<td bgcolor="#0132A7"><img src="/screens/spacer.gif" height="1" width="1" alt="" /></td>
-</tr>
-</table>
-<!--End the bottom logo table--> 
-<p align="center" class="InnovativeCredit">Powered by <a href="http://www.iii.com" target="_blank">Innovative Interfaces, Inc.</a> 2003</p>
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
+<TR>
+   
+<TD ALIGN="left" VALIGN="top">
+
+Type the <B>ISBN/ISSN</B> you want, then press <b>&lt;Enter&gt;</b>
+or click <b>Submit Search</b>
+<FORM METHOD=GET>
+<INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="35" SIZE="35" ALIGN=CENTER>
+<br>
+<INPUT TYPE=SUBMIT VALUE="Submit Search">
+</FORM>
+
+<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" WIDTH=86 HEIGHT=26 
+ALIGN="center" ALT="" BORDER="0" ALT="[START OVER]"></A>
+
+<P>
+
+Type as much or as little of the <B>ISBN or ISSN</B></FONT> as you want, with 
+or without hyphens:
+
+<UL>
+<TABLE>
+<TR><TD><LI> 0198-9375</TD>
+<TR><TD><LI> 01989375</TD>
+<TR><TD><LI> 0871085461</TD>
+</TABLE>
+</UL>
+<P>
+
+Other standard numbers used by Saint Louis Art Museum include museum object 
+numbers and auction catalog sales codes, for example:
+
+
+<UL>
+<TABLE>
+<TR><TD><LI> 1:1935</TD>
+<TR><TD><LI> LO9124 Winston</TD>
+
+</TABLE>
+</UL>
+
+</DIV>
+</TD>
+</TR>
+</TABLE>
+
+</TD>
+<TD VALIGN="top"></TD>
+</TR>
+</TABLE>
+<p>
+<!--<IMG SRC="/screens/botlogo.gif">-->
+</DIV>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> <html> <head>
-<title>Saint Louis Art Museum Slide Library Word Search</title> <link
-href="/screens/css9.css" type="text/css" rel="stylesheet"></link>
+<title>Saint Louis Art Museum Slide Library Word Search</title>
+<link href="/screens/slamcss.css" type="text/css" rel="stylesheet"></link>
 <script type="text/javascript" language="JavaScript1.3">
 <!--
 //  IMPORTANT NOTE: The following Javascript functions are provided for example purposes only.
@@ -55,6 +55,7 @@ else if(limitName[i] != "availlim") {limitWorkString += "&" + limitName[i]+"=";}
 if (document.search.availlim != null) {
 if (document.search.availlim.checked) {limitWorkString += "&availlim=1";}
 }
+
 return limitWorkString;
 }
 
@@ -166,7 +167,10 @@ limitArrayCounter++;
 }
 continue;
 }
-else if (searchForm[i].type == "text") {limitValue[limitArrayCounter] = searchForm[i].value; limitArrayCounter++; continue;}
+
+<!-- SLAM modification! In following line SLAM added: || searchForm[i].name == "searchscope" -->
+
+else if (searchForm[i].type == "text" || searchForm[i].name == "searchscope") {limitValue[limitArrayCounter] = searchForm[i].value; limitArrayCounter++; continue;}
 else {limitValue[limitArrayCounter] = ""; limitArrayCounter++; continue;}		 
 }
 else
@@ -195,6 +199,7 @@ if (searchString.indexOf("&") != -1) {searchString = searchString.replace(/&/g, 
 if (searchString.indexOf("?") != -1) {searchString = searchString.replace(/\?/g, "%3F");}
 if (searchString.indexOf("/") != -1) {searchString = searchString.replace(/\//g, "%2F");}
 window.location.href = "http://" + location.host + "/search/X?" + searchString + limitString;
+
 return false;
 }
 
@@ -206,9 +211,20 @@ function modifySearch()
 // -->
 {
 var modifyString1 = decodeURI(location.search);
+<!-- SLAM modification!
+// Following IF block added 11/13/06 to remove the string "searchtype=X&searcharg=" from
+// URLs used to retrieve the AVS page when user submits an unsuccessful Word search
+// from the search form at top of search results screens.
+// -->
+
+if (modifyString1.indexOf("?searchtype=X") != -1)
+{
+modifyString1 = "?" + modifyString1.slice(24)
+}
 var modifyString2 = new Array();
 var modifyString3 = new Array();
 var modifyString2 = modifyString1.split("&");
+
 if (modifyString2[0].indexOf("?NOSRCH=") != -1)
 {
 var modifyString3 = modifyString2[0].split("?NOSRCH=");
@@ -218,6 +234,10 @@ else
 var modifyString3 = modifyString2[0].split("?");
 }
 parseSearch(modifyString3[1]);
+<!-- SLAM Modification!
+// Following call to repopLimits function (see below) added 11/13/06.
+// -->
+repopLimits (modifyString2);
 }
 
 function parseSearch(str)
@@ -388,6 +408,45 @@ continue;
 }
 }
 
+<!-- SLAM Modification!
+// Added repopLimits function (called in last line of modifySearch function above), 11/13/06.
+// Used in place of tokens to repopulate user's limits when a search is modified.
+// -->
+function repopLimits(limitsString) {
+var repopLimitChunk = new Array();
+var repopLimitName = "";
+var repopLimitValue = "";
+for (var x = 1; x < limitsString.length; x++) {
+    repopLimitChunk = limitsString[x].split("=");
+    repopLimitName = repopLimitChunk[0];
+    repopLimitValue = repopLimitChunk[1];
+    if (repopLimitName.length < 5)
+    {
+    if (document.forms[0].elements[repopLimitName].type == "text")
+    {
+    document.forms[0].elements[repopLimitName].value = repopLimitValue
+    }
+    else
+    {
+    for (var l = 0; l < document.forms[0].elements[repopLimitName].length;
+l++)
+    {
+    if (document.forms[0].elements[repopLimitName].options[l].value ==
+repopLimitValue)
+    {
+    document.forms[0].elements[repopLimitName].options[l].selected = true
+    break;
+    }
+    else
+    {
+    continue;
+    }
+    }
+    }
+}
+}
+}
+
 function gotoDestination(path,port) {
   if (port == null) port = 80;
 	var url = "http://" + location.hostname + ":" + port + path;
@@ -400,42 +459,35 @@ function GoBack() {
 //-->
 </script>
 
-
-
-
 </head>
 
- <body style="background-color: #DDE4E9">
+<body onload="if (location.search != '') modifySearch(document.location.search); document.search.searchText1.focus();" style="background-color: #DDE4E9";>
  
  <div id="container">
  
  <div>
- <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
- Louis Art Museum">
-
- </div>
- </div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
  
  <div id="navigation">
  <ul>
- <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
- <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+ <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
  <ul>
-
- <li><a href="/search~S6/"><div>Books & Periodicals</div></a></li>
- <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
- <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
- <li><a href="/search~S8/"><div>Archives</div></a></li>
- <li><a href="/search~S9" id="currentsubPage"><div>Slide Library</div></a></li>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ <li><a href="/search~S9" id="currentsubPage"><font>Slide Library</font></a></li>
 
  </ul>
  </li>
  
  
  <li><a
- href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library
- Information</div></a></li><li><a
- href="http://slrlc.org/patroninfo/"><div>View Your Record</div></a></li>
+ href="/patroninfo~S9/"><font>View Your Record</font></a></li>
  </ul>
  </div>
  
@@ -449,85 +501,110 @@ Advanced Word Search
 </div>
 
 <!--{iferr}-->
-<div class="errormessage">
+<div id="errormessage">
 <!--{msg}-->
 </div>
 <!--{xif}-->
 
-<p>Please fill in the boxes, select limits, and click Submit (or choose a <a
-href="/search/Y">Simple Word Search</a>):</p>
+<p>Fill in the boxes, select optional search limits, and click Submit (or choose a <a
+href="/search~S9/Y">Simple Word Search</a>). For additional search help see <a href="#help">below</a>.</p>
 
 <!-- Note: if you use a character set other than utf-8, change the charset
 declaration in the enctype attribute below accordingly. -->
 <form action="javascript:submitSearch(this);" enctype="multipart/form-data: charset=utf-8" name="search" id="search" onsubmit="return submitSearch(this);">
 <input type="hidden" name="startSearch" />
 
+<table id="booleanTable">
+
+<tr>
+<td class="firstCell">Search for:</td>
+<td>
 <select name="fieldLimit1">
 <option value="" selected="selected">Any Field:</option>
 <option value="a:">Artist:</option>
 <option value="t:">Title:</option>
-<option value="d:">Subject:</option>
 <option value="N:">Note:</option>
 </select>
-<input maxlength="75" size="35" name="searchText1" />
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText1" />
+</td>
+</tr>
+<tr>
+<td>
 <select name="boolean1">
 <option value="+and+" selected="selected">And</option>
 <option value="+and+not+">And not</option>
 <option value="+or+">Or</option>
 </select>
-<br />
+</td>
+<td>
 <select name="fieldLimit2">
 <option value="" selected="selected">Any Field:</option>
 <option value="a:">Artist:</option>
 <option value="t:">Title:</option>
-<option value="d:">Subject:</option>
 <option value="N:">Note:</option>
 </select>
-<input maxlength="75" size="35" name="searchText2" />
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText2" />
+</td>
+</tr>
+<tr>
+<td>
 <select name="boolean2">
 <option value="+and+" selected="selected">And</option>
 <option value="+and+not+">And not</option>
 <option value="+or+">Or</option>
 </select>
-<br />
+</td>
+<td>
 <select name="fieldLimit3">
 <option value="" selected="selected">Any Field:</option>
 <option value="a:">Artist:</option>
 <option value="t:">Title:</option>
-<option value="d:">Subject:</option>
 <option value="N:">Note:</option>
 </select>
-<input maxlength="75" size="35" name="searchText3" />
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText3" />
+</td>
+</tr>
+<tr>
+<td>
 <select name="boolean3">
 <option value="+and+" selected="selected">And</option>
 <option value="+and+not+">And not</option>
 <option value="+or+">Or</option>
 </select>
-<br />
+</td>
+<td>
 <select name="fieldLimit4">
 <option value="" selected="selected">Any Field:</option>
 <option value="a:">Artist:</option>
 <option value="t:">Title:</option>
-<option value="d:">Subject:</option>
 <option value="N:">Note:</option>
 </select>
-<input maxlength="75" size="35" name="searchText4" />
-<input type="hidden" name="endSearch" />
-<br />
+</td>
+<td>
+<input maxlength="75" size="45" name="searchText4" />
+</td>
+</tr>
+</table>
 
-<input type="hidden" name="startLimit" />
-
-<p>Collection: 
-<div class="indent">
-<select name=searchscope >
-<option value="9">Slide Library</option>
-</select>
-</div>
+<p>
+<input type="submit" value="Submit" name="submit" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset">&nbsp;<INPUT TYPE="BUTTON" VALUE="Start Over" ONCLICK="location.href='/search~S9/'">
 </p>
 
-<p>Limit to: 
+<input type="hidden" name="endSearch" />
+
+<input type="hidden" name="startLimit" />
+<input name="searchscope" value="9" type=hidden />
+
+<p>Limit Format to: 
 <div class="indent">
 <select name="m">
+<option value="" selected="selected">ANY</option>
 <option value="g">Slides</option>
 <option value="k">Digital Images</option>
 </select>
@@ -538,23 +615,20 @@ declaration in the enctype attribute below accordingly. -->
 
 <div class="indent">
 <select name="SORT">
-<option value="A" selected>Title</option>
+<option value="A" selected="selected">Title</option>
 <option value="R">Relevance</option>
 </select>
 </div>
 </p>
-<p> 
-<input type="submit" value="Submit" name="submit" />
-</p>
+
 <input type="hidden" name="endLimit" />
 
 </form>
 
 
-<p style="font-size: 16pt; font-weight: bold; margin-bottom: -20px; color:
-#577993; text-align: center;">Search Help</p>
-
 <div id="wordhelp">
+<p style="font-size: 16pt; font-weight: bold; margin-bottom: -5px; margin-top: 2px; color:
+#577993; text-align: center;"><a name="help" style="text-decoration: none;">Search Help</a></p>
 
 <p><b>Tips</b></p>
 
@@ -574,15 +648,16 @@ results.</p>
 <p>Multiple words are searched together as one phrase, if enclosed in quotation
 marks. For example:</p>
 
-<div class="indent"> "renaissance sculpture"<br /> "sepik river" </div>
+<div class="indent"> "dining table"
+<br /> "portrait of a man" </div>
 
 <p><b>Truncation</b></p> <p>Words may be right-hand truncated using an asterisk.
 Use a single asterisk * to truncate from 1-5 characters. Use a double asterisk **
 for open-ended truncation. For example:</p>
 
-<div class="indent"> expression* german*<br>
+<div class="indent"> impression*<br>
 
-parmig** </div>
+kunst** </div>
 
 
 <p><b>Wildcards</b></p>
@@ -590,14 +665,16 @@ parmig** </div>
 <p>A single character in a keyword can be replaced with a question  mark to
 search for variants of the replaced character. For example:</p>
 
-<div class="indent"> organi?ation<br /> poll???olo </div>
+<div class="indent"> wom?n
+<br /> mu?eum
+</div>
 
 <p><b>Field Limits</b></p>
 
 <p>Specify fields to search by selecting either [All Fields], [Author], [Title], [Subject], or [Note] from the left-hand column of pulldown menus. For example:
 
-<div class="indent"> [Subject] synchromism<br />
-[Author] wilmerding
+<div class="indent"> [Artist] Praxiteles<br />
+[Note] marble
 </div>
 
 <p><b>Boolean Operators</b></p>
@@ -606,12 +683,12 @@ search for variants of the replaced character. For example:</p>
 multiple search terms. Narrow your search by selecting [And Not] to
 exclude specific words or phrases. For example:</p>
 
-<div class="indent">Line 1 [Author] gug** [And]<br />
-Line 2 [Title] addict<br />
+<div class="indent">Line 1 [Artist] Rap**
+<br />Line 2 [And] [Title] Virgin<br />
 <br />
-Line 1 [Title] blue [And]<br />
-Line 2 [Subject] porcelain or pottery [And Not]<br />
-Line 3 [Any Field] chin* or korea*
+Line 1 [Title] Apollo<br />
+Line 2 [And] [Note] marble <br />
+Line 3 [And Not] [Any Field] temple
 </div>
 
 </div>

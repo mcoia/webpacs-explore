@@ -2,40 +2,36 @@
 <html>
 <head>
 <title>Saint Louis Art Museum Slide Library Artist/Title Search</title>
-<link href="/screens/css9.css" type="text/css" rel="stylesheet"></link>
+
 </head>
 
- <body style="background-color: #DDE4E9">
+ <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
  
  <div id="container">
  
- <div>
- <div id="top"> <img src="http://stlouis.art.museum/images/heading.gif" width="501" height="27" border="0" alt="Saint
- Louis Art Museum">
-
- </div>
- </div>
+<div>
+ <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
+ </div></div>
  
  <div id="navigation">
  <ul>
- <li> <a href="http://www.slrlc.org"><div>SLRLC Home</div></a></li>
- <li> <a href="/search~S3/" id="currentPage"><div>Richardson Library</div></a>
+ <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
+ <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
+  <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
  <ul>
-
- <li><a href="/search~S6/"><div>Books & Periodicals</div></a></li>
- <li><a href="/search~S10/"><div>Periodicals Only</div></a></li>
- <li><a href="/search~S7/"><div>Auction Catalogs</div></a></li>
- <li><a href="/search~S8/"><div>Archives</div></a></li>
- <li><a href="/search~S9" id="currentsubPage"><div>Slide Library</div></a></li>
+ <li><a href="/search~S3/"><font>All Collections</font></a></li>
+ <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
+ <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
+ <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
+ <li><a href="/search~S8/"><font>Archives</font></a></li>
+ <li><a href="/search~S9" id="currentsubPage"><font>Slide Library</font></a></li>
 
  </ul>
  </li>
  
  
- <li><a
- href="http://www.stlouis.art.museum/index.aspx?id=7"><div>Library
- Information</div></a></li><li><a
- href="http://slrlc.org/patroninfo/"><div>View Your Record</div></a></li>
+<li><a
+ href="/patroninfo~S9/"><font>View Your Record</font></a></li>
  </ul>
  </div>
  
@@ -45,29 +41,37 @@
 
 <h2>Slide Library</h2>
 
-<div class="firstPara">
-Artist/Title Search
+<br />
+<div id="menuBar">
+<a HREF="/search~S9/a">ARTIST</a>
+<a HREF="/search~S9/t">TITLE</a>
+<font>ARTIST + TITLE</font>
+<a HREF="/search~S9/i">OBJECT NO.</a>
+<a HREF="/search~S9/m">CALL NO.</a>
+<a HREF="/search~S9/Y">WORD</a>
 </div>
-
 
 <p>
-Type the <b>ARTIST</b> and <b>TITLE</b> for the Slide you want then click <b> Submit Search</b>
+Type the <b>ARTIST</b> and <b>TITLE</b> you want, then press the [<b>Enter</b>] key or click <b>Submit Search</b>
 </p>
 
-<div class="errormessage">
+<!--{iferr}-->
+<div id="errormessage">
+<!--{msg}-->
 </div>
+<!--{xif}-->
 
 <DIV ID="ATtable">
-<FORM METHOD=POST>
+<FORM>
 <TABLE>
 <TR>
 <TD>ARTIST</TD>
-<TD> <INPUT TYPE="text" NAME="author" SIZE=40></TD><TD></TD></TR>
-<TR><TD>TITLE</TD> <TD><INPUT TYPE="text" NAME="title" SIZE=40></TD><TD><INPUT TYPE="submit" value="Submit Search"></TD></TR>
+<TD> <INPUT TYPE="text" NAME="author" SIZE=45></TD><TD></TD></TR>
+<TR><TD>TITLE</TD> <TD><INPUT TYPE="text" NAME="title" SIZE=45></TD> <TD><INPUT TYPE=SUBMIT VALUE="Submit Search"></TD></TR>
 </TABLE>
+
 </FORM>
 </DIV>
-<a href="/search/"><img src="newsrch.gif" xalign="center" alt="" border="0" alt="[START OVER]"></a>
 <br />
 <br />
 <div id="ATtable">

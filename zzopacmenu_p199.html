@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Millennium Library STAFF Menu</title>
+
+</head>
+<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
+<DIV ALIGN="center">
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
+<TR>
+<!--{patron}-->
+<P>
+</TR>
+
+<TR>
+<TD COLSPAN=3>
+
+<IMG SRC="/screens/millogo.gif" WIDTH=100 HEIGHT=82 ALT="" BORDER="0" ALIGN="left"><CENTER><IMG SRC="/screens/logo.gif" WIDTH=400 HEIGHT=79 ALT="" BORDER="0"></CENTER>
+<BR>
+<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" ALIGN="left"></TD>
+</TR>
+<TR>
+<TD VALIGN="top" width=25%>
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
+<TD>
+<font size=+1 color=green face="arial">Catalog Options</font><p>
+<A HREF="/"><font face="arial" color=blue>Home
+</A></font><BR>
+<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
+Library Information</A></font><BR>
+<A HREF="/suggest/"><font face="arial" color=blue>
+Suggestions</A></font><BR>
+<A HREF="/acquire/"><font face="arial" color=blue>Books to Acquire</A></font><BR>
+<A HREF="/ftlist/"><font face="arial" color=blue>Featured Lists</font></A><BR>
+<A HREF="/patroninfo/"><font face="arial" color=blue>
+View Your Record</font></A><BR>
+</TD>
+</TR>
+</TABLE>
+
+</TD><TD VALIGN="top">
+<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" ALIGN="top"></TD>
+<TD VALIGN="center"> 
+
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
+<TR><TD COLSPAN=2>
+<font size=+1 color=green face="arial">Staff Search Options</font><p>
+<FORM ACTION=/search~/a?a>
+<SELECT NAME=searchtype>
+<OPTION VALUE=t SELECTED>TITLE <OPTION VALUE=a>AUTHOR 
+<OPTION VALUE=d>SUBJECT <OPTION VALUE=c>CALL NUMBER
+<OPTION VALUE=b>BARCODE	<OPTION VALUE=.>RECORD NUMBER
+<OPTION VALUE=X>WORD</SELECT>
+
+<INPUT TYPE=TEXT NAME=searcharg SIZE=20 MAXLENGTH=75 VALUE="">
+</SELECT>
+<INPUT TYPE="SUBMIT" VALUE="GO!">
+</FORM>
+<DIV>
+</TR>
+<TR><TD><a href="/search/a">Author Search</a></TD><TD><a href="/search/i">ISSN/ISBN Search</a></TD>
+<TR><TD><a href="/search/t">Title Search</a></TD><TD><a href="/search/c">Call Number Search</a></TD>
+<TR><TD><a href="/search/b">Barcode Search</a></TD><TD><a href="/search/,">Record Number Search</a></TD>
+<TR><TD><a href="/search/d">Subject Search</a></TD><TD><a href="/search/r">Course Reserves</a></TD>
+<TR><TD><a href="/search/X">Keyword Search</a></TD><TD><a href="/search/p">Course Reserves by Professor<a></TD>
+<TR><TD><a href="/search/q">Author/Title Search</a></TD><TD><a href="http://INNOPACIP:211/screens/z39menu.html">Search Other Databases by Z39.50</a></TD>
+</TABLE>
+
+</TD>
+<TD VALIGN="top"></TD>
+</TR>
+</TABLE>
+<p>
+<IMG SRC="/screens/botlogo.gif">
+</DIV>
+</body>
+</html>
