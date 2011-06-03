@@ -63,8 +63,8 @@ CUSTOM_MESSAGES=F
 STARTOVER=/search
 STATGROUP=login
 STYLESHEET=/screens/styles.css
-SUPPRESS_OPTION=STARTOVER,ANOTHER,NEWSRCH
-TIMEOUT=600;URL=/
+SUPPRESS_OPTION=Z39SEARCH
+TIMEOUT=32000;URL=/
 TOPLOGO=@screens/toplogo.html
 UPDATECIRC=true
 XSTARTOVER=/search
@@ -79,12 +79,12 @@ STAFF_LOGGEDIN_MSG=<span class="loggedInMessage">You are logged into staff mode 
 ICON_BUT_ANOTHER=<span class="button"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonText">Another Search</span></span>
 ICON_BUT_NEWSRCH=<span class="button"><img src="/screens/ico_startover.gif" alt=""><span class="buttonText">Start Over</span></span>
 ICON_BUT_WORDSRCH=<span class="button"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonText">Search as Words</span></span>
-DROP_DOWN=Xatdc
+DROP_DOWN=atdXscmbl
 FRAMEURL=0
 IBROWSE_MAX=10000
 KEYWORD_COLOR=Y|all|red
 MULT_LIMITS=true
-NOSEARCH=nubf
+NOSEARCH=nuf
 OFFER_HISTORY=true
 
 # Advanced Searching
@@ -120,7 +120,7 @@ ICON_BUT_LIMAVAIL=<span class="button"><img src="/screens/ico_list.gif" alt=""><
 ICON_BUT_LIMIT=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Limit/Sort Search</span></span>
 ICON_BUT_UNLIMAVAIL=<span class="button"><img src="/screens/ico_list.gif" alt=""><span class="buttonText">Show All</span></span>
 DISPLAY_245=atd
-EXTENDED=CT
+EXTENDED=CL
 HEADING_LENGTH=100
 ICON_856LINK=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Website
 ICON_962LINK=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Digital Image
@@ -159,7 +159,7 @@ IMAGE_MATTYPEv=/screens/media_vhs.gif
 IMAGE_MATTYPEw=/screens/media_periodical.gif
 IMAGE_MATTYPEz=/screens/media_bestseller.gif
 IMAGE_MATTYPE2=/screens/media_article.gif
-INDEX_EXT=coi
+INDEX_EXT=coiatWl
 MEDIA=2
 NO_COPIES=Currently no copies available
 SORT_BROWSE=t:Title|a:Author|c:Year|r:Reverse Year|n:Call Number|m:Material Type
@@ -182,7 +182,7 @@ ICON_BIB_PAGING_CAPTION=
 ICON_BIB_PAGING_NEXT=<span class="button"><span class="buttonText" id="buttonNextRecord">Next Record</span><img src="/screens/ico_next.gif" alt=""></span>
 ICON_BIB_PAGING_PREV=<span class="button"><img src="/screens/ico_previous.gif" alt=""><span class="buttonText">Previous Record</span></span>
 ICON_RECORDLINK=<a href="%s"><span class="button"><img src="/screens/ico_bookmark.gif" alt=""><span class="buttonText">Permanent Link</span></span></a>
-LINK856TEXT=Connect to
+LINK856TEXT=Click on the following to
 MARC=yes
 SHOWOREC=no_cdate
 TABLEPARAM_BIB=width="100%" cellpadding="0" cellspacing="0" border="0"|cellpadding="0" cellspacing="0" border="0" align="center"
@@ -255,7 +255,7 @@ EXPORT_SELECT_TABLE=Sendto:browser,email,local|Format:full,brief,marc,procite,en
 XRECTYPE=boi
 
 #Requesting
-BIBREQUEST=true
+# BIBREQUEST=true
 ICON_BUT_REQUEST=<span class="button"><img src="/screens/ico_checkmark.gif" alt=""><span class="buttonText">Request</span></span>
 ICON_BUT_REQUEST_ALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Request Available</span></span></div></div>
 ICON_BUT_REQUEST_MULTI=<span class="button"><img src="/screens/ico_request_multi.gif" alt=""><span class="buttonText">Request Saved</span></span>
@@ -263,10 +263,10 @@ ICON_BUT_REQUEST_RESET=<div onmousedown="this.className='pressedState';" onmouse
 ICON_BUT_REQUEST_SELECTED=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Request Selected</span></span></div></div>
 ICON_REQUEST=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Request
 #REQFILLTIME=14|<br>Request available in approximately %d days|<br>Current estimated availability: approximately %d days|<br>This material may be immediately available
-REQUEST=Hold this item|bib|ask|Y
-REQUEST_ARTICLE_IFCHKIN=Y
+# REQUEST=Hold this item|bib|ask|Y
+# REQUEST_ARTICLE_IFCHKIN=Y
 #REQUEST_INSTRUCTION=Please enter any special instructions: 
-REQUEST_MULTI=Request All Items in Book Cart|bib|ask
+# REQUEST_MULTI=Request All Items in Book Cart|bib|ask
 
 # Patron Record
 ICON_BUT_PAT_CANCEL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Cancel</span></span></div></div>
@@ -287,7 +287,7 @@ ICON_BUT_PAT_SUBMIT=<div onmousedown="this.className='pressedState';" onmouseout
 ICON_BUT_PSTARTOVER=<span class="button"><img src="/screens/ico_startover.gif" alt=""><span class="buttonText">Start Over</span></span>
 #BUT_RET2PREC=
 ICON_BUT_UPDATE_HOLDS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Update List</span></span></div></div>
-CHANGE_HOLD_LOC=true
+# CHANGE_HOLD_LOC=true
 #FREEZE_HOLDS=true
 ICON_CLOSEWINDOW=<span class="button"><img src="/screens/ico_x.gif" alt=""><span class="buttonText">Close Window</span></span>
 ICON_CONFIRM_YES=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Yes</span></span></div></div>
@@ -301,7 +301,7 @@ MIN_PIN_LENGTH=6
 MODIFY_PFLDS=z
 #MODIFY_PFLDS=ahtpzHx
 MY_WEBPAC=false,2,0-255
-NEWPIN_MSG=Please enter a Personal Identification Number (PIN)
+NEWPIN_MSG=Please enter your PIN
 PATRON_FIELDS=n/a|a/a|t/a|F/43
 #Note that in the PATRON_MSG web option you should replace z with the field tag used on your system for messages.
 #PATRON_MSG=z|Message from the library
