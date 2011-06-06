@@ -122,6 +122,7 @@ BUT_NEXTREC=/screens/nextrec.gif
 BUT_PREVPAGE=/screens/prevpage.gif
 BUT_PREVREC=/screens/prevrec.gif
 BUT_PREVSCRN=/screens/prevscrn.gif
+ICON_BUT_PSTARTOVER=<img src="/screens/newsrch.gif" border="0">
 BUT_PUBLIC=/screens/public.gif
 BUT_REGULAR_DISPLAY=/screens/regdisp.gif
 BUT_REQUEST=/screens/request.gif
@@ -132,7 +133,7 @@ BUT_RETHOME=/screens/rethome.gif
 BUT_RTRNTB=/screens/rtrntb.gif
 BUT_SHOWSIM=/screens/showsimilar.gif
 BUT_STAFF=/screens/staff.gif
-BUT_STARTOVER=/screens/newsrch.gif
+ICON_BUT_STARTOVER=<img src="/screens/newsrch.gif" border="0">
 BUT_WORDSRCH=/screens/wordsrch.gif
 BUT_Z39_ANOTHER=/screens/z39ano.gif
 BUT_Z39_REQUEST=/screens/request.gif
@@ -161,11 +162,11 @@ TOPLOGO8=<div style="line-height: 130%; background-color: #577993; padding-top: 
 
 ICON_BOOKCART_SAVED=<IMG SRC="/screens/clrrecord.gif" ALT="Clear Record" BORDER=0>
 
-ICON_SUBMIT3=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT7=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT8=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT9=<img src=/screens/submit.gif border=0/>
-ICON_SUBMIT10=<img src=/screens/submit.gif border=0/>
+ICON_SUBMIT=<img src="/screens/submit.gif" border=0/>
+
+ICON_BUT_PAT_SUBMIT=<img src="/screens/submit.gif" border=0/>
+
+
 ICON_CANCEL3=<img src=/screens/cancel.gif border=0/>
 ICON_CANCEL7=<img src=/screens/cancel.gif border=0/>
 ICON_CANCEL8=<img src=/screens/cancel.gif border=0/>
