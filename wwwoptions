@@ -34,6 +34,8 @@
 # WebPAC Pro
 # Research Pro
 # Program Registration
+# Scoping Options
+# Web Access Management Options
 
 
 # General Display and Behavior
@@ -72,7 +74,7 @@ XSTARTOVER=/search
 # Staff
 ICON_BUT_PUBLIC=<span class="button"><img src="/screens/ico_patron.gif" alt=""><span class="buttonText">Patron View</span></span>
 ICON_BUT_STAFF=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Staff View</span></span>
-STAFF=1
+STAFF=2,8,101,199
 STAFF_LOGGEDIN_MSG=<span class="loggedInMessage">You are logged into staff mode at %s as %s</span>
 
 # General and Phrase Searching
@@ -143,22 +145,16 @@ IMAGE_MATTYPEd=/screens/media_musicmanuscript.gif
 IMAGE_MATTYPEe=/screens/media_map.gif
 IMAGE_MATTYPEf=/screens/media_mapmanuscript.gif
 IMAGE_MATTYPEg=/screens/media_film.gif
-IMAGE_MATTYPEh=/screens/media_electronicdoc.gif
 IMAGE_MATTYPEi=/screens/media_cdbook.gif
 IMAGE_MATTYPEj=/screens/media_musicalsound.gif
 IMAGE_MATTYPEk=/screens/media_photo.gif
-IMAGE_MATTYPEl=/screens/media_largeprint.gif
 IMAGE_MATTYPEm=/screens/media_computerfile.gif
-IMAGE_MATTYPEn=/screens/media_newspaper.gif
-IMAGE_MATTYPEq=/screens/media_ebook.gif
+IMAGE_MATTYPEo=/screens/media_kit.gif
+IMAGE_MATTYPEp=/screens/media_mixed.gif
 IMAGE_MATTYPEr=/screens/media_3dartwork.gif
-IMAGE_MATTYPEs=/screens/media_tapebook.gif
 IMAGE_MATTYPEt=/screens/media_manuscript.gif
-IMAGE_MATTYPEu=/screens/media_dvd.gif
-IMAGE_MATTYPEv=/screens/media_vhs.gif
-IMAGE_MATTYPEw=/screens/media_periodical.gif
-IMAGE_MATTYPEz=/screens/media_bestseller.gif
-IMAGE_MATTYPE2=/screens/media_article.gif
+IMAGE_MATTYPEx=/screens/media_exhibit.gif
+IMAGE_MATTYPE@=/screens/media_ebook.gif
 INDEX_EXT=coiatWl
 MEDIA=2
 NO_COPIES=Currently no copies available
@@ -173,7 +169,7 @@ BIB_TOC_HEADER=<strong>Table of Contents</strong>
 ICON_BUT_MARC_DISPLAY=<span class="button"><img src="/screens/ico_marc.gif" alt=""><span class="buttonText">MARC Display</span></span>
 ICON_BUT_REGULAR_DISPLAY=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Regular Display</span></span>
 ICON_BUT_RTRNTB=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Return to Browse</span></span>
-DISPLAY_856=z|true
+DISPLAY_856=z|false
 HOLDINGS_POS=atpR
 #HOTLINK=i^020,c^09,n^505
 ICON_BIB_HOLDINGS_ITEMS=View Copies
@@ -252,7 +248,7 @@ ICON_BUT_EXPORT_VIEW_SAVES=<span class="button"><img src="/screens/ico_bag.gif" 
 ICON_BUT_VIEW_SAVES=<span class="button"><img src="/screens/ico_bag.gif" alt=""><span class="buttonText">View Bag</span></span>
 EMAILOP=From the library catalog|exporter|
 EXPORT_SELECT_TABLE=Sendto:browser,email,local|Format:full,brief,marc,procite,endnote
-XRECTYPE=boi
+XRECTYPE=bi
 
 #Requesting
 # BIBREQUEST=true
@@ -392,6 +388,7 @@ IR_PLACEMENT=1
 # Media Management
 ICON_BUT_RET2CRS=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Return to Course</span></span>
 ERESERVE=[0123456789]
+ERESERVE_IP=www.slrlc.org
 #IMAGE_PRINT=yes
 #IMAGE_SAVE=yes
 
@@ -404,7 +401,7 @@ TABLEPARAM_RSRV_BIBS=width="100%" border="0" cellpadding="0" cellspacing="0"
 # Featured Lists
 ICON_BUT_PREVSCRN=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Back</span></span>
 ICON_BUT_RET2FEAT=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Back</span></span>
-#FEATURED_LIST=01,02,03|FEATURED LISTS|CATEGORY|# of Titles
+FEATURED_LIST=98,101|Selected Titles|Topic|# Titles
 
 # Content Linking and Other Resources
 # If your system uses SSL, use the https example, to avoid secure/nonsecure warning on Internet Explorer.
@@ -449,6 +446,10 @@ ICON_BUT_Z39_REQUEST=<span class="button"><img src="/screens/ico_checkbox.gif" a
 ICON_BUT_Z39SEARCH=<span class="button"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonText">Search Other Libraries</span></span>
 Z39BROADCAST=Z39.50 Broadcast Search:Please select the Z39.50 servers to which you want to send your search
 Z39MULTI=500:100
+Z39SEARCH=New York:INNOPAC,ANS:INNOPAC,LHL:davinci,WASHU:INNOPAC,NHM:UNICORN
+Z39RESTRICT=OCLC3/WorldCat
+Z39IPOK=199.217.207.98
+
 
 # Partner
 ICON_BUT_RETHOME=<span class="button"><img src="/screens/ico_up.gif" alt=""><span class="buttonText">Home</span></span>
@@ -526,3 +527,13 @@ ICON_VIEW_ADDITIONAL_SESSIONS=<span class="button"><span class="buttonText">View
 ICON_HIDE_ADDITIONAL_SESSIONS=<span class="button"><span class="buttonText">Hide Additional Sessions</span></span>
 ICON_PROGRAM_CAL=<span class="button"><img src="/screens/ico_calendar.gif" alt=""><span class="buttonText">Events Calendar</span></span>
 TABLEPARAM_PROG_SECTIONS=width="100%" border="0" cellspacing="0" align="center"
+
+# Scoping Options
+
+RESET_SCOPE=false
+LOCKSCOPE=false
+
+# Web Access Management Options
+
+PROXYDNS=www.slrlc.org
+
