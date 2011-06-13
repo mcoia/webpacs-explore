@@ -1,0 +1,4 @@
+/*.topLogo {background:url('/screens/nursing_arc_home.jpg') no-repeat; height:450px;}*/
+.fullPage {background:url('/screens/nursing_gradient.jpg') repeat-y blue;}
+.pageContent {margin-top:-180px; width:75%; margin-left:auto;margin-right:auto; background-color:#fcfeff;}
+.navigationRow{width:60%; margin-left:auto; margin-right:auto;}
