@@ -1,4 +1,5 @@
 .topLogo {background:url('/screens/nursing_arc_cropped.jpg') no-repeat; height:450px;}
+#goldfarb {margin:2px;}
 .fullPage {background:url('/screens/nursing_gradient.jpg') repeat-y blue;}
 .minHeight {background:url('/screens/nursing_gradient.jpg') repeat-y blue;}
 .pageContent {margin-top:-300px; width:75%; margin-left:auto;margin-right:auto; background-color:#fcfeff;}
