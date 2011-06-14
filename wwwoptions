@@ -68,6 +68,7 @@ STYLESHEET=/screens/styles.css
 SUPPRESS_OPTION=Z39SEARCH
 TIMEOUT=32000;URL=/
 TOPLOGO=@screens/toplogo.html
+TOPLOGO2=@screens/toplogo_s2.html
 UPDATECIRC=true
 XSTARTOVER=/search
 
