@@ -31,17 +31,18 @@ obj.submit();
 </head>
 <body>
 <!--{toplogo}-->
-<div class="pageContentInner mainSearch">
+<div class="pageContentInner">
 
+<div id="left">
 <h1 class="accessibleAddInfo">Search</h1>
 
-<form action="/search~S6/" method="get"
+<form action="/search/" method="get"
 id="search" name="search">
 
-<div> basic search / <a href="/search~S6/X">advanced search</a>
+<div class="options"> basic search / <a href="/search~S2/X">advanced search</a>
 </div>
 
-<div> 
+<div class="limits"> 
 <label> <input name="searchtype" value="X" checked="checked" type="radio"> Keyword </label> 
 <label> <input name="searchtype" value="t" type="radio"> Title </label>
 <label> <input name="searchtype" value="s" type="radio"> Journal Title </label>
@@ -50,7 +51,7 @@ id="search" name="search">
 <label> <input name="searchtype" value="y" type="radio"> Resource Name </label>
 </div>
 
-<div><label for="searcharg"><input name="searcharg" value="" id="searcharg" class="text" type="text">
+<div class="searchBox"><label for="searcharg"><input name="searcharg" value="" id="searcharg" class="text" type="text">
 in
 
 
@@ -58,10 +59,12 @@ in
 
 
 <input value="Search" type="submit"> </label></div>
-<div id="tipper">e.g. british animal painting</div>
-<div> <a href="/search~S6/Y">keyword search tips</a></div>
+<div class="example">e.g. british animal painting</div>
+<div class="tip"> <a href="/search~S6/Y">keyword search tips</a></div>
 
 </form>
+
+</div>
 
 
 
