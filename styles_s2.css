@@ -3,11 +3,12 @@ body div {padding:0px}
 .box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
 .allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
 .clear {height:0px;}
-#left {float: left; margin: 0; width: 660px;}
+#left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
 .innerContent {text-align: left; padding:25px 0; background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85;}
 .innerContentWrapper {background: url("/screens/history_wrapper.png") repeat-y scroll left top transparent; width:970px; margin-left:auto; margin-right:auto;}
 #logo {position:absolute; top:20px;}
+#right {float: right; width: 270px;}
 #search {height: 140px; padding: 25px 36px 0; }
 #search a {color: #80929F;}
 #search a:hover {color: #330000;}
@@ -19,3 +20,4 @@ body div {padding:0px}
 #slogan {position:absolute; top:25px; right:0px;}
 .topLogo {background: url("http://collections.mohistory.org/search/sites/all/themes/mhmth/images/header/rotate.php") no-repeat scroll center top transparent; height:135px; text-align: center; width: 100%; border-bottom: 7px solid #002A5C;}
 .topLogo, #skipNav, .clear {padding:0;}
+#welcome {background:#D3DEE4; border-bottom:1px solid #BFB184; border-right: border-bottom:1px solid #BFB184; height:239px; padding: 25px 18px; }
