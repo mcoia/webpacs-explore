@@ -10,6 +10,7 @@ TOPLOGO3=<div style="line-height: 130%; background-color: #577993; padding-top: 
 TOPLOGO4=<img src="/screens/mhm2.gif">
 TOPLOGO5=<center><img src="/screens/mhm.gif"></center>
 TOPLOGO7=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><a href="http://www.slam.org"><img border="0" src="http://stlouis.art.museum/Homepage/images/heading.gif"></a></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Auction Catalogs</b></font><br></center>
+
 TOPLOGO12=<center><img src="/screens/mhm.gif"></center>
 # BRIEF=
 BROWSE_t=245/abnp
@@ -148,6 +149,7 @@ TOPLOGO11=<img src="/screens/botanicuslogo.gif"><p><p>
 # HEADING_LENGTH=
 TOPLOGO6=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Books & Periodicals</b></font><br></center>
 TOPLOGO10=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Periodicals Only</b></font><br></center>
+
 #EXTENDED_l=UT
 
 STYLESHEET6=/screens/slamcss.css
@@ -180,10 +182,24 @@ EXRECTYPE=EXRECTYPE=bi
 XRECTYPE=XRECTYPE=bi
 
 ICON_RECORDLINK7=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
+
 ICON_RECORDLINK6=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
 ICON_RECORDLINK3=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
 ICON_RECORDLINK8=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
 ICON_RECORDLINK9=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
 ICON_RECORDLINK10=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
+
 ICON_RECORDLINK2=<table class="url"><tr><td "top" class="urlLabel">URL for this record</td><td class="urlText">http://www.slrlc.org%s</td></tr></table>
 DISPLAY_856=z|true
+
+# WEBPAC PRO
+BROWSE50=true
+WEBPUBDEF=true
+TABLEPARAM_BRIEFCIT=true|border="0" cellpadding="3" width="100%"
+ICON_REL_GROUP_1=<img src="/screens/relevance5.gif" alt="">&nbsp;Most relevant titles&nbsp;
+ICON_REL_GROUP_2=<img src="/screens/relevance4.gif" alt="">&nbsp;Highly relevant titles&nbsp;
+ICON_REL_GROUP_3=<img src="/screens/relevance3.gif" alt="">&nbsp;Very relevant titles&nbsp;
+ICON_REL_GROUP_4=<img src="/screens/relevance2.gif" alt="">&nbsp;Relevant titles&nbsp;
+ICON_REL_GROUP_5=<img src="/screens/relevance1.gif" alt="">&nbsp;Other relevant titles&nbsp;
+
+
