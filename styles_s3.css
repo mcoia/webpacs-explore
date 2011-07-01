@@ -1,9 +1,19 @@
 body {
     background-color:#F5F5F5;
     margin:0;
+    color:#6D6F6F;
 }
 body div {
     padding:0px
+}
+
+.botLogo {
+    width:100%;
+    background:white;
+    margin-top:7px;
+    float:left;
+    font-family:'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
+    font-size:11px;
 }
 .allContent {
     background: #F5F5F5;
@@ -11,7 +21,19 @@ body div {
     min-height:300px;
 }
 .clear {height:0px;}
-.innerContent, .topLogoContent {
+
+#footerContact {
+    float:left;
+    line-height:115%;
+    margin-top:14px;
+}
+
+#footerLogo {
+    margin:18px 18px 18px 36px;
+    float:left;
+}
+
+.innerContent, .topLogoContent, .botLogoContent {
     width:1000px;
     margin-left: auto;
     margin-right: auto;
