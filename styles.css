@@ -1044,7 +1044,7 @@ div#searchNavMenu { clear:both; float:right; background:#3B77B6; width:100%; }
 /* table striping styles */
 /* for brief citation */
 
-td.odd { background:#F8F8F8; }
+td.odd { background:#FFFFE4; }
 
 td.highlight { background:#FFFFE4; }
 

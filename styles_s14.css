@@ -1,3 +1,7 @@
+.browseScreen {background-color:#FFFFFF;}
+
+.browseSearchtool {background: url("tile_search_yellow.jpg") repeat-x scroll left bottom transparent;}
+
 .topLogo {background:url('/screens/nursing_arc_cropped.jpg') no-repeat; height:450px;}
 
 #goldfarb {margin:8px;}
@@ -12,7 +16,9 @@
 
 .pageContent {margin-top:-300px; width:75%; margin-left:auto;margin-right:auto;}
 
-.navigationRow{width:60%; margin-left:auto; margin-right:auto;}
+.navigationRow{width:100; margin-left:auto; margin-right:auto; background-color:#FFFFFF;}
+
+td.odd { background:#fffff2; }
 
 #topLinksList a:link, #topLinksList a:visited  { color: #FFFFFF;}
 
