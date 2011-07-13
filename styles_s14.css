@@ -1,6 +1,20 @@
 .topLogo {background:url('/screens/nursing_arc_cropped.jpg') no-repeat; height:450px;}
+
 #goldfarb {margin:8px;}
+
+.form2Part, .form1Part, .mylistsSavePage form {background-image:none; background-color:#ffffe4;}
+
 .fullPage {background:url('/screens/nursing_gradient.jpg') repeat-y blue;}
+
+.mainSearch .form1Part, .mainMenuContent {width: 700px;}
+
 .minHeight {background:url('/screens/nursing_gradient.jpg') repeat-y blue;}
-.pageContent {margin-top:-300px; width:75%; margin-left:auto;margin-right:auto; background-color:#fcfeff;}
+
+.pageContent {margin-top:-300px; width:75%; margin-left:auto;margin-right:auto;}
+
 .navigationRow{width:60%; margin-left:auto; margin-right:auto;}
+
+#topLinksList a:link, #topLinksList a:visited  { color: #FFFFFF;}
+
+#topLinksList a:active,#topLinksList a:hover   {background:none; color:#FFFFFF;}
+
