@@ -8,13 +8,25 @@ h2, .pageContentInner h2 {
     font:21px georgia,serif;
     margin: 0 0 12px;
 }
+#exampleText {
+    margin: 2em 0 1em;
+    font-size: 0.9em;
+}
+#exampleText hr {
+    color:#DCD5C3;
+}
+.firstItem {margin-left:-2.25em;}
 #left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
 .innerContent {text-align: left; padding:25px 0; background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85;}
 .innerContentWrapper {background: url("/screens/history_wrapper.png") repeat-y scroll left top transparent; width:970px; margin-left:auto; margin-right:auto;}
 #logo {position:absolute; top:20px;}
+.mainMenuSrchText ul {
+    list-style-type:none;
+    padding-left:2.25em;;
+}
 #right {float: right; width: 270px;}
-#search {height: 140px; padding: 25px 36px 0; }
+#search {padding: 25px 36px 0; }
 #search a {color: #80929F;}
 #search a:hover {color: #330000;}
 #search .example {font-size:.9em; margin-left:10px; margin-top:4px;}
