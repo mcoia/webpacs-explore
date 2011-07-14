@@ -1,3 +1,5 @@
+a img {border:none;}
+
 .browseScreen {background-color:#FFFFFF;}
 
 .browseSearchtool, .bibSearch {background: url("tile_search_yellow.jpg") repeat-x scroll left bottom transparent;}
