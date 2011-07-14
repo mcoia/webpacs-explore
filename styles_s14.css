@@ -1,6 +1,6 @@
 .browseScreen {background-color:#FFFFFF;}
 
-.browseSearchtool {background: url("tile_search_yellow.jpg") repeat-x scroll left bottom transparent;}
+.browseSearchtool, .bibSearch {background: url("tile_search_yellow.jpg") repeat-x scroll left bottom transparent;}
 
 .topLogo {background:url('/screens/nursing_arc_cropped.jpg') no-repeat; height:450px;}
 
@@ -15,6 +15,8 @@
 .minHeight {background:url('/screens/nursing_gradient.jpg') repeat-y blue;}
 
 .pageContent {margin-top:-300px; width:75%; margin-left:auto;margin-right:auto;}
+
+.pageContent #bibDisplayBody  {background:#FFFFFF;padding-bottom:15px;}
 
 .navigationRow{width:100; margin-left:auto; margin-right:auto; background-color:#FFFFFF;}
 
