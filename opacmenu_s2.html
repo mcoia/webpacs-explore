@@ -28,6 +28,17 @@ obj.submit();
 }
 /* ]]> */
 </script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
+	
+	$('input[name="searchtype"]').change(function(){
+    	$("#exampleText").load("/screens/" + this.value + ".inc");
+	});
+});
+</script>
+
 </head>
 <body>
 <!--{toplogo}-->
@@ -45,13 +56,13 @@ id="search" class="box" name="search">
 <div class="limits"> 
 <label> <input name="searchtype" value="X" checked="checked" type="radio"> Keyword </label> 
 <label> <input name="searchtype" value="t" type="radio"> Title </label>
-<label> <input name="searchtype" value="s" type="radio"> Journal Title </label>
-<label><input name="searchtype" value="a" type="radio"> Author </label>
-<label> <input name="searchtype" value="d" type="radio"> Subject </label>
-<label> <input name="searchtype" value="y" type="radio"> Resource Name </label>
+<label> <input name="searchtype" value="a" type="radio"> Author </label>
+<label><input name="searchtype" value="d" type="radio"> Subject </label>
+<label> <input name="searchtype" value="m" type="radio"> Call Number </label>
+<label> <input name="searchtype" value="y" type="radio"> Other Searches </label>
 </div>
 
-<div class="searchBox"><label for="searcharg"><input name="searcharg" value="" id="searcharg" class="text" type="text">
+<div class="searchBox"><input name="searcharg" value="" id="searcharg" class="text" type="text">
 in
 
 
@@ -67,12 +78,11 @@ in
 <hr>
 	<div class="mainMenuSrchText">
 		<ul>
-			<li class="firstItem">e.g. Italian cooking</li>
-			<li>The Appeal</li>
+			<li class="firstItem">e.g. urban renewal</li>
 
-			<li>tax and legislat*</li>
+			<li>missouri archaeology</li>
 
-			<li>(lunar or solar) and eclipse</li>
+			<li>census st. charles</li>
 		</ul>
 	</div>
 </div>
@@ -83,7 +93,6 @@ in
 
 
 </div>
-
 
 <div id="right">
 
