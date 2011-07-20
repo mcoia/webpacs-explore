@@ -50,6 +50,11 @@ body div {
     position:absolute;
     top:36px;
 }
+#socialMedia {
+    width:110px;
+    float:left;
+    margin: 26px 0 0 20px;
+}
 .topLogo {
     background: #517D98;
     height:80px;
