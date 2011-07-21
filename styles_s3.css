@@ -1,3 +1,5 @@
+a img {border:none;}
+
 body {
     background-color:#F5F5F5;
     margin:0;
@@ -5,6 +7,13 @@ body {
 }
 body div {
     padding:0px
+}
+
+
+.allContent {
+    background: #F5F5F5;
+    width:100%;
+    min-height:300px;
 }
 
 .botLogo {
@@ -15,11 +24,14 @@ body div {
     font-family:'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
     font-size:11px;
 }
-.allContent {
-    background: #F5F5F5;
-    width:100%;
-    min-height:300px;
+
+.browseSearchtool h2 {
+    margin:0 0 6px 0 !important;
+    text-align:left;
+    font-family: 'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
+    font-weight:normal;
 }
+
 .clear {height:0px;}
 
 #footerContact {
@@ -44,10 +56,67 @@ body div {
     padding:25px 0;
     background: white;
 }
+
+.innerForm {
+    width:28em;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 #logo {
     position:absolute;
     top:36px;
 }
+
+.pageContentInner {
+    margin-bottom:75px;
+}
+
+#socialMedia {
+    width:110px;
+    float:left;
+    margin: 26px 0 0 20px;
+}
+
+.scopeBox {
+    width:244px;
+    height:100px;
+    margin: 0 10px 10px 0;
+    float:left;
+    position:relative;
+}
+
+.scopeBox a {
+    color:white;
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    padding-top:5px;
+    text-decoration:none;
+}
+
+.scopeBox a:hover {
+    border-top:1px solid white;
+}
+
+#scopeBoxes {
+    width: 508px;
+    margin:75px auto;
+}
+
+#scopeBoxes #archives {background-color:#666666;}
+
+#scopeBoxes #books {background-color:#004A80;}
+
+#scopeBoxes #periodicals {background-color:#999999;}
+
+#scopeBoxes #auction {background-color:#7E9CB3;}
+
+#scopeBoxes #slide {background-color:#24385B;}
+
+#scopeBoxes #allCollection {background-color:#C4C4C4;}
+
 .topLogo {
     background: #517D98;
     height:80px;
