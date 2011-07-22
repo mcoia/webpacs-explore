@@ -17,16 +17,42 @@ h2, .pageContentInner h2 {
     color:#DCD5C3;
 }
 .firstItem {margin-left:-2.25em;}
+.formsTogether {
+    width:inherit;
+}
 #left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
-.innerContent {text-align: left; padding:25px 0; background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85;}
+.innerContent {text-align: left; background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85; min-height:300px;}
 .innerContentWrapper {background: url("/screens/history_wrapper.png") repeat-y scroll left top transparent; width:970px; margin-left:auto; margin-right:auto;}
 #logo {position:absolute; top:20px;}
+#mainColumn {
+    width:680px;
+    float:right;
+}
 .mainMenuSrchText ul {
     list-style-type:none;
     padding-left:2.25em;;
 }
+.navigationRow select, .navigationrow option {
+    position:relative;
+    right:inherit;
+    top:inherit;
+}
+#opacMenu #rightColumn {
+    display:none;
+}
+.pageContentInner {
+    margin-top:25px;
+}
 #right {float: right; width: 270px;}
+#rightColumn {
+    width: 220px;
+    float:right;
+    background:#F0E9D6;
+    border:2px solid #DDCA85;
+    margin:35px 10px;
+    padding:10px;
+}
 #search {padding: 25px 36px 0; }
 #search a {color: #80929F;}
 #search a:hover {color: #330000;}
