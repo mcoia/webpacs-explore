@@ -1,6 +1,9 @@
 a img {border:none;}
 body {font: 12px Verdana,Arial,Helvetica,sans-serif; background-color:#91B0D5; margin:0;}
 body div {padding:0px}
+label {
+    display:inline-block;
+}
 .box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
 .allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
 .clear {height:0px;}
@@ -19,6 +22,9 @@ h2, .pageContentInner h2 {
 .firstItem {margin-left:-2.25em;}
 .formsTogether {
     width:inherit;
+}
+.hiddenSearch {
+    display:none;
 }
 #left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
@@ -57,7 +63,7 @@ h2, .pageContentInner h2 {
 #search a {color: #80929F;}
 #search a:hover {color: #330000;}
 #search .example {font-size:.9em; margin-left:10px; margin-top:4px;}
-#search .limits {line-height:14px; margin-top:11px; font-size:.9em;}
+#search .limits {line-height:14px; margin-top:11px; font-size:.9em; width:500px;}
 #search .options {color: #330000; font-size:14px; font-weight:bold;}
 #search .searchBox {margin-top: 10px;}
 #search .tip {margin-top: 12px;}

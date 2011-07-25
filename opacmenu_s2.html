@@ -33,7 +33,10 @@ obj.submit();
 <script type="text/javascript">
 $(document).ready(function () {
 	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
-	
+	$('#other').click(function() {
+		$(this).hide();
+		$('label.hiddenSearch').show();
+	});
 	$('input[name="searchtype"]').change(function(){
     	$("#exampleText").load("/screens/" + this.value + ".inc");
 	});
@@ -59,9 +62,14 @@ id="search" class="box" name="search">
 <label> <input name="searchtype" value="X" checked="checked" type="radio"> Keyword </label> 
 <label> <input name="searchtype" value="t" type="radio"> Title </label>
 <label> <input name="searchtype" value="a" type="radio"> Author </label>
-<label><input name="searchtype" value="d" type="radio"> Subject </label>
+<label> <input name="searchtype" value="d" type="radio"> Subject </label>
 <label> <input name="searchtype" value="m" type="radio"> Call Number </label>
-<label> <input name="searchtype" value="y" type="radio"> Other Searches </label>
+<label id="other"> <input name="searchtype" value="y" type="radio"> Other Searches </label>
+<label class="hiddenSearch"> <input name="searchtype" value="j" type="radio"> Genre </label>
+<label class="hiddenSearch"> <input name="searchtype" value="o" type="radio"> OCLC # </label>
+<label class="hiddenSearch"> <input name="searchtype" value="b" type="radio"> Barcode </label>
+<label class="hiddenSearch"> <input name="searchtype" value="i" type="radio"> ISBN/ISSN </label>
+</span>
 </div>
 
 <div class="searchBox"><input name="searcharg" value="" id="searcharg" class="text" type="text">
