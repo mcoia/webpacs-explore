@@ -1,4 +1,8 @@
 a img {border:none;}
+a:link { color: #002A5C; }
+a:active { color: #002A5C; }
+a:visited { color: #002A5C; }
+a:hover  { color: #002A5C; }
 body {font: 12px Verdana,Arial,Helvetica,sans-serif; background-color:#91B0D5; margin:0;}
 body div {padding:0px}
 label {
@@ -7,9 +11,12 @@ label {
 .box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
 .allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
 .clear {height:0px;}
-h2, .pageContentInner h2 {
+h2, .pageContentInner h2, #rightColumn lh {
     color:#542929;
-    font:21px georgia,serif;
+    font-family:georgia,serif;
+}
+h2, .pageContentInner h2, #rightColumn lh {
+    font-size:1.4em;
     margin: 0 0 12px;
 }
 #exampleText {
@@ -58,6 +65,16 @@ h2, .pageContentInner h2 {
     border:2px solid #DDCA85;
     margin:35px 10px;
     padding:10px;
+}
+#rightColumn lh {
+    font-size:16px;
+}
+#rightColumn li {
+    list-style-type:none;
+    margin:5px 8px;
+}
+#rightColumn a {
+    text-decoration:none;
 }
 #search {padding: 25px 36px 0; }
 #search a {color: #80929F;}
