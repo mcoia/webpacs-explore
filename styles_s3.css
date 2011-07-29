@@ -105,17 +105,13 @@ body div {
     margin:75px auto;
 }
 
-#scopeBoxes #archives {background-color:#666666;}
+#scopeBoxes #scopeBox1 {background-color:#004A80;}
 
-#scopeBoxes #books {background-color:#004A80;}
+#scopeBoxes #scopeBox2 {background-color:#666666;}
 
-#scopeBoxes #periodicals {background-color:#999999;}
+#scopeBoxes #scopeBox3 {background-color:#999999;}
 
-#scopeBoxes #auction {background-color:#7E9CB3;}
-
-#scopeBoxes #slide {background-color:#24385B;}
-
-#scopeBoxes #allCollection {background-color:#C4C4C4;}
+#scopeBoxes #scopeBox4 {background-color:#7E9CB3;}
 
 .topLogo {
     background: #517D98;
