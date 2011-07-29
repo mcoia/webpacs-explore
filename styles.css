@@ -617,6 +617,8 @@ div .bibResourceSidebar { display:none; }
 
 .helpExample h4 { margin-top:0px; }
 
+.hidden {display:none;}
+
 .pageContentInner .helpSubhead { border-top:4px solid #E8E8E8; margin:45px 0 5px; }
 
 .holdingsDivider { border:1px solid #D3D3D3; margin:3px 0; }
