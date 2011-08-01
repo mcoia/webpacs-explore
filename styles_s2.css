@@ -10,6 +10,9 @@ label {
 }
 .box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
 .allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
+.browseSuperEntry {
+    display:none;
+}
 .clear {height:0px;}
 h2, .pageContentInner h2, #rightColumn lh {
     color:#542929;
