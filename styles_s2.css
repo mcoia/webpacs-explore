@@ -10,8 +10,32 @@ label {
 }
 .box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
 .allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
+.briefcitDetail, .briefcitAuthDetail {
+    padding:0 0 0 20px;
+    width:75%;
+}
+.briefcitMedia, .bibMedia, .briefcitResourceMedia, .briefcitProgramMedia, td.browseEntryMedia, td.browseSubEntryMedia {
+    margin-top:1em;
+}
+.briefcitRight {
+    display:inline;
+    float:left;
+    margin-bottom:30px;
+    padding:0;
+    text-align:left;
+    width:41px;
+}
+.briefcitRow {
+    padding-left:0%;
+}
+.briefcitYear {
+    text-align:center;
+    margin-top:1.5em;
+    font-size:1.2em;
+}
 .browseSuperEntry {
     display:none;
+    font-size:1.35em;
 }
 .clear {height:0px;}
 h2, .pageContentInner h2, #rightColumn lh {
