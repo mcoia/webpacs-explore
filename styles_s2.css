@@ -57,6 +57,15 @@ h2, .pageContentInner h2, #rightColumn lh {
 .formsTogether {
     width:inherit;
 }
+.gbs {display:none;}
+.gbs img {
+    border: 0pt none;
+    vertical-align: middle;
+    margin:6px 0;
+}
+.gbs a {
+    text-decoration:none;
+}
 .hiddenSearch {
     display:none;
 }
