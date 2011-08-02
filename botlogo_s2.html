@@ -90,3 +90,9 @@ for(bib in numbers) {
     //alert(window.location.protocol);
 </script> 
 
+<script>
+var searchTerm = $('#searcharg').val()
+var worldcatLink = '<a href="http://www.worldcat.org/search?q=' + searchTerm + '"><span class="button"><img src="/screens/ico_worldcat.png" alt=""><span class="buttonText">Search WorldCat</span></span></a>'
+$('.navigationRow form').prepend(worldcatLink)
+</script>
+
