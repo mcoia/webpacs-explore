@@ -2,6 +2,20 @@
 <!-- Rel 2009B Example Set -->
 <!-- Updated: 06 Oct 2010 -->
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
+	$('#other').click(function() {
+		$(this).hide();
+		$('label.hiddenSearch').show();
+	});
+	$('input[name="searchtype"]').change(function(){
+    	$("#exampleText").load("/screens/" + this.value + ".inc");
+	});
+});
+</script>
+
 <link rel="stylesheet" type="text/css" href="/screens/styles_s2.css" />
 
 
@@ -52,6 +66,7 @@
     <li><a href="http://www.mohistory.org/buy_photos">Image Store</a></li>
     <li><a href="http://collections.mohistory.org/search">Cross-Collection Search (Beta)</a></li>
     <li><a href="http://www.mohistory.org/lrc/catalogs/card-catalogs">Card Catalogs</a></li>
+    <li>
 </ul>
 <ul>
     <lh>Map</lh>

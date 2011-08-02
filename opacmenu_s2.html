@@ -29,19 +29,6 @@ obj.submit();
 }
 /* ]]> */
 </script>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
-	$('#other').click(function() {
-		$(this).hide();
-		$('label.hiddenSearch').show();
-	});
-	$('input[name="searchtype"]').change(function(){
-    	$("#exampleText").load("/screens/" + this.value + ".inc");
-	});
-});
-</script>
 
 </head>
 <body>
