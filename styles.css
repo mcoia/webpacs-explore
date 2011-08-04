@@ -152,7 +152,7 @@ a:hover  { color: #7C14B8; }
 
 #bibDisplayBody a:link,#bibDisplayBody a:visited, #formLinks a:link,#formLinks a:visited, .recordPager a:link, .recordPager a:visited, .actionButtonArea a:link, .actionButtonArea a:visited, .bibPager a:visited, .bibPager a:link { color: #014184; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-weight:bold; padding:6px 5px 3px 0px; text-decoration:none; width:auto; }
 
-#bibDisplayBody a:active,#bibDisplayBody a:hover,#formLinks a:active,#formLinks a:hover, .recordPager a:active, .recordPager a:hover, .actionButtonArea a:active, .actionButtonArea a:hover, .bibPager a:active, .bibPager a:hover { text-decoration:underline; }
+#bibDisplayBody a:active,#bibDisplayBody a:hover,#formLinks a:active,#formLinks a:hover, .recordPager a:active, .recordPager a:hover, .actionButtonArea a:active, .actionButtonArea a:hover, .bibPager a:active, .bibPager a:hover { text-decoration:none; }
 
 #bibDisplayBody .bibVol a:link, #bibDisplayBody .bibVol a:visited { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
 
@@ -409,7 +409,7 @@ table.browseResourceTable { border:0; }
 
 .browseSaveJump a:link,.browseSaveJump a:visited  { color: #014184; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-weight:bold; padding:6px 5px 3px 0px; text-decoration:none; width:auto; }
 
-.browseSaveJump a:active,.browseSaveJump a:hover   { text-decoration:underline; }
+.browseSaveJump a:active,.browseSaveJump a:hover   { text-decoration:none; }
 
 .browseSaveJump img { width:auto; }
 
@@ -442,6 +442,8 @@ h1.browseSuperEntryTitle { font-size:1.1em; display:inline; }
 #buttonNextRecord { border-left:1px solid #D3D3D3; margin-right:3px; padding-left:8px; }
 
 .buttonText { font-size:.8824em; font-weight:bold; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; }
+
+span.buttonText:hover {text-decoration:underline;}
 
 .buttonTopLinks { white-space:nowrap; }
 
@@ -692,8 +694,6 @@ div .bibResourceSidebar { display:none; }
 .mylistsSavePage .pageMainAreaHeader { font-size:1.3333em; font-weight:bold; }
 
 .navigationRow a:link,.navigationRow a:visited  { color: #014184; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-weight:bold; padding:6px 5px 3px 0px; text-decoration:none; width:auto; }
-
-.navigationRow a:active,.navigationRow a:hover   { text-decoration:underline; }
 
 .navigationRow { margin:0; }
 
