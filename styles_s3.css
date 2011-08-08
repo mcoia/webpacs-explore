@@ -9,11 +9,21 @@ body div {
     padding:0px
 }
 
+h3 {
+    font-family:sans-serif;
+    font-weight:normal;
+    font-size:12px;;
+}
+
 
 .allContent {
     background: #F5F5F5;
     width:100%;
     min-height:300px;
+}
+
+#accessibleForm .browseSearchtool {
+    margin:38px;
 }
 
 .botLogo {
@@ -25,6 +35,10 @@ body div {
     font-size:11px;
 }
 
+.bottomContent {
+    margin-top:25px;
+}
+
 .browseSearchtool h2 {
     margin:0 0 6px 0 !important;
     text-align:left;
@@ -33,6 +47,19 @@ body div {
 }
 
 .clear {height:0px;}
+
+.contactInfo {
+    float:left;
+    padding-left:20px;
+    width:220px;
+    text-align:left;
+    font-family: 'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
+    font-size:12px;
+}
+
+.contactInfo a:link {
+    text-decoration:none;
+}
 
 #footerContact {
     float:left;
@@ -64,13 +91,52 @@ body div {
     margin-right:auto;
 }
 
+.leftColumn {
+    float:left;
+    width:142px;
+    padding:0 15px;
+    text-align:left;
+    font-size:11px
+}
+
+.leftColumn a:link, .leftColumn a:visited {
+    text-decoration:none;
+    color:#6D6F6F;
+}
+
+.leftColumn ul {
+    list-style-type:none;
+    padding-left:0;
+}
+
+.leftColumn ul li {
+    border-bottom:1px solid #DDDDDD;
+    padding:3px 0;
+}
+
+.leftColumn ul li ul {
+    margin-left:15px;
+}
+
+.leftColumn ul li ul li {
+    border-bottom:none;
+}
+
 #logo {
     position:absolute;
     top:36px;
 }
 
-.pageContentInner {
-    margin-bottom:75px;
+.mainSearch .form1Part {
+    margin-top:0;
+    width:100%;
+    height:150px;
+}
+
+.rightColumn {
+    width:760px;
+    float:left;
+    padding:0 10px;
 }
 
 #socialMedia {
@@ -102,7 +168,9 @@ body div {
 
 #scopeBoxes {
     width: 508px;
-    margin:75px auto;
+    float:left;
+    border-right: 1px solid #DDDDDD;
+    padding-right:10px;
 }
 
 #scopeBoxes #scopeBox1 {background-color:#004A80;}
