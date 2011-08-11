@@ -2,8 +2,16 @@
 <!-- Rel 2009B Example Set -->
 <!-- Updated: 06 Oct 2010 -->
 <link rel="stylesheet" type="text/css" href="/screens/styles_s3.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
 
-
+	$('#searchtype').change(function(){
+    	$("#exampleText").load("/screens/" + this.value + "_art.inc");
+	});
+});
+</script>
 
 
 <div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>

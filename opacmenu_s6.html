@@ -67,12 +67,14 @@ obj.submit();
 <h2>Books and Periodicals</h2>
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
-<option value="X" selected="selected">Keyword</option>
-<option value="t">Title</option>
-<option value="s">Journal Title</option>
+<option value="X" selected="selected">Word</option>
 <option value="a">Author</option>
+<option value="t">Title</option>
 <option value="d">Subject</option>
-<option value="y">Resource Name</option>
+<option value="s">Journal Title</option>
+<option value="c">Call Number</option>
+<option value="i">ISBN/ISSN</option>
+<option value="p">Instructor</option>
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
@@ -88,6 +90,17 @@ obj.submit();
 <input type="submit" class="submitHidden">
 
 </span>
+<div id="exampleText">
+	<div class="mainMenuSrchText">Type the search term you want to find. Examples:
+		<ul class="unpadded">
+			<li>Italian cooking</li>
+			<li>The Appeal</li>
+			<li>tax and legislat*</li>
+
+			<li>(lunar or solar) and eclipse</li>
+		</ul>
+	</div>
+</div>
 </div>
 </div><!-- formEntryArea -->
 <!--</fieldset> optional-->
