@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
+<title>Missouri History Museum Library Catalog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/screens/norightcolumn.css" />
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
+}
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
+}
+}
+/* ]]> */
+</script>
+
+</head>
+<body>
+
+<!--{toplogo}-->
+<div class="pageContentInner">
+
+<div id="left">
+<h1 class="accessibleAddInfo">Search</h1>
+
+<form action="/search/" method="get"
+id="search" class="box" name="search">
+
+<div class="options"> basic search / <a href="/search~S2/X">advanced search</a>
+</div>
+
+<div class="limits"> 
+<label> <input name="searchtype" value="X" checked="checked" type="radio"> Keyword </label> 
+<label> <input name="searchtype" value="t" type="radio"> Title </label>
+<label> <input name="searchtype" value="a" type="radio"> Author </label>
+<label> <input name="searchtype" value="d" type="radio"> Subject </label>
+<label> <input name="searchtype" value="m" type="radio"> Call Number </label>
+<label id="other"> <input name="searchtype" value="y" type="radio"> Other Searches </label>
+<label class="hiddenSearch"> <input name="searchtype" value="j" type="radio"> Genre </label>
+<label class="hiddenSearch"> <input name="searchtype" value="o" type="radio"> OCLC # </label>
+<label class="hiddenSearch"> <input name="searchtype" value="b" type="radio"> Barcode </label>
+<label class="hiddenSearch"> <input name="searchtype" value="i" type="radio"> ISBN/ISSN </label>
+<input type="hidden" name="SORT" value="DX"> 
+</span>
+</div>
+
+<div class="searchBox"><input name="searcharg" value="" id="searcharg" class="text" type="text">
+in
+
+
+<!--{scope}-->
+
+
+<input value="Search" type="submit"> </label></div>
+<div class="tip"> <a href="/search/Y">keyword search tips</a></div>
+
+
+<div id="exampleText">
+<hr>
+	<div class="mainMenuSrchText">
+		<ul>
+			<li class="firstItem">e.g. urban renewal</li>
+
+			<li>missouri archaeology</li>
+
+			<li>census st. charles</li>
+		</ul>
+	</div>
+</div>
+
+</form>
+
+
+
+
+</div>
+
+<div id="right">
+
+<div id="welcome">
+Box with some more information or links.
+	
+</div>
+
+
+	
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
+</body>
+</html>
