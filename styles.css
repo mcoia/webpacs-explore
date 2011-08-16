@@ -435,7 +435,7 @@ h1.browseSuperEntryTitle { font-size:1.1em; display:inline; }
 
 .button { white-space:nowrap;  }
 
-.button img { border:0; margin-right:3px; vertical-align:text-bottom; }
+.button img { border:0; margin:3px 3px 3px; vertical-align:text-bottom; }
 
 .button2 { font-size:.8824em; white-space:nowrap; }
 
@@ -522,8 +522,6 @@ div .confirmValue { padding-top:3px; }
 .exportBrief { text-align:left; padding-bottom:10px; }
 
 .exportBrief pre { margin:0 12px; }
-
-.bibItems {background:#FFFFFF; }
 
 div .bibResourceSidebar { display:none; }
 

@@ -10,6 +10,14 @@ label {
 }
 .box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
 .allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
+#bibDisplayBody {
+    background: #FCFAF4;
+}
+.bibSearch { background: url("tile_search_brown_inverse.jpg") repeat-x scroll left bottom transparent }
+.bibSearchHistory, .resourceHistory { position: inherit;}
+.briefcitCell {
+    background: #fefdf8;
+}
 .briefcitDetail, .briefcitAuthDetail {
     padding:0 0 0 20px;
     width:75%;
@@ -28,11 +36,19 @@ label {
 .briefcitRow {
     padding-left:0%;
 }
+
 .briefcitYear {
     text-align:center;
     margin-top:1.5em;
     font-size:1.2em;
 }
+
+.browseHeaderData, .browseHeaderEntries, .browseHeaderMark, .browseHeaderNum, .browseHeaderYear, .browseHeaderMedia { background: #DDE1E4;}
+
+.browseSearchtool {
+    background: url("tile_search_brown.jpg") repeat-x scroll left bottom transparent
+}
+
 .browseSuperEntry {
     display:none;
     font-size:1.35em;
@@ -71,13 +87,14 @@ h2, .pageContentInner h2, #rightColumn lh {
 }
 #left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
-.innerContent {text-align: left; background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85; min-height:300px;}
+.innerContent {text-align: left; background-color: #EFE8D1; min-height:300px;}
 .innerContentWrapper {background: url("/screens/history_wrapper.png") repeat-y scroll left top transparent; width:970px; margin-left:auto; margin-right:auto;}
 #logo {position:absolute; top:20px;}
 #mainColumn {
     width:680px;
     float:right;
 }
+.mainMenu {background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85;} 
 .mainMenuSrchText ul {
     list-style-type:none;
     padding-left:2.25em;;
@@ -87,6 +104,10 @@ h2, .pageContentInner h2, #rightColumn lh {
     right:inherit;
     top:inherit;
 }
+td.odd, td.highlight {
+    background: #FCFAF4;
+}
+
 #opacMenu #rightColumn {
     display:none;
 }
@@ -97,8 +118,8 @@ h2, .pageContentInner h2, #rightColumn lh {
 #rightColumn {
     width: 220px;
     float:right;
-    background:#F0E9D6;
-    border:2px solid #DDCA85;
+    background:#FCFAF4;
+    border:2px solid #F3EBD3;
     margin:35px 10px;
     padding:10px;
 }
