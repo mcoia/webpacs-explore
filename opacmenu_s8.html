@@ -31,8 +31,27 @@ obj.submit();
 </head>
 <body>
 <!--{toplogo}-->
-<div class="pageContentInner mainSearch">
 
+<div class="pageContentInner mainSearch">
+<div class="leftColumn">
+<ul>
+	<li><a href="http://www.slam.org">Museum Home</a></li>
+	<li><a href="http://www.slam.org">SLRLC Home</a><li>
+	<ul>
+		<li><a href="/search~S3">All Collections</a></li>
+		<li><a href="/search~S6">Books & Periodicals</a></li>
+		<li><a href="/search~S10">Periodicals Only</a></li>
+		<li><a href="/search~S7">Auction Catalogues</a></li>
+		<li><a href="/search~S8">Archives</a></li>
+	</ul>
+	</li>
+	<li><a href="http://www.worldcat.org">WorldCat</a></li>
+	<li><a href="http://www.archive.org">Internet Archive</a></li>
+	<li><a href="http://books.google.org">Google Books</a></li>
+	<li><a href="/patroninfo">My Library</a></li>
+</ul>
+</div>
+<div class="rightColumn">
 <h1 class="accessibleAddInfo">Search</h1>
 
 <div id="accessibleForm" class="form1Part">
@@ -48,17 +67,19 @@ obj.submit();
 <h2>Archives</h2>
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
-<option value="X" selected="selected">Keyword</option>
-<option value="t">Title</option>
-<option value="s">Journal Title</option>
+<option value="X" selected="selected">Word</option>
 <option value="a">Author</option>
+<option value="t">Title</option>
 <option value="d">Subject</option>
-<option value="y">Resource Name</option>
+<option value="s">Journal Title</option>
+<option value="c">Call Number</option>
+<option value="i">ISBN/ISSN</option>
+<option value="p">Instructor</option>
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
 <input maxlength="75" name="searcharg" size="20" >
-<input type="hidden" name="searchscope" value="8">
+<input type="hidden" name="searchscope" value="6">
 <span class="nowrap formButtonArea">
 
   <!--{submit}-->
@@ -69,19 +90,46 @@ obj.submit();
 <input type="submit" class="submitHidden">
 
 </span>
+<div id="exampleText">
+	<div class="mainMenuSrchText">Type the search term you want to find. Examples:
+		<ul class="unpadded">
+			<li>Italian cooking</li>
+			<li>The Appeal</li>
+			<li>tax and legislat*</li>
+
+			<li>(lunar or solar) and eclipse</li>
+		</ul>
+	</div>
+</div>
 </div>
 </div><!-- formEntryArea -->
 <!--</fieldset> optional-->
 </form>
 </div><!-- browseSearchtool -->
 </div><!-- form1Part -->
+<div class="bottomContent">
 <div id="scopeBoxes">
 <div class="scopeBox" id="scopeBox1"><a href="/search~S3">ALL COLLECTIONS</a></div>
 <div class="scopeBox" id="scopeBox2"><a href="/search~S6">BOOKS AND PERIODICALS</a></div>
 <div class="scopeBox" id="scopeBox3"><a href="/search~S10">PERIODICALS</a></div>
 <div class="scopeBox" id="scopeBox4"><a href="/search~S7">AUCTION CATALOGUES</a></div>
-<div>
+</div><!--scopeBoxes-->
+<div class="contactInfo">
+<h3>RICHARDSON MEMORIAL LIBRARY</h3>
+During construction, open Thursdays 10:00 am to 5:00 pm<br />
+By appointment only<br />
+<br />
+Contact:<br />
+314.655.5252<br />
+<a href="mailto:library@slam.org">library@slam.org</a><br />
+<br />
+<a href="http://www.slam.org/RichardsonLibrary/research.php">Ask a librarian</a> <br />
+<a href="http://www.slam.org/RichardsonLibrary/projects.php">St. Louis artist files</a><br />
+</div>
+	
+</div><!--bottomContent-->
 
+</div><!--rightColumn-->
 </div><!--pageContentInner -->
 
 <!--{botlogo}-->
