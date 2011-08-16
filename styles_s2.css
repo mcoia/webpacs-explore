@@ -15,7 +15,7 @@ label {
 }
 .bibSearch { background: url("tile_search_brown_inverse.jpg") repeat-x scroll left bottom transparent }
 .bibSearchHistory, .resourceHistory { position: inherit;}
-.briefcitCell {
+.briefcitCell, .browseEntry, .browseSubEntry {
     background: #fefdf8;
 }
 .briefcitDetail, .briefcitAuthDetail {
@@ -70,6 +70,9 @@ h2, .pageContentInner h2, #rightColumn lh {
     color:#DCD5C3;
 }
 .firstItem {margin-left:-2.25em;}
+.form2Part, .form1Part, .mylistsSavePage form, .form3Part, .form3PartBelow{
+    background: #fcfaf4;
+}
 .formsTogether {
     width:inherit;
 }
@@ -104,7 +107,7 @@ h2, .pageContentInner h2, #rightColumn lh {
     right:inherit;
     top:inherit;
 }
-td.odd, td.highlight {
+td.odd, td.highlight, tr.odd {
     background: #FCFAF4;
 }
 
