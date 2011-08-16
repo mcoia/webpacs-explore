@@ -3,7 +3,7 @@
 <!-- Rel 2009B Example Set -->
 <!-- This File Last Changed: 11 June 2010 -->
 <head>
-<title>Richardson Library Auction Catalogs</title>
+<title>Richardson Library Auction Catalogues</title>
 <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 <script type="text/javascript">/* <![CDATA[ */
@@ -31,8 +31,27 @@ obj.submit();
 </head>
 <body>
 <!--{toplogo}-->
-<div class="pageContentInner mainSearch">
 
+<div class="pageContentInner mainSearch">
+<div class="leftColumn">
+<ul>
+	<li><a href="http://www.slam.org">Museum Home</a></li>
+	<li><a href="http://www.slam.org">SLRLC Home</a><li>
+	<ul>
+		<li><a href="/search~S3">All Collections</a></li>
+		<li><a href="/search~S6">Books & Periodicals</a></li>
+		<li><a href="/search~S10">Periodicals Only</a></li>
+		<li><a href="/search~S7">Auction Catalogues</a></li>
+		<li><a href="/search~S8">Archives</a></li>
+	</ul>
+	</li>
+	<li><a href="http://www.worldcat.org">WorldCat</a></li>
+	<li><a href="http://www.archive.org">Internet Archive</a></li>
+	<li><a href="http://books.google.org">Google Books</a></li>
+	<li><a href="/patroninfo">My Library</a></li>
+</ul>
+</div>
+<div class="rightColumn">
 <h1 class="accessibleAddInfo">Search</h1>
 
 <div id="accessibleForm" class="form1Part">
@@ -48,17 +67,16 @@ obj.submit();
 <h2>Auction Catalogues</h2>
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
-<option value="X" selected="selected">Keyword</option>
+<option value="l" selected="selected">Date of Sale</option>
+<option value="a">Auction House</option>
+<option value="i">Sale Code</option>
 <option value="t">Title</option>
-<option value="s">Journal Title</option>
-<option value="a">Author</option>
-<option value="d">Subject</option>
-<option value="y">Resource Name</option>
+<option value="Y">Word</option>
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
 <input maxlength="75" name="searcharg" size="20" >
-<input type="hidden" name="searchscope" value="7">
+<input type="hidden" name="searchscope" value="6">
 <span class="nowrap formButtonArea">
 
   <!--{submit}-->
@@ -69,19 +87,61 @@ obj.submit();
 <input type="submit" class="submitHidden">
 
 </span>
+<div id="exampleText">
+	
+<hr />
+        <p>Type the exact <strong>Date of Sale</strong> as 8 digits, for example:</p>
+        
+		<ul>
+			<li>2005 December 19 = <strong>20051219</strong></li>
+
+		</ul>
+                
+        <p>Use right-hand truncation to retrieve all catalogs for an entire month, for example:</p>
+        
+            <ul>
+                
+                        <li>May 1998 = <strong>199805</strong> or <strong>1998/05</strong></li>
+                        
+            </ul>
+            
+        <p>For sales that occurred over a span of dates, enter the <strong>earliest</strong> date of sale, for example: </p>
+        
+            <ul>
+                
+                        <li>July 2-11, 2001 = <strong>20010702</strong> or <strong>2001/07/02</strong></li>
+                        
+            </ul>
+</div>
 </div>
 </div><!-- formEntryArea -->
 <!--</fieldset> optional-->
 </form>
 </div><!-- browseSearchtool -->
 </div><!-- form1Part -->
+<div class="bottomContent">
 <div id="scopeBoxes">
 <div class="scopeBox" id="scopeBox1"><a href="/search~S3">ALL COLLECTIONS</a></div>
 <div class="scopeBox" id="scopeBox2"><a href="/search~S6">BOOKS AND PERIODICALS</a></div>
 <div class="scopeBox" id="scopeBox3"><a href="/search~S8">ARCHIVES</a></div>
 <div class="scopeBox" id="scopeBox4"><a href="/search~S10">PERIODICALS</a></div>
-<div>
+</div><!--scopeBoxes-->
+<div class="contactInfo">
+<h3>RICHARDSON MEMORIAL LIBRARY</h3>
+During construction, open Thursdays 10:00 am to 5:00 pm<br />
+By appointment only<br />
+<br />
+Contact:<br />
+314.655.5252<br />
+<a href="mailto:library@slam.org">library@slam.org</a><br />
+<br />
+<a href="http://www.slam.org/RichardsonLibrary/research.php">Ask a librarian</a> <br />
+<a href="http://www.slam.org/RichardsonLibrary/projects.php">St. Louis artist files</a><br />
+</div>
+	
+</div><!--bottomContent-->
 
+</div><!--rightColumn-->
 </div><!--pageContentInner -->
 
 <!--{botlogo}-->
