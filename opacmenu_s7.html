@@ -67,14 +67,11 @@ obj.submit();
 <h2>Auction Catalogues</h2>
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
-<option value="X" selected="selected">Word</option>
-<option value="a">Author</option>
+<option value="l" selected="selected">Date of Sale</option>
+<option value="a">Auction House</option>
+<option value="i">Sale Code</option>
 <option value="t">Title</option>
-<option value="d">Subject</option>
-<option value="s">Journal Title</option>
-<option value="c">Call Number</option>
-<option value="i">ISBN/ISSN</option>
-<option value="p">Instructor</option>
+<option value="Y">Word</option>
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
@@ -91,15 +88,30 @@ obj.submit();
 
 </span>
 <div id="exampleText">
-	<div class="mainMenuSrchText">Type the search term you want to find. Examples:
-		<ul class="unpadded">
-			<li>Italian cooking</li>
-			<li>The Appeal</li>
-			<li>tax and legislat*</li>
+	
+<hr />
+        <p>Type the exact <strong>Date of Sale</strong> as 8 digits, for example:</p>
+        
+		<ul>
+			<li>2005 December 19 = <strong>20051219</strong></li>
 
-			<li>(lunar or solar) and eclipse</li>
 		</ul>
-	</div>
+                
+        <p>Use right-hand truncation to retrieve all catalogs for an entire month, for example:</p>
+        
+            <ul>
+                
+                        <li>May 1998 = <strong>199805</strong> or <strong>1998/05</strong></li>
+                        
+            </ul>
+            
+        <p>For sales that occurred over a span of dates, enter the <strong>earliest</strong> date of sale, for example: </p>
+        
+            <ul>
+                
+                        <li>July 2-11, 2001 = <strong>20010702</strong> or <strong>2001/07/02</strong></li>
+                        
+            </ul>
 </div>
 </div>
 </div><!-- formEntryArea -->
