@@ -13,6 +13,9 @@ label {
 #bibDisplayBody {
     background: #FCFAF4;
 }
+.bibRecordLinkText {
+    font-size:smaller;
+}
 .bibSearch { background: url("tile_search_brown_inverse.jpg") repeat-x scroll left bottom transparent }
 .bibSearchHistory, .resourceHistory { position: inherit;}
 .briefcitCell, .browseEntry, .browseSubEntry {
