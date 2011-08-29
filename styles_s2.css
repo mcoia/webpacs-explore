@@ -162,5 +162,6 @@ td.odd, td.highlight, tr.odd {
 }
 .topLogo {background: url("http://collections.mohistory.org/search/sites/all/themes/mhmth/images/header/rotate.php") no-repeat scroll center top transparent; height:135px; text-align: center; width: 100%; border-bottom: 7px solid #002A5C;}
 .topLogo, #skipNav, .clear {padding:0;}
+#webaddress {display:none;}
 #welcome {background:#dde1e4; border-bottom:1px solid #BFB184; border-right: border-bottom:1px solid #BFB184; height:156px; padding: 5px 18px; }
 #welcome a {color:black;}
