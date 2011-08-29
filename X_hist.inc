@@ -5,7 +5,7 @@
 
 			<li>missouri archaeology</li>
 
-			<li>census st. charles</li>
+			<li>census boone county</li>
 		</ul>
 	</div>
 </div>
