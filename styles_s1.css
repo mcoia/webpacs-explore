@@ -15,6 +15,37 @@ body {background-image: url("/screens/gardens_background.jpg"); background-posit
     background-color:#1D3B04;
 }
 
+.pageFooterAddress{
+    float:left;
+    padding: 0 16px;
+    color:#D1DDBC;
+}
+
+.pageFooterColumn {
+    border-right: 1px solid #767D64;
+    float:left;
+    height:170px;
+    padding: 0 16px;
+    width: 110px;
+    color:#D1DDBC;
+}
+
+.pageFooterColumn li {
+    list-style-type:none;
+}
+
+.pageFooterColumn p {
+    color:#FFFFFF;
+    border-bottom: 1px solid #767D64;
+    margin-bottom:7px;
+    padding-bottom:7px;
+}
+
+.pageFooterColumn ul {
+    padding-left:0;
+    margin-top:0;
+}
+
 #shadowBackground {
     background-image: url("/screens/shadowBackground.gif");
     background-repeat: repeat-x;
