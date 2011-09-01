@@ -39,48 +39,52 @@ obj.submit();
 <div id="left">
 <h1 class="accessibleAddInfo">Search</h1>
 
-<div id="accessibleForm" class="form1Part">
-<div class="browseSearchtool">
-<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
-<input type="hidden" id="iiiFormHandle_1">
+<form action="/search/" method="get"
+id="search" class="box" name="search">
 
-<!-- Optional legend:
-<fieldset>
-<legend>Type the search term you want to find.</legend>-->
-<div class="formEntryArea">
-<label for="searchtype" class="accessibleAddInfo">Search type</label>
-<select name="searchtype" id="searchtype">
-<option value="t" selected="selected">Title & BPH Abbrev. Search</option>
-<option value="X">Keyword</option>
-<option value="a">Author</option>
-<option value="s">Journal Title</option>
-<option value="d">Subject</option>
-<option value="c">Call Number</option>
-<option value="h">Mentor Number</option>
-<option value="i">ISBN/ISSN Number</option>
-<option value="b">Barcode Search</option>
-<option value=",">Bib ID</option>
-</select>
-<!--{nosort}-->
-<label for="searcharg" class="accessibleAddInfo">Search term</label>
-<input maxlength="75" name="searcharg" size="20" >
-<label for="scope" class="accessibleAddInfo">Location</label>
-<!--{scope}-->
-<span class="nowrap formButtonArea">
+<div class="options"> basic search / <a href="/search~S2/X">advanced search</a>
+</div>
 
-  <!--{submit}-->
-
-<input type="hidden" id="iiiFormHandle_1"/>
-<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
-
-<input type="submit" class="submitHidden">
-
+<div class="limits"> 
+<label> <input name="searchtype" value="X" checked="checked" type="radio"> Keyword </label> 
+<label> <input name="searchtype" value="t" type="radio"> Title & BPH Abbrev. Search </label>
+<label> <input name="searchtype" value="a" type="radio"> Author </label>
+<label> <input name="searchtype" value="s" type="radio"> Journal Title</label>
+<label> <input name="searchtype" value="d" type="radio"> Subject </label>
+<label> <input name="searchtype" value="c" type="radio"> Call Number </label>
+<label id="other"> <input name="searchtype" value="y" type="radio"> Other Searches </label>
+<label class="hiddenSearch"> <input name="searchtype" value="h" type="radio"> Mentor Number </label>
+<label class="hiddenSearch"> <input name="searchtype" value="i" type="radio"> ISBN/ISSN </label>
+<label class="hiddenSearch"> <input name="searchtype" value="b" type="radio"> Barcode </label>
+<label class="hiddenSearch"> <input name="searchtype" value="," type="radio"> Bib ID </label>
 </span>
-</div><!-- formEntryArea -->
-<!--</fieldset> optional-->
+</div>
+
+<div class="searchBox"><input name="searcharg" value="" id="searcharg" class="text" type="text">
+in
+
+
+<!--{scope}-->
+
+
+<input value="Search" type="submit"> </label></div>
+<div class="tip"> <a href="/search/Y">keyword search tips</a></div>
+
+
+<div id="exampleText">
+<hr>
+	<div class="mainMenuSrchText">
+		<ul>
+			<li class="firstItem">e.g. urban renewal</li>
+
+			<li>missouri archaeology</li>
+
+			<li>census st. charles</li>
+		</ul>
+	</div>
+</div>
+
 </form>
-</div><!-- browseSearchtool -->
-</div><!-- form1Part -->
 
 
 
