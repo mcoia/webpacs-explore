@@ -42,6 +42,7 @@
 AVAILLIM=<span class="availLimMessage">Limit search to available items</span>|<span class="availLimMessage">Search results limited to available items</span>
 AVAILLIM_STATS=-,o
 BOTLOGO=@screens/botlogo.html
+BOTLOGO1=@screens/botlogo_s1.html
 BOTLOGO2=@screens/botlogo_s2.html
 BOTLOGO3=@screens/botlogo_s3.html
 BOTLOGO6=@screens/botlogo_s3.html
@@ -78,10 +79,11 @@ STYLESHEET=/screens/styles.css
 SUPPRESS_OPTION=Z39SEARCH
 TIMEOUT=32000;URL=/
 TOPLOGO=@screens/toplogo.html
+TOPLOGO1=@screens/toplogo_s1.html
 TOPLOGO2=@screens/toplogo_s2.html
 TOPLOGO3=@screens/toplogo_s3.html
 TOPLOGO6=@screens/toplogo_s3.html
-TOPLOGO7=@screens/toplogo_s3.html
+TOPLOGO7=@screens/toplogo_s7.html
 TOPLOGO8=@screens/toplogo_s3.html
 TOPLOGO9=@screens/toplogo_s3.html
 TOPLOGO10=@screens/toplogo_s3.html
@@ -204,6 +206,7 @@ ICON_BIB_PAGING_CAPTION=
 ICON_BIB_PAGING_NEXT=<span class="button"><span class="buttonText" id="buttonNextRecord">Next Record</span><img src="/screens/ico_next.png" alt=""></span>
 ICON_BIB_PAGING_PREV=<span class="button"><img src="/screens/ico_previous.gif" alt=""><span class="buttonText">Previous Record</span></span>
 ICON_RECORDLINK=<a href="%s"><span class="button"><img src="/screens/ico_bookmark.png" alt=""><span class="buttonText">Permanent Link</span></span></a>
+ICON_RECORDLINK2=<div class="bibRecordLinkText">Bookmark this record:<div class="bibRecordLink"><a id="recordnum" href="%s">%s</a></div></div>
 LINK856TEXT=Click on the following to
 MARC=yes
 SHOWOREC=no_cdate
@@ -440,7 +443,7 @@ BIBIMAGE_TEXT=Book Cover
 BUT_ENCYCPD=/screens/encycpd.gif
 BUT_FULL_TEXT=/screens/full_text.gif
 #WEBADDRESS=|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;ItemKey=%s&amp;Options=N||<span class="button"><img src="/screens/ico_info.png" border="0" alt=""><span class="buttonText">More Information</span></span>|-1
-WEBADDRESS=http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;field-keywords=%s|I|http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&field-isbn=%s|<span class="button"><img src="/screens/ico_info.png" border="0" alt=""><span class="buttonText">More Information</span></span>|<span class="button"><img src="/screens/ico_info.png" border="0" alt=""><span class="buttonText">More Information</span></span>|-1
+WEBADDRESS=http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;field-keywords=%s|I|http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&field-isbn=%s|<span class="button" id="webaddress"><img src="/screens/ico_info.png" border="0" alt=""><span class="buttonText">More Information</span></span>|<span class="button"><img src="/screens/ico_info.png" border="0" alt=""><span class="buttonText">More Information</span></span>|-1
 
 # WebBridge/Pathfinder Pro
 ICON_BUT_CLOSEFRAME=<span class="button"><img src="/screens/ico_x.gif" alt=""><span class="buttonText">Close Frame</span></span>

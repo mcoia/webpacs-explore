@@ -1,0 +1,47 @@
+body {background-image: url("/screens/gardens_background.jpg"); background-position: center bottom; background-repeat: repeat-x;}
+
+.content {
+    width:952px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:37px;
+    position:relative;
+    padding:0;
+}
+
+#footer {
+    bottom:0;
+    height:250px;
+    background-color:#1D3B04;
+}
+
+#shadowBackground {
+    background-image: url("/screens/shadowBackground.gif");
+    background-repeat: repeat-x;
+    width:100%;
+    height: 10px;
+}
+
+.topLogoSmall img {
+    margin-left:10px;
+}
+
+#topNavigation {
+    background-color:#C9D7B2;
+    padding: 1em;
+    width:40em;
+}
+
+#topNavigation ul {
+    list-style-type:none;
+}
+
+#topNavigation li {
+    display:inline;
+    padding: 0 .5em;
+    border-right:1px solid black;
+}
+
+#topNavigation #lastItem {
+    border:none;
+}
