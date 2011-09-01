@@ -42,6 +42,7 @@
 AVAILLIM=<span class="availLimMessage">Limit search to available items</span>|<span class="availLimMessage">Search results limited to available items</span>
 AVAILLIM_STATS=-,o
 BOTLOGO=@screens/botlogo.html
+BOTLOGO1=@screens/botlogo_s1.html
 BOTLOGO2=@screens/botlogo_s2.html
 BOTLOGO3=@screens/botlogo_s3.html
 BOTLOGO6=@screens/botlogo_s3.html
@@ -78,6 +79,7 @@ STYLESHEET=/screens/styles.css
 SUPPRESS_OPTION=Z39SEARCH
 TIMEOUT=32000;URL=/
 TOPLOGO=@screens/toplogo.html
+TOPLOGO1=@screens/toplogo_s1.html
 TOPLOGO2=@screens/toplogo_s2.html
 TOPLOGO3=@screens/toplogo_s3.html
 TOPLOGO6=@screens/toplogo_s3.html
