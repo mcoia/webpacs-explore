@@ -1,4 +1,13 @@
-body {background-image: url("/screens/gardens_background.jpg"); background-position: center bottom; background-repeat: repeat-x;}
+body {
+    background-image: url("/screens/gardens_background.jpg");
+    background-position: center top;
+    background-repeat: repeat-x;
+    background: #5d793c url("/screens/gardens_background.jpg") center top repeat-x;
+    font-family:Georgia,BemboStdRegular,Serif;}
+    
+body div {
+    padding:0;
+}
 
 .content {
     width:952px;
@@ -7,12 +16,68 @@ body {background-image: url("/screens/gardens_background.jpg"); background-posit
     margin-top:37px;
     position:relative;
     padding:0;
+    min-height:500px;
+}
+
+.form1Part {
+    margin:0;
 }
 
 #footer {
-    bottom:0;
     height:250px;
     background-color:#1D3B04;
+    width:930px;
+    margin: 0 auto 40px;
+}
+
+#footerColumns {
+    margin-left:auto;
+    margin-right:auto;
+    width:700px;
+}
+
+.pageFooterAddress{
+    float:left;
+    padding: 9px 16px;
+    color:#D1DDBC;
+}
+
+.pageFooterAddress h4{
+    margin-top: 0;
+    display: inline-block;
+}
+
+.pageFooterAddress img{
+    margin-right: 8px;
+}
+
+.pageFooterAddress p{
+    margin:0;
+}
+
+.pageFooterColumn {
+    border-right: 1px solid #767D64;
+    float:left;
+    height:170px;
+    padding: 0 16px;
+    width: 110px;
+    color:#D1DDBC;
+}
+
+.pageFooterColumn li {
+    list-style-type:none;
+}
+
+.pageFooterColumn p {
+    color:#FFFFFF;
+    border-bottom: 1px solid #767D64;
+    margin-bottom:7px;
+    padding-bottom:7px;
+}
+
+.pageFooterColumn ul {
+    padding-left:0;
+    margin-top:0;
 }
 
 #shadowBackground {
@@ -28,18 +93,21 @@ body {background-image: url("/screens/gardens_background.jpg"); background-posit
 
 #topNavigation {
     background-color:#C9D7B2;
-    padding: 1em;
-    width:40em;
+    padding: .5em;
+    width:35em;
+    color: #285407;
+    font-size:1.1em;
 }
 
 #topNavigation ul {
     list-style-type:none;
+    padding:0;
 }
 
 #topNavigation li {
     display:inline;
     padding: 0 .5em;
-    border-right:1px solid black;
+    border-right:1px solid #285407;
 }
 
 #topNavigation #lastItem {
