@@ -1,7 +1,13 @@
 body {
     background-image: url("/screens/gardens_background.jpg");
     background-position: center top;
+    background-repeat: repeat-x;
+    background: #5d793c url("/screens/gardens_background.jpg") center top repeat-x;
     font-family:Georgia,BemboStdRegular,Serif;}
+    
+body div {
+    padding:0;
+}
 
 .content {
     width:952px;
@@ -10,12 +16,18 @@ body {
     margin-top:37px;
     position:relative;
     padding:0;
+    min-height:500px;
+}
+
+.form1Part {
+    margin:0;
 }
 
 #footer {
-    bottom:0;
     height:250px;
     background-color:#1D3B04;
+    width:930px;
+    margin: 0 auto 40px;
 }
 
 #footerColumns {
