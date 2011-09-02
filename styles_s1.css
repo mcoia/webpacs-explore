@@ -1,4 +1,7 @@
-body {background-image: url("/screens/gardens_background.jpg"); background-position: center bottom; background-repeat: repeat-x;}
+body {
+    background-image: url("/screens/gardens_background.jpg");
+    background-position: center top;
+    font-family:Georgia,BemboStdRegular,Serif;}
 
 .content {
     width:952px;
@@ -15,10 +18,29 @@ body {background-image: url("/screens/gardens_background.jpg"); background-posit
     background-color:#1D3B04;
 }
 
+#footerColumns {
+    margin-left:auto;
+    margin-right:auto;
+    width:700px;
+}
+
 .pageFooterAddress{
     float:left;
-    padding: 0 16px;
+    padding: 9px 16px;
     color:#D1DDBC;
+}
+
+.pageFooterAddress h4{
+    margin-top: 0;
+    display: inline-block;
+}
+
+.pageFooterAddress img{
+    margin-right: 8px;
+}
+
+.pageFooterAddress p{
+    margin:0;
 }
 
 .pageFooterColumn {
@@ -59,18 +81,21 @@ body {background-image: url("/screens/gardens_background.jpg"); background-posit
 
 #topNavigation {
     background-color:#C9D7B2;
-    padding: 1em;
-    width:40em;
+    padding: .5em;
+    width:35em;
+    color: #285407;
+    font-size:1.1em;
 }
 
 #topNavigation ul {
     list-style-type:none;
+    padding:0;
 }
 
 #topNavigation li {
     display:inline;
     padding: 0 .5em;
-    border-right:1px solid black;
+    border-right:1px solid #285407;
 }
 
 #topNavigation #lastItem {
