@@ -6,10 +6,10 @@ BOTLOGO=<!--<center><img src="/screens/botlogo.gif"></center>-->
 TOPLOGO=<img src="/screens/iiilogo.gif"><img src="/screens/slrlc.gif">
 TOPLOGO1=<center><img src="/screens/mbglogo.gif"></center>
 TOPLOGO2=<center><a href="http://www.mohistory.org/lrc/collections/library/"><img border="0"  src="/screens/mhm2.gif"></a></center>
-TOPLOGO3=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Richardson Library</b></font><br></center>
+TOPLOGO3=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="/screens/slamhead.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Richardson Library</b></font><br></center>
 TOPLOGO4=<img src="/screens/mhm2.gif">
 TOPLOGO5=<center><img src="/screens/mhm.gif"></center>
-TOPLOGO7=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><a href="http://www.slam.org"><img border="0" src="http://stlouis.art.museum/Homepage/images/heading.gif"></a></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Auction Catalogs</b></font><br></center>
+TOPLOGO7=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><a href="http://www.slam.org"><img border="0" src="/screens/slamhead.gif"></a></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Auction Catalogs</b></font><br></center>
 
 TOPLOGO12=<center><img src="/screens/mhm.gif"></center>
 # BRIEF=
@@ -77,7 +77,7 @@ FRAMEURL_PAT=40
 
 # Keyword search WWWOptions
 
-#ASSEARCH=1
+# ASSEARCH=1
 AVS_TAG=XYZ
 KEYWORD_COLOR=Y|all|red
 
@@ -147,10 +147,10 @@ BUT_CARDFORM_BOX=/screens/boxdisp.gif
 BUT_Z39SEARCH=/screens/z39srch.gif
 TOPLOGO11=<img src="/screens/botanicuslogo.gif"><p><p>
 # HEADING_LENGTH=
-TOPLOGO6=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Books & Periodicals</b></font><br></center>
-TOPLOGO10=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Periodicals Only</b></font><br></center>
+TOPLOGO6=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="/screens/slamhead.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Books & Periodicals</b></font><br></center>
+TOPLOGO10=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="/screens/slamhead.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Periodicals Only</b></font><br></center>
 
-#EXTENDED_l=UT
+# EXTENDED_l=UT
 
 STYLESHEET6=/screens/slamcss.css
 ICON_SUBMIT6=<img src=/screens/submit.gif border=0/>
@@ -158,9 +158,9 @@ ICON_CANCEL6=<img src=/screens/cancel.gif border=0/>
 STYLESHEET10=/screens/slamcss.css
 STYLESHEET7=/screens/slamcss.css
 STYLESHEET9=/screens/slamcss.css
-TOPLOGO9=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Slide Library</b></font><br></center>
+TOPLOGO9=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="/screens/slamhead.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Slide Library</b></font><br></center>
 STYLESHEET8=/screens/slamcss.css
-TOPLOGO8=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="http://stlouis.art.museum/Homepage/images/heading.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Archival Records</b></font><br></center>
+TOPLOGO8=<div style="line-height: 130%; background-color: #577993; padding-top: 15px; padding-bottom: 15px; margin-bottom: 10px"><center><img src="/screens/slamhead.gif"></center></div> <center><font color=#577993 face="sabon, times, serif" size=+3><b>Archival Records</b></font><br></center>
 
 ICON_BOOKCART_SAVED=<IMG SRC="/screens/clrrecord.gif" ALT="Clear Record" BORDER=0>
 
@@ -203,3 +203,8 @@ ICON_REL_GROUP_4=<img src="/screens/relevance2.gif" alt="">&nbsp;Relevant titles
 ICON_REL_GROUP_5=<img src="/screens/relevance1.gif" alt="">&nbsp;Other relevant titles&nbsp;
 
 
+EXTENDED=CT
+
+BIBIMAGE=http://contentcafe2.btol.com/ContentCafe/Jacket.aspx?UserID=MOB54116&amp;Password=CC42814&amp;Return=1&Type=S&amp;Value=%s&amp;erroroverride=1|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=MOB54116&amp;Password=CC42814&amp;ItemKey=%s&amp;Options=N
+
+WEBADDRESS=|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=MOB54116&amp;Password=CC42814&amp;ItemKey=%s&amp;Options=N|<span class="button" id="webaddress"><IMG SRC="/screens/ico_info.gif" alt="" border="0"><span class="buttonText">Media Information</span></span>
