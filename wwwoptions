@@ -207,4 +207,4 @@ EXTENDED=CT
 
 BIBIMAGE=http://contentcafe2.btol.com/ContentCafe/Jacket.aspx?UserID=MOB54116&amp;Password=CC42814&amp;Return=1&Type=S&amp;Value=%s&amp;erroroverride=1|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=MOB54116&amp;Password=CC42814&amp;ItemKey=%s&amp;Options=N
 
-WEBADDRESS=|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=MOB54116&amp;Password=CC42814&amp;ItemKey=%s&amp;Options=N|<span class="button" id="webaddress"><IMG SRC="/screens/ico_info.gif" alt="" border="0"><span class="buttonText">Media Information</span></span>
+#WEBADDRESS=|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=MOB54116&amp;Password=CC42814&amp;ItemKey=%s&amp;Options=N|<span class="button" id="webaddress"><IMG SRC="/screens/ico_info.gif" alt="" border="0"><span class="buttonText">Media Information</span></span>
