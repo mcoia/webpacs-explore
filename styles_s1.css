@@ -9,6 +9,13 @@ body div {
     padding:0;
 }
 
+h1 {
+    font-size: 23px;
+    margin: 7px 60px;
+    color: #1D3B04;
+    
+}
+
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
     border: 2px #DCE2D4 ridge;
     text-align:center;
