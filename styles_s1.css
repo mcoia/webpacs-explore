@@ -69,7 +69,7 @@ h1 {
     background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF
 }
 
-.form3Part {
+.form3Part, .form2Part, .form1Part, .mylistsSavePage form {
     float:none;
     width: 635px;
 }
@@ -166,6 +166,10 @@ h1 {
 #topNavigation a {
     text-decoration:none;
     color: #285407;
+}
+
+#topNavigation a:hover,  #topNavigation a:active {
+    text-decoration:underline;
 }
 
 #topNavigation ul {
