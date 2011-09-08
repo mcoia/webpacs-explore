@@ -1,5 +1,5 @@
-a:link, a:hover, a:active, a:visited {
-    color: #285407;
+a:visited {
+    color: #014184;
 }
 
 body {
@@ -67,6 +67,11 @@ h1 {
 
 .form2Part, .form1Part, .mylistsSavePage form {
     background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF
+}
+
+.form3Part {
+    float:none;
+    width: 635px;
 }
 
 #footer {
