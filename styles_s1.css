@@ -1,3 +1,7 @@
+a:link, a:hover, a:active, a:visited {
+    color: #285407;
+}
+
 body {
     background-image: url("/screens/gardens_background.jpg");
     background-position: center top;
@@ -61,11 +65,24 @@ h1 {
     margin:0;
 }
 
+.form2Part, .form1Part, .mylistsSavePage form {
+    background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF
+}
+
 #footer {
     height:250px;
     background-color:#1D3B04;
     width:930px;
     margin: 0 auto 40px;
+}
+
+#footer a {
+    text-decoration:none;
+    color: #D1DDBC;
+}
+
+#footer a:hover, #footer a:active {
+    text-decoration:underline;
 }
 
 #footerColumns {
@@ -139,6 +156,11 @@ h1 {
     width:35em;
     color: #285407;
     font-size:1.1em;
+}
+
+#topNavigation a {
+    text-decoration:none;
+    color: #285407;
 }
 
 #topNavigation ul {
