@@ -29,15 +29,15 @@ label {
     width:75%;
 }
 .briefcitMedia, .bibMedia, .briefcitResourceMedia, .briefcitProgramMedia, td.browseEntryMedia, td.browseSubEntryMedia {
-    margin-top:1em;
+    margin-top:1em; margin-left:auto;margin-right:auto;
 }
 .briefcitRight {
     display:inline;
     float:left;
     margin-bottom:30px;
     padding:0;
-    text-align:left;
-    width:41px;
+    text-align:center;
+    width:100px;
 }
 .briefcitRow {
     padding-left:0%;
