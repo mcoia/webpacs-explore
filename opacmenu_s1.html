@@ -52,7 +52,7 @@ return false;
 
 
   <div id="tabs">
-    <ul>
+    <ul id="tabList">
       <li><a href="#tab-1">Word</a></li>
       <li><a href="#tab-2">Title</a></li>
       <li><a href="#tab-3">Author</a></li>
@@ -60,18 +60,15 @@ return false;
 
     <div id="tab-1" class="tabContent">
  
- <div class="browseSearchtool">
+
+<div class="innerTab">
 <form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
 <input type="hidden" id="iiiFormHandle_1">
 
-<!-- Optional legend:
-<fieldset>
-<legend>Type the search term you want to find.</legend>-->
-<div class="formEntryArea">
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
-<option value="t" selected="selected">Title & BPH Abbrev. Search</option>
-<option value="X">Keyword</option>
+<option value="t">Title & BPH Abbrev. Search</option>
+<option value="X" selected="selected">Word</option>
 <option value="a">Author</option>
 <option value="s">Journal Title</option>
 <option value="d">Subject</option>
@@ -82,13 +79,9 @@ return false;
 <option value=",">Bib ID</option>
 </select>
 <!--{nosort}-->
-<label for="searcharg" class="accessibleAddInfo">Search term</label>
 <input maxlength="75" name="searcharg" size="20" >
-<label for="scope" class="accessibleAddInfo">Location</label>
-<!--{scope}-->
+<input type="hidden" name="searchscope" value="1">
 <span class="nowrap formButtonArea">
-
-  <!--{submit}-->
 
 <input type="hidden" id="iiiFormHandle_1"/>
 <a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
@@ -96,22 +89,122 @@ return false;
 <input type="submit" class="submitHidden">
 
 </span>
-</div><!-- formEntryArea -->
+
 </form>
-</div><!-- browseSearchtool -->
+
+<p>Type the search term you want to find.  For example:</p>
+
+<ul>
+    <li>Floras of the World</li>
+    <li>(annotated bibliography) and bot*</li>
+    <li>(alaska or canada) and (botany and not ferns)</li>
+    
+</ul>
+
+<p>Switch to <a href="/search/X">Advanced Word Search</a></p>
+
+</div>
+
     </div>
     <div id="tab-2" class="tabContent">
+<div class="innerTab">
+<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
+<input type="hidden" id="iiiFormHandle_1">
 
-      <h3>Tab 2</h3>
-      <p><img src="http://papermashup.com/demos/jquery-gallery/images/t2.png" width="120" height="120" class="thumbs"/> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec <br/>
-        <a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe to my feed here</a></p>
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="t" selected="selected">Title & BPH Abbrev. Search</option>
+<option value="X">Word</option>
+<option value="a">Author</option>
+<option value="s">Journal Title</option>
+<option value="d">Subject</option>
+<option value="c">Call Number</option>
+<option value="h">Mentor Number</option>
+<option value="i">ISBN/ISSN Number</option>
+<option value="b">Barcode Search</option>
+<option value=",">Bib ID</option>
+</select>
+<!--{nosort}-->
+<input maxlength="75" name="searcharg" size="20" >
+<input type="hidden" name="searchscope" value="1">
+<span class="nowrap formButtonArea">
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+
+</form>
+
+<p>Type as much or as little of the title as you want, beginning with the first word. Omit any article at the beginning of the title ("the," "les," "el"...). You may also enter a BPH abbreviation as a title.
+For example:</p>
+
+<ul>
+    <li>History of Botany (1530-1860)</li>
+    <li>History of Bot</li>
+    <li>History</li>
+    <li>nat. malays.</li>
+    
+</ul>
+
+<p>Switch to <a href="/search/X">Advanced Word Search</a></p>
+
+</div>
     </div>
     <div id="tab-3" class="tabContent">
-      <h3>Tab 3</h3>
+<div class="innerTab">
+<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
+<input type="hidden" id="iiiFormHandle_1">
 
-      <p><img src="http://papermashup.com/demos/jquery-gallery/images/t3.png" width="120" height="120" class="thumbs"/> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur enim. Nullam id ligula in nisl tincidunt feugiat. Curabitur eu magna porttitor ligula bibendum rhoncus. Etiam dignissim. Duis lobortis porta risus. Quisque velit metus, dignissim in, rhoncus at, congue quis, mi. Praesent vel lorem. Suspendisse ut dolor at justo tristique dapibus. Morbi erat mi, rutrum a, aliquam nec, mattis semper, leo. Maecenas blandit risus vitae quam. Vivamus ut odio.<br/>
-        <a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe to my feed here</a></p>
-    </div>
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="t">Title & BPH Abbrev. Search</option>
+<option value="X">Word</option>
+<option value="a"  selected="selected">Author</option>
+<option value="s">Journal Title</option>
+<option value="d">Subject</option>
+<option value="c">Call Number</option>
+<option value="h">Mentor Number</option>
+<option value="i">ISBN/ISSN Number</option>
+<option value="b">Barcode Search</option>
+<option value=",">Bib ID</option>
+</select>
+<!--{nosort}-->
+<input maxlength="75" name="searcharg" size="20" >
+<input type="hidden" name="searchscope" value="1">
+<span class="nowrap formButtonArea">
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+
+</form>
+
+<p>Type the author's or artist's last name first.  For example:</p>
+
+<ul>
+    <li>Ewan</li>
+    <li>Ewan, Joseph</li>
+    <li>Raven, P</li>
+    <li>hooker, j</li>
+    
+</ul>
+
+<p>You may also type the name of an organization or governmental body. For example: </p>
+
+<ul>
+    <li>Botanical Society of America</li>
+    <li>Missouri Botanical Garden</li>
+</ul>
+
+<p>Switch to <a href="/search/X">Advanced Word Search</a></p>
+
+</div>
 
   </div>
 

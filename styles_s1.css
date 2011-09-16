@@ -20,6 +20,10 @@ h1 {
     
 }
 
+#accessibleForm {
+    background: #F1F4EB;
+}
+
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
     border: 2px #DCE2D4 ridge;
     text-align:center;
@@ -66,14 +70,17 @@ h1 {
     margin:0;
 }
 
-.form2Part, .form1Part, .mylistsSavePage form {
-    background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF
+.form2Part, .form1Part, .mylistsSavePage form, .form3PartBelow {
+    background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF;
 }
 
 .form3Part, .form2Part, .form1Part, .mylistsSavePage form {
     float:none;
     width: 635px;
+    margin-left:auto;
+    margin-right:auto;
 }
+
 
 #footer {
     height:250px;
@@ -196,9 +203,11 @@ h1 {
 
 /* Tab styles */
 
-* {
-	margin: 0;
-	padding: 0;
+.innerTab {
+    width:32em;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #tabs {
@@ -207,32 +216,38 @@ h1 {
         margin-left:auto;
         margin-right:auto;
 }
-#tabs ul {
+
+#tabs a {
+        color: #285407;
+}
+
+#tabList {
 	float: left;
 	background: #fff;
 	width: 500px;
-	padding-top: 4px;
+	padding: 0;
+        margin: 0;
 }
-#tabs li {
+#tabList li {
 	margin-left: 8px;
 	list-style: none;
 }
-#tabs li:first-child {
+#tabList li:first-child {
 	margin-left: 0;
 }
-* html #tabs li {
+* html #tabList li {
 	display: inline;
 }
-#tabs li, #tabs li a {
+#tabList li, #tabList li a {
 	float: left;
 }
-#tabs ul li.active {
+#tabList li.active {
 	background: #F1F4EB;
 }
-#tabs ul li {
+#tabList li {
 	background: #F8F9F4;
 }
-#tabs ul li.active a {
+#tabList li.active a {
 	color: #333333;
 }
 #tabs .tabContent {
@@ -247,7 +262,7 @@ h1 {
 #tabs div p {
 	line-height: 150%;
 }
-#tabs ul li a {
+#tabList li a {
 	text-decoration: none;
 	padding: 8px;
 	color: #000;
