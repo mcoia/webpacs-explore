@@ -4,15 +4,28 @@
 <link rel="stylesheet" type="text/css" href="/screens/styles_s3.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
+
+var examples = new Array ();
+examples["l"] = "YYYY/MM/DD"
+examples["a"] = ""
+examples["i"] = ""
+examples["t"] = "Omit initial articles (the, a, der, la, etc.)"
+examples["Y"] = ""
+
+
 $(document).ready(function () {
 	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
 
 	$('#searchtype').change(function(){
-    	$("#exampleText").load("/screens/" + this.value + "_auc.inc");
+    	$('[name="searcharg"]').val(examples[this.value]);
+	});
+	$('[name="searcharg"]').click(function(){
+    	$(this).val("");
+        $('[name="searcharg"]').css("color","#000000");
 	});
 });
-</script>
 
+</script>
 
 <div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
 <div class="topLogo">

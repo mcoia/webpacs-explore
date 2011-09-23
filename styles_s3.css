@@ -102,7 +102,7 @@ hr {
 }
 
 .innerForm {
-    width:28em;
+    width:34em;
     text-align:left;
     margin-left:auto;
     margin-right:auto;
@@ -149,17 +149,13 @@ hr {
     width:100%;
 }
 
+
 .rightColumn {
     width:760px;
     float:left;
     padding:0 10px;
 }
 
-#socialMedia {
-    width:110px;
-    float:left;
-    margin: 26px 0 0 20px;
-}
 
 .scopeBox {
     width:244px;
@@ -196,6 +192,14 @@ hr {
 #scopeBoxes #scopeBox3 {background-color:#999999;}
 
 #scopeBoxes #scopeBox4 {background-color:#7E9CB3;}
+
+#searchInput {color: #B0B0B0;}
+
+#socialMedia {
+    width:110px;
+    float:left;
+    margin: 26px 0 0 20px;
+}
 
 .topLogo {
     background: #517D98;

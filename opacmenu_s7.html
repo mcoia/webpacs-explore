@@ -53,7 +53,6 @@ obj.submit();
 </div>
 <div class="rightColumn">
 <h1 class="accessibleAddInfo">Search</h1>
-
 <div id="accessibleForm" class="form1Part">
 <div class="browseSearchtool">
 <form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
@@ -64,7 +63,7 @@ obj.submit();
 <legend>Type the search term you want to find.</legend>-->
 <div class="formEntryArea">
 <div class="innerForm">
-<h2>Auction Catalogues</h2>
+<h2>Books and Periodicals</h2>
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
 <option value="l" selected="selected">Date of Sale</option>
@@ -75,8 +74,8 @@ obj.submit();
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
-<input maxlength="75" name="searcharg" size="20" >
-<input type="hidden" name="searchscope" value="7">
+<input maxlength="75" name="searcharg" size="35" id="searchInput" value="YYYY/MM/DD">
+<input type="hidden" name="searchscope" value="6">
 <span class="nowrap formButtonArea">
 
   <!--{submit}-->
@@ -87,38 +86,14 @@ obj.submit();
 <input type="submit" class="submitHidden">
 
 </span>
-<div id="exampleText">
-	
-<hr />
-        <p>Type the exact <strong>Date of Sale</strong> as 8 digits, for example:</p>
-        
-		<ul>
-			<li>2005 December 19 = <strong>20051219</strong></li>
 
-		</ul>
-                
-        <p>Use right-hand truncation to retrieve all catalogs for an entire month, for example:</p>
-        
-            <ul>
-                
-                        <li>May 1998 = <strong>199805</strong> or <strong>1998/05</strong></li>
-                        
-            </ul>
-            
-        <p>For sales that occurred over a span of dates, enter the <strong>earliest</strong> date of sale, for example: </p>
-        
-            <ul>
-                
-                        <li>July 2-11, 2001 = <strong>20010702</strong> or <strong>2001/07/02</strong></li>
-                        
-            </ul>
-</div>
 </div>
 </div><!-- formEntryArea -->
 <!--</fieldset> optional-->
 </form>
 </div><!-- browseSearchtool -->
 </div><!-- form1Part -->
+
 <div class="bottomContent">
 <div id="scopeBoxes">
 <div class="scopeBox" id="scopeBox1"><a href="/search~S3">ALL COLLECTIONS</a></div>
