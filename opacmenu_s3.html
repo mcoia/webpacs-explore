@@ -64,7 +64,7 @@ obj.submit();
 <legend>Type the search term you want to find.</legend>-->
 <div class="formEntryArea">
 <div class="innerForm">
-<h2>All Collections</h2>
+<h2>Books and Periodicals</h2>
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
 <option value="X" selected="selected">Word</option>
@@ -78,8 +78,8 @@ obj.submit();
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
-<input maxlength="75" name="searcharg" size="20" >
-<input type="hidden" name="searchscope" value="3">
+<input id="searchInput" maxlength="75" name="searcharg" id="searchInput" size="35" >
+<input type="hidden" name="searchscope" value="6">
 <span class="nowrap formButtonArea">
 
   <!--{submit}-->
@@ -90,17 +90,7 @@ obj.submit();
 <input type="submit" class="submitHidden">
 
 </span>
-<div id="exampleText">
-	<div class="mainMenuSrchText">Type the search term you want to find. Examples:
-		<ul class="unpadded">
-			<li>Italian cooking</li>
-			<li>The Appeal</li>
-			<li>tax and legislat*</li>
 
-			<li>(lunar or solar) and eclipse</li>
-		</ul>
-	</div>
-</div>
 </div>
 </div><!-- formEntryArea -->
 <!--</fieldset> optional-->
