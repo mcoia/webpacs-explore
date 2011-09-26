@@ -149,6 +149,9 @@ hr {
     width:100%;
 }
 
+.navigationRow select, .navigationrow option, .bibSearchHistory, .resourceHistory {
+    top: -60px;  
+}
 
 .rightColumn {
     width:760px;
