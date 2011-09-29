@@ -21,7 +21,7 @@ h1 {
 }
 
 #accessibleForm {
-    background: #F1F4EB;
+    background: #DFE6D2;
 }
 
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
@@ -242,10 +242,10 @@ h1 {
 	float: left;
 }
 #tabList li.active {
-	background: #F1F4EB;
+	background: #DFE6D2;
 }
 #tabList li {
-	background: #F8F9F4;
+	background: #F1F4EB;
 }
 #tabList li.active a {
 	color: #333333;
