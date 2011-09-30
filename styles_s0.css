@@ -4,7 +4,7 @@ label {
     display:inline-block;
 }
 .box {border: 1px solid #868d96; margin: 0;}
-.allContent {width: 80%; height:100%; margin-left:auto; margin-right:auto;}
+.allContent {width: 80%; min-height:100%; margin-left:auto; margin-right:auto;}
 .bibSearchHistory, .resourceHistory {position:relative;right:inherit;top:inherit;}
 .briefcitDetail, .briefcitAuthDetail {
     padding:0 0 0 20px;
@@ -43,6 +43,10 @@ h2, .pageContentInner h2, #rightColumn lh {
     margin: 2em 0 1em;
 }
 .firstItem {margin-left:-2.25em;}
+.form3Part {
+    width:50em;
+    float:none;
+}
 .formsTogether {
     width:inherit;
 }
@@ -108,6 +112,10 @@ h2, .pageContentInner h2, #rightColumn lh {
 #opacMenu #rightColumn {
     display:none;
 }
+.pageContentInner {
+    padding:20px 0;
+    margin: 0 20px;
+}
 #right {float: right; width: 270px;}
 #search .example {font-size:.9em; margin-left:10px; margin-top:4px;}
 #search .limits {margin-top:11px; width:500px;}
@@ -129,7 +137,7 @@ h2, .pageContentInner h2, #rightColumn lh {
 #topLinksList a:active, #topLinksList a:hover{
     background:none;
 }
-.topLogo {height:120px; text-align: center;}
+.topLogo {height:100px; text-align: center;}
 .topLogo, #skipNav, .clear {padding:0;}
 
 
