@@ -366,7 +366,7 @@ PATRONVIEW_START=holds,ill,mylists,fines,chkouts,bookings,psearch,mffavs,readhis
 PREF_SEARCHES=25|Y
 PREFTEXT=Save as preferred search
 READING_HISTORY=optin|true|
-TOPLOGO_LOGGEDIN=Y
+TOPLOGO_LOGGEDIN=N
 
 # Patron Ratings
 ICON_PATRATE=<span class="button"><img src="/screens/patrate.gif" alt=""><span class="buttonText">My Ratings</span></span>
