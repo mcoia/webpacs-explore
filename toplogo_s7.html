@@ -23,6 +23,14 @@ $(document).ready(function () {
     	$(this).val("");
         $('[name="searcharg"]').css("color","#000000");
 	});
+	$("div#socialMedia img").mouseover(function() {
+		iconid = $(this).attr('id');
+		$(this).attr("src", "/screens/" + iconid + ".png");
+	});
+		$("div#socialMedia img").mouseout(function() {
+		iconid = $(this).attr('id');
+		$(this).attr("src", "/screens/" + iconid + "BW.png");
+	});
 });
 
 </script>
