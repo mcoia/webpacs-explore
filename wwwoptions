@@ -107,7 +107,7 @@ ICON_BUT_NEWSRCH2=<span class="button"><img src="/screens/ico_startover.png" alt
 ICON_BUT_NEWSRCH4=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
 ICON_BUT_NEWSRCH12=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
 ICON_BUT_WORDSRCH=<span class="button"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText">Search as Words</span></span>
-DROP_DOWN=atdXscmbl
+DROP_DOWN=Xtadscib
 FRAMEURL=0
 IBROWSE_MAX=10000
 KEYWORD_COLOR=Y|all|red
