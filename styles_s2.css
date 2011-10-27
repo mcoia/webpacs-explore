@@ -59,6 +59,9 @@ label {
     display:none;
     font-size:1.35em;
 }
+.buttonText {
+    1em;
+}
 .clear {height:0px;}
 h2, .pageContentInner h2, #rightColumn lh {
     color:#542929;
