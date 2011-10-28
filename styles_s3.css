@@ -89,6 +89,8 @@ hr {
     float:left;
 }
 
+td.highlight { background:#f2f6f9; }
+
 .innerContent, .topLogoContent, .botLogoContent {
     width:1000px;
     margin-left: auto;
