@@ -41,6 +41,12 @@ h1 {
     background-color:#E9ECE3;
 }
 
+#bookImage {
+    position:absolute;
+    right:85px;
+    top:16px;
+}
+
 .briefcitItems {
     border:none;
     width:100%;
