@@ -41,6 +41,12 @@ h1 {
     background-color:#E9ECE3;
 }
 
+#bookImage {
+    position:absolute;
+    right:85px;
+    top:12px;
+}
+
 .briefcitItems {
     border:none;
     width:100%;
@@ -112,6 +118,12 @@ h1 {
     font-size:1.2em;
     list-style-type:none;
     margin:1em 0 0 2em;
+}
+
+.navigationRow select, .navigationrow option, .bibSearchHistory, .resourceHistory {
+    position:inherit;
+    right:0;
+    top:0;
 }
 
 .pageFooterAddress{
