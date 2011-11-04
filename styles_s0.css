@@ -4,7 +4,7 @@ label {
     display:inline-block;
 }
 .box {border: 1px solid #868d96; margin: 0;}
-.allContent {width: 80%; min-height:100%; margin-left:auto; margin-right:auto;}
+.allContent {width: 80%; min-height:100%; margin-left:auto; margin-right:auto; min-width:1000px;}
 .bibSearchHistory, .resourceHistory {position:relative;right:inherit;top:inherit;}
 .briefcitDetail, .briefcitAuthDetail {
     padding:0 0 0 20px;
