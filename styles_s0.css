@@ -104,6 +104,9 @@ h2, .pageContentInner h2, #rightColumn lh {
     list-style-type:none;
     padding-left:2.25em;;
 }
+.miscButtons {
+    margin-top:10px
+}
 .navigationRow select, .navigationrow option {
     position:inherit;
     right:inherit;

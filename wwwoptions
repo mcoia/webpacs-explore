@@ -313,7 +313,7 @@ ICON_BUT_PSTARTOVER=<span class="button"><img src="/screens/ico_startover.png" a
 ICON_BUT_PSTARTOVER2=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
 ICON_BUT_PSTARTOVER4=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
 ICON_BUT_PSTARTOVER12=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
-#BUT_RET2PREC=
+ICON_BUT_RET2PREC=<span class="button"><img src="/screens/ico_patron.png" alt=""><span class="buttonText">Return to Your Record</span></span>
 ICON_BUT_UPDATE_HOLDS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Update List</span></span></div></div>
 # CHANGE_HOLD_LOC=true
 #FREEZE_HOLDS=true
@@ -345,7 +345,7 @@ TABLEPARAM_PATFUNC=border="0"|border="0"|border="0"
 TIMEOUT_POPUP=600
 
 # My Millennium
-#BUT_LOGOUT=/screens/logout.gif
+ICON_BUT_LOGOUT=<span class="button"><img src="/screens/ico_x.png" alt=""><span class="buttonText">Log Out</span></span>
 ICON_BUT_PAT_PSEARCH_REMOVE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Delete All Searches</span></span></div></div>
 BUT_PAT_PSEARCH_UPDATE=/screens/updatelist.gif" class="button
 ICON_BUT_PAT_PSEARCH_UPDATE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Update List</span></span></div></div>
