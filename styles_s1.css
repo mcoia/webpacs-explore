@@ -120,6 +120,11 @@ h1 {
     margin:1em 0 0 2em;
 }
 
+.miscButtons {
+    text-align:left;
+    margin-top:10px
+}
+
 .navigationRow select, .navigationrow option, .bibSearchHistory, .resourceHistory {
     position:inherit;
     right:0;
