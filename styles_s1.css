@@ -170,6 +170,10 @@ h1 {
     margin-top:0;
 }
 
+.patFloat {
+    height: auto;
+}
+
 #shadowBackground {
     background-image: url("/screens/shadowBackground.gif");
     background-repeat: repeat-x;
