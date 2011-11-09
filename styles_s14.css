@@ -22,6 +22,8 @@ a img {border:none;}
 
 .navigationRow{width:100; margin-left:auto; margin-right:auto; background-color:#FFFFFF;}
 
+#searchscope, #scopeMenu, #locationMenu {display:none;}
+
 td.odd { background:#fffff2; }
 
 #topLinksList a:link, #topLinksList a:visited  { color: #FFFFFF;}
