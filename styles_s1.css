@@ -258,8 +258,12 @@ h1 {
 	margin-left: 8px;
 	list-style: none;
 }
+#tabList li:hover {
+    cursor:pointer;
+}
 #tabList li:first-child {
 	margin-left: 0;
+	background-color: #DFE6D4
 }
 * html #tabList li {
 	display: inline;

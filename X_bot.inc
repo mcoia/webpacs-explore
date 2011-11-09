@@ -1,11 +1,8 @@
-<hr>
-	<div class="mainMenuSrchText">
-		<ul>
-			<li class="firstItem">e.g. urban renewal</li>
+<p>Type the search term you want to find.  For example:</p>
 
-			<li>missouri archaeology</li>
-
-			<li>census st. charles</li>
-		</ul>
-	</div>
-</div>
+<ul>
+    <li>Floras of the World</li>
+    <li>(annotated bibliography) and bot*</li>
+    <li>(alaska or canada) and (botany and not ferns)</li>
+    
+</ul>

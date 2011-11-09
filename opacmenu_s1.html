@@ -35,19 +35,16 @@ obj.submit();
 <script type="text/javascript">
 
 $(document).ready(function(){
-$('#tabs .tabContent').hide();
-$('#tabs .tabContent:first').show();
-$('#tabs ul li:first').addClass('active');
-$('#tabs ul li a').click(function(){ 
-$('#tabs ul li').removeClass('active');
-$(this).parent().addClass('active'); 
-var currentTab = $(this).attr('href'); 
-$('#tabs .tabContent').hide();
-$(currentTab).show();
-return false;
+$("#tabList li").click(function () {
+	var tabId = $(this).attr('id');
+	$("#searchtype").val(tabId);
+	$("#tabList li").css("background-color", "#F1F4EB");
+	$(this).css("background-color", "#DFE6D4");
+	$("#exampleText").load("/screens/" + tabId + "_bot.inc");
+    });
 });
-});
-</script>
+</script> 
+
 <div class="pageContentInner mainSearch">
 	
 <div class="miscButtons">
@@ -57,9 +54,9 @@ return false;
 
   <div id="tabs">
     <ul id="tabList">
-      <li><a href="#tab-1">Keyword</a></li>
-      <li><a href="#tab-2">Title</a></li>
-      <li><a href="#tab-3">Author</a></li>
+      <li id="X"><a>Keyword</a></li>
+      <li id="t"><a>Title</a></li>
+      <li id="a"><a>Author</a></li>
     </ul>
 
     <div id="tab-1" class="tabContent">
@@ -96,6 +93,7 @@ return false;
 
 </form>
 
+<div id="exampleText">
 <p>Type the search term you want to find.  For example:</p>
 
 <ul>
@@ -104,111 +102,13 @@ return false;
     <li>(alaska or canada) and (botany and not ferns)</li>
     
 </ul>
+</div>
 
 <p>Switch to <a href="/search/X">Advanced Keyword Search</a></p>
 
 </div>
 
-    </div>
-    <div id="tab-2" class="tabContent">
-<div class="innerTab">
-<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
-<input type="hidden" id="iiiFormHandle_1">
 
-<label for="searchtype" class="accessibleAddInfo">Search type</label>
-<select name="searchtype" id="searchtype">
-<option value="t" selected="selected">Title & BPH Abbrev. Search</option>
-<option value="X">Keyword</option>
-<option value="a">Author</option>
-<option value="s">Journal Title</option>
-<option value="d">Subject</option>
-<option value="c">Call Number</option>
-<option value="h">Mentor Number</option>
-<option value="i">ISBN/ISSN Number</option>
-<option value="b">Barcode Search</option>
-<option value=",">Bib ID</option>
-</select>
-<!--{nosort}-->
-<input maxlength="75" name="searcharg" size="28" >
-<input type="hidden" name="searchscope" value="1">
-<span class="nowrap formButtonArea">
-
-<input type="hidden" id="iiiFormHandle_1"/>
-<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
-
-<input type="submit" class="submitHidden">
-
-</span>
-
-</form>
-
-<p>Type as much or as little of the title as you want, beginning with the first word. Omit any article at the beginning of the title ("the," "les," "el"...). You may also enter a BPH abbreviation as a title.
-For example:</p>
-
-<ul>
-    <li>History of Botany (1530-1860)</li>
-    <li>History of Bot</li>
-    <li>History</li>
-    <li>nat. malays.</li>
-    
-</ul>
-
-<p>Switch to <a href="/search/X">Advanced Keyword Search</a></p>
-
-</div>
-    </div>
-    <div id="tab-3" class="tabContent">
-<div class="innerTab">
-<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
-<input type="hidden" id="iiiFormHandle_1">
-
-<label for="searchtype" class="accessibleAddInfo">Search type</label>
-<select name="searchtype" id="searchtype">
-<option value="t">Title & BPH Abbrev. Search</option>
-<option value="X">Keyword</option>
-<option value="a"  selected="selected">Author</option>
-<option value="s">Journal Title</option>
-<option value="d">Subject</option>
-<option value="c">Call Number</option>
-<option value="h">Mentor Number</option>
-<option value="i">ISBN/ISSN Number</option>
-<option value="b">Barcode Search</option>
-<option value=",">Bib ID</option>
-</select>
-<!--{nosort}-->
-<input maxlength="75" name="searcharg" size="28" >
-<input type="hidden" name="searchscope" value="1">
-<span class="nowrap formButtonArea">
-
-<input type="hidden" id="iiiFormHandle_1"/>
-<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
-
-<input type="submit" class="submitHidden">
-
-</span>
-
-</form>
-
-<p>Type the author's or artist's last name first.  For example:</p>
-
-<ul>
-    <li>Ewan</li>
-    <li>Ewan, Joseph</li>
-    <li>Raven, P</li>
-    <li>hooker, j</li>
-    
-</ul>
-
-<p>You may also type the name of an organization or governmental body. For example: </p>
-
-<ul>
-    <li>Botanical Society of America</li>
-    <li>Missouri Botanical Garden</li>
-</ul>
-
-<p>Switch to <a href="/search/X">Advanced Keyword Search</a></p>
-
-</div>
 
   </div>
 
