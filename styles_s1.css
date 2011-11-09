@@ -61,6 +61,10 @@ h1 {
     background-color: #E9ECE3;
 }
 
+.browseSuperEntryTitle {
+    margin:0;
+}
+
 .content {
     width:952px;
     margin-left:auto;
