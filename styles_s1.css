@@ -179,6 +179,8 @@ h1 {
     height: auto;
 }
 
+#searchscope, #scopeMenu, #locationMenu {display:none;}
+
 #shadowBackground {
     background-image: url("/screens/shadowBackground.gif");
     background-repeat: repeat-x;
