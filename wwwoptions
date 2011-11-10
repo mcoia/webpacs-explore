@@ -151,7 +151,7 @@ DISPLAY_245=atd
 EXTENDED=CL
 HEADING_LENGTH=100
 ICON_856LINK=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Website
-ICON_962LINK=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Digital Image
+ICON_962LINK=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Digital Copy
 #ICON_BOOKCART=<span class="button"><img src="/screens/ico_bag_add.png" alt=""><span class="buttonText">Add to Bag</span></span>
 ICON_BOOKCART_SAVED=<span class="button"><img src="/screens/ico_bag_minus.png" alt=""><span class="buttonText">Remove From Bag</span></span>
 ICON_FULLRECORD=View Full Record and Holdings Information
