@@ -117,7 +117,7 @@ h1 {
 .fullRecord {
     margin-top:1em;
 }
-
+#innreach {display:none;}
 .linkList li {
     font-size:1.2em;
     list-style-type:none;
