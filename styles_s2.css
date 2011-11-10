@@ -97,6 +97,7 @@ h2, .pageContentInner h2, #rightColumn lh {
 .hiddenSearch {
     display:none;
 }
+#innreach {display:none;}
 #left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
 .innerContent {text-align: left; background-color: #EFE8D1; min-height:300px;}
