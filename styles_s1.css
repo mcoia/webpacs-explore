@@ -57,6 +57,10 @@ h1 {
     margin-bottom:1em;
 }
 
+.briefcitMedia, .bibMedia {
+    display:none;
+}
+
 .browseHeaderData {
     background-color: #E9ECE3;
 }
