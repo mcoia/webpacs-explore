@@ -571,5 +571,5 @@ PROXYDNS=www.slrlc.org
 
 # INN-Reach
 
-INNREACH=<span class="button"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X,t=t,a=a,d=d,s=s,c=c,i=i,j=l,o=o)
-INNREACH7=<span class="button"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X,t=t,d=d,s=s,c=c,j=l,o=o)
+INNREACH=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X,t=t,a=a,d=d,s=s,c=c,i=i,j=l,o=o)
+INNREACH7=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X,t=t,d=d,s=s,c=c,j=l,o=o)
