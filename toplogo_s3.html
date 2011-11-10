@@ -19,11 +19,12 @@ $(document).ready(function () {
 	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
 
 	$('#searchtype').change(function(){
-    	$('[name="searcharg"]').val(examples[this.value]);
+	$('#searchInput').css("color","#B0B0B0");
+    	$('#searchInput').val(examples[this.value]);
 	});
-	$('[name="searcharg"]').click(function(){
+	$('#searchInput').click(function(){
     	$(this).val("");
-	$('[name="searcharg"]').css("color","#000000");
+	$('#searchInput').css("color","#000000");
 	});
 	$("div#socialMedia img").mouseover(function() {
 		iconid = $(this).attr('id');
