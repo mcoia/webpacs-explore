@@ -23,3 +23,14 @@ Telephone 314.721.0072<br />
 </div><!-- allContent -->
 <!-- end botlogo.html file -->
 
+<script>
+var searchTerm = $('#searcharg').val()
+var openlibrarylink = '<a href="http://openlibrary.org/search?q=' + searchTerm + '"><span class="button"><img src="/screens/ico_openlibrary.png" alt=""><span class="buttonText">Search Open Library</span></span></a>'
+$('.navigationRow form').append(openlibrarylink)
+</script>
+
+<script>
+var isbn = bookid.replace(/\D/g, '');
+var openlibrarylink = '<a href="http://openlibrary.org/search?isbn=' + isbn + '"><span class="button"><img src="/screens/ico_openlibrary.png" alt=""><span class="buttonText">Search Open Library</span></span></a>'
+$('.navigationRowRecord').append(openlibrarylink)
+</script>
