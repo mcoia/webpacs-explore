@@ -41,6 +41,10 @@ h1 {
     background-color:#E9ECE3;
 }
 
+.briefcitActions {
+    display:none;
+}
+
 #bookImage {
     position:absolute;
     right:85px;
@@ -57,11 +61,19 @@ h1 {
     margin-bottom:1em;
 }
 
-.briefcitMedia, .bibMedia {
+.briefcitMedia, .bibMedia{
     display:none;
 }
 
-.browseHeaderData {
+.browseHeaderMedia {
+    color: #E9ECE3;
+}
+
+.browseSubEntryMedia {
+    visibility:hidden;
+}
+
+.browseHeaderData, .browseHeaderEntries, .browseHeaderMark, .browseHeaderNum, .browseHeaderYear, .browseHeaderMedia {
     background-color: #E9ECE3;
 }
 
@@ -115,7 +127,7 @@ h1 {
 #footerColumns {
     margin-left:auto;
     margin-right:auto;
-    width:700px;
+    width:750px;
 }
 
 .fullRecord {
@@ -163,7 +175,7 @@ h1 {
     float:left;
     height:170px;
     padding: 0 16px;
-    width: 110px;
+    width: 130px;
     color:#D1DDBC;
 }
 
