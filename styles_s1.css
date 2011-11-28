@@ -47,9 +47,21 @@ h1 {
     top:12px;
 }
 
+.briefcitActions {
+    display:none;
+}
+
+.briefcitDetailMain {
+    margin-bottom:1em;
+}
+
 .briefcitItems {
     border:none;
     width:100%;
+}
+
+.briefcitItemsHeader {
+    display:none;
 }
 
 .briefcitItemsMain {
@@ -57,11 +69,33 @@ h1 {
     margin-bottom:1em;
 }
 
-.briefcitMedia, .bibMedia {
+h2.briefcitTitle {
+    font-size:1.1em;
+}
+
+.briefcitYear {
+    margin-top:4.5em;
+    text-align:center;
+    font-weight:bold;
+}
+
+.briefcitMedia, .bibMedia{
     display:none;
 }
 
-.browseHeaderData {
+.browseEntry a {
+    font-size:1.1em; 
+}
+
+.browseHeaderMedia {
+    color: #E9ECE3;
+}
+
+.browseSubEntryMedia {
+    visibility:hidden;
+}
+
+.browseHeaderData, .browseHeaderEntries, .browseHeaderMark, .browseHeaderNum, .browseHeaderYear, .browseHeaderMedia {
     background-color: #E9ECE3;
 }
 
@@ -115,7 +149,7 @@ h1 {
 #footerColumns {
     margin-left:auto;
     margin-right:auto;
-    width:700px;
+    width:750px;
 }
 
 .fullRecord {
@@ -163,7 +197,7 @@ h1 {
     float:left;
     height:170px;
     padding: 0 16px;
-    width: 110px;
+    width: 130px;
     color:#D1DDBC;
 }
 
