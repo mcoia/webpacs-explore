@@ -141,6 +141,8 @@ a:hover  { color: #7C14B8; }
 
 #accessibleForm .advancedSearch fieldset fieldset { border:none; padding:0; text-align:left; margin:0 0 6px 0; }
 
+.authorityRedirect {border:none;}
+
 .availLimMessage { font-style:normal; }
 
 .bibClear { clear:both; }
@@ -741,7 +743,7 @@ div .bibResourceSidebar { display:none; }
 
 .patActionsLinks,.patTop, .patFuncArea { border:1px solid #ECECEC; outline:5px solid #FFF; padding:5px;  }
 
-#patButFines a { background:#FFFFFF url('ico_payment.gif') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
+#patButFines a { background:#FFFFFF url('ico_payment.png') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
 
 #patButHolds a { background:#FFFFFF url('ico_redflag.gif') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
 
@@ -749,7 +751,7 @@ div .bibResourceSidebar { display:none; }
 
 #patButChkouts a { background:#FFFFFF url('ico_books.gif') no-repeat top left; }
 
-#patButBookings a { background:#FFFFFF url('ico_checkbox.gif') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
+#patButBookings a { background:#FFFFFF url('ico_checkbox.png') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
 
 #patButFines a, #patButHolds a, #patButChkouts a, #patButBookings a { margin-top:3px; margin-left:0px; padding-left:28px; line-height:30px; }
 
