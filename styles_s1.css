@@ -51,14 +51,28 @@ h1 {
     top:12px;
 }
 
+.briefcitDetailMain {
+    margin-bottom:1em;
+}
+
 .briefcitItems {
     border:none;
     width:100%;
 }
 
+.briefcitItemsHeader {
+    display:none;
+}
+
 .briefcitItemsMain {
     width:100%;
     margin-bottom:1em;
+}
+
+.briefcitYear {
+    margin-top:4.5em;
+    text-align:center;
+    font-weight:bold;
 }
 
 .briefcitMedia, .bibMedia{
