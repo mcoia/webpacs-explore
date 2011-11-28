@@ -154,6 +154,7 @@ td.odd, td.highlight, tr.odd {
 #search .options {color: #330000; font-size:14px; font-weight:bold;}
 #search .searchBox {margin-top: 10px;}
 #search .tip {margin-top: 12px;}
+#searchscope {display:none;}
 #slogan {position:absolute; top:25px; right:0px;}
 .topLinks {
     margin-top:105px;
