@@ -41,14 +41,14 @@ h1 {
     background-color:#E9ECE3;
 }
 
-.briefcitActions {
-    display:none;
-}
-
 #bookImage {
     position:absolute;
     right:85px;
     top:12px;
+}
+
+.briefcitActions {
+    display:none;
 }
 
 .briefcitDetailMain {
@@ -69,6 +69,10 @@ h1 {
     margin-bottom:1em;
 }
 
+h2.briefcitTitle {
+    font-size:1.1em;
+}
+
 .briefcitYear {
     margin-top:4.5em;
     text-align:center;
@@ -77,6 +81,10 @@ h1 {
 
 .briefcitMedia, .bibMedia{
     display:none;
+}
+
+.browseEntry a {
+    font-size:1.1em; 
 }
 
 .browseHeaderMedia {
