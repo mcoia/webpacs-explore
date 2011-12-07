@@ -255,7 +255,8 @@ h2.briefcitTitle {
 #topNavigation {
     background-color:#C9D7B2;
     padding: .5em;
-    width:35em;
+    width:45%;
+    min-width:33em;
     color: #285407;
     font-size:1.1em;
 }
@@ -272,6 +273,9 @@ h2.briefcitTitle {
 #topNavigation ul {
     list-style-type:none;
     padding:0;
+    width:32em;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #topNavigation li {
