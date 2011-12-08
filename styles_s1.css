@@ -24,10 +24,6 @@ h1 {
     background: #DFE6D2;
 }
 
-.bibDisplayContentMain, .resourceDisplayContentMain {
-    width:90%;   
-}
-
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
     border: 2px #DCE2D4 ridge;
     text-align:center;
@@ -55,11 +51,6 @@ h1 {
     display:none;
 }
 
-.briefcitDetail, .briefcitAuthDetail {
-    width:80%;
-    padding: 0 0 0 2em;
-}
-
 .briefcitDetailMain {
     margin-bottom:1em;
 }
@@ -76,10 +67,6 @@ h1 {
 .briefcitItemsMain {
     width:100%;
     margin-bottom:1em;
-}
-
-.briefcitJacket, .bibDisplayJacket {
-    display:none;
 }
 
 h2.briefcitTitle {
@@ -117,7 +104,7 @@ h2.briefcitTitle {
 }
 
 .content {
-    width:90%;
+    width:952px;
     margin-left:auto;
     margin-right:auto;
     margin-top:37px;
@@ -144,9 +131,9 @@ h2.briefcitTitle {
 
 
 #footer {
-    height:200px;
+    height:250px;
     background-color:#1D3B04;
-    width:85%;
+    width:930px;
     margin: 0 auto 40px;
 }
 
@@ -255,8 +242,7 @@ h2.briefcitTitle {
 #topNavigation {
     background-color:#C9D7B2;
     padding: .5em;
-    width:45%;
-    min-width:33em;
+    width:35em;
     color: #285407;
     font-size:1.1em;
 }
@@ -273,9 +259,6 @@ h2.briefcitTitle {
 #topNavigation ul {
     list-style-type:none;
     padding:0;
-    width:32em;
-    margin-left:auto;
-    margin-right:auto;
 }
 
 #topNavigation li {
@@ -358,6 +341,9 @@ h2.briefcitTitle {
 	padding: 8px;
 	color: #000;
 	font-weight: bold;
+}
+.textBox {
+    margin: 0 60px;
 }
 .thumbs {
 	float:left;
