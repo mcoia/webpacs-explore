@@ -25,7 +25,7 @@ td, #bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formL
 .bibDisplayContentMain, .resourceDisplayContentMain {
     width:90%;   
 }
-.bibDisplayContentMain table, .bibDisplayUrls table, table.reserveBibs, .resourceDisplayContentMain table, .bibDisplayReviews {
+.bibDisplayContentMain table, .bibDisplayUrls table, table.reserveBibs, .resourceDisplayContentMain table, .bibDisplayReviews, .briefcitItems th, .briefcitCell {
     font-size:1em;
 }
 
