@@ -7,39 +7,50 @@ body {
     background-position: center top;
     background-repeat: repeat-x;
     background: #5d793c url("/screens/gardens_background.jpg") center top repeat-x;
-    font-family:Georgia,BemboStdRegular,Serif;}
+    font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+}
     
 body div {
     padding:0;
-}
-
-h1 {
-    font-size: 23px;
-    margin: 7px 60px;
-    color: #1D3B04;
-    
 }
 
 #accessibleForm {
     background: #DFE6D2;
 }
 
+td, #bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formLinks a:visited, .recordPager a:link, .recordPager a:visited, .actionButtonArea a:link, .actionButtonArea a:visited, .bibPager a:visited, .bibPager a:link {
+    font-family:'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+}
+
+.bibDisplayContentMain, .resourceDisplayContentMain {
+    width:90%;   
+}
+.bibDisplayContentMain table, .bibDisplayUrls table, table.reserveBibs, .resourceDisplayContentMain table, .bibDisplayReviews, .briefcitItems th, .briefcitCell {
+    font-size:1em;
+}
+
+.bibInfoLabel, .bibInfoData {padding-top:.5em;}
+
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
     border: 2px #DCE2D4 ridge;
-    text-align:center;
     color:#1D3B04;
 }
 
 .bibItems .bibItemsHeader th {
     padding: 5px 8px;
     background-color:#C0CAB2;
-    font-size:1em;
+    text-align: center;
     
 }
 
 .bibItems td {
     background-color:#E9ECE3;
 }
+
+.bibItemsEntry {
+    text-align:left;
+}
+
 
 #bookImage {
     position:absolute;
@@ -50,6 +61,16 @@ h1 {
 .briefcitActions {
     display:none;
 }
+
+.briefcitCell {
+    padding: .5em 0;
+}
+
+.briefcitDetail, .briefcitAuthDetail {
+    width:80%;
+    padding: 0 0 0 2em;
+}
+
 
 .briefcitDetailMain {
     margin-bottom:1em;
@@ -67,6 +88,11 @@ h1 {
 .briefcitItemsMain {
     width:100%;
     margin-bottom:1em;
+}
+
+
+.briefcitJacket, .bibDisplayJacket {
+    display:none;
 }
 
 h2.briefcitTitle {
@@ -103,8 +129,13 @@ h2.briefcitTitle {
     margin:0;
 }
 
+.buttonText {
+    font-size: .95em;
+}
+
 .content {
-    width:952px;
+    width:90%;
+    min-width:790px;
     margin-left:auto;
     margin-right:auto;
     margin-top:37px;
@@ -131,9 +162,9 @@ h2.briefcitTitle {
 
 
 #footer {
-    height:250px;
+    height:210px;
     background-color:#1D3B04;
-    width:930px;
+    width:85%;
     margin: 0 auto 40px;
 }
 
@@ -149,7 +180,7 @@ h2.briefcitTitle {
 #footerColumns {
     margin-left:auto;
     margin-right:auto;
-    width:750px;
+    width:57em;
 }
 
 .fullRecord {
@@ -235,14 +266,21 @@ h2.briefcitTitle {
     border:none;
 }
 
+.topLogo h1 {
+    font-size: 23px;
+    margin: 7px 86px;
+    color: #416910;
+    
+}
+
 .topLogoSmall img {
     margin-left:10px;
 }
 
 #topNavigation {
     background-color:#C9D7B2;
-    padding: .5em;
-    width:35em;
+    padding: .4em 0 .4em 84px;
+    margin:1.2em 0 .8em;
     color: #285407;
     font-size:1.1em;
 }
@@ -259,12 +297,12 @@ h2.briefcitTitle {
 #topNavigation ul {
     list-style-type:none;
     padding:0;
+    margin:0;
 }
 
 #topNavigation li {
     display:inline;
-    padding: 0 .5em;
-    border-right:1px solid #285407;
+    padding: 0 6.5% 0 0;
 }
 
 #topNavigation #lastItem {
@@ -341,6 +379,9 @@ h2.briefcitTitle {
 	padding: 8px;
 	color: #000;
 	font-weight: bold;
+}
+.textBox {
+    margin: 0 60px;
 }
 .thumbs {
 	float:left;
