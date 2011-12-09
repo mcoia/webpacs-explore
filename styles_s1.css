@@ -13,13 +13,6 @@ body div {
     padding:0;
 }
 
-h1 {
-    font-size: 23px;
-    margin: 7px 60px;
-    color: #1D3B04;
-    
-}
-
 #accessibleForm {
     background: #DFE6D2;
 }
@@ -259,6 +252,13 @@ h2.briefcitTitle {
 #tabs .browseSearchtool {
     background:none;
     border:none;
+}
+
+.topLogo h1 {
+    font-size: 23px;
+    margin: 7px 60px;
+    color: #1D3B04;
+    
 }
 
 .topLogoSmall img {
