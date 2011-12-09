@@ -7,7 +7,7 @@ body {
     background-position: center top;
     background-repeat: repeat-x;
     background: #5d793c url("/screens/gardens_background.jpg") center top repeat-x;
-    font-family:Georgia,BemboStdRegular,Serif;}
+}
     
 body div {
     padding:0;
@@ -150,7 +150,7 @@ h2.briefcitTitle {
 
 
 #footer {
-    height:200px;
+    height:210px;
     background-color:#1D3B04;
     width:85%;
     margin: 0 auto 40px;
@@ -168,7 +168,7 @@ h2.briefcitTitle {
 #footerColumns {
     margin-left:auto;
     margin-right:auto;
-    width:750px;
+    width:57em;
 }
 
 .fullRecord {
@@ -256,8 +256,8 @@ h2.briefcitTitle {
 
 .topLogo h1 {
     font-size: 23px;
-    margin: 7px 60px;
-    color: #1D3B04;
+    margin: 7px 86px;
+    color: #416910;
     
 }
 
