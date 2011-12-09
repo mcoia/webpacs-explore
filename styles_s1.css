@@ -7,6 +7,7 @@ body {
     background-position: center top;
     background-repeat: repeat-x;
     background: #5d793c url("/screens/gardens_background.jpg") center top repeat-x;
+    font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
 }
     
 body div {
@@ -17,8 +18,8 @@ body div {
     background: #DFE6D2;
 }
 
-#bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formLinks a:visited, .recordPager a:link, .recordPager a:visited, .actionButtonArea a:link, .actionButtonArea a:visited, .bibPager a:visited, .bibPager a:link {
-    font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+td, #bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formLinks a:visited, .recordPager a:link, .recordPager a:visited, .actionButtonArea a:link, .actionButtonArea a:visited, .bibPager a:visited, .bibPager a:link {
+    font-family:'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
 }
 
 .bibDisplayContentMain, .resourceDisplayContentMain {
