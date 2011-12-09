@@ -26,7 +26,6 @@ h1 {
 
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
     border: 2px #DCE2D4 ridge;
-    text-align:center;
     color:#1D3B04;
 }
 
@@ -34,12 +33,18 @@ h1 {
     padding: 5px 8px;
     background-color:#C0CAB2;
     font-size:1em;
+    text-align: center;
     
 }
 
 .bibItems td {
     background-color:#E9ECE3;
 }
+
+.bibItemsEntry {
+    text-align:left;
+}
+
 
 #bookImage {
     position:absolute;
