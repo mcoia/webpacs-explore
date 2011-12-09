@@ -135,6 +135,7 @@ h2.briefcitTitle {
 
 .content {
     width:90%;
+    min-width:790px;
     margin-left:auto;
     margin-right:auto;
     margin-top:37px;
@@ -278,8 +279,8 @@ h2.briefcitTitle {
 
 #topNavigation {
     background-color:#C9D7B2;
-    padding: .5em;
-    width:35em;
+    padding: .4em 0 .4em 84px;
+    margin:1.2em 0 .8em;
     color: #285407;
     font-size:1.1em;
 }
@@ -296,12 +297,12 @@ h2.briefcitTitle {
 #topNavigation ul {
     list-style-type:none;
     padding:0;
+    margin:0;
 }
 
 #topNavigation li {
     display:inline;
-    padding: 0 .5em;
-    border-right:1px solid #285407;
+    padding: 0 6.5% 0 0;
 }
 
 #topNavigation #lastItem {
