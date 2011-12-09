@@ -25,9 +25,8 @@ td, #bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formL
 .bibDisplayContentMain, .resourceDisplayContentMain {
     width:90%;   
 }
-
-.bibDisplayContentMain table table, .bibDisplayUrls table table, .resourceDisplayContentMain table table {
-    font-size: 1.2em;
+.bibDisplayContentMain table, .bibDisplayUrls table, table.reserveBibs, .resourceDisplayContentMain table, .bibDisplayReviews {
+    font-size:1em;
 }
 
 .bibInfoLabel, .bibInfoData {padding-top:.5em;}
@@ -40,7 +39,6 @@ td, #bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formL
 .bibItems .bibItemsHeader th {
     padding: 5px 8px;
     background-color:#C0CAB2;
-    font-size:1em;
     text-align: center;
     
 }
@@ -125,6 +123,10 @@ h2.briefcitTitle {
 
 .browseSuperEntryTitle {
     margin:0;
+}
+
+.buttonText {
+    font-size: .95em;
 }
 
 .content {
