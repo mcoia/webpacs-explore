@@ -17,6 +17,10 @@ body div {
     background: #DFE6D2;
 }
 
+#bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formLinks a:visited, .recordPager a:link, .recordPager a:visited, .actionButtonArea a:link, .actionButtonArea a:visited, .bibPager a:visited, .bibPager a:link {
+    font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+}
+
 .bibDisplayContentMain, .resourceDisplayContentMain {
     width:90%;   
 }
