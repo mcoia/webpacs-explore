@@ -6,7 +6,7 @@ body { color:#000; background-color:#FFF; background-image:none; font-family:Tim
 
 img { border:0; }
 
-td { color:#000; background-color:#FFF; background-image:none; font-family:Times New Roman,Times,Georgia,serif; font-size:10pt; }
+td { color:#000; background-color:#FFF; background-image:none; font-family:Times New Roman,Times,Georgia,serif; }
 
 table.browseScreen td { width:18%; }
 
@@ -24,7 +24,7 @@ table.browseScreen td { width:18%; }
 
 #bibDisplayContent { display:block !important; }
 
-.bibDisplayContentMain, .resourceDisplayContentMain { margin-left:1em; width:78%; }
+.bibDisplayContentMain, .resourceDisplayContentMain { margin-left:1em; width:78%; font-size:12pt; }
 
 .bibDisplayJacket, .bibMedia { width: 80px; }
 
@@ -122,6 +122,6 @@ tr.patFuncHeaders { border-bottom:1px solid #888888; }
 
 .resourceDisplayContentMain { float:left; margin-left:1em; padding-left:4em; position:absolute; left:0; }
 
-.resourceDisplayBibs td, .resourceDisplayBibs th, .resourceLicenseHeader { font-family:Times New Roman,Times,Georgia,serif; font-size:10pt; }
+.resourceDisplayBibs td, .resourceDisplayBibs th, .resourceLicenseHeader { font-family:Times New Roman,Times,Georgia,serif; font-size:13pt; }
 
 .topLogoSmall img { border:0; height:.25in; width:1.75in; }

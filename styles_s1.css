@@ -24,6 +24,10 @@ h1 {
     background: #DFE6D2;
 }
 
+.bibDisplayContentMain table table, .bibDisplayUrls table table, .resourceDisplayContentMain table table {
+    font-size: 1.2em;
+}
+
 .bibItems table, .bibItems th, .bibItems tr, .bibItems td {
     border: 2px #DCE2D4 ridge;
     color:#1D3B04;
