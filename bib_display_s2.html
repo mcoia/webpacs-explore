@@ -114,9 +114,8 @@
 <script type='text/javascript'>
        
 
-var ISBN = $(".bibInfoLabel:contains('ISBN')").siblings(".bibInfoData").text();
-ISBN = ISBN.replace(/[^0123456789]/g,"")
-var bibapi_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + ISBN;
+var OCLC = "OCLC:" + $(".bibInfoLabel:contains('OCLC')").siblings(".bibInfoData").text().replace(/[^0123456789]/g,"")
+var bibapi_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + OCLC;
 // Construct an inline javascript invocation of the remote GBS script
 var bibScriptLine = "%3Cscript src='" + bibapi_url + "' type='text/javascript'%3E%3C/script%3E";
 // Insert the line of script into this page so it returns the _GBSBookInfo object
@@ -126,8 +125,8 @@ document.write(unescape(bibScriptLine));
                     
 <script type='text/javascript'>
 // Resuming the original script, add the link if the lookup succeeded
-// Just look up the first ISBN number, don't worry about any others
-var bibInfo = _GBSBookInfo[ISBN];
+// Just look up the first OCLC number, don't worry about any others
+var bibInfo = _GBSBookInfo[OCLC];
 // HTML for images
 gbsPreviewImg = '<img src="/screens/gbs_preview_button.gif" alt="Preview" title="Preview";>'
 if(bibInfo){
