@@ -112,20 +112,21 @@
 
 <script type='text/javascript'> 
     var ProcessResults = function(bookInfo) {
-        var buttonImg = 'http://www.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif';
+        var buttonImg = "<img src='/screens/googlebutton.gif' alt='Google Preview'>"
         var textGBS = "";
-        for (ISBN in bookInfo) {
-            var b = bookInfo[ISBN];
+        for (OCLC in bookInfo) {
+            var b = bookInfo[OCLC];
+            var googleButton = "<a href='" + b.preview_url + "' target='blank'>" + buttonImg;
             //form the text of Google Book contents
             if (b && (b.preview == "full")) {
                 //textGBS = "Full Text";
                 //"Google Book Search";
-                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview' style='border: 0pt none ; vertical-align: middle;'></a>&nbsp;&nbsp;<a href='" + b.preview_url + "' target='blank'>" + "</a>";
+                document.getElementById("googlebooks").innerHTML = googleButton
             }
             else if (b && (b.preview == "partial")) {
                 //textGBS = "(Limited preview)"
                 //"Preview at Google Book Search";
-                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview' style='border: 0pt none ; vertical-align: middle;'><a>&nbsp;&nbsp;<a href='" + b.preview_url + "' target='blank'>" + "</a>";
+                document.getElementById("googlebooks").innerHTML = googleButton
             }
             else {
                 //document.getElementById("googlebooks").innerHTML = "None available.";
@@ -133,7 +134,6 @@
     }
 }
 </script>
-
 <script type='text/javascript'>
        
 var ISBN = $(".bibInfoLabel:contains('ISBN')").siblings(".bibInfoData").text().replace(/[^0123456789]/g,"")
