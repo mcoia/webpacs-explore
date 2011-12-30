@@ -35,7 +35,7 @@
 <div class="bibMedia">
 <!--{media}-->
 </div>
-<div id="gbsLink" name="gbsLink"></div>
+<div id="googlebooks" name="googlebooks"></div>
 </div>
 
 <div class="bibDisplayContentMain">
@@ -110,85 +110,43 @@
 <div class="clear"></div>
 </div><!-- close bibDisplayBody -->
 
-<!-- Google Book Search viewability API script for bib record--> 
 <script type='text/javascript'> 
-// Find all the td elements
-var tdList = document.getElementsByTagName("td");
-// Make an array to store the ones with the "bibInfoLabel" class
-gbsList =  new Array();
-for (var td = 0; td < tdList.length; td++) {
-    // Get the class
-	classAttrib = tdList[td].getAttribute("class");
-	// Hack for IE
-	if(classAttrib == null) { classAttrib = tdList[td].getAttribute("className") }
-	// Store the td if it holds the label for the ISBN #
-	if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="ISBN")) {
-		gbsList.push(tdList[td]);
-	}
+    var ProcessResults = function(bookInfo) {
+        var buttonImg = 'http://www.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif';
+        var textGBS = "";
+        for (ISBN in bookInfo) {
+            var b = bookInfo[ISBN];
+            //form the text of Google Book contents
+            if (b && (b.preview == "full")) {
+                //textGBS = "Full Text";
+                //"Google Book Search";
+                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview' style='border: 0pt none ; vertical-align: middle;'></a>&nbsp;&nbsp;<a href='" + b.preview_url + "' target='blank'>" + "</a>";
+            }
+            else if (b && (b.preview == "partial")) {
+                //textGBS = "(Limited preview)"
+                //"Preview at Google Book Search";
+                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview' style='border: 0pt none ; vertical-align: middle;'><a>&nbsp;&nbsp;<a href='" + b.preview_url + "' target='blank'>" + "</a>";
+            }
+            else {
+                //document.getElementById("googlebooks").innerHTML = "None available.";
+            }
+    }
 }
-// Make an array for the numbers in the adjacent tds (probably only one, though)
-var bibnumbers = new Array();
-for (var bib = 0; bib < gbsList.length; bib++) {
-	// for IE
-	bookid = gbsList[bib].nextSibling.nextSibling;
-	// otherwise
-	if(bookid == null){
-		bookid = gbsList[bib].nextSibling
-	}
-	// Remove leading and trailing newlines from the numbers
-	bookid = bookid.innerHTML.replace(/^\s+|\s+$/g,"");
-	// Prefix the number with the label that GBS needs and store it
-	if(bookid.length > 0) {
-		bibnumbers[bib] = "ISBN:" + bookid;
-	}
-}
- 
-// Construct the URL for the remote GBS script
-var bibapi_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + bibnumbers.join(",");
-// Construct an inline javascript invocation of the remote GBS script
-var bibScriptLine = "%3Cscript src='" + bibapi_url + "' type='text/javascript'%3E%3C/script%3E";
-// Insert the line of script into this page so it returns the _GBSBookInfo object
-document.write(unescape(bibScriptLine));
-</script> 
-<script type='text/javascript'> 
-// Resuming the original script, add the link if the lookup succeeded
-// Just look up the first ISBN number, don't worry about any others
-var bibInfo = _GBSBookInfo[bibnumbers[0]];
-// HTML for images
-gbsPreviewImg = '<img src="/screens/gbs_preview_button.gif" alt="Preview" title="Preview";>'
-if(bibInfo){
-	// Set text and link values depending on viewablity
-	if(bibInfo.preview == "full") {
-                textGBS = "Full text at"; //"Read at Google Books";  
-		linkGBS = bibInfo.preview_url;
-		linkImage = gbsPreviewImg;
-	}
-	if(bibInfo.preview == "partial") {
-                textGBS = "Preview & search inside book at"; //"Preview at Google Books";  
-		linkGBS = bibInfo.preview_url;
-		linkImage = gbsPreviewImg;
-	}
-	if(bibInfo.preview == "noview") {
-                textGBS = "Information at Google Book Search"; 
-		linkGBS = bibInfo.info_url;
-		linkImage = gbsPreviewImg;
-	}
-	// Rewrite the HTML inside the "gbsLink" <div> element
-	var divList = document.getElementsByTagName("div");
-    for (var div = 0; div < divList.length; div++) {
-	    // Get the class
-		nameAttrib = divList[div].getAttribute("name");
-		// Hack for IE
-		if(nameAttrib == null) { nameAttrib = divList[div].getAttribute("className") }
-		// Store the td if it holds the label for the ISBN #
-		if(nameAttrib == "gbsLink") {
-			divList[div].innerHTML = '<a href="' + linkGBS + '" target="_blank" style="text-decoration: none;">' + linkImage + '</a>';
-			divList[div].style.display="";
-		}	
-	}
-} else {
-  document.getElementById('infoTable').style.width = '100%';
-  document.getElementById('sidebarContent').style.width = '0%';
-}
+</script>
+
+<script type='text/javascript'>
+       
+var ISBN = $(".bibInfoLabel:contains('ISBN')").siblings(".bibInfoData").text().replace(/[^0123456789]/g,"")
+
+var cburl = "http://books.google.com/books";
+// Retrieve the info for these bibkeys
+var api_url = cburl + "?jscmd=viewapi&bibkeys=ISBN:" + ISBN;
+var s = document.createElement("script");
+s.setAttribute("type", "text/javascript");
+//alert("searching for: " + ISBN);
+s.setAttribute("src", "http://books.google.com/books?jscmd=viewapi&bibkeys=ISBN:" + ISBN + "&callback=ProcessResults");
+document.documentElement.firstChild.appendChild(s);
+//alert (api_url);
+
 </script>
 <!--{botlogo}-->
