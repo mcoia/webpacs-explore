@@ -35,7 +35,7 @@
 <div class="bibMedia">
 <!--{media}-->
 </div>
-<div id="gbsLink" name="gbsLink"></div>
+<div id="googlebooks" name="googlebooks"></div>
 </div>
 
 <div class="bibDisplayContentMain">
@@ -110,41 +110,44 @@
 <div class="clear"></div>
 </div><!-- close bibDisplayBody -->
 
-<!-- Google Book Search viewability API script for bib record--> 
-<script type='text/javascript'>
-       
-
-var OCLC = "OCLC:" + $(".bibInfoLabel:contains('OCLC')").siblings(".bibInfoData").text().replace(/[^0123456789]/g,"")
-var bibapi_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + OCLC;
-// Construct an inline javascript invocation of the remote GBS script
-var bibScriptLine = "%3Cscript src='" + bibapi_url + "' type='text/javascript'%3E%3C/script%3E";
-// Insert the line of script into this page so it returns the _GBSBookInfo object
-document.write(unescape(bibScriptLine));
-</script type='text/javascript'>
-
-                    
-<script type='text/javascript'>
-// Resuming the original script, add the link if the lookup succeeded
-// Just look up the first OCLC number, don't worry about any others
-var bibInfo = _GBSBookInfo[OCLC];
-// HTML for images
-gbsPreviewImg = '<img src="/screens/gbs_preview_button.gif" alt="Preview" title="Preview";>'
-if(bibInfo){
-	// Set text and link values depending on viewablity
-	if(bibInfo.preview == "full") {
-                textGBS = "Full text at"; //"Read at Google Books";  
-		linkGBS = bibInfo.preview_url;
-	}
-	if(bibInfo.preview == "partial") {
-                textGBS = "Preview & search inside book at"; //"Preview at Google Books";  
-		linkGBS = bibInfo.preview_url;
-	}
-	if(bibInfo.preview == "noview") {
-                textGBS = "Information at Google Book Search"; 
-		linkGBS = bibInfo.info_url;
-	}
-	// Rewrite the HTML inside the "gbsLink" <div> element
-$('#gbsLink').html( '<a href="' + linkGBS + '">' + gbsPreviewImg + '</a>')
+<script type='text/javascript'> 
+    var ProcessResults = function(bookInfo) {
+        var buttonImg = 'http://www.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif';
+        var textGBS = "";
+        for (OCLC in bookInfo) {
+            var b = bookInfo[OCLC];
+            //form the text of Google Book contents
+            if (b && (b.preview == "full")) {
+                //textGBS = "Full Text";
+                //"Google Book Search";
+                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview' style='border: 0pt none ; vertical-align: middle;'></a>&nbsp;&nbsp;<a href='" + b.preview_url + "' target='blank'>" + "</a>";
+            }
+            else if (b && (b.preview == "partial")) {
+                //textGBS = "(Limited preview)"
+                //"Preview at Google Book Search";
+                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview' style='border: 0pt none ; vertical-align: middle;'><a>&nbsp;&nbsp;<a href='" + b.preview_url + "' target='blank'>" + "</a>";
+            }
+            else {
+                //document.getElementById("googlebooks").innerHTML = "None available.";
+            }
+    }
 }
 </script>
+
+<script type='text/javascript'>
+       
+var OCLC = $(".bibInfoLabel:contains('OCLC')").siblings(".bibInfoData").text().replace(/[^0123456789]/g,"")
+
+var cburl = "http://books.google.com/books";
+// Retrieve the info for these bibkeys
+var api_url = cburl + "?jscmd=viewapi&bibkeys=OCLC:" + OCLC;
+var s = document.createElement("script");
+s.setAttribute("type", "text/javascript");
+//alert("searching for: " + OCLC);
+s.setAttribute("src", "http://books.google.com/books?jscmd=viewapi&bibkeys=OCLC:" + OCLC + "&callback=ProcessResults");
+document.documentElement.firstChild.appendChild(s);
+//alert (api_url);
+
+</script>
+                    
 <!--{botlogo}-->
