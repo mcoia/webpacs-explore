@@ -114,8 +114,8 @@
     var ProcessResults = function(bookInfo) {
         var buttonImg = "<img src='/screens/googlebutton.gif' alt='Google Preview'>"
         var textGBS = "";
-        for (OCLC in bookInfo) {
-            var b = bookInfo[OCLC];
+        for (ISBN in bookInfo) {
+            var b = bookInfo[ISBN];
             var googleButton = "<a href='" + b.preview_url + "' target='blank'>" + buttonImg;
             //form the text of Google Book contents
             if (b && (b.preview == "full")) {
