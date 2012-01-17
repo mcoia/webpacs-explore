@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
+<title>St. Louis Research Libraries Consortium Catalog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" 
+media="print">
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
+}
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
+}
+}
+/* ]]> */
+</script>
+
+
+</head>
+<body>
+<!--{toplogo}-->
+<script type="text/javascript">
+
+$(document).ready(function(){
+$("#tabList li").click(function () {
+	var tabId = $(this).attr('id');
+	$("#searchtype").val(tabId);
+	$("#tabList li").css("background-color", "#F1F4EB");
+	$(this).css("background-color", "#DFE6D4");
+	$("#exampleText").load("/screens/" + tabId + "_bot.inc");
+    });
+});
+</script> 
+
+<div class="pageContentInner mainSearch">
+	
+<div class="miscButtons">
+<!--{logout}-->
+</div>
+
+
+  <div id="tabs">
+    <ul id="tabList">
+      <li id="X"><a>Keyword</a></li>
+      <li id="t"><a>Title</a></li>
+      <li id="a"><a>Author</a></li>
+    </ul>
+
+    <div id="tab-1" class="tabContent">
+ 
+
+<div class="innerTab">
+<form action="/search/" method="get" name="search" id="search" 
+onSubmit="return iiiSearchValidate();">
+<input type="hidden" id="iiiFormHandle_1">
+
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="t">Title or BPH</option>
+<option value="X" selected="selected">Keyword</option>
+<option value="a">Author</option>
+<option value="s">Journal Title</option>
+<option value="d">Subject</option>
+<option value="c">Call Number</option>
+<option value="h">Mentor</option>
+<option value="i">ISBN/ISSN</option>
+<option value="b">Barcode</option>
+<option value=",">Bib ID</option>
+</select>
+<!--{nosort}-->
+<input maxlength="75" name="searcharg" size="28" >
+<input type="hidden" name="searchscope" value="1">
+<span class="nowrap formButtonArea">
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div 
+onmousedown="this.className='pressedState';" onmouseout="this.className='';" 
+onmouseup="this.className='';"><div class="buttonSpriteDiv"><span 
+class="buttonSpriteSpan1"><span 
+class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+
+</form>
+
+<div id="exampleText">
+</div>
+
+<p>Switch to <a href="/search/X">Advanced Keyword Search</a></p>
+
+</div>
+
+
+
+  </div>
+
+<h1 class="accessibleAddInfo">Search</h1>
+
+
+</div><!-- pageContentInner -->
+</div>
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
+</body>
+</html>

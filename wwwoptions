@@ -45,11 +45,13 @@ BOTLOGO=@screens/botlogo.html
 BOTLOGO1=@screens/botlogo_s1.html
 BOTLOGO2=@screens/botlogo_s2.html
 BOTLOGO3=@screens/botlogo_s3.html
+BOTLOGO4=@screens/botlogo_s2.html
 BOTLOGO6=@screens/botlogo_s3.html
 BOTLOGO7=@screens/botlogo_s3.html
 BOTLOGO8=@screens/botlogo_s3.html
-BOTLOGO9=@screens/botlogo_s3.html
 BOTLOGO10=@screens/botlogo_s3.html
+BOTLOGO11=@screens/botlogo_s1.html
+BOTLOGO12=@screens/botlogo_s2.html
 ICON_BUT_CANCEL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Cancel</span></span></div></div>
 ICON_BUT_CLOSEWINDOW=<span class="button"><img src="/screens/ico_x.gif" alt=""><span class="buttonText">Close Window</span></span>
 ICON_BUT_RET2CAT=<span class="button"><img src="/screens/ico_back.png" alt=""><span class="buttonText">Return to Catalog</span></span>
@@ -82,11 +84,16 @@ TOPLOGO=@screens/toplogo.html
 TOPLOGO1=@screens/toplogo_s1.html
 TOPLOGO2=@screens/toplogo_s2.html
 TOPLOGO3=@screens/toplogo_s3.html
+TOPLOGO4=@screens/toplogo_s2.html
+TOPLOGO5=@screens/toplogo_s14.html
 TOPLOGO6=@screens/toplogo_s3.html
 TOPLOGO7=@screens/toplogo_s7.html
 TOPLOGO8=@screens/toplogo_s3.html
-TOPLOGO9=@screens/toplogo_s3.html
+#TOPLOGO9=@screens/toplogo_s3.html
 TOPLOGO10=@screens/toplogo_s3.html
+TOPLOGO11=@screens/toplogo_s1.html
+TOPLOGO12=@screens/toplogo_s2.html
+#TOPLOGO13=@screens/toplogo_s3.html
 TOPLOGO14=@screens/toplogo_s14.html
 UPDATECIRC=true
 XSTARTOVER=/search
