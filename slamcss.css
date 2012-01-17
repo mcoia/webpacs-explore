@@ -1,4 +1,4 @@
-body { background-color: #FFFFFF }
+body { background-color: #FFFFFF; padding-right: 20px; }
 
 #container {
 	width: 100%;
@@ -32,6 +32,11 @@ table.patFunc { background-color: #DDE4E9; border: 1px solid #000000; }
 table.patFunc th { background-color: #FFFFFF;  border: 0px; padding: 6px; }
 table.patFunc td { background-color: #FFFFFF; border: 0px; padding: 6px; }
 table.browseScreen { font-weight: bold; font-family: Times, serif; }
+table.bibHoldings { border: 0px; margin-left:10px; }
+
+
+td { font-family: Times, serif; }
+th { font-family: Times, serif; }
 td.browsePager { font-weight: normal; font-family: Times, serif; }
 td.browsePager a:link, td.browsePager a:active, td.browsePager a:visited { text-decoration: none; }
 td.browsePager a:hover { text-decoration: underline; }
@@ -43,9 +48,9 @@ td.browseHeaderYear {color: #FFFFFF; font-weight: bold; text-align: center; vert
 td.browseHeaderMark {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
 td.browseEntry { background-color: #FFFFFF; }
 
-table.url { width: 100%; font-weight: normal; font-family: Times, serif; color: #85A3B8; }
-td.urlLabel { width: 20%; }
-td.urlText { font-size: 85%; letter-spacing: -0.3px; font-family: Courier; }
+table.url { width: 100%; font-weight: normal; font-family: Times, serif; color: #85A3B8; border: 0px; padding: 0px; }
+td.urlLabel { width: 15%;}
+td.urlText { font-size: 85%; font-family: Courier; }
 
 td.browseSubEntryData  { background-color: #FFFFFF; color: #4E5C65; }
 td.browseSubEntryData a:link, td.browseSubEntryData a:active, td.browseSubEntryData a:visited { text-decoration: none; color: #4E5C65; }
@@ -54,6 +59,9 @@ td.browseSubEntryData a:before { content: "\2022"; padding-right: 0.4em; margin-
 td.browseEntryData { background-color: #FFFFFF; color: #1F1F1F; font-weight: bold; }
 td.browseEntryData a:link, td.browseEntryData a:active, td.browseEntryData a:visited  { text-decoration: underline; color: #1F1F1F; font-weight: bold; }
 td.browseEntryData a:hover { text-decoration: underline; color: #0000ff; }
+
+td.briefcitCell a:link, td.browseSubEntryData a:active, td.browseSubEntryData a:visited { text-decoration: none; color: #4E5C65; }
+td.briefcitCell a:hover { text-decoration: underline; color: #0000ff; }
 
 td.yourEntryWouldBeHereData { background-color: #FFFFFF; color: red;}
 td.yourEntryWouldBeHereData a:link, td.yourEntryWouldBeHereData a:active, td.yourEntryWouldBeHereData a:visited { text-decoration: underline; color: red; }
@@ -65,6 +73,11 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 
 .navigationRow select { width: 150px; }
 
+.bibRecordLink { padding-left: 0px; }
+.bibContent { width: 100% }
+.bibSearchtoolMessage { font-family: Times, serif; }
+.holdingsDivider { border: 0px; height: 0px; width: 0px; }
+.bibHoldingsLabel {width: 15% }
 .bibPager { font-weight: normal; font-family: Times, serif; }
 .bibPager a:link, td.bibPager a:active, td.bibPager a:visited { text-decoration: none; }
 .bibPager a:hover { text-decoration: underline; }
@@ -76,6 +89,13 @@ tr.browsePager { font-weight: normal; font-family: Times, serif; }
 .bibInfo a:link, .bibInfo a:active, .bibInfo a:visited { text-decoration: underline; } 
 .bibInfoData a:link, .bibInfoData a:active, .bibInfoData a:visited  { text-decoration: underline; color: #1F1F1F; }
 .bibInfoData a:hover { color: #0000ff; }
+
+.checkinInfo { margin-left: 20px; font-family: Times, serif; }
+.checkinInfoLabel { float:left; width:20%; height:15pt; }
+.checkinInfoData { float:right; width:80%; height:15pt; }
+.checkinInfoHoldingsLabel { float:left; width:20%; height:45pt; }
+.checkinInfoHoldingsData { float:right; width:80%; height:45pt; }
+
 
 /*The following entry overrides the font color set in the LINK856TEXT WWWOption (by MoBot?; Grrr ...) ;*/
 .bibLinks font { font-family: Times, serif; color: #000000; }

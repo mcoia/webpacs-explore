@@ -3,7 +3,7 @@
 # -----------------------------------------------------
 #
 #
-# converted by cvpubdef from HOLDINGS_POS: atpR
+# converted by cvpubdef from HOLDINGS_POS: atpeR
 #
 #
 # converted from HOLDINGS_POS field tag: 'a'
@@ -23,14 +23,16 @@ b|t||-6|Title||b|
 b|p|270|-6|Address||b|
 b|p||-6|Publication Info.||b|
 #
+# converted from HOLDINGS_POS field tag: 'e'
+#
+b|e||-6|Edition||b|
+#
 # end HOLDINGS_POS
 #
 #
-# next lines added by cvpubdef
+# next line added by cvpubdef
 b|H|||||
-b|T|||||
 #
-b|e||-6|Edition||b|
 b|r|306|-6|Playing Time||b|
 b|r|307|-6|Hours||b|
 b|r|310|-6|Frequency||b|
