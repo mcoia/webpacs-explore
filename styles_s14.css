@@ -4,7 +4,7 @@ a img {border:none;}
 
 .browseSearchtool, .bibSearch {background: url("tile_search_yellow.jpg") repeat-x scroll left bottom transparent;}
 
-.browseSearchtool select, .browseSearchtool input { font-size:1.25em; }
+.browseSearchtool select, .browseSearchtool input { font-size:1.5em; }
 
 .topLogo {background:url('/screens/nursing_arc_cropped.jpg') no-repeat; height:450px;}
 
