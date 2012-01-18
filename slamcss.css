@@ -1,0 +1,542 @@
+body { background-color: #FFFFFF; padding-right: 20px; }
+
+body > div {
+	background-color: #DDE4E9;
+} 
+
+#container {
+	width: 100%;
+	margin: 0px;
+	line-height: 130%;
+}
+
+#top {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0px;
+	/*background-color: #2F6680;*/
+	background-color: #577993;
+}
+
+#top img {
+	margin-left: 185px;
+}
+
+
+a:link, a:active, a:visited
+{	color: #577993;
+	text-decoration: none;
+}
+
+a:hover  { color: #4E5C65;
+			text-decoration: underline;
+		  } 
+
+table.patFunc { background-color: #DDE4E9; border: 1px solid #000000; }
+table.patFunc th { background-color: #FFFFFF;  border: 0px; padding: 6px; }
+table.patFunc td { background-color: #FFFFFF; border: 0px; padding: 6px; }
+table.browseScreen { font-weight: bold; font-family: Times, serif; }
+table.bibHoldings { border: 0px; margin-left:10px; }
+
+
+td { font-family: Times, serif; }
+th { font-family: Times, serif; }
+td.browsePager { font-weight: normal; font-family: Times, serif; }
+td.browsePager a:link, td.browsePager a:active, td.browsePager a:visited { text-decoration: none; }
+td.browsePager a:hover { text-decoration: underline; }
+tr.browseHeader { background-color: #577993; }
+td.browseHeaderData {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+td.browseHeaderEntries {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+td.browseHeaderNum {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+td.browseHeaderYear {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+td.browseHeaderMark {color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle;}
+td.browseEntry { background-color: #FFFFFF; }
+
+table.url { width: 100%; font-weight: normal; font-family: Times, serif; color: #85A3B8; border: 0px; padding: 0px; }
+td.urlLabel { width: 15%;}
+td.urlText { font-size: 85%; font-family: Courier; }
+
+td.browseSubEntryData  { background-color: #FFFFFF; color: #4E5C65; }
+td.browseSubEntryData a:link, td.browseSubEntryData a:active, td.browseSubEntryData a:visited { text-decoration: none; color: #4E5C65; }
+td.browseSubEntryData a:hover { text-decoration: underline; color: #0000ff; }
+td.browseSubEntryData a:before { content: "\2022"; padding-right: 0.4em; margin-top:0 }
+td.browseEntryData { background-color: #FFFFFF; color: #1F1F1F; font-weight: bold; }
+td.browseEntryData a:link, td.browseEntryData a:active, td.browseEntryData a:visited  { text-decoration: underline; color: #1F1F1F; font-weight: bold; }
+td.browseEntryData a:hover { text-decoration: underline; color: #0000ff; }
+
+td.briefcitCell a:link, td.browseSubEntryData a:active, td.browseSubEntryData a:visited { text-decoration: none; color: #4E5C65; }
+td.briefcitCell a:hover { text-decoration: underline; color: #0000ff; }
+
+td.yourEntryWouldBeHereData { background-color: #FFFFFF; color: red;}
+td.yourEntryWouldBeHereData a:link, td.yourEntryWouldBeHereData a:active, td.yourEntryWouldBeHereData a:visited { text-decoration: underline; color: red; }
+td.yourEntryWouldBeHereData a:hover { text-decoration: underline; color: #0000ff; }
+
+td.browseEntryEntries { text-align: center; }
+tr.msg { font-weight: bold; font-family: Times, serif; color: red; }
+tr.browsePager { font-weight: normal; font-family: Times, serif; }
+
+.navigationRow select { width: 150px; }
+
+.bibRecordLink { padding-left: 0px; }
+.bibContent { width: 100% }
+.bibSearchtoolMessage { font-family: Times, serif; }
+.holdingsDivider { border: 0px; height: 0px; width: 0px; }
+.bibHoldingsLabel {width: 15% }
+.bibPager { font-weight: normal; font-family: Times, serif; }
+.bibPager a:link, td.bibPager a:active, td.bibPager a:visited { text-decoration: none; }
+.bibPager a:hover { text-decoration: underline; }
+.bibItemsHeader { background-color: #577993; color: #FFFFFF; }
+.bibItems { font-family: Times, serif; }
+.bibItemsEntry a:link, .bibItemsEntry a:active, .bibItemsEntry a:visited { text-decoration: underline; color: #1F1F1F; } 
+.bibItemsEntry a:hover { color: #0000ff; }
+.bibInfo { font-family: Times, serif; }
+.bibInfo a:link, .bibInfo a:active, .bibInfo a:visited { text-decoration: underline; } 
+.bibInfoData a:link, .bibInfoData a:active, .bibInfoData a:visited  { text-decoration: underline; color: #1F1F1F; }
+.bibInfoData a:hover { color: #0000ff; }
+
+.checkinInfo { margin-left: 20px; font-family: Times, serif; }
+.checkinInfoLabel { float:left; width:20%; height:15pt; }
+.checkinInfoData { float:right; width:80%; height:15pt; }
+.checkinInfoHoldingsLabel { float:left; width:20%; height:45pt; }
+.checkinInfoHoldingsData { float:right; width:80%; height:45pt; }
+
+
+/*The following entry overrides the font color set in the LINK856TEXT WWWOption (by MoBot?; Grrr ...) ;*/
+.bibLinks font { font-family: Times, serif; color: #000000; }
+
+
+/*-- Navigation Items... ------------------------ */
+
+#navigation {
+	padding: 0px;
+	padding-top: 30px;
+	float: left;
+	width: 160px;
+}
+
+
+#navigation ul {
+	margin-left: 0px;
+	padding: 0px;
+}
+
+#navigation li {
+	list-style-type: none;
+	margin-top: 2px;
+	margin-left: 0px;
+}
+
+#navigation li a,
+#navigation li a:visited,
+#navigation li a:active {
+	border: 1px solid #DDE4E9;
+	font-family: scalasans,sans-serif;
+	color: #606A74;
+	font-size: 8pt;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	width: 160px;
+}
+
+#navigation li a#currentPage:link,
+#navigation li a#currentPage:visited,
+#navigation li a#currentPage:active {
+	border: 1px solid white;
+	color: #FFFFFF;
+	background-color: #577993;
+}
+
+
+#navigation li font {
+	padding-left: 30px;
+	text-indent: -10px;
+	font-family: scalasans,sans-serif;
+	font-size: 8pt;
+	display: block;
+}
+
+#navigation li li font {
+	padding-left: 50px;
+	text-indent: -10px;
+	font-family: scalasans,sans-serif;
+	font-size: 8pt;
+	display: block;
+}
+
+
+#navigation li a:hover,
+#navigation li a#currentPage:hover {
+	border: 1px solid white;
+	color: #FFFFFF;
+	background-color: #4E5C65;
+}
+
+/* SUB LIST ---------------------------------- */
+
+
+#navigation li li {
+	list-style-type: none;
+	margin-left: 0px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+
+#navigation li li a:link,
+#navigation li li a:visited,
+#navigation li li a:active {
+	border: 1px solid #DDE4E9;
+	font-family: scalasans,sans-serif;
+	color: #4E5C65;
+	font-size: 8pt;
+	text-decoration: none;
+	text-transform: none;
+	display: block;
+	width: 160px;
+}
+
+#navigation li li a#currentsubPage:link,
+#navigation li li a#currentsubPage:visited,
+#navigation li li a#currentsubPage:active
+{
+	text-transform: none;
+	background-color: #f1f4f6;
+	border: 1px solid #FFFFFF;
+}
+
+#navigation li li a:hover,
+#navigation li li a#currentsubPage:hover {
+	border: 1px solid white;
+	color: #FFFFFF;
+	background-color: #4E5C65;
+	text-transform: none;
+}
+
+
+
+#navigation li li li div {
+	padding-left: 90px;
+	text-indent: -10px;
+}
+
+/* ------------------------------------------------- */
+
+#content {
+	width: 500px;
+	margin-left: 185px;
+	margin-top: 20px;
+	margin-bottom: 12px;
+	border-left: 2px solid #eeeeee;
+    padding-left: 10px;
+}
+
+#content {
+
+	line-height: 14pt;
+	font-family: times;
+	font-size: 9pt;
+}
+
+#content p {
+	line-height: 14pt;
+	font-family: times;
+	font-size: 12pt;
+	margin-bottom: 6pt;
+	/* letter-spacing: -1px; */
+	/* text-align: justify; */
+}
+
+
+#content h2 {
+	font-family: sabon, times, serif;
+	color: #577993;
+	font-size: 20pt;
+	font-weight: bold;
+	padding-top: 10px;
+	margin-bottom: -4pt;
+}
+
+#content h3 {
+	font-family: scalasans,sans-serif;
+	color: #000000;
+	font-size: 13pt;
+	font-weight: bold;
+    margin-bottom: -2pt;
+    padding-top: 10px;
+
+}
+
+#content h4 {
+	font-family: scalasans,sans-serif;
+	color: #000000;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 4pt;
+	margin-bottom: 0px;
+}
+
+.indent {
+	padding-left: 30px;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	line-height: 18pt;
+}
+
+#wordhelp {
+	padding: 15px;
+	border: 1px #CCCCCC solid;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 40px;
+	background-color: #f1f4f6;
+}
+
+#wordhelp h1 {
+	text-align: center;
+	color: #577993;
+	font-size: 16pt;
+	line-height: 4pt;
+}
+
+
+#errormessage, #errormessage h2 {
+	color: red;
+	text-align: center;
+	font-family: Times;
+	font-size: 12pt;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#startoverButton {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: scalasans,sans-serif;
+	color: #FFFFFF;
+	font-size: 8pt;
+	text-decoration: none;
+	text-align: center;
+	background-color: #577993;
+	display: block;
+	border: 1px solid #FFFFFF;
+	width: 80px;
+}
+
+#startoverButton a:link, #startoverButton a:active, #startoverButton a:visited, #startoverButton a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+#menuBar {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-right: -50px;
+	font-family: sans-serif;
+	color: #606A74;
+	font-size: 8pt;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+#menuBar a:link, #menuBar a:active, #menuBar a:visited {
+	color: #606A74;
+	text-decoration: none;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+#menuBar a:hover {
+	text-decoration: underline;
+	color: #577993;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#menuBar a:first-child {
+	padding-left: 0px;
+}
+
+#menuBar font {
+	font-family: sans-serif;
+	color: #606A74;
+	font-size: 8pt;
+	text-decoration: none;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+	border: 1px solid #577993;
+}
+
+#content table {
+    margin-left: 20px;
+    
+	}	
+
+#content table {
+	font-family: scalasans,sans-serif;
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+#content td {
+	padding-right: 30px;
+}
+
+#content td a:link,
+#content td a:active, 
+#content td a:visited {
+	 text-decoration: none;
+     color: #4E5C65;
+ }
+ 
+#content td a:hover {
+	text-decoration: underline;
+	color: #577993;
+}
+
+#content p a:link,
+#content p a:active, 
+#content p a:visited {
+	 text-decoration: underline;
+     color: #000000;
+ }
+ 
+#content p a:hover {
+
+	color: #577993;
+}
+
+#content #ATtable table {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#content #ATtable td {
+	font-family: Times, serif;
+	font-size: 12pt;
+	line-height: 18pt;
+	padding-right: 0px;
+	color: #000000;
+}
+	
+	
+#content #ATtable th {
+	font-family: Times, serif;
+	font-size: 12pt;
+	font-weight: normal;
+	padding: 10px;
+}
+
+#content #booleanTable td {
+	margin: 0px;
+	padding: 0px;
+}
+
+#content #booleanTable td.firstCell {
+	font-family: Times, serif;
+	font-size: 12pt;
+	font-weight: normal;
+	font-style: italic;
+}
+
+#content #Lmtable table {
+	margin-left: 10px;
+	font-family: Times, serif;
+	font-size: 12pt;
+	line-height: 18pt;
+	color: #000000;
+	
+}
+
+#content #Lmtable td {
+	padding-right: 5px;
+}
+
+
+.firstPara {
+	padding-top: 15pt;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+
+#footer {
+	padding-top: 90px;
+
+}
+
+
+#footer
+{
+	font-size: 9pt;
+	line-height: 14pt;
+	color: #606A74;
+	font-family: Sabon, Times New Roman;
+}
+
+#footer #copyright
+{
+	padding-top: 5px;
+	font-size: 8pt;
+}
+
+#footer #copyright a:link,
+#footer #copyright a:visited,
+#footer #copyright a:active {
+	text-decoration: none;
+	color: #577993;
+}
+
+#footer #copyright a:hover {
+	color: #4E5C65;
+}
+
+#alphanavigation ul {
+     font-family: Times,serif;
+     padding: 0 0 0 10px;
+	 font-size: 20px;
+	 letter-spacing: 6px;
+     text-align: center;
+}
+
+#alphanavigation li {
+     margin: 0;
+     display: inline;
+     list-style: none;
+}
+
+#alphanavigation a {
+     text-decoration: none;
+}
+
+#artistnames {
+     font-size: 16px;
+	 line-height: 130%;
+	 color: black;
+	 font-family: Times, serif;
+	 margin-left: 12px;
+}
+
+#artistnames #seeref {
+     text-indent: 15px;
+}
+
+#artistnames H2 {
+	font-family: Times, serif;
+	color: #577993;
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 10px;
+	margin-bottom: 4px;
+	margin-left: -8px;
+}
+
+#artistnames H2 a {
+     text-decoration: none;
+	 color: #577993;
+}
