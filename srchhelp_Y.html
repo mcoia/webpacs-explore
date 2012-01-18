@@ -1,137 +1,110 @@
-<html>
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
 <head>
-<title>SLRLC Simple Search</title>
+<title>St. Louis Research Libraries Consortium Catalog</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
 
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 </head>
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
-<DIV ALIGN="center">
+<body>
+<!--{toplogo}-->
+<div class="pageContentInner">
+   
+<span class="button miscButtons"><img src="/screens/ico_startover.png" alt=""><span class="buttonText"><a href="/search/">New Search</a></span></span>
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<!--{patron}-->
-<P>
-</TR>
 
-<TR>
-<TD COLSPAN=3>
+<h1 class="pageHeader">Keyword Search</h1>
 
-<IMG SRC="/screens/iiilogo.gif" WIDTH=70 HEIGHT=73 ALT="" BORDER="0" 
-ALIGN="left"><IMG SRC="/screens/slrlc.gif" ALT="" 
-BORDER="0">
-<BR>
-<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" 
-ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
-<TD>
-<font size=+1 color=green face="arial">Catalog Options</font><p>
-<A HREF="/"><font face="arial" color=blue>Home
-</A><BR>
-<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
-Library Information</A></font><BR>
-<A HREF="/suggest/"><font face="arial" color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font face="arial" color=blue>Books to 
-Acquire</A></font><BR>
-<A HREF="/ftlist/"><font face="arial" color=blue>Featured Lists</font></A><BR>
-<A HREF="/patroninfo/"><font face="arial" color=blue>
-View Your Record</font></A><BR>
-</TD>
-</TR>
-</TABLE>
-
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="center" ALIGN="center">
-<CENTER>
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-
-<!--{msg->
-
-<TD ALIGN="left" VALIGN="top">
-<TABLE BORDER=0 CELLPADDING=9 ALIGN="center">
-<TR><TD ALIGN=left colspan=2>
-Type the <B>WORD(S)</B> you want, then click <b>Search</b>
-
-<FORM ACTION=/search/Y>
+<div class="formsTogether" id="accessibleForm">
+<div class="form1Part">
+<form method="get">
+<fieldset>
+<!-- Optional legend:
+<legend>Type the keyword(s) in the box below then press Enter or click the Submit button.</legend>
+-->
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="SEARCH">Search for:</label>
+</span>
+<select name="searchscope" id="searchscopeindex">
+<option value="2" selected="selected"> Missouri History Museum</option>
+<option value="4"> MHM Condie</option>
+</select>
+</div>
+<div id="scopeMenu" class="formEntryArea formScopeSearch">
+<span class="formLabel">
+<label for="searchscope">Search in the:</label>
+</span>
 <!--{scope}-->
-<!--rch}-->
-<!-rt}-->
-<!-it}-->
+</div>
 
-</FORM>
-</TD></TR></TABLE>
-<p>
+<div class="formButtonArea">
+<!--{submit}-->
+</div>
+</fieldset>
+</form>
+</div><!--form1Part -->
 
-<A HREF="/search/X"><IMG SRC="/screens/advanced.gif" BORDER=0 ALT="[ADVANCED 
-SEARCH]"></a>&nbsp;
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" BORDER=0 ALT="[START 
-OVER]"></A>
-</TABLE>
-</TR>
-<TR>
-<TD COLSPAN=3>
-<p>
-<TABLE CELLPADDING=10 CELLSPACING=2 WIDTH="100%">
-<TR>
-<TH WIDTH=10%></TH>
-<TH WIDTH=40%>Type in Words to search: </TH>
+<div class="clear"></div>
 
-<TH WIDTH=50%>EXAMPLES</TH></TR>
-<TR>
-<TD WIDTH=100><b>ADJACENCY</b></TD>
-<TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-Multiple words are searched together as one phrase.</FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT>United States supreme court</TT></TD>
-<TR>
-<TD WIDTH=100><b>TRUNCATION</b></TD><TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-Words may be right-hand truncated using an asterisk. Use a single asterisk * 
-to
-truncate from 1-5 characters. Use a double asterisk ** for open-ended 
-truncation
-.</FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT>environment* polic*
-<p>
-fyodor dost**</TT>
-</TD>
-<TR>
-<TD WIDTH=100><b>OPERATORS</b></TD><TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-Use &quot;and&quot; or &quot;or&quot; to specify multiple words in any field,
-any order.  Use &quot;and not&quot; to exclude words. Parentheses group words 
-to
-gether when using Boolean operators.</FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT>(annotated bibliography) and child*<BR>
-(alaska or canada) and (adventure and not vacation)</TT></TD>
-<TR>
-<TD WIDTH=100><b>PROXIMITY</b></TD><TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-Use &quot;near&quot; to specify words close to each other, in any
-order. Use &quot;within #&quot; to specify terms which occur within # words of
- e
-ach other in the record.</FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT>California near university
-<p>
-america within 3 econom*</TT></TD>
-<TR>
-<TD WIDTH=100><b>FIELDS</b></TD><TD BGCOLOR="#CCFF99"><FONT SIZE=-1>
-Specify fields to search, using field abbreviation.  Fields available for
-this database are a: (author), t: (title), s: (subject), and n: (note.)
-</FONT></TD>
-<TD BGCOLOR="#99CCFF"><TT>(a:twain) and (t:huck*)</TT><br>
-<TT>(a:united and a:states) and (s:handicapped or s:disabled)</TT></TD></TR>
-</TABLE>
+<div>
+<p>Type the keyword you want to find. For example:</p>
+<ul>
+<li>design</li>
+<li>bleachers grisham</li>
+</ul>
+<table class="tipsTable">
+<caption>Search Tips</caption>
+<!-- <tr valign="top"><th align="left">Adjacency</th>
+<td>Multiple words are searched together as one phrase.<br>
+<span style="text-decoration:underline">Example</span> : world health organization</td>
+</tr> -->
+<tr valign="top"><th align="left">Wildcards</th>
+<td>
+Words may be right-hand truncated using an asterisk ('*') in place of other characters. <!-- Use '**' for open-ended truncation of over five characters.--> The '*' wildcard may also be embedded in a search string. You may use '?' to replace a single character anywhere within a word.<br>
+<span style="text-decoration:underline">Examples</span> : environment* polic*, wom?n</td>
+</tr>
+<tr valign="top"><th align="left">Boolean Operators</th>
+<td>
+Use "and" or "or" to specify multiple words in any field, any order. Use "and not" to exclude words.<br>
+<span style="text-decoration:underline">Example</span> : stocks and bonds<br>
+<span style="text-decoration:underline">Example</span> : (alaska or canada) and (adventure and not vacation)</td>
+</tr>
+<tr valign="top"><th align="left">Field limits</th>
+<td>
+A field limit causes the system to search only the specified field for the specified word(s).</td>
+</tr>
+<tr valign="top">
+<th align="left">Grouping</th>
+<td>
+Keyword search results are usually grouped by relevance to bring the most likely titles to the top of the list. Each group represents a similar level of relevance and results are sorted within the group by date or title. To get an ungrouped result set, use boolean operators to form a complex query.
+</td>
+</tr>
+<!-- <tr valign="top"><th align="left">Proximity Operators</th>
+<td>
+Use "near" to specify words close to each other, in any order.<br>
+<span style="text-decoration:underline">Example</span> : california near university</td>
+</tr> -->
+</table>
 
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-<IMG SRC="/screens/botlogo.gif">
-</DIV>
+</div><!--bottom part -->
+</div><!--formsTogether -->
+</div><!-- pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].SEARCH.focus(); }
+catch(err) {}
+//--><!]]></script>
 </body>
 </html>

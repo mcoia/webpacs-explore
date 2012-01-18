@@ -1,7 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML> <HEAD> <title>Saint Louis Art Museum Archives</title>
-<link href="/sreeens/slamcss.css" type="text/css" rel="stylesheet"></link>
-<SCRIPT LANGUAGE="JavaScript">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
+<title>Saint Louis Art Museum Archives</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<script type="text/javascript">
 <!--
 function doSearch(form) {
   var theIndex=form.elements[0].selectedIndex;
@@ -24,71 +29,85 @@ function doSearch(form) {
   }
 }
 //-->
-</SCRIPT>
-</HEAD>
- <body style="background-color: #DDE4E9" onLoad="document.forms[0].elements[0].focus()";>
- 
- <div id="container">
- 
- <div>
- <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
- </div></div>
- 
- <div ID="navigation">
- <ul>
- <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
- <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
- <li> <a href="http://www.slam.org/Education/library.php" id="currentPage"><font>Richardson Library</font></a>
- <ul>
- <li><a href="/search~S3/"><font>All Collections</font></a></li>
- <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
- <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
- <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
- <li><a href="/search~S8/" id="currentsubPage"><font>Archives</font></a></li>
+</script>
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
+}
 
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
+}
+}
+/* ]]> */
+</script>
 
- </ul>
- </li>
- 
- <li><a
- href="/patroninfo~S8/"><font>View
- Your Record</font></a></li></ul></div>
- 
- <div><div id="content">
+</head>
+<body>
+<!--{toplogo}-->
 
-
-<h2>Archival Records</h2>
-
-<div class="firstPara">
-Word Search
+<div class="pageContentInner mainSearch">
+<div class="leftColumn">
+<ul>
+	<li><a href="http://www.slam.org">Museum Home</a></li>
+	<li><a href="/">SLRLC Home</a><li>
+	<ul>
+		<li><a href="/search~S3">All Collections</a></li>
+		<li><a href="/search~S6">Books & Periodicals</a></li>
+		<li><a href="/search~S10">Periodicals Only</a></li>
+		<li><a href="/search~S7">Auction Catalogues</a></li>
+		<li><a href="/search~S8">Archives</a></li>
+	</ul>
+	</li>
+	<li><a href="http://www.worldcat.org" target="_blank">WorldCat</a></li>
+	<li><a href="http://www.archive.org" target="_blank">Internet Archive</a></li>
+	<li><a href="http://books.google.com" target="_blank">Google Books</a></li>
+	<li><a href="/patroninfo">My Library</a></li>
+</ul>
 </div>
+<div class="rightColumn">
+<h1 class="accessibleAddInfo">Search</h1>
 
+<div id="accessibleForm" class="form1Part">
+<div class="browseSearchtool">
+<div class="formEntryArea">
+<div class="innerForm">
+	
+<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();" style="margin-bottom:2em;">
+<input type="hidden" id="iiiFormHandle_1">
+<h2>Archives</h2>
+<p>Search for Archival records using <strong>Names</strong>, <strong>Subjects</strong>, or other relevant <strong>Words</strong>, in any order.</p>
+<input type="hidden" name="searchtype" value="X">
+<!--{nosort}-->
+<input maxlength="75" name="searcharg" size="20">
+<input type="hidden" name="searchscope" value="8">
+	
+<span class="nowrap formButtonArea">
 
-<!--{iferr}-->
-<div id="errormessage">
-<!--{msg}-->
-</div>
-<!--{xif}-->
+<input type="button" value="Submit">
+  
+</span>
 
+</form>
 
 <p>
-Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other relevant <B>Words</B>, in any order:
-</p>
-
-<FORM METHOD=GET ACTION=/search~S8/Y name="Simple">
-<!--{search}-->
-<input type="hidden" name="SORT" value="D">
-<input type="submit" name="submit" value="Submit">&nbsp;&nbsp;<input type="button" value=" Reset " ONCLICK="document.forms[0].elements[0].value=''">
-<input name="searchscope" type="hidden" value="8">
-</FORM>
-<br />
-<p>
-<font style="color: #577993; font-weight: bold; font-size: 16pt; font-family: sabon, times, serif;">Or</font> &#8212; search for the records of a specific named <B>Person</B> or <B>Institution</B>, or records on a specific <B>Subject</B>, using the lists below:
+Or search for the records of a specific named <strong>Person</strong> or <strong>Institution</strong>, or records on a specific <strong>Subject</strong>, using the lists below:
 <p>
 
 
-<FORM NAME="names">
-<select style="width: 450px;">
+<form name="names" style="margin-bottom:1em;">
+<select>
 <option>Select a Name ... </option>
 <option value="Abid, Ann B">Abid, Ann B.</option>
 <option value="Aloe, Louis P., 1867-1929">Aloe, Louis P., 1867-1929</option>
@@ -278,13 +297,13 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Wuerpel, Edmund H., 1866-1958">Wuerpel, Edmund H., 1866-1958</option>
 <option value="Zelleke, Ghenete">Zelleke, Ghenete</option>
 </select>
-<BR>
-<INPUT TYPE="BUTTON" VALUE="GO!" onClick="doSearch(this.form)">
-</FORM>
+
+<input type="button" value="Submit" onClick="doSearch(this.form)">
+</form>
 
 
-<FORM NAME="subjects">
-<select style="width: 450px;">
+<form name="subjects" style="margin-bottom:1em;">
+<select>
 <option>Select a Subject ...</option>
 <option value="Aloe, Louis P., 1867-1929 Archives">Aloe, Louis P., 1867-1929--Archives</option>
 <option value="Architecture Missouri Saint Louis Archival resources">Architecture--Missouri--Saint Louis--Archival resources</option>
@@ -353,20 +372,45 @@ Search for Archival records using <B>Names</B>, <B>Subjects</B>, or other releva
 <option value="Wuerpel, Edmund H., 1866-1958">Wuerpel, Edmund H., 1866-1958</option>
 
 </select>
-<BR>
-<INPUT TYPE="BUTTON" VALUE="GO!" onClick="doSearch(this.form)">
-</FORM>
 
-<div><div id="footer">
-	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
-	Telephone 314.655.5252
-	
-	<div id="copyright">
-		&copy; 2009 Saint Louis Art Museum
+<input type="button" value="Submit" onClick="doSearch(this.form)">
+</form>
 </div>
-</div></div>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
 
+</div><!-- browseSearchtool -->
+</div><!-- form1Part -->
+<div class="bottomContent">
+<div id="scopeBoxes">
+<a class="scopeBox" id="scopeBox1" href="/search~S3"><p>ALL COLLECTIONS</p></a>
+<a class="scopeBox" id="scopeBox2" href="/search~S6"><p>BOOKS AND PERIODICALS</p></a>
+<a class="scopeBox" id="scopeBox3" href="/search~S10"><p>PERIODICALS</p></a>
+<a class="scopeBox" id="scopeBox4" href="/search~S7"><p>AUCTION CATALOGUES</p></a>
+</div><!--scopeBoxes-->
+<div class="contactInfo">
+<h3>RICHARDSON MEMORIAL LIBRARY</h3>
+Public hours:<br />
+Tuesday through Friday from 10:00am to 5:00pm.<br />
+<br />
+Contact:<br />
+314.655.5252<br />
+<a href="mailto:library@slam.org">library@slam.org</a><br />
+<br />
+<a href="http://www.slam.org/Education/research.php">Ask a Librarian</a> <br />
+<a href="http://www.slrlc.org/screens/STLartists2.html">St. Louis Artist Files</a><br />
+</div>
+	
+</div><!--bottomContent-->
 
-</div> </div> </div>
+</div><!--rightColumn-->
+</div><!--pageContentInner -->
 
- </body> </HTML>
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
+</body>
+</html>

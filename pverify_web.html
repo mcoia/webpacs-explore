@@ -1,71 +1,112 @@
-<HTML>
-
-<IMG  SRC="/screens/iiilogo.gif" WIDTH=70 HEIGHT=73 ALT="" BORDER="0" 
-ALIGN="left">
-<IMG SRC="/screens/slrlc.gif" ALT="" BORDER="0"><!--{toplogo}-->
-<BODY>
-<FORM method="post" name="patform">
+<!--{toplogo}-->
+<div class="pageContentInner">
+<h1 class="pageHeader">Login</h1>
+<div class="form1Part formLogin" id="accessibleForm">
+<!--{formbegin}-->
 <!--{iferrmsg}-->
-<FONT COLOR=RED SIZE=+2><EM>
+<span class="errormessage">
 <!--{iferrmsgisPIN}-->
 <!--{newpinmsg}-->
 <!--{else}-->
 <!--{errmsg}-->
 <!--{xif}-->
-</EM></FONT><BR><BR><BR>
+</span>
 <!--{xif}-->
+
+<fieldset>
+<legend>
 <!--{enterinfo}-->
-<TABLE BORDER=0 WIDTH=100%>
+</legend>
+
+<!--{ifextpat}-->
+<h2>Students, Staff, and Faculty</h2>
+<div class="formEntryArea">
+<label for="extpatid"><span class="formLabel">
+Username:
+</span></label>
+<!--{extpatid}-->
+<label for="extpatpw"><span class="formLabel">
+Password:
+</span></label>
+<!--{extpatpw}-->
+</div>
+<h2>Visitors</h2>
+<!--{xif}-->
+
 <!--{ifneedpatronname}-->
-<TR><TD WIDTH=30%></TD><TD><FONT SIZE=-1>
-<!--{nameexample}-->
-</FONT></TD></TR><TR><TD>
+<div class="formEntryArea">
 <!--{nameprompt}-->
-</TD><TD>
 <!--{name}-->
-</TD></TR>
+<div class="formLabelExample">
+<!--{nameexample}-->
+</div>
+</div>
 <!--{xif}-->
+
 <!--{ifneedpatronverify}-->
-<TR><TD></TD><TD><FONT SIZE=-1>
-<!--{barcodeexample}-->
-</FONT></TD></TR>
-<TR><TD>
-PIN Number: (Unique ID#)
-</TD><TD>
+<div class="formEntryArea">
+<!--{barcodeprompt}-->
 <!--{barcode}-->
-</TD></TR>
+<div class="formLabelExample">
+<!--{barcodeexample}-->
+</div>
+</div>
+
 <!--{ifneedspin}-->
+
 <!--{iferrmsgisPIN}-->
-<TR><TD COLSPAN=2>
+<p>
 <!--{newpinmsg}-->
-</TD></TR><TR><TD>
+</p>
+<div class="formEntryArea">
+<!-- <label for="pin1"> -->
+<span class="formLabel">
 <!--{pin1prompt}-->
-</TD><TD>
+</span>
 <!--{pin1}-->
-</TD></TR><TR><TD>
+<!-- </label> -->
+</div>
+<div class="formEntryArea">
+<!-- <label for="pin2"> -->
+<span class="formLabel">
 <!--{pin2prompt}-->
-</TD><TD>
+</span>
 <!--{pin2}-->
-</TD></TR>
+<!-- </label> -->
+</div>
+
 <!--{else}-->
-<TR><TD></TD><TD><FONT SIZE=-1>
-<!--{pininstructions}-->
-</FONT></TD></TR><TR><TD>
+<div class="formEntryArea">
 <!--{pinprompt}-->
-</TD><TD>
 <!--{pin}-->
-</TD></TR>
+<span class="formLabelExample">
+<!--{pininstructions}-->
+</span>
+</div>
+
 <!--{xif}-->
 <!--{xif}-->
 <!--{xif}-->
-</TABLE>
-<P>
+
+    <!--{ifalternate_id}-->
+    <!--{user_name}-->
+    <!--{xif}-->
+
+<div class="formButtonArea">
+<!--{ifneedspin}-->
+<!--{pinresetrequest}-->
+<!--{xif}-->
 <!--{submit}-->
-</FORM>
-<DIV ALIGN=LEFT>
-<!--{startover}-->
-<DIV>
+<input type="submit" class="submitHidden">
+</div>
+</fieldset>
+<!--{formend}-->
+
+</div>
+
+</div><!-- pageContentInner -->
 <!--{botlogo}-->
-</BODY>
-</HTML>
- 
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].elements[1].focus(); }
+catch(err) {}
+//--><!]]></script>

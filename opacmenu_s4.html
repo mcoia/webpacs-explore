@@ -1,147 +1,202 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
+<title>Missouri History Museum Library Catalog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/screens/norightcolumn.css" />
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
+}
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
+}
+}
+/* ]]> */
+</script>
+
+</head>
+<body>
+
+<!-- begin toplogo.html file -->
+
+
+<script src="/screens/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
+	$('#other').click(function() {
+		$(this).hide();
+		$('label.hiddenSearch').show();
+	});
+	$('input[name="searchtype"]').change(function(){
+    	$("#exampleText").load("/screens/" + this.value + "_hist.inc");
+	});
+});
+</script>
+
+<link rel="stylesheet" type="text/css" href="/screens/styles_s2.css" />
 
 
 
-<head><title>Missouri Historical Society / Condie History Education Center 
-Library Catalog </title> </head>
- 
 
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc" 
-onLoad="document.Main.searcharg.value='';document.Main.searcharg.focus();">
-<DIV ALIGN="center"> 
-<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0 WIDTH=0%>
-<TR>
-<!--{patron}-->
-<P>
-</TR>
+<div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
+<div class="topLogo">
+<div class="topLogoContent">
+<div id="logo">
+<a href="http://www.mohistory.org">
+<img src="/screens/mhm.png" alt="Missouri History Museum">
+</a>
+</div>
+<div id="slogan">
+<img src="/screens/hhh.png" alt="History happens here!">
+</div>
+<div class="topLinks">
+<ul id="topLinksList">
+<li><a href="http://www.mohistory.org">History Museum</a></li>
+<li><a href="http://www.mohistory.org/lrc-home">Library+Research Center</a></li>
+<li><a href="http://www.mohistory.org/search_options">More search options</a></li>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="allContent">
+<div class="innerContentWrapper">
+<div class="innerContent mainMenu">
+<div id="rightColumn">
+<ul>
+    <lh>Search By</LH>
+    <li><a href="/search/X">Keyword</a></li>
+    <li><a href="/search/t">Title</a></li>
+    <li><a href="/search/a">Author</a></li>
+    <li><a href="/search/d">Subject</a></li>
+    <li><a href="/search/m">Call Number</a></li>
+    <li><a href="/search/j">Genre</a></li>
+    <li><a href="/search/o">OCLC Number</a></li>
+    <li><a href="/search/b">Barcode</a></li>
+    <li><a href="/search/i">ISBN/ISSN</a></li>
+</ul>
+<ul>
+    <lh>More Search Options</lh>
+    <li><a href="http://genealogy.mohistory.org/">Genealogy Index</a></li>
+    <li><a href="http://www.mohistory.org/lrc/collections/archives-collections-guides">Archives Guides</a></li>
+    <li><a href="http://www.mohistory.org/lrc/collections/images-collections-guides">Photo Guides</a></li>
+    <li><a href="http://contentdm.mohistory.org/">Digitized Books and Documents</a></li>
+    <li><a href="http://www.mohistory.org/buy_photos">Image Store</a></li>
+    <li><a href="http://collections.mohistory.org/search">Cross-Collection Search (Beta)</a></li>
+    <li><a href="http://www.mohistory.org/lrc/catalogs/card-catalogs">Card Catalogs</a></li>
+    <li>
+</ul>
+<ul>
+    <lh>Map</lh>
+    <li>Reading Room</li>
+</ul>
+</div>
+<div id="mainColumn"><!-- content container -->
+<a name="content" id="content"></a>
 
-<TR>
-<TD COLSPAN=3>
-                          
-<!--<IMG  SRC="/screens/iiilogo.gif" WIDTH=100 HEIGHT=100 ALT="" BORDER="0" 
-ALIGN="left">--> <IMG SRC="/screens/mhm2.gif"> 
+<!--end toplogo-->
 
- 
-<ALT=Missouri Historical Society
-BORDER="0">
-<!--<center><IMG SRC="screens/condie.gif"></center>-->
-<font size=+3 <font color="ff8c00" font face="garamond"> <center> 
-<strong> 
-Condie 
-History Education 
-Center </font> </strong> </center>
+<div class="pageContentInner">
 
+<div id="left">
+<h1 class="accessibleAddInfo">Search</h1>
 
-<IMG SRC="/screens/grndot.gif" WIDTH=100% HEIGHT=2 ALT="0" BORDER="0" 
-ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 VALIGN="top" ALIGN="left">
+<form action="/search/" method="get"
+id="search" class="box" name="search">
 
-<TD>
-<br>
-<font size=+1> <font color="FF8C00" face="garamond"> <center> <strong>
-More about the <br>  Missouri History Museum</center> </strong> </font><p>
+<div class="options"> basic search / <a href="/search~S2/X">advanced search</a>
+</div>
 
-<A HREF="http://www.mohistory.org/"><font face="garamond" color=blue> <center>
- <font 
-size=+1> MHM HomePage
-</A> </center> </font>
-<br>
+<div class="limits"> 
+<label> <input name="searchtype" value="X" checked="checked" type="radio"> Keyword </label> 
+<label> <input name="searchtype" value="t" type="radio"> Title </label>
+<label> <input name="searchtype" value="a" type="radio"> Author </label>
+<label> <input name="searchtype" value="d" type="radio"> Subject </label>
+<label> <input name="searchtype" value="m" type="radio"> Call Number </label>
+<label id="other"> <input name="searchtype" value="y" type="radio"> Other Searches </label>
+<label class="hiddenSearch"> <input name="searchtype" value="j" type="radio"> Genre </label>
+<label class="hiddenSearch"> <input name="searchtype" value="o" type="radio"> OCLC # </label>
+<label class="hiddenSearch"> <input name="searchtype" value="b" type="radio"> Barcode </label>
+<label class="hiddenSearch"> <input name="searchtype" value="i" type="radio"> ISBN/ISSN </label>
+<input type="hidden" name="SORT" value="DX">
+<input type="hidden" name="sortdropdown" value="r">
+</span>
+</div>
 
-<A HREF="http://www.mohistory.org/content/Education/page6.aspx">
-<font face="garamond" color=blue> <center> <font size=+1>
-Condie History Education Center  </center> </A> </font> 
-<br>
-
-<A 
-HREF="http://www.mohistory.org/content/LibraryAndResearch/ResearchLibrary.aspx
-"> <font face="garamond" color=blue> <center> <font size=+1> Library and 
-Research Center </center> </a> </font>
-
-<BR>
-
-<!--A  HREF="/suggest/"><font face="garamond" color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font face="garamond" color=blue>Books to 
-Acquire</A></font><BR>
-<A HREF="/ftlist/"><font face="garamond" color=blue>Featured 
-Lists</font></A>--><BR>
-
-<!-- <A HREF="/patroninfo/"><font face="garamond" color=blue>
-View Your Record</font></A><BR> -->
-
-</TD>
-</TR>
-</TABLE>
-
-<TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=2 HEIGHT=300 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<td valign="top">
+<div class="searchBox"><input name="searcharg" value="" id="searcharg" class="text" type="text">
+in
 
 
-<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 VALIGN="center" ALIGN="left">
-<TR> <TD colspan=2>
- 
-<font size=+2 color="ff8c00"> <center> <strong> Catalog Search Options 
-</center> </strong> </font>
- 
-<br>
-<FORM ACTION=/search~/a?a>
-<SELECT NAME=searchscope>
-<OPTION VALUE=4 SELECTED> MHS Condie Center <OPTION VALUE=2> 
-MHS Library </SELECT>
-<SELECT NAME=searchtype>
-<OPTION VALUE=X SELECTED>WORD
-<OPTION VALUE=t>TITLE
-<OPTION VALUE=a>AUTHOR
-<OPTION VALUE=d>SUBJECT 
-<OPTION VALUE=m>Condie CALL NO.
-<!-- OPTION VALUE=i>ISBN/ISSN -->
-<!-- OPTION VALUE=j>SPECIAL (GENRE) -->
-</SELECT>
+<label for="searchscope" style="display:none;">Search Scope</label>
+<select name="searchscope" id="searchscope">
+<option value="2" selected="selected"> Missouri History Museum</option>
+<option value="4"> MHM Condie</option>
+</select>
 
-<INPUT TYPE="TEXT" NAME="searcharg" SIZE="25" MAXLENGTH="75" VALUE="">
-</SELECT>
-<INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D">
-<INPUT TYPE="SUBMIT" VALUE="GO!">
-</FORM>
-<DIV>
-</TR>
 
-<TR><TD><a href="/search~S4/a">Author Search</a></TD>
-<TD> <A HREF="/search~S4/t">Title Search </a></td>
+<input value="Search" type="submit"> </label></div>
+<div class="tip"> <a href="/search/Y">keyword search tips</a></div>
 
-<TD> <!-- <a href="/search~S4/i">ISSN/ISBN Search --> </a></TD>
 
-<!-- <TR> <TD> <a href="/search~S4/q"> Author/Title Search</a> </td> -->
+<div id="exampleText">
+<hr>
+	<div class="mainMenuSrchText">
+		<ul>
+			<li class="firstItem">e.g. urban renewal</li>
 
-<TR> <TD> <a href="/search~S4/m">Condie Call Number Search</a> </TD>
- 
-<TR><TD><a href="/search~S4/d">Subject Search</a></TD> 
+			<li>missouri archaeology</li>
 
-<!-- <TD> <a href="/search/r">Course Reserves</a></TD>-->
+			<li>census boone county</li>
+		</ul>
+	</div>
+</div>
 
-<TD><a href="/search~S4/X">Word Search</a></TD><TR><!--<TD><a 
-href="/search/p">Course Reserves by Professor<a></TD>-->
+</form>
 
-<!--<TR><TD></a href="http://172.16.17.226:211/screens/z39menu.html">Search 
-Other Databases by Z39.50</a> --> </TD>
 
-<!--<TR><TD><a href="/search~S2/s">Journal Title</a></TD>-->
-<!--<TD><a href="/search/k">Title Keyword</a></TD>-->
 
-<!--<TD><a href="/search~S4/j">Special (Genre) Search</a> --></td>
-</TABLE>
 
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-<!--<IMG  SRC="/screens/botlogo.gif">-->
-</DIV>
+</div>
+
+<div id="right">
+
+<div id="welcome">
+<h2>Welcome</h2>
+Welcome to the Missouri History Museum's Online Library Catalog.
+
+<p><a href="http://www.mohistory.org/lrc/family-history/get-started/online-library-catalog">What's in this catalog</a></p>
+<p><a href="http://www.mohistory.org/lrc/catalogs/card-catalogs">What's not online yet</a></p>
+<p><a href="http://www.mohistory.org/search_options">Other online information</a></p>
+	
+</div>
+	
+</div>
+
+
+	
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
 </body>
 </html>

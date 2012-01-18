@@ -1,0 +1,146 @@
+a img {border:none;}
+body div {padding:0px}
+label {
+    display:inline-block;
+}
+.box {border: 1px solid #868d96; margin: 0;}
+.allContent {width: 80%; min-height:100%; margin-left:auto; margin-right:auto; min-width:1000px;}
+.bibSearchHistory, .resourceHistory {position:relative;right:inherit;top:inherit;}
+.briefcitDetail, .briefcitAuthDetail {
+    padding:0 0 0 20px;
+    width:75%;
+}
+.briefcitMedia, .bibMedia, .briefcitResourceMedia, .briefcitProgramMedia, td.browseEntryMedia, td.browseSubEntryMedia {
+    margin-top:1em;
+}
+.briefcitRight {
+    display:inline;
+    float:left;
+    margin-bottom:30px;
+    padding:0;
+    text-align:left;
+    width:41px;
+}
+.briefcitYear {
+    text-align:center;
+    margin-top:1.5em;
+    font-size:1.2em;
+}
+.browseSearchtool {
+    font-size:1em;
+}
+.browseSuperEntry {
+    display:none;
+    font-size:1.35em;
+}
+.clear {height:0px;}
+h2, .pageContentInner h2, #rightColumn lh {
+    font-family:georgia,serif;
+    font-size:1.4em;
+    margin: 0 0 12px;
+}
+#exampleText {
+    margin: 2em 0 1em;
+}
+.firstItem {margin-left:-2.25em;}
+.form3Part {
+    width:50em;
+    float:none;
+}
+.formsTogether {
+    width:inherit;
+}
+#frontSearch {padding: 25px 36px 0; }
+.gbs {display:none;}
+.gbs img {
+    border: 0pt none;
+    vertical-align: middle;
+    margin:6px 0;
+}
+.gbs a {
+    text-decoration:none;
+}
+.hiddenSearch {
+    display:none;
+}
+#left {float: left; margin: 0; width: 640px;}
+.innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
+.innerContent {text-align: left; min-height:300px;}
+.innerContentWrapper {width:970px; margin-left:auto; margin-right:auto;}
+#logo {position:absolute; top:20px;}
+.logoBox {
+    float:left;
+    text-align:center;
+    height:140px;
+    font-size:1.2em;
+    margin: 5px 0;
+}
+.logoBox img {
+    border:none;
+}
+.logoBox:nth-child(2n) {
+    width:190px;
+}
+.logoBox:nth-child(2n+1) {
+    width:430px;
+}
+#logoBoxes {margin-top:15px;}
+#art a {
+    color:#527D98; text-decoration:none;
+}
+#gardens a {
+    color:#416910; text-decoration:none;
+}
+#gardens img {
+    width:430px;
+}
+#history a {
+    color:#005DAB; text-decoration:none;
+}
+#nursing a {
+    color:#00529C; text-decoration:none;
+}
+.mainMenuSrchText ul {
+    list-style-type:none;
+    padding-left:2.25em;;
+}
+.miscButtons {
+    margin-top:10px
+}
+.navigationRow select, .navigationrow option {
+    position:inherit;
+    right:inherit;
+    top:15px;
+}
+#opacMenu #rightColumn {
+    display:none;
+}
+.pageContentInner {
+    padding:20px 0;
+    margin: 0 20px;
+}
+#right {float: right; width: 270px;}
+#search .example {font-size:.9em; margin-left:10px; margin-top:4px;}
+#search .limits {margin-top:11px; width:500px;}
+#search .options {font-size:14px; font-weight:bold;}
+#search .searchBox {margin-top: 10px;}
+#search .tip {margin-top: 12px;}
+#slogan {position:absolute; top:25px; right:0px;}
+#slrlcInfo {border:1px solid #868d96; height:370px; padding: 5px 18px; }
+#slrlcInfo img {float: left; margin-right:5px;}
+#topContent {
+    height: 370px;
+}
+.topLinks {
+    margin-top:105px;
+}
+#topLinksList{
+    font-size:1.1em;
+}
+#topLinksList a:active, #topLinksList a:hover{
+    background:none;
+}
+.topLogo {height:100px; text-align: center;}
+.topLogo, #skipNav, .clear {padding:0;}
+
+

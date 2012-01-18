@@ -1,0 +1,57 @@
+<!-- begin toplogo.html file -->
+<!-- Rel 2009B Example Set -->
+<!-- Updated: 06 Oct 2010 -->
+<link rel="stylesheet" type="text/css" href="/screens/styles_s3.css" />
+<script type="text/javascript" src="/screens/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+
+var examples = new Array ();
+examples["X"] = ""
+examples["a"] = "Last name first"
+examples["c"] = ""
+examples["d"] = "Library of Congress heading"
+examples["i"] = ""
+examples["p"] = "Murawski"
+examples["s"] = "Omit initial articles (the, a, der, la, etc.)"
+examples["t"] = "Omit initial articles (the, a, der, la, etc.)"
+
+$(document).ready(function () {
+	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
+
+	$('#searchtype').change(function(){
+	$('#searchInput').css("color","#B0B0B0");
+    	$('#searchInput').val(examples[this.value]);
+	});
+	$('#searchInput').click(function(){
+    	$(this).val("");
+	$('#searchInput').css("color","#000000");
+	});
+	$("div#socialMedia img").mouseover(function() {
+		iconid = $(this).attr('id');
+		$(this).attr("src", "/screens/" + iconid + ".png");
+	});
+		$("div#socialMedia img").mouseout(function() {
+		iconid = $(this).attr('id');
+		$(this).attr("src", "/screens/" + iconid + "BW.png");
+	});
+
+
+});
+
+</script>
+
+
+<div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
+<div class="topLogo">
+<div class="topLogoContent">
+<div id="logo">
+<a href="http://www.slam.org/"><img id="slamLogo" src="/screens/slam.png"></a>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="allContent">
+<div class="innerContent">
+<div class="pageContent"><!-- content container -->
+<a name="content" id="content"></a>
+<!--end toplogo.html-->

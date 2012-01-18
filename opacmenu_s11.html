@@ -1,99 +1,127 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
+<title>St. Louis Research Libraries Consortium Catalog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" 
+media="print">
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
+}
 
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
+}
+}
+/* ]]> */
+</script>
 
-<head><title>Botanicus Digital Library
- 
-</title>
 
 </head>
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc" 
-onLoad="document.Main.searcharg.value='';document.Main.searcharg.focus();">
-<DIV ALIGN="center">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<!--{patron}-->
-<P>
-</TR>
-
-<TR>
-<TD COLSPAN=3>
+<body>
 <!--{toplogo}-->
+<script type="text/javascript">
 
-<!--<CENTER><IMG SRC="/screens/mbglogo.gif" WIDTH=500 
-HEIGHT=50 
-ALT=Missouri Botanical Garden BORDER="0"></CENTER>
-<BR>
-<CENTER><font size=+3 color="006651">BOTANICUS<font></CENTER>
-<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" 
-ALIGN="left">--></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=20%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
-<TD>
-<font size=+1 color="#006651">
-Catalog 
-Options</font><p>
-<A HREF="/"><font color=blue>Home</font>
-</A><BR><BR>
-<A HREF="http://www.mobot.org/MOBOT/molib"><font  color=blue>
-Library Information</A></font><BR>
-<!--A  HREF="/suggest/"><font color=blue>
-Suggestions</A></font><BR>
-<A HREF="/acquire/"><font  color=blue>Books to 
-Acquire</A></font><BR>
-<A HREF="/ftlist/"><font face="arial" color=blue>Featured 
-Lists</font></A>--><BR>
-<A HREF="/patroninfo/"><font color=blue>
-View Your Record</font></A><BR>
-</TD>
-</TR>
-</TABLE>
+$(document).ready(function(){
+$("#tabList li").click(function () {
+	var tabId = $(this).attr('id');
+	$("#searchtype").val(tabId);
+	$("#tabList li").css("background-color", "#F1F4EB");
+	$(this).css("background-color", "#DFE6D4");
+	$("#exampleText").load("/screens/" + tabId + "_bot.inc");
+    });
+});
+</script> 
 
-</TD><TD VALIGN="top">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=300 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="center"> 
+<div class="pageContentInner mainSearch">
+	
+<div class="miscButtons">
+<!--{logout}-->
+</div>
 
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=4 VALIGN="top" ALIGN="left">
-<TR><TD COLSPAN=2>
-<font size=+1 color="006651">BOTANICUS Digital Library<BR> 
-Search Options</font><p>
-<FORM ACTION=/search~/a?a name="Main">
-<SELECT NAME=searchscope>
-<OPTION VALUE=11>Botanicus</SELECT>
-<SELECT NAME=searchtype>
-<OPTION VALUE=t selected>TITLE</OPTION>
-<OPTION VALUE=a>AUTHOR</OPTION>
-<OPTION VALUE=d>SUBJECT</OPTION>
-<OPTION VALUE=X>KEYWORD</OPTION>
-<OPTION VALUE=b>BARCODE</OPTION>
-</SELECT>
-<INPUT TYPE="TEXT" NAME="searcharg" SIZE="25" MAXLENGTH="75" VALUE="">
-</SELECT>
-<INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D">
-<INPUT TYPE="SUBMIT" VALUE="GO!">
-</FORM>
-<DIV>
-</TR>
-<TR><TD><a href="/search/a">Author 
-Search</a></TD><TD><a 
-href="/search/Y">Keyword Search</a></TD></TR>
-<TR><TD><a href="/search/t">Title Search</a></TD> 
-<TD><a href="/search/c">Call Number Search</a></TD></TR>
-<TR><TD><a href="/search/s">Journal Title Search</a></TD>
-<TD><a href="/search/d">Subject Search</a></TD></TR>
-<TR><TD><a href="/search/q">Author/Title Search</a></TD> 
-<TD><a href="/search/b">Barcode Search</a></TD></TR>
-</font>
-</TABLE>
 
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-<!--<IMG  SRC="/screens/botlogo.gif">-->
-</DIV>
+  <div id="tabs">
+    <ul id="tabList">
+      <li id="X"><a>Keyword</a></li>
+      <li id="t"><a>Title</a></li>
+      <li id="a"><a>Author</a></li>
+    </ul>
+
+    <div id="tab-1" class="tabContent">
+ 
+
+<div class="innerTab">
+<form action="/search/" method="get" name="search" id="search" 
+onSubmit="return iiiSearchValidate();">
+<input type="hidden" id="iiiFormHandle_1">
+
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="t">Title or BPH</option>
+<option value="X" selected="selected">Keyword</option>
+<option value="a">Author</option>
+<option value="s">Journal Title</option>
+<option value="d">Subject</option>
+<option value="c">Call Number</option>
+<option value="h">Mentor</option>
+<option value="i">ISBN/ISSN</option>
+<option value="b">Barcode</option>
+<option value=",">Bib ID</option>
+</select>
+<!--{nosort}-->
+<input maxlength="75" name="searcharg" size="28" >
+<input type="hidden" name="searchscope" value="1">
+<span class="nowrap formButtonArea">
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div 
+onmousedown="this.className='pressedState';" onmouseout="this.className='';" 
+onmouseup="this.className='';"><div class="buttonSpriteDiv"><span 
+class="buttonSpriteSpan1"><span 
+class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+
+</form>
+
+<div id="exampleText">
+</div>
+
+<p>Switch to <a href="/search/X">Advanced Keyword Search</a></p>
+
+</div>
+
+
+
+  </div>
+
+<h1 class="accessibleAddInfo">Search</h1>
+
+
+</div><!-- pageContentInner -->
+</div>
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
 </body>
 </html>
