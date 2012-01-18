@@ -1,739 +1,132 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML> <HEAD>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
 <title>Richardson Library Periodicals</title>
-
-<script language="JavaScript">
-
-function goTo(form) {
-
-  var theCode=form.pizzasize.options[form.pizzasize.selectedIndex].value;
-  
-  if (theCode != "")
-  {
-  if (form.vendor[0].checked)
-  {
-  var myURL="http://0-vnweb.hwwilsonweb.com.www.slrlc.org/hww/Journals/searchAction.jhtml?sid=HWW:ARTFT&issn=" + theCode;
-  window.open(myURL, target="_blank");
-  }
-  else
-  {
-  var myURL="http://0-www.jstor.org.www.slrlc.org/action/showPublication?journalCode=" + theCode;
-  window.open(myURL, target="_blank");
-  }
-  }
-
-}
-
-var lists = new Array();
-
-lists['wilson']    = new Array();
-lists['wilson'][0] = new Array(
-	'Select a WilsonWeb journal title ...',
-    'African Arts',
-	'Afterimage',
-	'American Artist',
-	'American Cinematographer',
-	'American Visions',
-	'Animation Magazine',
-	'Antiquity',
-	'Aperture',
-	'Applied Arts',
-	'Architectural Digest',
-	'Architecture',
-	'L’Architettura',
-	'Archivo Espanol de Arte',
-	'ARQ',
-	'ARQ (Santiago, Chile)',
-	'Ars Orientalis',
-	'Art & Antiques',
-	'The Art Bulletin',
-	'Art Bulletin of Nationalmuseum Stockholm',
-	'Art Business News',
-	'Art Criticism',
-	'Art in America',
-	'Art Issues',
-	'Art Journal',
-	'Art Monthly',
-	'Art New England',
-	'Art Nexus',
-	'Art Papers',
-	'Art Press',
-	'Art/Text',
-	'Arte Veneta',
-	'Arte y Parte',
-	'Artext',
-	'Artichoke',
-	'Arts & the Islamic World',
-	'Arts d’Afrique Noire',
-	'ArtUS',
-	'Artweek',
-	'Assemblage',
-	'Aurora (Woodcliff Lake, N.J.)',
-	'Baumeister',
-	'Beaux Arts Magazine',
-	'Border Crossings',
-	'Bulletin of the American Schools of Oriental Research',
-	'Ceramic Review',
-	'Ceramics (Sydney, Australia)',
-	'Ceramics Monthly',
-	'Ceramics Technical',
-	'Cimaise',
-	'Cineaste',
-	'Cinema Journal',
-	'Contract (San Francisco, Calif.: 2000)',
-	'Crafts (London, England)',
-	'Creative Review',
-	'CRM',
-	'Cuadernos de Arte de la Universidad de Granada',
-	'Curator',
-	'Design Issues',
-	'Drawing',
-	'Dress',
-	'Entertainment Design',
-	'European Photography',
-	'Fashion Theory',
-	'Fiberarts',
-	'Film Criticism',
-	'Film History (Bloomington, IN)',
-	'Films in Review',
-	'Flash Art (International Edition)',
-	'Gazette des BeauxArts',
-	'Goya',
-	'Green Places',
-	'Hesperia',
-	'Home Cultures',
-	'Impressions',
-	'Inland Architect',
-	'Interior Design (New York, N.Y.)',
-	'International Review of African American Art',
-	'Irish Arts Review (Dublin, Ireland)',
-	'Irish Arts Review Yearbook',
-	'IS Magazine',
-	'Issues in Architecture, Art and Design',
-	'JAB (Journal of Artists’ Books)',
-	'Jahrbuch der Kunsthistorischen Sammlungen in Wien',
-	'Journal of Architectural and Planning Research',
-	'The Journal of Canadian Art History',
-	'Journal of Interior Design',
-	'Journal of Media Practice',
-	'Journal of Popular Film and Television',
-	'Journal of the History of Collections',
-	'Journal of the Society of Architectural Historians',
-	'The Journal of the Walters Art Gallery',
-	'Journal of Visual Art Practice',
-	'Jump Cut',
-	'Konsthistorisk Tidskrift',
-	'Koreana',
-	'Landscape Design',
-	'Leonardo',
-	'Letter Arts Review',
-	'Live Design',
-	'The Magazine Antiques (1971)',
-	'Make, the magazine of women’s art',
-	'Marg',
-	'Material Culture',
-	'Metalsmith',
-	'Millennium Film Journal',
-	'Mitteilungen des Deutschen Archaeologischen Instituts',
-	'Modern Painters',
-	'Native Peoples',
-	'Near Eastern Archaeology',
-	'New Art Examiner',
-	'The New Criterion',
-	'Nineteenth Century Art Worldwide',
-	'Nka',
-	'Novyi Mir Iskusstva',
-	'October (Cambridge, Mass.)',
-	'Ornament',
-	'Oxford Art Journal',
-	'Parachute',
-	'Piecework',
-	'Pioneer America Society Transactions',
-	'Places (Cambridge, Mass.)',
-	'Pottery Making Illustrated',
-	'Print (New York, N.Y.)',
-	'Public Art Review',
-	'Record of the Art Museum (Princeton University)',
-	'La Revue du Louvre et des Musees de France',
-	'Rock Art Research',
-	'RPS Journal',
-	'Scandinavian Journal of Design History',
-	'Sculpture (Washington, D.C.)',
-	'Sculpture Review',
-	'Sight & Sound',
-	'Stained Glass (Kansas City, MO: 1990)',
-	'Storia dell’Arte',
-	'The Structurist',
-	'Studio Potter',
-	'Surface Design Journal',
-	'TCI',
-	'TD&T',
-	'Technoetic Arts',
-	'Textile',
-	'Tribal (San Francisco, Calif.)',
-	'Umbrella',
-	'Visible Language',
-	'WallrafRichartzJahrbuch',
-	'Werk, Bauen + Wohnen',
-	'Woman’s Art Journal',
-	'World of Tribal Arts',
-	'Zeitschrift des Deutschen Vereins fur Kunstwissenschaft'
-
-);
-lists['wilson'][1] = new Array(
-    '',
-    '0001-9933',
-	'0300-7472',
-	'0002-7375',
-	'0002-7928',
-	'0884-9390',
-	'1041-617X',
-	'0003-598X',
-	'0003-6420',
-	'1196-1775',
-	'0003-8520',
-	'0746-0554',
-	'0003-8830',
-	'0004-0428',
-	'1359-1355',
-	'0716-0852',
-	'0571-1371',
-	'0195-8208',
-	'0004-3079',
-	'1401-2987',
-	'0273-5652',
-	'0195-4148',
-	'0004-3214',
-	'1046-8471',
-	'0004-3249',
-	'0142-6702',
-	'0274-7073',
-	'0122-1744',
-	'0278-1441',
-	'0245-5676',
-	'0727-1182',
-	'0392-5234',
-	'1136-2006',
-	'1544-2136',
-	'0847-3277',
-	'0264-1828',
-	'0337-1603',
-	'1546-7082',
-	'0004-4121',
-	'0889-3012',
-	'1527-652X',
-	'0005-674X',
-	'0757-2271',
-	'0831-2559',
-	'0003-097X',
-	'0144-1825',
-	'1035-1841',
-	'0009-0328',
-	'1324-4175',
-	'0009-6830',
-	'0009-7004',
-	'0009-7101',
-	'1530-6224',
-	'0306-610X',
-	'0262-1037',
-	'1068-4999',
-	'0210-962X',
-	'0011-3069',
-	'0747-9360',
-	'0191-6963',
-	'0361-2112',
-	'1520-5150',
-	'0172-7028',
-	'1362-704X',
-	'0164-324X',
-	'0163-5069',
-	'0892-2160',
-	'0015-1688',
-	'0394-1493',
-	'0016-5530',
-	'0017-2715',
-	'1742-3716',
-	'0018-098X',
-	'1740-6315',
-	'1095-2136',
-	'0020-1472',
-	'0020-5508',
-	'1045-0920',
-	'1649-217X',
-	'0791-3540',
-	'1542-4219',
-	'0960-8648',
-	'1085-1461',
-	'0075-2312',
-	'0738-0895',
-	'0315-4297',
-	'1071-7641',
-	'1468-2753',
-	'0195-6051',
-	'0954-6650',
-	'0037-9808',
-	'0083-7156',
-	'1470-2029',
-	'0146-5546',
-	'0023-3609',
-	'1016-0744',
-	'0020-2908',
-	'0024-094X',
-	'1076-7339',
-	'1559-2359',
-	'0161-9284',
-	'1365-8190',
-	'0025-2913',
-	'0883-3680',
-	'0270-1146',
-	'1064-5586',
-	'0342-1287',
-	'0953-6698',
-	'0895-7606',
-	'1094-2076',
-	'0886-8115',
-	'0734-0222',
-	'1543-1002',
-	'1075-7163',
-	'1560-8697',
-	'0162-2870',
-	'0148-3897',
-	'0142-6540',
-	'0318-7020',
-	'1067-2249',
-	'0884-3309',
-	'0731-0455',
-	'1096-830X',
-	'0032-8510',
-	'1040-211X',
-	'0032-843X',
-	'0035-2608',
-	'0813-0426',
-	'1468-8670',
-	'0906-3447',
-	'0889-728X',
-	'0747-5284',
-	'0037-4806',
-	'1067-8867',
-	'0392-4513',
-	'0081-6027',
-	'0091-6641',
-	'0197-4483',
-	'1063-9497',
-	'1052-6765',
-	'1477-965X',
-	'1475-9756',
-	'1549-4691',
-	'0160-0699',
-	'0022-2224',
-	'0083-7105',
-	'0257-9332',
-	'0270-7993',
-	'1354-2990',
-	'0044-2135'
-);
-
-// Second set of titles and codes
-lists['jstor']    = new Array();
-lists['jstor'][0] = new Array(
-    'Select a JSTOR journal title ...',
-'African Arts',
-'AIC Bulletin',
-'AIC Journal',
-'American Antiquity',
-'American Art',
-'American Art Illustrated',
-'American Art Journal',
-'American Art News',
-'American School of Classical Studies in Rome Suppl. Papers',
-'American Society of Architectural Historians Journal',
-'Amtliche Berichte aus den Koniglichen Kunstsammlungen',
-'Amtliche Berichte aus den Preuszischen Kunstsammlungen',
-'Annual of the British School at Athens',
-'Archives of American Art Bulletin',
-'Archives of American Art Journal',
-'Archives of Asian Art',
-'Archives of the Chinese Art Society of America',
-'Ars Islamica',
-'Ars Orientalis',
-'Art & Life',
-'Art Bulletin',
-'Art Education',
-'Art Institute of Chicago Bulletin (1907-1951)',
-'Art Institute of Chicago Bulletin (1973-1982)',
-'Art Institute of Chicago Calendar',
-'Art Institute of Chicago Museum Studies',
-'Art Institute of Chicago Quarterly',
-'Art Journal',
-'Art Journal (1875-1887)',
-'Art News (1923-1924)',
-'Artibus Asiae',
-'Artibus Asiae. Suppl.',
-'Artibus et Historiae',
-'Artist (American Edition)',
-'Athenian Agora',
-'Berliner Museen',
-'Berliner Museen Jahrbuch',
-'Boston Museum Bulletin',
-'British Museum Quarterly',
-'Brush and Pencil',
-'Burlington Magazine',
-'Cleveland Museum of Art Bulletin',
-'Cleveland Studies in the History of Art',
-'College Art Association of America Bulletin',
-'College Art Journal',
-'Connoisseur (Philadelphia : 1886-1888)',
-'Corinth',
-'Crayon',
-'Design Quarterly',
-'Dumbarton Oaks Papers',
-'Everyday Art Quarterly',
-'Fogg Art Museum Acquisitions',
-'Fogg Art Museum Annual Report',
-'Fogg Art Museum Bulletin',
-'Fogg Art Museum Notes',
-'Forschungen und Berichte',
-'Garden History',
-'Garden History Society Newsletter',
-'Garden History Society Occasional Paper',
-'Garden History Society Quarterly Newsletter',
-'Germanic Museum Bulletin',
-'Gesta',
-'Grand Street',
-'Grey Room',
-'Harvard Art Museums Annual Report',
-'Harvard University Art Museums Bulletin',
-'Harvard University Art Museums Directors Report',
-'Hesperia',
-'Hesperia Suppl.',
-'Huntington Library Bulletin',
-'Huntington Library Quarterly',
-'I Tatti Studies',
-'IIC American Group Bulletin',
-'Illustrated Magazine of Art',
-'J. Paul Getty Museum Journal',
-'Journal of Aesthetics and Art Criticism',
-'Journal of Decorative and Propaganda Arts',
-'Journal of Design History',
-'Leonardo',
-'Leonardo. Suppl.',
-'M Bulletin (Museum of Fine Arts, Boston)',
-'Marburger Jahrbuch für Kunstwissenschaft',
-'Master Drawings',
-'Memoirs of the American Academy in Rome',
-'Memoirs of the American Academy in Rome Suppl.',
-'Metropolitan Museum Journal',
-'Metropolitan Museum of Art Bulletin',
-'Metropolitan Museum of Art Notable Acquisitions',
-'Metropolitan Museum of Art Recent Acquisitions',
-'Metropolitan Museum Studies',
-'MFA Bulletin',
-'Mitteilungen des Kunsthistorischen Institutes in Florenz',
-'MoMA',
-'MoMA Bulletin',
-'MoMA Members Newsletter',
-'Monthly Illustrator',
-'Muqarnas',
-'Museum of Fine Arts, Boston Journal',
-'Museum of Fine Arts Bulletin',
-'October',
-'Oxford Art Journal',
-'PAJ: Journal of Performance and Art',
-'Parnassus',
-'Pennsylvania Museum Bulletin',
-'Performing Arts Journal',
-'Philadelphia Museum of Art Bulletin',
-'Princeton University Art Museum Record',
-'Simiolus',
-'Smithsonian Studies in American Art',
-'Society of Architectural Historians Journal',
-'Studies in Art Education',
-'Studies in Conservation',
-'Studies in the Decorative Arts',
-'Syria',
-'Transactions of the American Art-Union',
-'Transactions of the Apollo Association',
-'Walters Art Gallery Journal',
-'Walters Art Museum Journal',
-'Warburg and Courtauld Institutes Journal',
-'West 86th',
-'Winterthur Portfolio',
-'Womans Art Journal',
-'Zeitschrift für Kunstgeschichte'
-
-);
-lists['jstor'][1] = new Array(
-	'',
-'africanarts',
-'bullamerinstcons',
-'jamerinstcons',
-'ameranti',
-'americanart',
-'amerartillu',
-'americanartj',
-'amerartnews',
-'supppapeamerscho',
-'jamersociarchhis',
-'amtlberikoenkuns',
-'amtlberipreukuns',
-'annubritschoathe',
-'bullarchamerart',
-'archamerartj',
-'archasiaart',
-'archchiartsocam',
-'arsislamica',
-'arsorie',
-'artandlife',
-'artbulletin',
-'arteducation',
-'bullartinstchic1',
-'bullartinstchic2',
-'caleartinstchic',
-'artinstchicmuses',
-'artinstchicquar',
-'artj',
-'artj1875',
-'artnews1923',
-'artibusasiae',
-'artiasiasupp',
-'artibushistoriae',
-'artiameredit',
-'athenianagora',
-'berlmuse',
-'jahrberlmuse',
-'bostmusebull',
-'britmusequar',
-'brushandpencil',
-'burlmaga',
-'bulleclevmuseart',
-'clevstudhistart',
-'bullcollartassoa',
-'collegeartj',
-'connoisseur',
-'coriresuexca',
-'crayon',
-'designquarterly',
-'dumboakspape',
-'everartquar',
-'acqufogg',
-'annurepofogg',
-'bullfoggartmuse',
-'notesfogg',
-'forsberi',
-'gardenhistory',
-'gardhistsocinews',
-'occapapegardhist',
-'quarnewsgardhist',
-'germmusebull',
-'gesta',
-'granstre',
-'greyroom',
-'annurepoharvuniv',
-'harvunivartmuse',
-'direrepo',
-'hesperia',
-'hespsupp',
-'huntlibrbull',
-'huntlibrquar',
-'tattstudessarena',
-'bullamergrouinte',
-'illumagaart',
-'jpaulgettmusej',
-'jaestartcrit',
-'jdecoproparts',
-'jdesignhistory',
-'leonardo',
-'leonsuppissu',
-'mbull',
-'marbjahrkuns',
-'masterdrawings',
-'memoameracadrome',
-'memoameracadrom2',
-'metrmusej',
-'metrmuseartbull',
-'notaacqumetrmuse',
-'receacqumetrmuse',
-'metrmusestud',
-'mfabull',
-'mittkunsinstflor',
-'moma',
-'musemodeartbull',
-'membnews',
-'montillu',
-'muqarnas',
-'jmusfineartsbos',
-'musefineartbull',
-'october',
-'oxfordartj',
-'pajjperfart',
-'parnassus',
-'bullpennmuse',
-'performingartsj',
-'philmuseartbull',
-'recoartmuseprinu',
-'siminethquarhist',
-'smitstudamerart',
-'jsociarchhist',
-'studarteduc',
-'studcons',
-'studdecoarts',
-'syria',
-'tranamerartunio',
-'tranapolassoprom',
-'jwaltartgallery',
-'jwaltartmuseum',
-'jwarbcourinst',
-'west86th',
-'wintport',
-'womansartj',
-'zeitkuns'
-
-);
-
-
-function emptyList( pizzasizes ) {
-	// Set each option to null thus removing it
-	while ( pizzasizes.options.length ) pizzasizes.options[0] = null;
-}
-
-function fillList( pizzasizes, arr ) {
-	// arr[0] holds the display text
-	// arr[1] are the values
-
-	for ( i = 0; i < arr[0].length; i++ ) {
-
-		// Create a new drop down option with the
-		// display text and value from arr
-
-		option = new Option( arr[0][i], arr[1][i] );
-
-		// Add to the end of the existing options
-
-		pizzasizes.options[pizzasizes.length] = option;
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
 	}
-
-	// Preselect option 0
-
-	pizzasizes.selectedIndex=0;
+	catch(err) {
+	}
+  return true;
 }
 
-function changeList( radioButton ) {
-	// Isolate the appropriate list by using the value
-	// of the currently selected option
-     if (radioButton.value == "ww")
-     {
-	 list = lists['wilson'];
-	 }
-	 else
-	 {
-     list = lists['jstor'];
-	 }
-
-	 emptyList( document.forms[1].pizzasize );
-
-	 fillList ( document.forms[1].pizzasize, list);
-
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
 }
-
-
+}
+/* ]]> */
 </script>
+</head>
+<body>
+<!--{toplogo}-->
 
-</HEAD>
- <body onload="changeList(document.forms[1].vendor[0]); document.forms[1].vendor[0].checked=true;" style="background-color: #DDE4E9" onLoad="document.forms[0].searcharg.focus()";>
- 
- <div id="container">
- 
- <div>
- <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
- </div></div>
- 
- <div ID="navigation">
- <ul>
- <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
- <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
- <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
- <ul>
- <li><a href="/search~S3/"><font>All Collections</font></a></li>
- <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
- <li><a href="/search~S10/" id="currentsubPage"><font>Periodicals Only</font></a></li>
- <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
- <li><a href="/search~S8/"><font>Archives</font></a></li>
-
-
- </ul>
- </li>
- 
- <li><a
- href="/patroninfo~S10/"><font>View
- Your Record</font></a></li></ul></div>
- 
- <div><div id="content">
-
-
-<h2>Periodicals Only</h2>
-<br>
-<FORM METHOD=POST ACTION=/search/a?a>
-<SELECT NAME=searchscope>
-<OPTION VALUE=10>Periodicals Only
-</SELECT>
-<SELECT NAME=searchtype>
-<OPTION VALUE=s>TITLE 
-<OPTION VALUE=a>NAME
-<OPTION VALUE=d>SUBJECT 
-<OPTION VALUE=Y SELECTED>WORD
-</SELECT>
-
-<INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="75" VALUE="">
-<INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D">
-<INPUT TYPE="SUBMIT" VALUE="GO!">
-</FORM>
-
-<h3>Search Options</h3>
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0>
-<TR>
-<TD><a href="/search~S10/s"><font face="arial">Title Search</a></TD>
-<TD><a href="/search~S10/i"><font face="arial">ISSN Search</a></TD>
-
-<TR><TD><a href="/search~S10/a"><font face="arial">Name Search</a></TD>
-<TD><a href="/search~S10/d"><font face="arial">Subject Search</a></TD>
-
-<TR><TD><a href="/search~S10/q"><font face="arial">Name + Title Search</a></TD>
-
-<TD><a href="/search~S10/X"><font face="arial">Advanced Search</a></TD>
-</TABLE>
-<br />
-<br />
-<p>
-<b>ON-SITE USERS</b> may access some full-text journal articles via the <b>WilsonWeb</b> <i>Art Full Text</i> database (selected runs, 1997-present) or <B>JSTOR</B> (archival sets, most complete to within 3-5 years of present).
-<br />
-<br />Use the menu below to link to specific titles on either the <B>WilsonWeb</B> or <B>JSTOR</B> web sites.
-</p>
-
-<FORM METHOD=POST ACTION="" style="margin-top: 20px; font-size: 12pt; margin-left: 15px; border-color: #eeeeee">
-
-<input type=radio name="vendor" value="ww" onclick="changeList(this)" checked>WilsonWeb
-<input type=radio name="vendor" value="jstor" onclick="changeList(this)">JSTOR<br \>
-
-
-<select name="pizzasize" style="width: 350px; margin-top: 10px; font-family: arial, sans-serif; background-color: #f1f4f6; color: #4E5C65">
-<option value="">
-</select>
-
-<INPUT TYPE="button" VALUE="GO!" onClick="goTo(this.form)">
-
-</FORM>
-
-<div><div id="footer">
-	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
-	Telephone 314.655.5252
-	
-	<div id="copyright">
-		&copy; 2009 Saint Louis Art Museum
+<div class="pageContentInner mainSearch">
+<div class="leftColumn">
+<ul>
+	<li><a href="http://www.slam.org">Museum Home</a></li>
+	<li><a href="/">SLRLC Home</a><li>
+	<ul>
+		<li><a href="/search~S3">All Collections</a></li>
+		<li><a href="/search~S6">Books & Periodicals</a></li>
+		<li><a href="/search~S10">Periodicals Only</a></li>
+		<li><a href="/search~S7">Auction Catalogues</a></li>
+		<li><a href="/search~S8">Archives</a></li>
+	</ul>
+	</li>
+	<li><a href="http://www.worldcat.org" target="_blank">WorldCat</a></li>
+	<li><a href="http://www.archive.org" target="_blank">Internet Archive</a></li>
+	<li><a href="http://books.google.com" target="_blank">Google Books</a></li>
+	<li><a href="/patroninfo">My Library</a></li>
+</ul>
 </div>
-</div></div>
+<div class="rightColumn">
+<h1 class="accessibleAddInfo">Search</h1>
 
+<div id="accessibleForm" class="form1Part">
+<div class="browseSearchtool">
+<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
+<input type="hidden" id="iiiFormHandle_1">
 
-</div> </div> </div>
+<!-- Optional legend:
+<fieldset>
+<legend>Type the search term you want to find.</legend>-->
+<div class="formEntryArea">
+<div class="innerForm">
+<h2>Periodicals</h2>
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="X" selected="selected">Word</option>
+<option value="a">Author</option>
+<option value="t">Title</option>
+<option value="d">Subject</option>
+<option value="s">Journal Title</option>
+<option value="c">Call Number</option>
+<option value="i">ISBN/ISSN</option>
+<option value="p">Instructor</option>
+</select>
+<!--{nosort}-->
+<label for="searcharg" class="accessibleAddInfo">Search term</label>
+<input maxlength="75" name="searcharg" id="searchInput" size="35" >
+<input type="hidden" name="searchscope" value="10">
+<span class="nowrap formButtonArea">
 
- </body> </HTML>
+  <!--{submit}-->
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+
+</div>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
+</form>
+</div><!-- browseSearchtool -->
+</div><!-- form1Part -->
+<div class="bottomContent">
+<div id="scopeBoxes">
+<a class="scopeBox" id="scopeBox1" href="/search~S3"><p>ALL COLLECTIONS</p></a>
+<a class="scopeBox" id="scopeBox2" href="/search~S6"><p>BOOKS AND PERIODICALS</p></a>
+<a class="scopeBox" id="scopeBox3" href="/search~S8"><p>ARCHIVES</p></a>
+<a class="scopeBox" id="scopeBox4" href="/search~S7"><p>AUCTION CATALOGUES</p></a>
+</div><!--scopeBoxes-->
+<div class="contactInfo">
+<h3>RICHARDSON MEMORIAL LIBRARY</h3>
+Public hours:<br />
+Tuesday through Friday from 10:00am to 5:00pm.<br />
+<br />
+Contact:<br />
+314.655.5252<br />
+<a href="mailto:library@slam.org">library@slam.org</a><br />
+<br />
+<a href="http://www.slam.org/Education/research.php">Ask a Librarian</a> <br />
+<a href="http://www.slrlc.org/screens/STLartists2.html">St. Louis Artist Files</a><br />
+</div>
+	
+</div><!--bottomContent-->
+
+</div><!--rightColumn-->
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
+</body>
+</html>

@@ -1,90 +1,82 @@
-<html>
-<head><title>
-SLRLC Subject Search                  
-</title>
-
-</head>
-<body bgcolor="#FFFFFF" alink="#000099" vlink="#0033cc">
-<DIV ALIGN="center">
-
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=90%>
-<TR>
-<P>
-</TR>
-
-<TR>
-<TD COLSPAN=3 width="600">
-
-<IMG  SRC="/screens/iiilogo.gif" WIDTH=70 HEIGHT=73 ALT="" BORDER="0" 
-ALIGN="left"><IMG SRC="/screens/slrlc.gif" 
-ALT="" 
-BORDER="0">
-<BR>
-<IMG SRC="/screens/grndot.gif" WIDTH=90% HEIGHT=1 ALT="" BORDER="0" 
-ALIGN="left"></TD>
-</TR>
-<TR>
-<TD VALIGN="top" width=25%>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 VALIGN="top" ALIGN="left">
-<TD>
-<font size=+1 color=green face="arial">Catalog Options</font><p>
-<A HREF="/"><font face="arial" color=blue>Home </font>
-</A>
-<BR><BR>
-<A HREF="/screens/libinfo.html"><font face="arial" color=blue>
-Consortium Information</font></A>
-<BR><BR>
-<A HREF="/patroninfo/"><font face="arial" color=blue>
-View Your Record</font></A><BR>
-</TD>
-</TR>
-</TABLE>
-
-</TD><TD VALIGN="top" width="3">
-<IMG SRC="/screens/grndot.gif" WIDTH=1 HEIGHT=400 ALT="LINE" BORDER="0" 
-ALIGN="top"></TD>
-<TD VALIGN="center" ALIGN="center" width="490">
-
-<CENTER>
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-   
-<TD ALIGN="left" VALIGN="top">
-
-Type the <B>SUBJECT</B> you want, then press <b>&lt;Enter&gt;</b>
-or click <b>Submit Search</b>
-<FORM METHOD=GET>
-<INPUT TYPE=TEXT NAME=SEARCH MAXLENGTH="35" SIZE="35" ALIGN=CENTER>
-<br>
-<INPUT TYPE=SUBMIT VALUE="Submit Search">
-</FORM>
-
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" WIDTH=86 HEIGHT=26 
-ALIGN="center" 
-ALT="" BORDER="0" ALT="[START OVER]"></A>
-
-<P>
-The SUBJECT field in the SLRLC catalog uses terms from the Library of Congress
- 
-Subject Headings.&nbsp; If you do not find what you want using a SUBJECT 
-search, 
-click the &quot;search as words&quot; option.&nbsp; Examples of subject 
-headings:<UL>
-<LI>Osage Indians<LI>Landscape Architecture<LI>Lewis and Clark 
-Expedition</UL>
-
-</DIV>
-</TD>
-</TR>
-</TABLE>
-
-
-</TD>
-<TD VALIGN="top"></TD>
-</TR>
-</TABLE>
-<p>
-&nbsp;</DIV>
-</body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
+<head>
+<title>St. Louis Research Libraries Consortium Catalog - Subject Search</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
+
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+</head>
+<body>
+<!--{toplogo}-->
+<div class="pageContentInner">
+   
+<span class="button miscButtons"><img src="/screens/ico_startover.png" alt=""><span class="buttonText"><a href="/search/">New Search</a></span></span>
+
+
+<h1 class="pageHeader">Subject Search</h1>
+
+<div id="accessibleForm" class="form2Part">
+<div class="formLeft">
+<form method="get">
+<fieldset>
+<!-- Optional legend:
+<legend>Type the subject you want to find, then press the Enter key or click Submit.</legend>
+-->
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="SEARCH">Search for:</label>
+</span>
+<select name="searchscope" id="searchscopeindex">
+<option value="2" selected="selected"> Missouri History Museum</option>
+<option value="4"> MHM Condie</option>
+</select>
+</div>
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="sortdropdown">Sort by:</label>
+</span>
+<!--{indexsort}-->
+</div>
+<div class="formEntryArea formScopeSearch">
+<span class="formLabel">
+<label for="searchscope">Search in the:</label>
+</span>
+<!--{scope}-->
+</div>
+
+<div class="formButtonArea">
+<!--{submit}-->
+</div>
+</fieldset>
+</form>
+</div><!--formLeft -->
+
+<div class="formRight">
+<p>Type as much or as little of the subject as you want. For example:</p>
+<ul>
+<li>Osage Indians</li>
+<li>Landscape Architecture</li>
+<li>Lewis and Clark Expedition</li>
+</ul>
+</div><!--formRight -->
+
+</div><!--form2Part -->
+</div><!-- pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].SEARCH.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
 </html>

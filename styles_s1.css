@@ -1,0 +1,394 @@
+a:visited {
+    color: #014184;
+}
+
+body {
+    background-image: url("/screens/gardens_background.jpg");
+    background-position: center top;
+    background-repeat: repeat-x;
+    background: #5d793c url("/screens/gardens_background.jpg") center top repeat-x;
+    font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+}
+    
+body div {
+    padding:0;
+}
+
+#accessibleForm {
+    background: #DFE6D2;
+}
+
+td, #bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formLinks a:visited, .recordPager a:link, .recordPager a:visited, .actionButtonArea a:link, .actionButtonArea a:visited, .bibPager a:visited, .bibPager a:link {
+    font-family:'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+}
+
+.bibDisplayContentMain, .resourceDisplayContentMain {
+    width:90%;   
+}
+.bibDisplayContentMain strong, .resourceDisplayContentMain strong{
+    color:#1D3B04;   
+}
+.bibDisplayContentMain table, .bibDisplayUrls table, table.reserveBibs, .resourceDisplayContentMain table, .bibDisplayReviews, .briefcitItems th, .briefcitCell {
+    font-size:1em;
+}
+
+.bibInfoLabel, .bibInfoData {padding-top:.5em;}
+
+.bibItems table, .bibItems th, .bibItems tr, .bibItems td {
+    border: 2px #DCE2D4 ridge;
+    color:#1D3B04;
+}
+
+.bibItems .bibItemsHeader th {
+    padding: 5px 8px;
+    background-color:#C0CAB2;
+    text-align: center;
+    
+}
+
+.bibItems td {
+    background-color:#E9ECE3;
+}
+
+.bibItemsEntry {
+    text-align:left;
+}
+
+
+#bookImage {
+    position:absolute;
+    right:85px;
+    top:12px;
+}
+
+.briefcitActions {
+    display:none;
+}
+
+.briefcitCell {
+    padding: .5em 0;
+}
+
+.briefcitDetail, .briefcitAuthDetail {
+    width:80%;
+    padding: 0 0 0 2em;
+}
+
+
+.briefcitDetailMain {
+    margin-bottom:1em;
+}
+
+.briefcitItems {
+    border:none;
+    width:100%;
+}
+
+.briefcitItemsHeader {
+    display:none;
+}
+
+.briefcitItemsMain {
+    width:100%;
+    margin-bottom:1em;
+}
+
+
+.briefcitJacket, .bibDisplayJacket {
+    display:none;
+}
+
+h2.briefcitTitle {
+    font-size:1.1em;
+}
+
+.briefcitYear {
+    margin-top:4.5em;
+    text-align:center;
+    font-weight:bold;
+}
+
+.briefcitMedia, .bibMedia{
+    display:none;
+}
+
+.browseEntry a {
+    font-size:1.1em; 
+}
+
+.browseHeaderMedia {
+    color: #E9ECE3;
+}
+
+.browseSubEntryMedia {
+    visibility:hidden;
+}
+
+.browseHeaderData, .browseHeaderEntries, .browseHeaderMark, .browseHeaderNum, .browseHeaderYear, .browseHeaderMedia {
+    background-color: #E9ECE3;
+}
+
+.browseSuperEntryTitle {
+    margin:0;
+}
+
+.buttonText {
+    font-size: .95em;
+}
+
+.content {
+    width:90%;
+    min-width:790px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:37px;
+    position:relative;
+    padding:0;
+    min-height:500px;
+    padding-bottom:15px;
+}
+
+.form1Part {
+    margin:0;
+}
+
+.form2Part, .form1Part, .mylistsSavePage form, .form3PartBelow {
+    background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF;
+}
+
+.form3Part, .form2Part, .form1Part, .mylistsSavePage form {
+    float:none;
+    width: 635px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#footer {
+    height:210px;
+    background-color:#1D3B04;
+    width:85%;
+    margin: 0 auto 40px;
+}
+
+#footer a {
+    text-decoration:none;
+    color: #D1DDBC;
+}
+
+#footer a:hover, #footer a:active {
+    text-decoration:underline;
+}
+
+#footerColumns {
+    margin-left:auto;
+    margin-right:auto;
+    width:57em;
+}
+
+.fullRecord {
+    margin-top:1em;
+}
+#innreach {display:none;}
+.linkList li {
+    font-size:1.2em;
+    list-style-type:none;
+    margin:1em 0 0 2em;
+}
+
+.miscButtons {
+    text-align:left;
+    margin-top:10px
+}
+
+.navigationRow select, .navigationrow option, .bibSearchHistory, .resourceHistory {
+    position:inherit;
+    right:0;
+    top:0;
+}
+
+.pageFooterAddress{
+    float:left;
+    padding: 9px 16px;
+    color:#D1DDBC;
+}
+
+.pageFooterAddress h4{
+    margin-top: 0;
+    display: inline-block;
+}
+
+.pageFooterAddress img{
+    margin-right: 8px;
+}
+
+.pageFooterAddress p{
+    margin:0;
+}
+
+.pageFooterColumn {
+    border-right: 1px solid #767D64;
+    float:left;
+    height:170px;
+    padding: 0 16px;
+    width: 130px;
+    color:#D1DDBC;
+}
+
+.pageFooterColumn li {
+    list-style-type:none;
+}
+
+.pageFooterColumn p {
+    color:#FFFFFF;
+    border-bottom: 1px solid #767D64;
+    margin-bottom:7px;
+    padding-bottom:7px;
+}
+
+.pageFooterColumn ul {
+    padding-left:0;
+    margin-top:0;
+}
+
+.patFloat {
+    height: auto;
+}
+
+#searchscope, #scopeMenu, #locationMenu {display:none;}
+
+#shadowBackground {
+    background-image: url("/screens/shadowBackground.gif");
+    background-repeat: repeat-x;
+    width:100%;
+    height: 10px;
+}
+
+#tabs .browseSearchtool {
+    background:none;
+    border:none;
+}
+
+.topLogo h1 {
+    font-size: 23px;
+    margin: 7px 86px;
+    color: #416910;
+    
+}
+
+.topLogoSmall img {
+    margin-left:10px;
+}
+
+#topNavigation {
+    background-color:#C9D7B2;
+    padding: .4em 0 .4em 84px;
+    margin:1.2em 0 .8em;
+    color: #285407;
+    font-size:1.1em;
+}
+
+#topNavigation a {
+    text-decoration:none;
+    color: #285407;
+}
+
+#topNavigation a:hover,  #topNavigation a:active {
+    text-decoration:underline;
+}
+
+#topNavigation ul {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+#topNavigation li {
+    display:inline;
+    padding: 0 6.5% 0 0;
+}
+
+#topNavigation #lastItem {
+    border:none;
+}
+
+/* Tab styles */
+
+.innerTab {
+    width:36em;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#tabs {
+	margin: 30px 0;
+        width:700px;
+        margin-left:auto;
+        margin-right:auto;
+}
+
+#tabs a {
+        color: #285407;
+}
+
+#tabList {
+	float: left;
+	background: #fff;
+	width: 500px;
+	padding: 0;
+        margin: 0;
+}
+#tabList li {
+	margin-left: 8px;
+	list-style: none;
+}
+#tabList li:hover {
+    cursor:pointer;
+}
+#tabList li:first-child {
+	margin-left: 0;
+	background-color: #DFE6D4
+}
+* html #tabList li {
+	display: inline;
+}
+#tabList li, #tabList li a {
+	float: left;
+}
+#tabList li.active {
+	background: #DFE6D2;
+}
+#tabList li {
+	background: #F1F4EB;
+}
+#tabList li.active a {
+	color: #333333;
+}
+#tabs .tabContent {
+	background: url("tile_vgradient_green.jpg") repeat-x scroll left top #FFFFFF;
+	clear: both;
+	padding: 15px;
+	min-height: 100px;
+}
+#tabs div h3 {
+	margin-bottom: 12px;
+}
+#tabs div p {
+	line-height: 150%;
+}
+#tabList li a {
+	text-decoration: none;
+	padding: 8px;
+	color: #000;
+	font-weight: bold;
+}
+.textBox {
+    margin: 0 60px;
+}
+.thumbs {
+	float:left;
+	border:#000 solid 1px;
+	margin-bottom:20px;
+	margin-right:20px;
+}

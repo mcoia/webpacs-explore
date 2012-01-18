@@ -1,103 +1,132 @@
- <HTML> <HEAD id="htmlHead"> <title>Richardson Library: All Collections</title>
-
-<SCRIPT LANGUAGE="JavaScript">
-<!--
-
-function addInstructorName() {
-if (document.forms[0].searchtype.options[4].selected == true)
-{ 
-var fillIn = document.forms[0].searcharg;
-fillIn.value = "Murawski";
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 June 2010 -->
+<head>
+<title>Richardson Library: All Collections</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<script type="text/javascript">/* <![CDATA[ */
+function iiiSearchValidate() {
+	try{
+	  if (document.getElementById('search').searcharg.value==null||document.getElementById('search').searcharg.value=="") {
+		return false;
+		}
+	}
+	catch(err) {
+	}
+  return true;
 }
-else
+
+function iiiDoSubmit_1()
 {
-var fillIn = document.forms[0].searcharg;
-fillIn.value = "";
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+if(iiiSearchValidate()){
+obj.submit();
 }
 }
+/* ]]> */
+</script>
+</head>
+<body>
+<!--{toplogo}-->
 
-//-->
-</SCRIPT>
-
-</HEAD>
- <body style="background-color: #DDE4E9">
- 
- <div id="container">
- 
- <div>
- <div id="top"> <a href="http://stlouis.art.museum"><img src="/screens/slamhead.gif" width="501" height="27" border="0" alt="Saint Louis Art Museum"></a>
- </div></div>
- 
- <div ID="navigation">
- <ul>
- <li> <a href="http://www.slam.org"><font>Museum Home</font></a></li>
- <li> <a href="http://www.slrlc.org"><font>SLRLC Home</font></a></li>
- <li> <a href="http://www.slam.org/RichardsonLibrary/" id="currentPage"><font>Richardson Library</font></a>
- <ul>
- <li><a href="/search~S3/" id="currentsubPage"><font>All Collections</font></a></li>
- <li><a href="/search~S6/"><font>Books & Periodicals</font></a></li>
- <li><a href="/search~S10/"><font>Periodicals Only</font></a></li>
- <li><a href="/search~S7/"><font>Auction Catalogs</font></a></li>
- <li><a href="/search~S8/"><font>Archives</font></a></li>
- </ul>
- </li>
- <li><a
- href="/patroninfo~S3/"><font>View
- Your Record</font></a></li></ul></div>
- 
- <div><div id="content">
-
-
-<h2>Richardson Library</h2>
- <h4>All Collections, including Auction Catalogs, Slides & Archives </h4>
-<br />
- <FORM METHOD=GET ACTION=/search/a?a> <SELECT
- NAME=searchscope> <OPTION VALUE=3>Saint Louis Art Museum</SELECT>
- <SELECT NAME=searchtype onchange="addInstructorName()">
- <OPTION VALUE=t>TITLE
- <OPTION VALUE=a>AUTHOR
- <OPTION VALUE=d>SUBJECT
- <OPTION VALUE=Y SELECTED>WORD
- <OPTION VALUE=p>INSTRUCTOR
- </SELECT>
-
- <INPUT TYPE="TEXT" NAME="searcharg" SIZE="20" MAXLENGTH="75" VALUE="">
- </SELECT> <INPUT TYPE="HIDDEN" NAME="SORT" VALUE="D"> <INPUT
- TYPE="SUBMIT" VALUE="GO!"> </FORM>
- 
- <h3>Search Options</h3>
-
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0>
-<TR>
-<TD><a href="/search~S3/a">Author Search</a></TD>
-<TD><a href="/search~S3/i">Number Search</a></TD>
-</TR>
-<TR><TD><a href="/search~S3/t">Title Search</a></TD>
-<TD><a href="/search~S3/c">Call Number Search</a></TD>
-</TR>
-<TR><TD><a href="/search~S3/q">Author + Title Search</a></TD>
-<TD><a href="/search~S3/d">Subject Search</a></TD>
-</TR>
-
-<TR><TD><a href="/search~S3/s">Journal Title Search</a></TD>
-
-<TD><a href="/search~S3/X">Advanced Search</a></TD>
-</TR>
-
-
-</TABLE>
-
-<div><div id="footer">
-	One Fine Arts Drive, Forest Park, St. Louis, MO 63110-1380<br>
-	Telephone 314.655.5252<br>
-	
-	<div id="copyright">
-		&copy; 2009 Saint Louis Art Museum
+<div class="pageContentInner mainSearch">
+<div class="leftColumn">
+<ul>
+	<li><a href="http://www.slam.org">Museum Home</a></li>
+	<li><a href="/">SLRLC Home</a><li>
+	<ul>
+		<li><a href="/search~S3">All Collections</a></li>
+		<li><a href="/search~S6">Books & Periodicals</a></li>
+		<li><a href="/search~S10">Periodicals Only</a></li>
+		<li><a href="/search~S7">Auction Catalogues</a></li>
+		<li><a href="/search~S8">Archives</a></li>
+	</ul>
+	</li>
+	<li><a href="http://www.worldcat.org" target="_blank">WorldCat</a></li>
+	<li><a href="http://www.archive.org" target="_blank">Internet Archive</a></li>
+	<li><a href="http://books.google.com" target="_blank">Google Books</a></li>
+	<li><a href="/patroninfo">My Library</a></li>
+</ul>
 </div>
-</div></div>
+<div class="rightColumn">
+<h1 class="accessibleAddInfo">Search</h1>
 
+<div id="accessibleForm" class="form1Part">
+<div class="browseSearchtool">
+<form action="/search/" method="get" name="search" id="search" onSubmit="return iiiSearchValidate();">
+<input type="hidden" id="iiiFormHandle_1">
 
-</div> </div> </div>
+<!-- Optional legend:
+<fieldset>
+<legend>Type the search term you want to find.</legend>-->
+<div class="formEntryArea">
+<div class="innerForm">
+<h2>All Collections</h2>
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="X" selected="selected">Word</option>
+<option value="a">Author</option>
+<option value="t">Title</option>
+<option value="d">Subject</option>
+<option value="s">Journal Title</option>
+<option value="c">Call Number</option>
+<option value="i">ISBN/ISSN</option>
+<option value="p">Instructor</option>
+</select>
+<!--{nosort}-->
+<label for="searcharg" class="accessibleAddInfo">Search term</label>
+<input id="searchInput" maxlength="75" name="searcharg" id="searchInput" size="35" >
+<input type="hidden" name="searchscope" value="3">
+<span class="nowrap formButtonArea">
 
- </body> </HTML>
-<!--this is customized <screens/opacmenu_s6.html>-->
+  <!--{submit}-->
+
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
+
+</span>
+
+</div>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
+</form>
+</div><!-- browseSearchtool -->
+</div><!-- form1Part -->
+<div class="bottomContent">
+<div id="scopeBoxes">
+<a class="scopeBox" id="scopeBox1" href="/search~S6"><p>BOOKS AND PERIODICALS</p></a>
+<a class="scopeBox" id="scopeBox2" href="/search~S8"><p>ARCHIVES</p></a>
+<a class="scopeBox" id="scopeBox3" href="/search~S10"><p>PERIODICALS</p></a>
+<a class="scopeBox" id="scopeBox4" href="/search~S7"><p>AUCTION CATALOGUES</p></a>
+</div><!--scopeBoxes-->
+<div class="contactInfo">
+<h3>RICHARDSON MEMORIAL LIBRARY</h3>
+Public hours:<br />
+Tuesday through Friday from 10:00am to 5:00pm.<br />
+<br />
+Contact:<br />
+314.655.5252<br />
+<a href="mailto:library@slam.org">library@slam.org</a><br />
+<br />
+<a href="http://www.slam.org/Education/research.php">Ask a Librarian</a> <br />
+<a href="http://www.slrlc.org/screens/STLartists2.html">St. Louis Artist Files</a><br />
+</div>
+	
+</div><!--bottomContent-->
+
+</div><!--rightColumn-->
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
+</body>
+</html>
