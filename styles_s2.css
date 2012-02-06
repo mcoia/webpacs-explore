@@ -82,6 +82,10 @@ h2, .pageContentInner h2, #rightColumn lh {
 .form2Part, .form1Part, .mylistsSavePage form, .form3Part, .form3PartBelow{
     background: #fcfaf4;
 }
+
+.formScopeSearch {
+    display:none;
+}
 .formsTogether {
     width:inherit;
 }
