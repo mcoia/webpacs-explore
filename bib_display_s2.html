@@ -128,6 +128,12 @@
                 //"Preview at Google Book Search";
                 document.getElementById("googlebooks").innerHTML = googleButton
             }
+            else if (b && (b.preview == "noview")) {
+                //"Preview at Google Book Search";
+                if (b.thumbnail_url != undefined){
+                document.getElementById("googlebooks").innerHTML = bookJacket + "<a href='" + b.preview_url + "'>" + buttonImg + "</a>"
+                }
+            }
             else {
                 //document.getElementById("googlebooks").innerHTML = "None available.";
             }
