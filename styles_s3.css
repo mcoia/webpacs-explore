@@ -11,6 +11,10 @@ body div {
     padding:0px
 }
 
+body > div {
+    background-color:inherit;
+}
+
 h3 {
     font-family:sans-serif;
     font-weight:normal;
@@ -51,6 +55,7 @@ hr {
     font-family: 'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
     font-weight:normal;
 }
+
 
 .clear {height:0px;}
 
@@ -216,10 +221,10 @@ a#scopeBox1:hover p, a#scopeBox2:hover p, a#scopeBox3:hover p, a#scopeBox4:hover
 
 #searchInput {color: #B0B0B0;}
 
-#searchscope, #scopeMenu, #locationMenu {display:none;}
+#searchscope, #scopeMenu, #locationMenu {}
 
 #socialMedia {
-    width:110px;
+    width:130px;
     float:left;
     margin: 26px 0 0 40px;
 }

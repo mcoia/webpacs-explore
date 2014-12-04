@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>jQuery UI Example Page</title>
+		<link type="text/css" href="jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.8.21.custom.min.js"></script>
+
+<script>
+$(function() {
+$("#jstor").autocomplete({
+	source: [
+{ label: 'Acquisitions (Fogg Art Museum) ', value: 'acqufogg' },
+{ label: 'African Arts ', value: 'acqufogg' },
+{ label: 'Afterall: A Journal of Art, Context and Enquiry ', value: 'afterall' },
+{ label: 'The Aldine ', value: 'aldine' },
+{ label: 'American Art ', value: 'americanart' },
+{ label: '. . . Smithsonian Studies in American Art ', value: 'smitstudamerart'},
+{ label: 'American Art Illustrated ', value: 'amerartillu' },
+{ label: 'American Art Journal ', value: 'americanartj' },
+{ label: 'The American Art Review ', value: 'amerartrevi' },
+{ label: 'American Journal of Archaeology ', value: 'amerjarch' },
+{ label: '. . . The American Journal of Archaeology and of the History of the Fine Arts ', value: 'amerjarchhistfin' },
+{ label: 'The American Magazine of Art ', value: 'amermagart' },
+{ label: '. . . Art and Progress ', value: 'artprog' },
+{ label: 'Annual Report of the Trustees of the Metropolitan Museum of Art ', value: 'annreptrusmetmar' },
+{ label: 'Archives of American Art Journal ', value: 'archamerartj' },
+{ label: '. . . Quarterly Bulletin (Archives of American Art) ', value: 'quarbullarchamer' },
+{ label: '. . . Bulletin (Archives of American Art) ', value: 'bullarchamerart' },
+{ label: 'Archives of Asian Art ', value: 'archasiaart' },
+{ label: '. . . Archives of the Chinese Art Society of America ', value: 'archchiartsocam' },
+{ label: 'Ars Orientalis ', value: 'arsorie' },
+{ label: '. . .Ars Islamica ', value: 'arsislamica' },
+{ label: 'The Art Amateur ', value: 'artamateur' },
+{ label: 'Art & Life ', value: 'artandlife' },
+{ label: '. . . The Lotus Magazine Art & Life ', value: 'lotusmagazine' },
+{ label: 'The Art Bulletin ', value: 'artbulletin' },
+{ label: '. . . The Bulletin of the College Art Association of America ', value: 'bullcollartassoa' },
+{ label: '. . . The Bulletin of the College Art Association ', value: 'bullcollartasso' },
+{ label: 'The Art Critic ', value: 'artcritic1893' },
+{ label: 'Art Documentation: Journal of the Art Libraries Society of North America ', value: 'artdocumentation' },
+{ label: '. . . ARLIS/NA Newsletter ', value: 'arlisnanews' },
+{ label: 'Art Education ', value: 'arteducation' },
+{ label: 'Art Institute of Chicago Museum Studies ', value: 'artinstchicmuses' },
+{ label: 'Art Journal ', value: 'artj' },
+{ label: '. . . College Art Journal ', value: 'collegeartj' },
+{ label: '. . . Parnassus ', value: 'parnassus' },
+{ label: 'The Art Journal (1875-1887) ', value: 'artj1875' },
+{ label: 'The Art News ', value: 'artnews1897' },
+{ label: 'The Art News (1923-) ', value: 'artnews1923' },
+{ label: '. . . American Art News ', value: 'amerartnews' },
+{ label: 'The Art Review ', value: 'artreview' },
+{ label: 'The Art Union ', value: 'artunion' },
+{ label: 'The Art World ', value: 'artworld' },
+{ label: 'Artibus Asiae ', value: 'artibusasiae' },
+{ label: 'Artibus Asiae. Supplementum ', value: 'artiasiasupp' },
+{ label: 'Artibus et Historiae ', value: 'artibushistoriae' },
+{ label: 'The Artist: An Illustrated Monthly Record of Arts, Crafts and Industries (American Edition) ', value: 'artiameredit' },
+{ label: 'The Athenian Agora ', value: 'athenianagora' },
+{ label: 'Berliner Museen ', value: 'berlmuse' },
+{ label: '. . . Amtliche Berichte aus den Preuszischen Kunstsammlungen ', value: 'amtlberipreukuns' },
+{ label: '. . . Amtliche Berichte aus den Königlichen Kunstsammlungen ', value: 'amtlberikoenkuns' },
+{ label: 'BOMB ', value: 'bomb bradleyhisbook' },
+{ label: 'Bradley, His Book ', value: 'bradleyhisbook' },
+{ label: 'The British Museum Quarterly ', value: 'britmusequar' },
+{ label: 'Brush and Pencil ', value: 'brushandpencil' },
+{ label: 'Bulletin (St. Louis Art Museum) ', value: 'bullstlouartmus'},
+{ label: '. . . Bulletin of the City Art Museum of St. Louis ', value: 'bullcityartmus'},
+{ label: 'Bulletin of the American Art-Union ', value: 'bullamerartunio' },
+{ label: 'Bulletin of the Art Institute of Chicago (1973-1982) ', value: 'bullartinstchic2' },
+{ label: '. . . Calendar of the Art Institute of Chicago ', value: 'caleartinstchic' },
+{ label: '. . . The Art Institute of Chicago Quarterly ', value: 'artinstchicquar' },
+{ label: '. . . Bulletin of the Art Institute of Chicago (1907-1951) ', value: 'bullartinstchic1' },
+{ label: 'The Bulletin of the Cleveland Museum of Art ', value: 'clevstudhistart' },
+{ label: 'Bulletin of the Fogg Art Museum ', value: 'bullfoggartmuse' },
+{ label: '. . . Notes (Fogg Art Museum) ', value: 'notesfogg' },
+{ label: 'The Bulletin of the Museum of Modern Art ', value: 'musemodeartbull' },
+{ label: 'Bulletin of the New England Art Union ', value: 'bullnewengartun' },
+{ label: 'The Burlington Magazine ', value: 'burlmaga' },
+{ label: '. . . The Burlington Magazine for Connoisseurs ', value: 'burlmagaconn' },
+{ label: 'Circa ', value: 'circa' },
+{ label: 'Cleveland Studies in the History of Art ', value: 'clevstudhistart' },
+{ label: 'The Collector and Art Critic ', value: 'collartcritic' },
+{ label: '. . . The Collector ', value: 'thecollector' },
+{ label: 'The Connoisseur ', value: 'connoisseur' },
+{ label: 'Corinth ', value: 'coriresuexca' },
+{ label: 'Cosmopolitan Art Journal ', value: 'cosmoartjourn' },
+{ label: 'The Crayon ', value: 'crayon' },
+{ label: 'The Decorator and Furnisher ', value: 'decoandfurn' },
+{ label: 'Design Quarterly ', value: 'designquarterly' },
+{ label: '. . . Everyday Art Quarterly ', value: 'everartquar' },
+{ label: 'Dumbarton Oaks Papers ', value: 'dumboakspape' },
+{ label: 'Fine Arts Journal ', value: 'fineartsj' },
+{ label: 'Forschungen und Berichte ', value: 'forsberi' },
+{ label: 'Garden History ', value: 'gardenhistory' },
+{ label: '. . . The Garden History Society Newsletter ', value: 'gardhistsocinews' },
+{ label: '. . . Occasional Paper (Garden History Society) ', value: 'occapapegardhist' },
+{ label: '. . . Quarterly Newsletter (Garden History Society) ', value: 'quarnewsgardhist' },
+{ label: 'Germanic Museum Bulletin ', value: 'germmusebull' },
+{ label: 'Gesta ', value: 'gesta' },
+{ label: 'Getty Research Journal ', value: 'gettyresearchj' },
+{ label: '. . . The J. Paul Getty Museum Journal ', value: 'jpaulgettmusej' },
+{ label: 'Grey Room ', value: 'greyroom' },
+{ label: 'Harvard Art Museum Annual Report ', value: 'harvartmusannrep' },
+{ label: '. . . Annual Report (Harvard Art Museum) ', value: 'annurepoharvuniv' },
+{ label: 'Harvard University Art Museums Bulletin ', value: 'harvunivartmuse' },
+{ label: '. . . Directors Report (Harvard University Art Museums) ', value: 'direrepo' },
+{ label: '. . . Annual Report (Fogg Art Museum) ', value: 'annurepofogg' },
+{ label: 'Hesperia Supplements ', value: 'hespsupp' },
+{ label: 'Hesperia: The Journal of the American School of Classical Studies at Athens ', value: 'hesperia' },
+{ label: 'Huntington Library Quarterly ', value: 'huntlibrquar' },
+{ label: '. . . The Huntington Library Bulletin ', value: 'huntlibrbull' },
+{ label: 'The Illustrated Magazine of Art ', value: 'illumagaart' },
+{ label: 'The Illustrated Wood Worker ', value: 'illuwoodwork' },
+{ label: 'Irish Arts Review (2002-) ', value: 'irisartsrevi2002' },
+{ label: '. . . Irish Arts Review Yearbook ', value: 'irisartsreviyear' },
+{ label: '. . . The GPA Irish Arts Review Yearbook ', value: 'gpairisartsrevi' },
+{ label: '. . . Irish Arts Review (1984-1987) ', value: 'irisartsrevi1984' },
+{ label: 'Jahrbuch der Berliner Museen ', value: 'jahrberlmuse' },
+{ label: '. . . Jahrbuch der Preuszischen Kunstsammlungen ', value: 'jahrpreukuns' },
+{ label: '. . . Jahrbuch der Königlich Preussischen Kunstsammlungen ', value: 'jahrkoenpreukuns' },
+{ label: 'The Journal of Aesthetics and Art Criticism ', value: 'jaestartcrit' },
+{ label: 'The Journal of Decorative and Propaganda Arts ', value: 'jdecoproparts' },
+{ label: 'Journal of Design History ', value: 'jdesignhistory' },
+{ label: 'Journal of the American Institute for Conservation ', value: 'jamerinstcons' },
+{ label: '. . . Bulletin of the American Institute for Conservation of Historic and Artistic Works ', value: 'bullamerinstcons' },
+{ label: '. . . Bulletin of the American Group. International Institute for Conservation of Historic and Artistic Works ', value: 'bullamergrouinte' },
+{ label: 'Journal of the Museum of Fine Arts, Boston ', value: 'jmusfineartsbos' },
+{ label: 'Journal of the Society of Architectural Historians ', value: 'jsociarchhist' },
+{ label: '. . . Journal of the American Society of Architectural Historians ', value: 'jamersociarchhis' },
+{ label: 'The Journal of the Walters Art Museum ', value: 'jwaltartmuseum' },
+{ label: '. . . The Journal of the Walters Art Gallery ', value: 'jwaltartgallery' },
+{ label: 'Journal of the Warburg and Courtauld Institutes ', value: 'jwarbcourinst' },
+{ label: '. . . Journal of the Warburg Institute ', value: 'jwarbinst' },
+{ label: 'The Knight Errant ', value: 'knighterrant' },
+{ label: 'Kunst des Orients ', value: 'kunstdesorients' },
+{ label: 'Leonardo ', value: 'leonardo' },
+{ label: 'Leonardo. Supplemental Issue ', value: 'leonsuppissu' },
+{ label: 'M Bulletin (Museum of Fine Arts, Boston) ', value: 'mbull' },
+{ label: '. . . MFA Bulletin ', value: 'mfabull' },
+{ label: '. . . Boston Museum Bulletin ', value: 'bostmusebull' },
+{ label: '. . . Bulletin of the Museum of Fine Arts ', value: 'bullmusefine' },
+{ label: '. . . Museum of Fine Arts Bulletin ', value: 'musefineartbull' },
+{ label: 'Marburger Jahrbuch für Kunstwissenschaft ', value: 'marbjahrkuns' },
+{ label: 'Master Drawings ', value: 'masterdrawings' },
+{ label: 'Mediterranean Studies ', value: 'mediterraneanstu' },
+{ label: 'Memoirs of the American Academy in Rome ', value: 'memoameracadrome' },
+{ label: 'Memoirs of the American Academy in Rome. Supplementary Volumes ', value: 'memoameracadrom2' },
+{ label: 'Metropolitan Museum Journal ', value: 'metrmusej' },
+{ label: 'The Metropolitan Museum of Art Bulletin ', value: 'metrmuseartbull' },
+{ label: 'Metropolitan Museum Studies ', value: 'metrmusestud' },
+{ label: 'Mitteilungen des Kunsthistorischen Institutes in Florenz ', value: 'mittkunsinstflor' },
+{ label: 'Modern Art ', value: 'modernart' },
+{ label: 'MoMA ', value: 'moma' },
+{ label: '. . . Members Newsletter ', value: 'membnews' },
+{ label: 'The Monthly Illustrator ', value: 'montillu' },
+{ label: '. . . The Quarterly Illustrator ', value: 'quartillus' },
+{ label: 'Muqarnas ', value: 'muqarnas' },
+{ label: 'National Academy Notes including the Complete Catalogue of the Spring Exhibition, National Academy of Design ', value: 'naacnicocasenacd' },
+{ label: '. . . Illustrated Art Notes upon the Annual Exhibition of the National Academy of Design ', value: 'ilarnoupanexnaad' },
+{ label: '. . . American Academy Notes ', value: 'ameracadnote' },
+{ label: 'The New Path ', value: 'newpath' },
+{ label: 'Newsletter (College Art Association of America, Visual Resources Committee) ', value: 'newscaaavrc' },
+{ label: 'CAA Slides & Photographs Newsletter ', value: 'caaslidphotnews' },
+{ label: 'October ', value: 'october' },
+{ label: 'Oxford Art Journal ', value: 'oxfordartj' },
+{ label: 'PAJ: A Journal of Performance and Art ', value: 'pajjperfart' },
+{ label: '. . . Performing Arts Journal ', value: 'performingartsj' },
+{ label: 'Papers of the British School at Rome ', value: 'papbritschrome' },
+{ label: 'Philadelphia Museum of Art Bulletin ', value: 'philmuseartbull' },
+{ label: '. . . The Philadelphia Museum Bulletin ', value: 'philmusebull' },
+{ label: '. . . Bulletin of the Pennsylvania Museum ', value: 'bullpennmuse' },
+{ label: 'Recent Acquisitions (Metropolitan Museum of Art) ', value: 'receacqumetrmuse' },
+{ label: '. . . Notable Acquisitions (Metropolitan Museum of Art) ', value: 'notaacqumetrmuse' },
+{ label: 'Record of the Art Museum, Princeton University ', value: 'recoartmuseprinu' },
+{ label: '. . . Record of the Museum of Historic Art, Princeton University ', value: 'recomusehistartp' },
+{ label: 'RES: Anthropology and Aesthetics ', value: 'resanthroaesth' },
+{ label: 'The Rijksmuseum Bulletin ', value: 'rijkbull' },
+{ label: '. . . Bulletin van het Rijksmuseum ', value: 'bullrijk' },
+{ label: 'Simiolus: Netherlands Quarterly for the History of Art ', value: 'siminethquarhist' },
+{ label: 'The Soil ', value: 'thesoil' },
+{ label: 'Studies in Art Education ', value: 'studarteduc' },
+{ label: 'Studies in Conservation ', value: 'studcons' },
+{ label: 'Supplementary Papers of the American School of Classical Studies in Rome ', value: 'supppapeamerscho' },
+{ label: 'Syria ', value: 'syria' },
+{ label: 'I Tatti Studies: Essays in the Renaissance ', value: 'tattstudessarena' },
+{ label: 'Transactions of the American Art-Union ', value: 'tranamerartunio' },
+{ label: '. . . Transactions of the Apollo Association for the Promotion of the Fine Arts in the United States ', value: 'tranapolassoprom' },
+{ label: 'Visual Arts Research ', value: 'visuartsrese' },
+{ label: '. . . Review of Research in Visual Arts Education ', value: 'reviresevisuarts' },
+{ label: '. . . Review of Research in Visual and Environmental Education ', value: 'reviresevisuenvi' },
+{ label: 'Watson\'s Art Journal ', value: 'watsartjour' },
+{ label: '. . . The American Art Journal ', value: 'amerartj' },
+{ label: 'West 86th: A Journal of Decorative Arts, Design History, and Material Culture ', value: 'west86th' },
+{ label: '. . . Studies in the Decorative Arts ', value: 'studdecoarts' },
+{ label: 'Winterthur Portfolio ', value: 'wintport' },
+{ label: 'Woman\'s Art Journal ', value: 'womansartj' },
+{ label: 'The Workshop ', value: 'theworkshop' },
+{ label: 'Yale University Art Gallery Bulletin ', value: 'yaluniartgalbul' },
+{ label: '. . . Yale Art Gallery Bulletin ', value: 'yaleartgallbull' },
+{ label: '. . . Bulletin of the Associates in Fine Arts at Yale ', value: 'bassofineartsyal' },
+{ label: 'Zeitschrift für Kunstgeschichte ', value: 'zeitkuns' }
+]
+	,focus: function (event, ui) {
+		$(event.target).val(ui.item.label);
+		return false;
+	}
+	,select: function (event, ui) {
+		$(event.target).val(ui.item.label);
+		window.open("http://0-www.jstor.org.www.slrlc.org/action/showPublication?journalCode=" + ui.item.value);
+		return false;
+	}
+});
+});
+</script>
+
+<script>
+$(function() {
+$("#fulltext").autocomplete({
+	source: [
+{ label: 'African Archaeological Review ', value: 'N6B' },
+{ label: 'African Arts ', value: 'AFA' },
+{ label: 'Afterimage ', value: 'ATF' },
+{ label: 'American Artist ', value: 'ARS' },
+{ label: 'American Artist: Drawing ', value: '2ZP1' },
+{ label: 'American Artist: Watercolor ', value: '9HK' },
+{ label: 'American Craft ', value: 'ACF' },
+{ label: 'American Photo ', value: 'AHT' },
+{ label: 'American Scholar ', value: 'AMS' },
+{ label: 'American Visions ', value: 'AMV' },
+{ label: 'Animation ', value: 'U58' },
+{ label: 'Antiquity ', value: 'ANT' },
+{ label: 'Aperture ', value: 'APE' },
+{ label: 'Applied Arts ', value: '10VQ' },
+{ label: 'Architect (Washington, D.C.) ', value: 'D2IP' },
+{ label: 'Architectural Design ', value: '10X5' },
+{ label: 'Architectural Digest ', value: 'ARD' },
+{ label: 'Architectural Review ', value: 'AEV' },
+{ label: 'Archivo Espanol de Arte ', value: 'K79' },
+{ label: 'Ars ', value: '2ZWP' },
+{ label: 'Ars Orientalis ', value: '2ZGG' },
+{ label: 'Art & Antiques ', value: 'TFM' },
+{ label: 'The Art Bulletin ', value: 'ARB' },
+{ label: 'Art Bulletin of Nationalmuseum Stockholm ', value: '2ZGI' },
+{ label: 'Art Business News ', value: '6CS' },
+{ label: 'Art & Christianity ', value: '2ZOZ' },
+{ label: 'Art & Christianity Enquiry Bulletin ', value: '5F1R' },
+{ label: 'Art Documentation: Bulletin of the Art Libraries Society of North America ', value: 'R8J' },
+{ label: 'Art Education ', value: 'ARE' },
+{ label: 'Art Issues ', value: '5F29' },
+{ label: 'Art Journal ', value: 'ARJ' },
+{ label: 'Art Libraries Journal ', value: 'ROI' },
+{ label: 'Art Monthly ', value: 'VJ9' },
+{ label: 'Art New England ', value: '2ZGS' },
+{ label: 'Art Newspaper ', value: '2ZGT' },
+{ label: 'Art Nexus ', value: '2ZHT' },
+{ label: 'Art Papers ', value: '5F1U' },
+{ label: 'Art Papers Magazine ', value: '2ZI0' },
+{ label: 'Art, Design & Communication in Higher Education ', value: 'L2L' },
+{ label: 'Art Press ', value: '13DB' },
+{ label: 'Art/Text ', value: '5F1V' },
+{ label: 'Arte y Parte ', value: '2ZHW' },
+{ label: 'Artext ', value: '7T6' },
+{ label: 'Artichoke ', value: '2ZHY' },
+{ label: 'Artonview ', value: '2ZI1' },
+{ label: 'Arts & Activities ', value: 'ANA' },
+{ label: 'Arts & the Islamic World ', value: '5F2A' },
+{ label: 'Arts d\'Afrique Noire ', value: '44V9' },
+{ label: 'ArtUS ', value: '7V0' },
+{ label: 'Artweek ', value: '5DA' },
+{ label: 'Asian Perspectives: Journal of Archeology for Asia & the Pacific ', value: '53G' },
+{ label: 'Assemblage ', value: 'ABG' },
+{ label: 'Aurora: The Journal of the History of Art ', value: '2ZI5' },
+{ label: 'Baumeister ', value: 'BG4' },
+{ label: 'Beaux Arts Magazine ', value: 'C5W' },
+{ label: 'BlackFlash Magazine ', value: '12CM' },
+{ label: 'Border Crossings ', value: 'xxx' },
+{ label: 'Boletin Museo Chileno de Arte Precolombino ', value: '2YBF' },
+{ label: 'Bomb ', value: 'QTH' },
+{ label: 'Bulletin of the American Schools of Oriental Research ', value: '2T9' },
+{ label: 'CAA Reviews ', value: 'AXYX' },
+{ label: 'Cahiers Metiers d\'Art / Craft Journal ', value: 'BE0O' },
+{ label: 'Ceramic Review ', value: '2ZIK' },
+{ label: 'Ceramica ', value: '1CJY' },
+{ label: 'Ceramics Monthly ', value: 'CEM' },
+{ label: 'Ceramics Technical ', value: '9OL' },
+{ label: 'Ceramics: Art & Perception ', value: '9OH' },
+{ label: 'Chicago Art Journal ', value: '8Z3E' },
+{ label: 'Cimaise ', value: '2ZIL' },
+{ label: 'Classical Journal ', value: '5W1' },
+{ label: 'Conservation Science in Cultural Heritage / Quaderni di Scienza della Conservazione ', value: 'B04Z' },
+{ label: 'Contemporary Aesthetics ', value: '1G6I' },
+{ label: 'Contract ', value: 'J02' },
+{ label: 'Craft & Design Enquiry ', value: 'D9MM' },
+{ label: 'Craft Plus Design Enquiry ', value: 'BKNZ' },
+{ label: 'Crafts ', value: '2ZIP' },
+{ label: 'Creative Review ', value: 'DYQ' },
+{ label: 'Crossings: Electronic Journal of Art & Technology ', value: '1CLC' },
+{ label: 'Curator ', value: 'S3P' },
+{ label: 'Design Issues ', value: 'DIU' },
+{ label: 'Drawing ', value: '5F2I' },
+{ label: 'E-flux ', value: 'BAVL' },
+{ label: 'Electronic Melbourne Art Journal ', value: 'D9O6' },
+{ label: 'Entertainment Design ', value: '5G2' },
+{ label: 'Estudios Atacameños ', value: '1CNZ' },
+{ label: 'Etc. ', value: '52QD' },
+{ label: 'European Photography ', value: '2ZIX' },
+{ label: 'Eye ', value: '2ZIY' },
+{ label: 'Fashion Theory ', value: '68B' },
+{ label: 'Fiberarts ', value: 'YNA' },
+{ label: 'Flash Art (International Edition) ', value: '2ZIZ' },
+{ label: 'Future Anterior ', value: '597T' },
+{ label: 'Gazette des Beaux Arts ', value: '3AGM' },
+{ label: 'Goya ', value: '2ZJ7' },
+{ label: 'Hesperia ', value: 'VHQ' },
+{ label: 'Hispanic Review ', value: 'HIR' },
+{ label: 'Home Cultures ', value: '68J' },
+{ label: 'Humanities ', value: 'HTS' },
+{ label: 'Hypatia ', value: 'HYP' },
+{ label: 'Inland Architect ', value: '2ZJC' },
+{ label: 'Interior Design (New York, N.Y.) ', value: 'IDS' },
+{ label: 'International Journal of Arts Management ', value: '4W6K' },
+{ label: 'International Journal of Design ', value: '782J' },
+{ label: 'International Journal of Education through Art ', value: '16WE' },
+{ label: 'International Journal of Historical Archaeology ', value: 'N6G' },
+{ label: 'International Journal of the Arts in Society ', value: 'B4ZC' },
+{ label: 'International Journal of the Image ', value: 'BE6P' },
+{ label: 'International Journal of the Inclusive Museum ', value: 'B4ZB' },
+{ label: 'International Review of African American Art ', value: 'IVA' },
+{ label: 'Irish Arts Review (Dublin, Ireland) ', value: '2ZJG' },
+{ label: 'Issues in Architecture, Art and Design ', value: '5F2O' },
+{ label: 'Journal of Aesthetic Education ', value: '5F6' },
+{ label: 'Journal of American Folklore ', value: 'JAF' },
+{ label: 'Journal of Art Historiography ', value: 'BNA5' },
+{ label: 'Journal of Artists Books ', value: 'SZE' },
+{ label: 'Journal of Canadian Art History ', value: '2ZJP' },
+{ label: 'Journal of Glass Studies ', value: '28L' },
+{ label: 'Journal of Historians of Netherlandish Art ', value: 'AYOL' },
+{ label: 'Journal of Interior Design ', value: '2ZJS' },
+{ label: 'Journal of Maritime Archaeology ', value: '46EM' },
+{ label: 'Journal of Modern Craft ', value: '451O' },
+{ label: 'Journal of Stained Glass ', value: '2ZJU' },
+{ label: 'Journal of the Fantastic in the Arts ', value: 'AWJV' },
+{ label: 'Journal of the Walters Art Museum ', value: '5F21' },
+{ label: 'Journal of Turkish Art Research ', value: 'BGFU' },
+{ label: 'Journal of Visual Art Practice ', value: 'L2G' },
+{ label: 'Jump Cut ', value: '1G6C' },
+{ label: 'Konsthistorisk Tidskrift ', value: 'BA0' },
+{ label: 'Koreana ', value: '02E' },
+{ label: 'Leonardo ', value: 'LEO' },
+{ label: 'Letter Arts Review ', value: '2PK' },
+{ label: 'Linea: The Journal of the Art Students League ', value: '8B9B' },
+{ label: 'Live Design ', value: '1UWV' },
+{ label: 'MAKE Magazine ', value: 'TGV' },
+{ label: 'Marg ', value: '10ND' },
+{ label: 'Material Culture ', value: '2ZK2' },
+{ label: 'Material Religion ', value: '68Q' },
+{ label: 'Metalsmith ', value: 'Z2V' },
+{ label: 'Metropolis: Architecture Design ', value: '3088' },
+{ label: 'Modern Painters ', value: 'MOP' },
+{ label: 'Music in Art ', value: '4ZEZ' },
+{ label: 'National Grid ', value: 'BA4G' },
+{ label: 'Native Peoples ', value: 'GUT' },
+{ label: 'Near Eastern Archaeology ', value: '3GS' },
+{ label: 'New Art Examiner ', value: '10UM' },
+{ label: 'New Ceramics ', value: 'BDWH' },
+{ label: 'The New Criterion ', value: 'NCI' },
+{ label: 'Nineteenth Century Art Worldwide ', value: '1CYL' },
+{ label: 'Nordic Journal of Aesthetics ', value: 'BO2A' },
+{ label: 'October (Cambridge, Mass.) ', value: 'OCT' },
+{ label: 'Ornament ', value: '5PU' },
+{ label: 'Parachute ', value: '2ZNW' },
+{ label: 'Photography & Culture ', value: '451Q' },
+{ label: 'Photoworks ', value: '8B9D' },
+{ label: 'Piecework ', value: '32S' },
+{ label: 'Pioneer America Society Transactions ', value: '2ZNZ' },
+{ label: 'Places ', value: 'TFB' },
+{ label: 'Popular Photography ', value: '6MMD' },
+{ label: 'Pottery Making Illustrated ', value: '6VR' },
+{ label: 'Print ', value: 'Z3M' },
+{ label: 'Public Art Review ', value: '2ZO4' },
+{ label: 'Record of the Art Museum (Princeton University) ', value: '1479' },
+{ label: 'Revue du Louvre ', value: 'D3LH' },
+{ label: 'Road Notes ', value: 'BKO1' },
+{ label: 'Rock Art Research ', value: '2ZOC' },
+{ label: 'RPS Journal ', value: '2ZOE' },
+{ label: 'Scandinavian Journal of Design History ', value: '2ZOG' },
+{ label: 'Sculpture ', value: '2ZOH' },
+{ label: 'Sculpture Journal ', value: '3DEO' },
+{ label: 'Sculpture Review ', value: '2D0' },
+{ label: 'Selvedge ', value: '6DTN' },
+{ label: 'Society for Commercial Archeology Journal ', value: 'B8ED' },
+{ label: 'South Asian Studies ', value: '24P1' },
+{ label: 'Southeastern Archaeology ', value: '34E' },
+{ label: 'Southeastern College Art Conference Review ', value: '2ZOJ' },
+{ label: 'Southwest Art ', value: '0VI' },
+{ label: 'Stained Glass ', value: '2ZOK' },
+{ label: 'Storia dellArte ', value: '1VPG' },
+{ label: 'Structurist ', value: '16PA' },
+{ label: 'Studies in Art Education ', value: 'SAE' },
+{ label: 'Studio Potter ', value: '10M1' },
+{ label: 'Textile: The Journal of Cloth & Culture ', value: '68H' },
+{ label: 'Time & Mind ', value: '451P' },
+{ label: 'Umbrella ', value: '2ZOR' },
+{ label: 'Umeni ', value: '2ZXB' },
+{ label: 'Uncoverings ', value: '2ZOS' },
+{ label: 'Visible Language ', value: '2FK' },
+{ label: 'Visual Arts Research ', value: 'QQM' },
+{ label: 'Visual Resources Association Bulletin ', value: '1XQ2' },
+{ label: 'X-tra ', value: '8W4S' }
+]
+	,focus: function (event, ui) {
+		$(event.target).val(ui.item.label);
+		return false;
+	}
+	,select: function (event, ui) {
+		$(event.target).val(ui.item.label);
+		window.open("http://search.ebscohost.com/login.aspx?direct=true&db=asu&jid=" + ui.item.value + "&site=ehost-live");
+		return false;
+	}
+});
+});
+</script>
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+</script>
+
+	</head>
+	<body>
+
+
+<div class="jtabs" style="width:50%;margin-left:20px;margin-top:20px">
+<font style="font-family: Times New Roman,serif; font-size: 14px;"><strong>ON-SITE USERS</strong> may access some full-text journal articles via EBSCO's <strong>Art Source</strong> database (selected runs, 1997-present) or <STRONG>JSTOR</STRONG> (archival sets, most complete to within 3-5 years of present).</font><br />
+<br />
+<div id="tabs" style="font-size:14px;">
+	<ul>
+		<li><a href="#tabs-1">JSTOR</a></li>
+		<li><a href="#tabs-2">Art Source</a></li>
+
+	</ul>
+	<div id="tabs-1">
+
+<div class="ui-widget">
+<br />
+
+<img src="jstor_logo2.jpg" style="vertical-align:middle;">
+<font style="font-weight:normal;font-size:14px;">Locate a <STRONG>JSTOR</STRONG> title<br />
+Type a word or phrase from the journal's title (hit your space bar to reveal all titles):</font><br />
+<br />
+	<input id="jstor" size="50">
+</div>
+
+	</div>
+	<div id="tabs-2">
+<div class="ui-widget">
+
+<br />
+<img src="logoEhost.gif" style="vertical-align:middle;">
+Locate a title in EBSCO's <STRONG>Art Source</STRONG> database<br />
+<br />
+Type a word or phrase from the journal's title (hit your space bar once to reveal all titles):<br />
+<br />
+
+	<input id="fulltext" size="50">
+</div>
+	</div>
+
+</div>
+
+</div>
+
+
+
+	</body>
+</html>
+
+

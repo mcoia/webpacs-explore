@@ -1,0 +1,27 @@
+<search
+ version="7.1"
+ name="SLAM Library"
+ description="Saint Louis Art Museum Library Catalog" 
+ action="http://www.slrlc.org/search~S6/Y"
+ searchForm="http://www.slrlc.org/search~S6/"
+ method="GET" >
+
+<input name="searchtype" value="Y">
+<input name="searcharg" user="">
+<input name="SORT" value="D">
+<input name="searchscope" value="6">
+
+<interpret
+ resultListStart='class="browseEntry"'
+ resultListEnd='</tr>'
+ resultItemStart='class="browseEntryData"'
+ resultItemEnd='</td>'
+>
+
+<browser
+update="file:///s:/intranet/Library/SLRLC.src"
+updateIcon="file:///s:/intranet/Library/SLRLC.gif"
+updateCheckDays="1"
+>
+
+</search>

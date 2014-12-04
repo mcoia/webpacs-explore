@@ -17,7 +17,8 @@ for (var div = 0; div < divList.length; div++) {
     // Get the class
 	classAttrib = divList[div].getAttribute("class");
 	// Hack for IE
-	if(classAttrib == null) { classAttrib = divList[div].getAttribute("className") }
+	if(classAttrib == null) { classAttrib = 
+divList[div].getAttribute("className") }
 	// Store the div if the class is "gbs"
 	if(classAttrib == "gbs") {
 		gbsList.push(divList[div]);
@@ -34,16 +35,20 @@ for (var bib = 0; bib < gbsList.length; bib++) {
 	}
 }
 // Construct the URL for the remote GBS script
-var api_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + numbers.join(",");
+var api_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + 
+numbers.join(",");
 // Construct an inline javascript invocation of the remote GBS script
-var scriptLine = "%3Cscript src='" + api_url + "' type='text/javascript'%3E%3C/script%3E";
-// Insert the line of script into this page so it returns the _GSBookInfo object
+var scriptLine = "%3Cscript src='" + api_url + "' 
+type='text/javascript'%3E%3C/script%3E";
+// Insert the line of script into this page so it returns the _GSBookInfo 
+object
 document.write(unescape(scriptLine));
 </script> 
 <script type='text/javascript'> 
  
 // Resuming the original script
-gbsPreviewImage = '<img src="/screens/googlebutton.gif" alt="Preview" title="Preview"> ';
+gbsPreviewImage = '<img src="/screens/googlebutton.gif" alt="Preview" 
+title="Preview"> ';
 // Iterate through the "gbs" <div> elements
 for(bib in numbers) {
 	// Look for matching GBS data
@@ -68,14 +73,16 @@ for(bib in numbers) {
 		}
 		// Rewrite the HTML inside the "gbs" <div> elements
 		if(bookInfo.thumbnail_url !== undefined) {
-			gbsList[bib].innerHTML = '<!-- <img src="' + bookInfo.thumbnail_url + '"><br>--><a href="' + linkGBS + '" target="_blank">' + linkImage + '</a>';
+			gbsList[bib].innerHTML = '<!-- <img src="' + bookInfo.thumbnail_url + 
+'"><br>--><a href="' + linkGBS + '" target="_blank">' + linkImage + '</a>';
 		} else {
 		gbsList[bib].innerHTML = '';
 		}
 		//+ '<img src="' + bookInfo.thumbnail_url + '">'
 		// Turn on the display of the GBS link
 		gbsList[bib].style.display = 'inline';
-		//thumbCell = gbsList[bib].parentNode.nextSibling.nextSibling.nextSibling.nextSibling;
+		//thumbCell = 
+gbsList[bib].parentNode.nextSibling.nextSibling.nextSibling.nextSibling;
 		//message += bib + thumbCell.className + " ";
 		//if(thumbCell.innerHTML.indexOf("&nbsp;")) {
 			//alert(thumbCell.innerHTML);
@@ -89,3 +96,26 @@ for(bib in numbers) {
 	//alert(message);
     //alert(window.location.protocol);
 </script> 
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-2470786-1']);
+ _gaq.push(['_setDomainName', 'none']);
+ _gaq.push(['_setAllowLinker', true]);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; 
+s.parentNode.insertBefore(ga, s);
+   })();
+
+</script>
+
+
+
+
