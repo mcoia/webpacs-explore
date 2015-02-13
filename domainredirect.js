@@ -13,8 +13,8 @@ var explore = 'http://explore.searchmobius.org'
 		redirectUrl = explore + notDomain + "&redirected"
 	}
 window.location = redirectUrl;
-	if(href.indexOf("slrlc.org:2082") != -1 ){
-		var oldDomain = "slrlc.org:2082"
+	if(href.indexOf("slrlc.org") != -1 ){
+		var oldDomain = "slrlc.org"
 		window.location = redirectUrl;
 	}else{}
 if (href.indexOf("&redirected") != -1 ) {
