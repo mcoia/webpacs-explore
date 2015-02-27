@@ -40,7 +40,7 @@ if (scope == undefined || scope == 0){
 
 if (href.indexOf("&redirected") != -1 ) {
     
-    var redirectMessage = "<p>You've been redirected from www.slrlc.org. Starting on May 1, 2015, those addresses will no longer work.</p><p>Please update your bookmarks to <a href='" + newURL + "'>" + newURL + "</a>.</p>"
+    var redirectMessage = "<p>You've been redirected from www.slrlc.org. Starting on May 1, 2015, those addresses will no longer work.<br>Please update your bookmarks to <a href='" + newURL + "'>" + newURL + "</a>.</p>"
 
     $(document).ready(function () {
         $('#alertMessage').html(redirectMessage);
