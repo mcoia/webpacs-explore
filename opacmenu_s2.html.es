@@ -37,7 +37,6 @@ obj.submit();
 
 
 <script src="/screens/jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="/screens/domainredirect.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
 	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
@@ -75,7 +74,6 @@ $(document).ready(function () {
 </div>
 </div>
 </div>
-<div id="alertMessage"></div>
 <div class="clear"></div>
 <div class="allContent">
 <div class="innerContentWrapper">

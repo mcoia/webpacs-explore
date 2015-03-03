@@ -73,7 +73,7 @@ ICON_SELECT_ALL=<div onmousedown="this.className='pressedState';" onmouseout="th
 INSERTTAG_INHEAD=<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print"><script type="text/javascript" src="/screens/bibdisplay.js"></script>
 INSERTTAG_HTML=<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en">
 RIGHT_CELL_WIDTH=18|25
-SSLPORT=80:443|2082:444
+#SSLPORT=80:443|2082:444
 CUSTOM_MESSAGES=F
 STARTOVER=/search
 STATGROUP=login
@@ -256,7 +256,7 @@ ICON_BUT_CARDFORM_BOX=<span class="button"><img src="/screens/ico_gear.png" alt=
 ICON_BUT_CARDFORM_LIN=<span class="button"><img src="/screens/ico_gear.png" alt=""><span class="buttonText">Show Cards in Line Format</span></span>
 CHECKIN_BGCOLOR=ARRIVED=#FFFFFF|EXPECTED=#FFFFFF|TO BIND/BOUND=#FFFFFF|LATE=#FFFFFF|OTHER=#FFFFFF
 CHECKIN_FONTCOLOR=ARRIVED=GREEN|EXPECTED=BLACK|TO BIND/BOUND=RED|LATE=BLACK|OTHER=BLACK
-CHECKIN_STATUS=ARRIVED=Here|EXPECTED=Coming soon|TO BIND/BOUND=Being bound|LATE=Late|OUT OF PRINT=Out of print
+CHECKIN_STATUS=ARRIVED=Here|EXPECTED=Coming soon|TO BIND/BOUND=Being bound|LATE=Late|Other=See staff
 DISPLAY_CHECKIN_856=z
 HOLDINGS_REQ=Deliver this article to me
 SORT_ITEMS=true
@@ -580,5 +580,3 @@ PROXYDNS=www.slrlc.org
 
 INNREACH=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X,t=t,a=a,d=d,s=s,c=c,i=i,j=l,o=o)
 INNREACH7=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X,t=t,d=d,s=s,c=c,j=l,o=o)
-ITEMOUT_MSG=Checked Out
-FEEDS_PORT=63200
