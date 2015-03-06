@@ -10,7 +10,7 @@ td { color:#000; background-color:#FFF; background-image:none; font-family:Times
 
 table.browseScreen td { width:18%; }
 
-.bibPager, .bibResourceSidebar, .bibSearch, .briefcitMark, .briefcitRequest, .browseSaveJump, .browseSearchtool, .browseResourceTable, .buttonSpriteDiv, .clear, .navigationRow, .patActionsLinks, .searchNav, #skipNav, .topMyLibrary, .topLinks, .navigationRowRecord, .pageContent div .bibResourceSidebar { display:none; }
+.bibPager, .bibSearch, .briefcitMark, .briefcitRequest, .browseSaveJump, .browseSearchtool, .browseResourceTable, .buttonSpriteDiv, .clear, .navigationRow, .patActionsLinks, .searchNav, #skipNav, .topMyLibrary, .topLinks, .navigationRowRecord, .pageContent { display:none; }
 
 .pageContent .bibDisplayPermLink, .resourceHistory, .recordPager { display:none; }
 
