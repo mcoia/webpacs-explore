@@ -1,7 +1,7 @@
 
 var href = window.location.href
-var edu = ".org:2082"
-var domainLength = href.indexOf(edu) + edu.length
+var org = ".org"
+var domainLength = href.indexOf(org) + org.length
 var notDomain = href.substring(domainLength)
 var searchmobius = 'http://explore.searchmobius.org'
 

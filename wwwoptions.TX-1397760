@@ -428,7 +428,7 @@ IR_PLACEMENT=1
 # Media Management
 ICON_BUT_RET2CRS=<span class="button"><img src="/screens/ico_back.png" alt=""><span class="buttonText">Return to Course</span></span>
 ERESERVE=[0123456789]
-ERESERVE_IP=www.slrlc.org
+ERESERVE_IP=www.explore.searchmobius.org
 # IMAGE_PRINT=yes
 # IMAGE_SAVE=yes
 
@@ -574,7 +574,7 @@ LOCKSCOPE=false
 
 # Web Access Management Options
 
-PROXYDNS=www.slrlc.org
+PROXYDNS=www.explore.searchmobius.org
 
 # INN-Reach
 
