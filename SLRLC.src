@@ -2,8 +2,8 @@
  version="7.1"
  name="SLAM Library"
  description="Saint Louis Art Museum Library Catalog" 
- action="http://www.slrlc.org/search~S6/Y"
- searchForm="http://www.slrlc.org/search~S6/"
+ action="http://www.explore.searchmobius.org/search~S6/Y"
+ searchForm="http://www.explore.searchmobius.org/search~S6/"
  method="GET" >
 
 <input name="searchtype" value="Y">
