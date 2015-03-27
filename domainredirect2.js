@@ -2,6 +2,7 @@ var href = window.location.href //gets url
 var spliturl = href.split(".org"); //splits url into array with beginning and scope ending
 var explore = 'http://explore.searchmobius.org' //new domain name
 var scope = spliturl[1].replace(/\/$/, ""); //gets scope information and removes '/' at the end
+var scopeEnd = spliturl[1].replace(/&redirected/, "")//removes redirected from end of url
 
 if (spliturl[0].indexOf("slrlc") != -1 || scope.indexOf(" ") != -1){ //if href matches unscoped url
   var redirectNoscope = explore + "/search~S0&redirected" //new url with no scope
@@ -15,7 +16,7 @@ if (spliturl[0].indexOf("slrlc") != -1 || scope.indexOf(" ") != -1){ //if href m
 if (scope == undefined || scope == 0){ //scope has something or nothing 
   var newURL = explore //
 }else {
-  var newURL = explore + scope
+  var newURL = explore + scopeEnd
 }
    
 if (href.indexOf("&redirected") != -1 ) {
