@@ -574,7 +574,6 @@ LOCKSCOPE=false
 
 # Web Access Management Options
 
-PROXYDNS=explorewam*.searchmobius.org
 
 # INN-Reach
 
