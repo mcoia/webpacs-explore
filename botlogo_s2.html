@@ -8,54 +8,102 @@
 </div><!-- allContent -->
 <!-- end botlogo.html file -->
 <!-- Google Book Search viewability API script for bib record-->
-
-<script type='text/javascript'>
-
-    var ProcessResults = function(bookInfo) {
-        var buttonImg = "<img src='/screens/googlebutton.gif' alt='Google Preview'>"
-        var textGBS = "";
-        for (OCLC in bookInfo) {
-	    alert("some text")
-            var b = bookInfo[OCLC[0]];
-            var googleButton = "<a href='" + b.preview_url + "' target='blank'>" + buttonImg;
-            //form the text of Google Book contents
-            if (b && (b.preview == "full")) {
-                //textGBS = "Full Text";
-                //"Google Book Search";
-                document.getElementById("googlebooks").innerHTML = googleButton
-            }
-            else if (b && (b.preview == "partial")) {
-                //textGBS = "(Limited preview)"
-                //"Preview at Google Book Search";
-                document.getElementById("googlebooks").innerHTML = googleButton
-            }
-            else {
-                //document.getElementById("googlebooks").innerHTML = "None available.";
-            }
-    }
+<script type='text/javascript'> 
+// Find all the div elements
+var divList = document.getElementsByTagName("div");
+// Make an array to store the ones with the "gbs" class
+gbsList =  new Array();
+for (var div = 0; div < divList.length; div++) {
+    // Get the class
+	classAttrib = divList[div].getAttribute("class");
+	// Hack for IE
+	if(classAttrib == null) { classAttrib = 
+divList[div].getAttribute("className") }
+	// Store the div if the class is "gbs"
+	if(classAttrib == "gbs") {
+		gbsList.push(divList[div]);
+	}
 }
+// Make an array for the numbers in the gbs divs
+var numbers = new Array();
+for (var bib = 0; bib < gbsList.length; bib++) {
+	// Remove leading and trailing newlines from the numbers
+	bookid = gbsList[bib].innerHTML.replace(/^\s+|\s+$/g,"")
+	// Prefix the number with the label that GBS needs and store it
+	if(bookid.length > 0) {
+		numbers[bib] = "OCLC:" + bookid;
+	}
+}
+// Construct the URL for the remote GBS script
+var api_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + 
+numbers.join(",");
+// Construct an inline javascript invocation of the remote GBS script
+var scriptLine = "%3Cscript src='" + api_url + "' 
+type='text/javascript'%3E%3C/script%3E";
+// Insert the line of script into this page so it returns the _GSBookInfo 
+object
+document.write(unescape(scriptLine));
+</script> 
+<script type='text/javascript'> 
+ 
+// Resuming the original script
+gbsPreviewImage = '<img src="/screens/googlebutton.gif" alt="Preview" 
+title="Preview"> ';
+// Iterate through the "gbs" <div> elements
+for(bib in numbers) {
+	// Look for matching GBS data
+	var bookInfo = _GBSBookInfo[numbers[bib]];
+	// If found, process it
+    if(bookInfo){
+		// Set text and link values depending on viewablity
+		if(bookInfo.preview == "full") { 
+			textGBS = ""; //"Google Book Search"; 
+			linkGBS = bookInfo.preview_url;
+			linkImage = gbsPreviewImage;
+		}
+		if(bookInfo.preview == "partial") { 
+			textGBS = "(Limited preview)" //"Preview at Google Book Search"; 
+			linkGBS = bookInfo.preview_url;
+			linkImage = gbsPreviewImage;
+		}
+		if(bookInfo.preview == "noview") { 
+			textGBS = "Information at Google Book Search"; 
+			linkGBS = bookInfo.info_url;
+			linkImage = gbsPreviewImage;
+		}
+		// Rewrite the HTML inside the "gbs" <div> elements
+		if(bookInfo.thumbnail_url !== undefined) {
+			gbsList[bib].innerHTML = '<!-- <img src="' + bookInfo.thumbnail_url + 
+'"><br>--><a href="' + linkGBS + '" target="_blank">' + linkImage + '</a>';
+		} else {
+		gbsList[bib].innerHTML = '';
+		}
+		//+ '<img src="' + bookInfo.thumbnail_url + '">'
+		// Turn on the display of the GBS link
+		gbsList[bib].style.display = 'inline';
+		//thumbCell = 
+gbsList[bib].parentNode.nextSibling.nextSibling.nextSibling.nextSibling;
+		//message += bib + thumbCell.className + " ";
+		//if(thumbCell.innerHTML.indexOf("&nbsp;")) {
+			//alert(thumbCell.innerHTML);
+			//thumbCell.innerHTML = thumbCell.getAttribute("class");
+		    //if(thumbCell !== undefined) { 
+				//thumbCell.innerHTML = '<img src="' + bookInfo.thumbnail_url + '">';
+			//}
+		//}
+	}
+}
+	//alert(message);
+    //alert(window.location.protocol);
+</script> 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62607427-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
-
-
-<script type='text/javascript'>
-
-var OCLC = new Array();
-
-$(".gbs").each(function(index) {
-    OCLC.push($(this).text());
-
-    var cburl = "http://books.google.com/books";
-    // Retrieve the info for these bibkeys
-    var api_url = cburl + "?jscmd=viewapi&bibkeys=OCLC:" + OCLC[index];
-    var s = document.createElement("script");
-    s.setAttribute("type", "text/javascript");
-    //alert("searching for: " + OCLC);
-    s.setAttribute("src", "http://books.google.com/books?jscmd=viewapi&bibkeys=OCLC:" + OCLC[index] + "&callback=ProcessResults");
-    document.documentElement.firstChild.appendChild(s);
-    //alert (api_url);
-
-});     
-
-</script>
-<!--this is customized <screens/botlogo_s2.html>-->
-
