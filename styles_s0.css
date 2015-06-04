@@ -126,8 +126,8 @@ h2, .pageContentInner h2, #rightColumn lh {
 #search .searchBox {margin-top: 10px;}
 #search .tip {margin-top: 12px;}
 #slogan {position:absolute; top:25px; right:0px;}
-#slrlcInfo {border:1px solid #868d96; height:370px; padding: 5px 18px; }
-#slrlcInfo img {float: left; margin-right:5px;}
+#exploreInfo {border:1px solid #868d96; height:319px; padding: 5px 18px; }
+#exploreInfo img {float: left; margin-right:5px;}
 #topContent {
     height: 370px;
 }
@@ -140,7 +140,7 @@ h2, .pageContentInner h2, #rightColumn lh {
 #topLinksList a:active, #topLinksList a:hover{
     background:none;
 }
-.topLogo {height:100px; text-align: center;}
+.topLogo {height:113px; text-align: center;}
 .topLogo, #skipNav, .clear {padding:0;}
 
 
