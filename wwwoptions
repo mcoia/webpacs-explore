@@ -106,14 +106,14 @@ STAFF=2,8,101,199
 STAFF_LOGGEDIN_MSG=<span class="loggedInMessage">You are logged into staff mode at %s as %s</span>
 
 # General and Phrase Searching
-ICON_BUT_ANOTHER=<span class="button"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText">Another Search</span></span>
-ICON_BUT_ANOTHER2=<span class="hidden"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText">Another Search</span></span>
-ICON_BUT_ANOTHER4=<span class="hidden"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText">Another Search</span></span>
-ICON_BUT_ANOTHER12=<span class="hidden"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText">Another Search</span></span>
+ICON_BUT_ANOTHER=<span class="button"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText anotherSearch">Another Search</span></span>
+ICON_BUT_ANOTHER2=<span class="hidden"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText anotherSearch">Another Search</span></span>
+ICON_BUT_ANOTHER4=<span class="hidden"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText anotherSearch">Another Search</span></span>
+ICON_BUT_ANOTHER12=<span class="hidden"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText anotherSearch">Another Search</span></span>
 ICON_BUT_NEWSRCH=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">Start Over</span></span>
-ICON_BUT_NEWSRCH2=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
-ICON_BUT_NEWSRCH4=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
-ICON_BUT_NEWSRCH12=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText">New Search</span></span>
+ICON_BUT_NEWSRCH2=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText anotherSearch">New Search</span></span>
+ICON_BUT_NEWSRCH4=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText anotherSearch">New Search</span></span>
+ICON_BUT_NEWSRCH12=<span class="button"><img src="/screens/ico_startover.png" alt=""><span class="buttonText anotherSearch">New Search</span></span>
 ICON_BUT_WORDSRCH=<span class="button"><img src="/screens/ico_magnifyingglass.png" alt=""><span class="buttonText">Search as Words</span></span>
 DROP_DOWN=Xtadscibl
 FRAMEURL=0
@@ -579,9 +579,11 @@ LOCKSCOPE=false
 PROXYDNS=*explorewam.searchmobius.org
 
 # INN-Reach
-
-INNREACH=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@searchmobius.org(X=X,t=t,a=a,d=d,s=s,c=c,i=i,j=l,o=o)
-INNREACH7=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@searchmobius.org(X=X,t=t,d=d,s=s,c=c,j=l,o=o)
+#ICON_INNREACH_ENCORE=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>
+#ICON_INNREACH_ENCORE7=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>
+#INNREACH_ENCORE=http://searchmobius.org/iii/encore/search/C__S%s__Orightresult__U?lang=eng&suite=cobalt
+#INNREACH=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@searchmobius.org(X=X,t=t,a=a,d=d,s=s,c=c,i=i,j=l,o=o)
+#INNREACH7=<span class="button" id="innreach"><img src="/screens/ico_mobius.png" alt=""><span class="buttonText">Search MOBIUS</span></span>@searchmobius.org(X=X,t=t,d=d,s=s,c=c,j=l,o=o)
 ITEMOUT_MSG=Checked Out
 FEEDS_PORT=63200
 
