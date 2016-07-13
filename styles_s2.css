@@ -162,6 +162,7 @@ td.odd, td.highlight, tr.odd {
 #slogan {position:absolute; top:25px; right:0px;}
 .topLinks {
     margin-top:105px;
+		width:100%;
 }
 #topLinksList{
     font-size:1.1em;
