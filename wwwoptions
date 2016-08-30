@@ -447,7 +447,7 @@ FEATURED_LIST=98,101|Selected Titles|Topic|# Titles
 
 # Content Linking and Other Resources
 # If your system uses SSL, use the https example, to avoid secure/nonsecure warning on Internet Explorer.
-BIBIMAGE=http://contentcafe2.btol.com/ContentCafe/Jacket.aspx?UserID=MOB54116&amp;Password=CC42814&amp;Return=1&Type=S&amp;Value=%s&amp;erroroverride=1|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=MOB54116&amp;Password=CC42814&amp;ItemKey=%s&amp;Options=N
+BIBIMAGE=http://www.syndetics.com/index.aspx?isbn=%s/SC.GIF&client=mobexp|I|http://www.syndetics.com/index.aspx?isbn=%s/LC.GIF&client=mobexp
 BIBIMAGE_TEXT=Book Cover
 BUT_ENCYCPD=/screens/encycpd.gif
 BUT_FULL_TEXT=/screens/full_text.gif
