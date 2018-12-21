@@ -44,11 +44,14 @@ b|r|307|-6|Hours:||b|
 b|r|310|-6|Frequency:||b|
 b|r|315|-6|Frequency:||b|
 b|r|321|-6|Frequency:||b|
-b|r|336|a|Content type:||b|
-b|r|337|a|Media type:||b|
-b|r|338|a|Carrier type:||b|
+b|r|336|a|||b|
+b|r|337|a|||b|
+b|r|338|a|||b|
+b|r|344|a|||b|
+b|r|347|a|||b|
 b|r|350|-6|||b|
 b|r|362|-6|Publication&nbsp;Date:||b|
+b|r|380|a|||b|
 b|r||-6|Description:||b|
 b|s||-6|Series:||b|
 b|n|501|-6|With:||b|
@@ -124,6 +127,7 @@ b|z||-uwxyz6|Continued By:||b|
 b|w||-6|Related To:||b|
 b|i|020|-6|ISBN:||b|
 b|i|022|-6|ISSN:||b|
+b|i|024|-6|Sale Code:||b|
 b|i|028|-6|Music #:||b|
 b|i||-6|Sale Code:||b|
 b|g||-6|Gov't Document No.:||b|
@@ -151,3 +155,4 @@ i|%||||0|b|
 i|m|||||b|&nbsp;
 #
 #end converted webpub.def
+

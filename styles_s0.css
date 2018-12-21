@@ -97,6 +97,8 @@ h2, .pageContentInner h2, #rightColumn lh {
 #history a {
     color:#005DAB; text-decoration:none;
 }
+#history p {width:395px; }
+
 #nursing a {
     color:#00529C; text-decoration:none;
 }

@@ -255,6 +255,8 @@ h2.briefcitTitle {
     height: auto;
 }
 
+#patButAR { display: none; }
+
 #searchscope, #scopeMenu, #locationMenu {display:none;}
 
 #shadowBackground {

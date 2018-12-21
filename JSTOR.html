@@ -60,7 +60,7 @@ $("#jstor").autocomplete({
 { label: 'The Athenian Agora ', value: 'athenianagora' },
 { label: 'Berliner Museen ', value: 'berlmuse' },
 { label: '. . . Amtliche Berichte aus den Preuszischen Kunstsammlungen ', value: 'amtlberipreukuns' },
-{ label: '. . . Amtliche Berichte aus den Königlichen Kunstsammlungen ', value: 'amtlberikoenkuns' },
+{ label: '. . . Amtliche Berichte aus den K{uFFFD}niglichen Kunstsammlungen ', value: 'amtlberikoenkuns' },
 { label: 'BOMB ', value: 'bomb bradleyhisbook' },
 { label: 'Bradley, His Book ', value: 'bradleyhisbook' },
 { label: 'The British Museum Quarterly ', value: 'britmusequar' },
@@ -119,7 +119,7 @@ $("#jstor").autocomplete({
 { label: '. . . Irish Arts Review (1984-1987) ', value: 'irisartsrevi1984' },
 { label: 'Jahrbuch der Berliner Museen ', value: 'jahrberlmuse' },
 { label: '. . . Jahrbuch der Preuszischen Kunstsammlungen ', value: 'jahrpreukuns' },
-{ label: '. . . Jahrbuch der Königlich Preussischen Kunstsammlungen ', value: 'jahrkoenpreukuns' },
+{ label: '. . . Jahrbuch der K{uFFFD}niglich Preussischen Kunstsammlungen ', value: 'jahrkoenpreukuns' },
 { label: 'The Journal of Aesthetics and Art Criticism ', value: 'jaestartcrit' },
 { label: 'The Journal of Decorative and Propaganda Arts ', value: 'jdecoproparts' },
 { label: 'Journal of Design History ', value: 'jdesignhistory' },
@@ -142,7 +142,7 @@ $("#jstor").autocomplete({
 { label: '. . . Boston Museum Bulletin ', value: 'bostmusebull' },
 { label: '. . . Bulletin of the Museum of Fine Arts ', value: 'bullmusefine' },
 { label: '. . . Museum of Fine Arts Bulletin ', value: 'musefineartbull' },
-{ label: 'Marburger Jahrbuch für Kunstwissenschaft ', value: 'marbjahrkuns' },
+{ label: 'Marburger Jahrbuch f{uFFFD}r Kunstwissenschaft ', value: 'marbjahrkuns' },
 { label: 'Master Drawings ', value: 'masterdrawings' },
 { label: 'Mediterranean Studies ', value: 'mediterraneanstu' },
 { label: 'Memoirs of the American Academy in Rome ', value: 'memoameracadrome' },
@@ -200,7 +200,7 @@ $("#jstor").autocomplete({
 { label: 'Yale University Art Gallery Bulletin ', value: 'yaluniartgalbul' },
 { label: '. . . Yale Art Gallery Bulletin ', value: 'yaleartgallbull' },
 { label: '. . . Bulletin of the Associates in Fine Arts at Yale ', value: 'bassofineartsyal' },
-{ label: 'Zeitschrift für Kunstgeschichte ', value: 'zeitkuns' }
+{ label: 'Zeitschrift f{uFFFD}r Kunstgeschichte ', value: 'zeitkuns' }
 ]
 	,focus: function (event, ui) {
 		$(event.target).val(ui.item.label);
@@ -208,7 +208,7 @@ $("#jstor").autocomplete({
 	}
 	,select: function (event, ui) {
 		$(event.target).val(ui.item.label);
-		window.open("http://0-www.jstor.org.www.explore.searchmobius.org/action/showPublication?journalCode=" + ui.item.value);
+		window.open("http://0-www.jstor.org.explore.searchmobius.org/journal/" + ui.item.value);
 		return false;
 	}
 });
@@ -303,7 +303,7 @@ $("#fulltext").autocomplete({
 { label: 'E-flux ', value: 'BAVL' },
 { label: 'Electronic Melbourne Art Journal ', value: 'D9O6' },
 { label: 'Entertainment Design ', value: '5G2' },
-{ label: 'Estudios Atacameños ', value: '1CNZ' },
+{ label: 'Estudios Atacame{uFFFD}os ', value: '1CNZ' },
 { label: 'Etc. ', value: '52QD' },
 { label: 'European Photography ', value: '2ZIX' },
 { label: 'Eye ', value: '2ZIY' },

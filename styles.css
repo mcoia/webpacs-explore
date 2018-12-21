@@ -780,7 +780,7 @@ div .confirmValue { padding-top:3px; }
 
 .patFloat .button img { margin-top:3px; }
 
-.patFloat .buttonText { margin-left:3px; }
+.patFloat .buttonText { margin-left:3px; font-size:.8824em; }
 
 .patFuncArea { background:#FFFFFF; float:left; margin-left:20px; width:60%; margin-bottom:18px; }
 
@@ -1109,3 +1109,31 @@ tr.highlight { background:#FFFFE4; }
 .wblinkdisplay form { margin-bottom:8px; }
 
 .wbnoresources { display:block; margin: 3px 0; }
+
+/* Texting Feature */
+
+
+#info, #sms {
+       border:1px solid #36647b;
+       position:absolute;
+       top:455;
+       left:455;
+       z-index:1000;
+       background:#fff;
+       padding:10px;
+       margin:10px;
+       background:#efefcf;
+       width:45em;
+}
+
+#sms .eg {
+       font-weight:bold;
+       font-size:90%;
+}
+
+#info {top:500}
+
+#sms {font-size:90%}
+
+
+body > div#bibDisplayBody a#smsbutton { display:none; }

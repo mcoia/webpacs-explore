@@ -3,7 +3,7 @@
 <!-- Rel 2009B Example Set -->
 <!-- This File Last Changed: 11 June 2010 -->
 <head>
-<title>Missouri History Museum Library Catalog</title>
+<title>Library & Research Center Online Catalog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 <link rel="stylesheet" type="text/css" href="/screens/norightcolumn.css" />
@@ -33,88 +33,7 @@ obj.submit();
 </head>
 <body>
 
-<!-- begin toplogo.html file -->
-
-
-<script src="/screens/jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="/screens/domainredirect.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-	$("span:contains(WebPAC PRO)").hide(); //Hide the iii footer
-	$('#other').click(function() {
-		$(this).hide();
-		$('label.hiddenSearch').show();
-	});
-	$('input[name="searchtype"]').change(function(){
-    	$("#exampleText").load("/screens/" + this.value + "_hist.inc");
-	});
-});
-</script>
-
-<link rel="stylesheet" type="text/css" href="/screens/styles_s2.css" />
-
-
-
-
-<div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
-<div class="topLogo">
-<div class="topLogoContent">
-<div id="logo">
-<a href="http://www.mohistory.org">
-<img src="/screens/mhm.png" alt="Missouri History Museum">
-</a>
-</div>
-<div id="slogan">
-<img src="/screens/hhh.png" alt="History happens here!">
-</div>
-<div class="topLinks">
-<ul id="topLinksList">
-<li><a href="/patroninfo">My Library Account</a></li>
-<li><a href="http://www.mohistory.org">History Museum</a></li>
-<li><a href="http://www.mohistory.org/lrc-home">Library+Research Center</a></li>
-<li><a href="http://www.mohistory.org/search_options">More search options</a></li>
-</div>
-</ul>
-</div>
-</div>
-<div id="alertMessage"></div>
-<div class="clear"></div>
-<div class="allContent">
-<div class="innerContentWrapper">
-<div class="innerContent mainMenu">
-<div id="rightColumn">
-<ul>
-    <lh>Search By</LH>
-    <li><a href="/search/X">Keyword</a></li>
-    <li><a href="/search/t">Title</a></li>
-    <li><a href="/search/a">Author</a></li>
-    <li><a href="/search/d">Subject</a></li>
-    <li><a href="/search/m">Call Number</a></li>
-    <li><a href="/search/j">Genre</a></li>
-    <li><a href="/search/o">OCLC Number</a></li>
-    <li><a href="/search/b">Barcode</a></li>
-    <li><a href="/search/i">ISBN/ISSN</a></li>
-</ul>
-<ul>
-    <lh>More Search Options</lh>
-    <li><a href="http://genealogy.mohistory.org/">Genealogy Index</a></li>
-    <li><a href="http://www.mohistory.org/lrc/collections/archives-collections-guides">Archives Guides</a></li>
-    <li><a href="http://www.mohistory.org/lrc/collections/images-collections-guides">Photo Guides</a></li>
-    <li><a href="http://contentdm.mohistory.org/">Digitized Books and Documents</a></li>
-    <li><a href="http://www.mohistory.org/buy_photos">Image Store</a></li>
-    <li><a href="http://collections.mohistory.org/search">Cross-Collection Search (Beta)</a></li>
-    <li><a href="http://www.mohistory.org/lrc/catalogs/card-catalogs">Card Catalogs</a></li>
-    <li>
-</ul>
-<ul>
-    <lh>Map</lh>
-    <li>Reading Room</li>
-</ul>
-</div>
-<div id="mainColumn"><!-- content container -->
-<a name="content" id="content"></a>
-
-<!--end toplogo-->
+<!--{toplogo}-->
 
 <div class="pageContentInner">
 
@@ -124,7 +43,7 @@ $(document).ready(function () {
 <form action="/search/" method="get"
 id="search" class="box" name="search">
 
-<div class="options"> basic search / <a href="/search~S2/X">advanced search</a>
+<div class="options"> basic library catalog search / <a href="/search~S2/X">advanced search</a>
 </div>
 
 <div class="limits"> 
@@ -178,19 +97,7 @@ in
 
 </div>
 
-<div id="right">
 
-<div id="welcome">
-<h2>Welcome</h2>
-Welcome to the Missouri History Museum's Online Library Catalog.
-
-<p><a href="http://www.mohistory.org/lrc/family-history/get-started/online-library-catalog">What's in this catalog</a></p>
-<p><a href="http://www.mohistory.org/lrc/catalogs/card-catalogs">What's not online yet</a></p>
-<p><a href="http://www.mohistory.org/search_options">Other online information</a></p>
-	
-</div>
-	
-</div>
 
 
 	

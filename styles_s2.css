@@ -3,27 +3,28 @@ a:link { color: #002A5C; }
 a:active { color: #002A5C; }
 a:visited { color: #002A5C; }
 a:hover  { color: #002A5C; }
-body {font: 12px Verdana,Arial,Helvetica,sans-serif; background-color:#91B0D5; margin:0;}
+body {font: 12px Verdana,Arial,Helvetica,sans-serif; margin:0;}
 body div {padding:0px}
 label {
     display:inline-block;
 }
-.box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;}
-.allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }
-#bibDisplayBody {
+/*.box {background: #F0E9D6; border: 2px solid #DDCA85; color:#202020; margin: 0;} */
+/*.allContent {background: url("/screens/history_background.gif") repeat-x scroll left top; width:100%; min-height:301px; }*/
+/*#bibDisplayBody {
     background: #FCFAF4;
-}
+}*/
 .bibDisplayContentMain, .resourceDisplayContentMain {
     padding-left: 1.5em;
 }
 .bibRecordLinkText {
     font-size:smaller;
 }
-.bibSearch { background: url("tile_search_brown_inverse.jpg") repeat-x scroll left bottom transparent }
+.bibResourceTable {display: none;}
+/*.bibSearch { background: url("tile_search_brown_inverse.jpg") repeat-x scroll left bottom transparent }*/
 .bibSearchHistory, .resourceHistory { position: inherit;}
-.briefcitCell, .browseEntry, .browseSubEntry {
+/*.briefcitCell, .browseEntry, .browseSubEntry {
     background: #fefdf8;
-}
+}*/
 .briefcitDetail, .briefcitAuthDetail {
     padding:0 0 0 20px;
     width:75%;
@@ -51,9 +52,11 @@ label {
 
 .browseHeaderData, .browseHeaderEntries, .browseHeaderMark, .browseHeaderNum, .browseHeaderYear, .browseHeaderMedia { background: #DDE1E4;}
 
-.browseSearchtool {
+.browseResourceTable {display:none;}
+
+/*.browseSearchtool {
     background: url("tile_search_brown.jpg") repeat-x scroll left bottom transparent
-}
+}*/
 
 .browseSuperEntry {
     display:none;
@@ -79,9 +82,10 @@ h2, .pageContentInner h2, #rightColumn lh {
     color:#DCD5C3;
 }
 .firstItem {margin-left:-2.25em;}
-.form2Part, .form1Part, .mylistsSavePage form, .form3Part, .form3PartBelow{
+
+/*.form2Part, .form1Part, .mylistsSavePage form, .form3Part, .form3PartBelow{
     background: #fcfaf4;
-}
+}*/
 
 .formScopeSearch {
     display:none;
@@ -104,14 +108,14 @@ h2, .pageContentInner h2, #rightColumn lh {
 
 #left {float: left; margin: 0; width: 640px;}
 .innerContent, .topLogoContent {width:960px; margin-left: auto; margin-right: auto; position: relative;}
-.innerContent {text-align: left; background-color: #EFE8D1; min-height:300px;}
-.innerContentWrapper {background: url("/screens/history_wrapper.png") repeat-y scroll left top transparent; width:970px; margin-left:auto; margin-right:auto;}
-#logo {position:absolute; top:20px;}
-#mainColumn {
+.innerContent {text-align: left; min-height:300px;}
+/*.innerContentWrapper {background: url("/screens/history_wrapper.png") repeat-y scroll left top transparent; width:970px; margin-left:auto; margin-right:auto;}*/
+#logo {position:absolute; margin-left: 75px;}
+/*#mainColumn {
     width:680px;
     float:right;
-}
-.mainMenu {background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85;} 
+} */
+/*.mainMenu {background: url("/screens/history_top.jpg") repeat-x scroll left top #DDCA85;} */
 .mainMenuSrchText ul {
     list-style-type:none;
     padding-left:2.25em;;
@@ -122,7 +126,7 @@ h2, .pageContentInner h2, #rightColumn lh {
     top:inherit;
 }
 td.odd, td.highlight, tr.odd {
-    background: #FCFAF4;
+    background: #f4f6f9;
 }
 
 #opacMenu #rightColumn {
@@ -132,7 +136,10 @@ td.odd, td.highlight, tr.odd {
     margin-top:25px;
 }
 #right {float: right; width: 270px;}
-#rightColumn {
+
+#rightColumn { display: none;}
+
+/*#rightColumn {
     width: 220px;
     float:right;
     background:#FCFAF4;
@@ -149,7 +156,9 @@ td.odd, td.highlight, tr.odd {
 }
 #rightColumn a {
     text-decoration:none;
-}
+}*/
+#rightLinksList li {display: inline-block; width:auto;}
+#rightLinksList {float:right; }
 #search {padding: 25px 36px 0; }
 #search a {color: #80929F;}
 #search a:hover {color: #330000;}
@@ -161,20 +170,22 @@ td.odd, td.highlight, tr.odd {
 #searchscope {display:none;}
 #slogan {position:absolute; top:25px; right:0px;}
 .topLinks {
-    margin-top:105px;
+   
 		width:100%;
 }
 #topLinksList{
-    font-size:1.1em;
+    font-size:1.1em;  
 }
-#topLinksList a:link, #topLinksList a:visited{
-    color:white;
+/*#topLinksList a:link, #topLinksList a:visited{
+    color:white; */
 }
 #topLinksList a:active, #topLinksList a:hover{
     background:none;
 }
-.topLogo {background: url("http://collections.mohistory.org/search/sites/all/themes/mhmth/images/header/rotate.php") no-repeat scroll center top transparent; height:135px; text-align: center; width: 100%; border-bottom: 7px solid #002A5C;}
+.topLogo { height:135px; text-align: center; width: 100%; border-bottom: 7px solid #0099A8; }
 .topLogo, #skipNav, .clear {padding:0;}
+.topLogoContent {width: 100%;}
+.topLogoContent li {display: inline-block;} 
 #webaddress {display:none;}
 #welcome {background:#dde1e4; border-bottom:1px solid #BFB184; border-right: border-bottom:1px solid #BFB184; height:156px; padding: 5px 18px; }
 #welcome a {color:black;}
