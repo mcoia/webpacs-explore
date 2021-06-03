@@ -56,7 +56,10 @@ b|s||-6|Series:||b|
 b|n|501|-6|With:||b|
 b|n|502|-6|Thesis:||b|
 b|n|504|-6|Bibliography:||b|
-b|n|505|-6|Contents:||b|
+b|n|5050.|-6|Contents:||b|
+b|n|5051.|-6|Contents:||b|
+b|n|5052.|-6|Contents:||b|
+b|n|5058.|-6| ||b|
 b|n|506|-6|Access:||b|
 b|n|508|-6|Credits:||b|
 b|n|510|-6|Indexed In:||b|
@@ -71,7 +74,7 @@ b|n|538|-6|System Details:||b|
 b|n|550|-6|Issued By:||b|
 b|n|555[^0]|-6|Indexes:||b|
 b|n|5550|-6|Finding Aids:||b|
-b|n|561|-6|Provenance:||b|
+b|n|561|-65|Provenance:||b|
 b|n|586|-6|Awards:||b|
 b|n|59[0-9]|-6|Local Note:||b|
 b|n||-6|Note:||b|
@@ -83,7 +86,7 @@ b|y||u|Misc.:||b|
 b|d|655|-26|Genre:||b|
 b|d|69[0-9]|-26|Local Subject:||b|
 b|d||-26|Subject:||b|
-b|b||-6|Other Author:||b|
+b|b||-65|Other Author:||b|
 b|u|210|-6|Key Title:||b|
 b|u|222|-6|Key Title:||b|
 b|u|2460.|-6|||b|

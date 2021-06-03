@@ -13,6 +13,16 @@ label {
 /*#bibDisplayBody {
     background: #FCFAF4;
 }*/
+
+#alertMessage { 
+ background: #1681C4 !important;
+ color: white !important;
+} 
+
+#alertMessage a {
+ color: white;
+}
+
 .bibDisplayContentMain, .resourceDisplayContentMain {
     padding-left: 1.5em;
 }

@@ -19,11 +19,11 @@ function doSearch(form) {
   {
   if ( form.name == "names" )
   {
-  var baseURL = "http://explore.searchmobius.org/search~S8/a";
+  var baseURL = "http://www.explore.searchmobius.org/search~S8/a";
   }
   else
   {
-  var baseURL = "http://explore.searchmobius.org/search~S8/d";
+  var baseURL = "http://www.explore.searchmobius.org/search~S8/d";
   }
   window.location.href=baseURL + "?SEARCH=" + theTerms;
   }
@@ -61,19 +61,22 @@ obj.submit();
 <div class="leftColumn">
 <ul>
 	<li><a href="http://www.slam.org">Museum Home</a></li>
-	<li><a href="/">EXPLORE Home</a><li>
+	<li><a href="/">EXPLORE Home</a></li>
+	<li><a href="https://www.slam.org/research/library-archives">Library Home</a>
 	<ul>
 		<li><a href="/search~S3">All Collections</a></li>
 		<li><a href="/search~S6">Books & Periodicals</a></li>
 		<li><a href="/search~S10">Periodicals Only</a></li>
 		<li><a href="/search~S7">Auction Catalogues</a></li>
 		<li><a href="/search~S8">Archives</a></li>
+                                                <li><a href="http://explore.searchmobius.org/screens/STLartists2.html">Artists Files</a></li>
 	</ul>
-	</li>
-	<li><a href="http://searchmobius.org/" target="_blank">MOBIUS</a></li>
+                                                </li>
+                        <li><a href="https://classic.searchmobius.org" target="_blank">MOBIUS</a></li>
 	<li><a href="http://www.worldcat.org" target="_blank">WorldCat</a></li>
 	<li><a href="http://www.archive.org" target="_blank">Internet Archive</a></li>
 	<li><a href="http://books.google.com" target="_blank">Google Books</a></li>
+	<li><a href="https://onlinebooks.library.upenn.edu/lists.html" target="_blank">Online Books</a></li>
 	<li><a href="/patroninfo">My Library</a></li>
 </ul>
 </div>
@@ -96,7 +99,10 @@ obj.submit();
 	
 <span class="nowrap formButtonArea">
 
-<input type="button" value="Submit">
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" class="submitHidden">
   
 </span>
 
@@ -115,7 +121,7 @@ Or search for the records of a specific named <strong>Person</strong> or <strong
 <option value="Ambler, Jacquelin">Ambler, Jacquelin</option>
 <option value="Archambault, Blanche A">Archambault, Blanche A.</option>
 
-<option value="Ballard, James Franklin, 1851-1931">Ballard, James Franklin, 1851-1931</option>
+<option value="Ballard, James F. (James Franklin), 1851-1931">Ballard, James F. (James Franklin), 1851-1931</option>
 <option value="Bartlett, Louisa, 1947-">Bartlett, Louisa, 1947-</option>
 <option value="Bellos, Alexandra">Bellos, Alexandra</option>
 <option value="Benjamin, Brent">Benjamin, Brent</option>
@@ -150,7 +156,7 @@ Or search for the records of a specific named <strong>Person</strong> or <strong
 <option value="Davis, Charles P.">Davis, Charles P.</option>
 <option value="Davis, Charles Percy, 1858-1933">Davis, Charles Percy, 1858-1933</option>
 <option value="Decker, Barbara">Decker, Barbara</option>
-<option value="Del Mar, Frances, 1868-1957">Del Mar, Frances, 1868-1957</option>
+<option value="Del Mar, Frances">Del Mar, Frances</option>
 
 <option value="Desloge, Nora">Desloge, Nora</option>
 <option value="Dreher, Fred, b. 1908">Dreher, Fred, b. 1908</option>
@@ -314,7 +320,7 @@ Or search for the records of a specific named <strong>Person</strong> or <strong
 <option value="Art patrons Missouri Saint Louis Archival resources">Art patrons--Missouri--Saint Louis--Archival resources</option>
 
 <option value="Artists Missouri Saint Louis Archival resources">Artists--Missouri--Saint Louis--Archival resources</option>
-<option value="Ballard, James Franklin, 1851-1931">Ballard, James Franklin, 1851-1931</option>
+<option value="Ballard, James F. (James Franklin), 1851-1931">Ballard, James F. (James Franklin), 1851-1931</option>
 <option value="Beckmann, Max, 1884-1950 Archives">Beckmann, Max, 1884-1950--Archives</option>
 <option value="Bixby, William K. (William Keeney), 1857-1931 Archives">Bixby, William K. (William Keeney), 1857-1931--Archives</option>
 <option value="Carpenter, Fred Green, 1882-1965 Archives">Carpenter, Fred Green, 1882-1965--Archives</option>
@@ -326,8 +332,8 @@ Or search for the records of a specific named <strong>Person</strong> or <strong
 <option value="City Art Museum of St. Louis Exhibitions Archives">City Art Museum of St. Louis--Exhibitions--Archives</option>
 <option value="City Art Museum of St. Louis">City Art Museum of St. Louis</option>
 <option value="Clark, Margot, 1924-1994 Archives">Clark, Margot, 1924-1994--Archives</option>
-<option value="Del Mar, Frances, 1868-1957 Archives">Del Mar, Frances, 1868-1957--Archives</option>
-<option value="Del Mar, Frances, 1868-1957 Photograph collections">Del Mar, Frances, 1868-1957--Photograph collections</option>
+<option value="Del Mar, Frances Archives">Del Mar, Frances--Archives</option>
+<option value="Del Mar, Frances Photograph collections">Del Mar, Frances--Photograph collections</option>
 <option value="Dreher, Fred, b. 1908 Archives">Dreher, Fred, b. 1908--Archives</option>
 <option value="Fountains Missouri Saint Louis Archival resources">Fountains--Missouri--Saint Louis--Archival resources</option>
 
@@ -391,15 +397,12 @@ Or search for the records of a specific named <strong>Person</strong> or <strong
 </div><!--scopeBoxes-->
 <div class="contactInfo">
 <h3>RICHARDSON MEMORIAL LIBRARY</h3>
-Public hours:<br />
-Tuesday through Friday from 10:00am to 5:00pm.<br />
+Currently closed to the public.
 <br />
-Contact:<br />
+For reference inquiries, contact:<br />
 314.655.5252<br />
 <a href="mailto:library@slam.org">library@slam.org</a><br />
-<br />
-<a href="http://www.slam.org/Education/research.php">Ask a Librarian</a> <br />
-<a href="http://explore.searchmobius.org/screens/STLartists2.html">St. Louis Artist Files</a><br />
+
 </div>
 	
 </div><!--bottomContent-->

@@ -85,9 +85,24 @@ h2, .pageContentInner h2, #rightColumn lh {
     width:430px;
 }
 #logoBoxes {margin-top:15px;}
-#art a {
-    color:#527D98; text-decoration:none;
+
+#art {
+background:#2A2A2A;
+height:50px;
+margin-right:20px;
 }
+
+#art a {
+    color:#2A2A2A; 
+   text-decoration:none;
+}
+
+#art img {
+   margin-top: 15px;
+  margin-bottom:8px;
+   width:350px;
+  }
+
 #gardens a {
     color:#416910; text-decoration:none;
 }

@@ -3,9 +3,9 @@ a img {border:none;}
 a:link {text-decoration:none;}
 
 body {
-    background-color:#F5F5F5;
+    background-color:#F0F0F0;
     margin:0;
-    color:#6D6F6F;
+    color:#2a2a2a;
 }
 body div {
     padding:0px
@@ -16,18 +16,18 @@ body > div {
 }
 
 h3 {
-    font-family:sans-serif;
+    font-family:"Open Sans";sans-serif;
     font-weight:normal;
-    font-size:12px;;
+    font-size:12px;
 }
 
 hr {
-    color:#FFFFFF;;
+    color:#eeeeee;
 }
 
 
 .allContent {
-    background: #F5F5F5;
+    background: #F0F0F0;
     width:100%;
     min-height:300px;
 }
@@ -37,22 +37,18 @@ hr {
 }
 
 .botLogo {
-    width:100%;
-    background:white;
-    margin-top:7px;
-    float:left;
-    font-family:'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
+    background: #2A2A2A;
+    height:100px;
+    text-align: center;
+    width: 100%;
+    font-family:'Georgia',serif;
     font-size:11px;
-}
-
-.bottomContent {
-    margin-top:25px;
 }
 
 .browseSearchtool h2 {
     margin:0 0 6px 0 !important;
     text-align:left;
-    font-family: 'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
+    font-family: 'Georgia',serif;
     font-weight:normal;
 }
 
@@ -62,9 +58,9 @@ hr {
 .contactInfo {
     float:left;
     padding-left:20px;
-    width:220px;
+    width:260px;
     text-align:left;
-    font-family: 'Bookman Old Style',Bookman,'URW Bookman L','Palatino Linotype',serif;
+    font-family: 'Georgia',serif;
     font-size:12px;
 }
 
@@ -87,19 +83,20 @@ hr {
 
 #footerContact {
     float:left;
-    line-height:115%;
-    margin-top:14px;
+    margin-top:42px;
+   color:#F0F0F0;
 }
 
 #footerLogo {
-    margin:18px 18px 18px 36px;
+    margin:40px;
     float:left;
 }
 
+
 td.highlight { background:#f2f6f9; }
 
-.innerContent, .topLogoContent, .botLogoContent {
-    width:1000px;
+.innerContent, .topLogoContent, .footerContent {
+    width:1050px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -122,7 +119,7 @@ td.highlight { background:#f2f6f9; }
     width:142px;
     padding:0 15px;
     text-align:left;
-    font-size:11px
+    font-size:12px
 }
 
 .leftColumn a:link, .leftColumn a:visited {
@@ -153,6 +150,7 @@ td.highlight { background:#f2f6f9; }
     top:36px;
 }
 
+
 .mainSearch .form1Part {
     margin-top:0;
     width:100%;
@@ -163,7 +161,7 @@ td.highlight { background:#f2f6f9; }
 }
 
 .rightColumn {
-    width:760px;
+    width:800px;
     float:left;
     padding:0 10px;
 }
@@ -211,30 +209,37 @@ a#scopeBox1:hover p, a#scopeBox2:hover p, a#scopeBox3:hover p, a#scopeBox4:hover
     padding-right:10px;
 }
 
-#scopeBoxes #scopeBox1 {background-color:#004A80;}
+#scopeBoxes #scopeBox1 {background-color:#2A2A2A;}
 
-#scopeBoxes #scopeBox2 {background-color:#666666;}
+#scopeBoxes #scopeBox2 {background-color:#808283;}
 
-#scopeBoxes #scopeBox3 {background-color:#999999;}
+#scopeBoxes #scopeBox3 {background-color:#AEAEAE;}
 
-#scopeBoxes #scopeBox4 {background-color:#7E9CB3;}
+#scopeBoxes #scopeBox4 {background-color:#3C3f42;}
 
 #searchInput {color: #B0B0B0;}
 
 #searchscope, #scopeMenu, #locationMenu {}
 
-#socialMedia {
-    width:130px;
-    float:left;
-    margin: 26px 0 0 40px;
+.footerContent img {
+  display: block;
+  width: 25%;
+  height: auto;
 }
+
 
 .topLogo {
-    background: #517D98;
-    height:80px;
+    background: #2A2A2A;
+    height:100px;
     text-align: center;
     width: 100%;
-    border-bottom: 6px solid #9BB1C5;
+    
 }
-.topLogo, #skipNav, .clear {padding:0;}
 
+.topLogo img { 
+   display: block;
+  width: 60%;
+  height: auto;
+}
+
+.topLogo, #skipNav, .clear {padding:0;}
